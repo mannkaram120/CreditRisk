@@ -1,0 +1,17 @@
+:root {
+  --cream: #f0efe7;
+  --black: #111110;
+  --green: #6bbf3e;
+  --green-dark: #4a8a28;
+  --gray-mid: #888780;
+  --gray-soft: #d9d5c7;
+  --paper: #f8f6ee;
+  --surface: rgba(255, 255, 255, 0.58);
+  --surface-strong: rgba(255, 255, 255, 0.82);
+  --danger: #cb4b3f;
+  --warning: #cf8a2e;
+  --shadow: 0 18px 50px rgba(17, 17, 16, 0.12);
+  --font-head: "Barlow Condensed", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-body: "Barlow", sans-serif;
+}

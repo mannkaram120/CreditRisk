@@ -1,0 +1,91 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    CREDIT RISK ENGINE - QUICK START                        ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+STEP 1: OPEN TERMINAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+cd "D:\Projects (Finance)\Credit Risk Engine\backend"
+
+
+STEP 2: INSTALL DEPENDENCIES (First time only)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+pip install -r requirements.txt
+
+
+STEP 3: START THE SERVER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+uvicorn main:app --port 8000
+
+You should see:
+  INFO:     Uvicorn running on http://127.0.0.1:8000
+
+
+STEP 4: TEST IN ANOTHER TERMINAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+curl http://127.0.0.1:8000/health
+
+Expected response:
+  {"status":"ok","version":"1.0.0"}
+
+
+API ENDPOINTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Health:               curl http://127.0.0.1:8000/health
+Merton Analysis:      curl http://127.0.0.1:8000/merton/AAPL
+Portfolio Presets:    curl http://127.0.0.1:8000/portfolio/preset/ig
+
+
+RUN TESTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+pytest tests/test_engine.py -v
+
+Expected: 18 tests passing ✓
+
+
+TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Port Already in Use?
+  Get-Process python | ForEach-Object { Stop-Process -Id $_.Id -Force }
+
+Cache Issues?
+  Remove-Item -Recurse __pycache__* .pytest_cache* -Force
+
+Documentation:
+  → Read SETUP_GUIDE.md for detailed instructions
+  → Read SYSTEM_OPERATIONAL_STATUS.md for system status
+
+
+AVAILABLE TICKERS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Any valid stock ticker: AAPL, MSFT, JPM, JPM, GS, BAC, F, etc.
+
+Examples:
+  curl http://127.0.0.1:8000/merton/MSFT
+  curl http://127.0.0.1:8000/merton/JPM
+  curl http://127.0.0.1:8000/merton/TSLA
+
+
+PORTFOLIO PRESETS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ig      - Investment Grade (5 companies)
+  hy      - High Yield (5 companies)
+  mixed   - Mixed Portfolio (6 companies)
+  crisis  - Financial Crisis (5 companies)
+
+Examples:
+  curl http://127.0.0.1:8000/portfolio/preset/ig
+  curl http://127.0.0.1:8000/portfolio/preset/hy
+
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                            YOU'RE READY TO GO! 🚀                          ║
+╚════════════════════════════════════════════════════════════════════════════╝
