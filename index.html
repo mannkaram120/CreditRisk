@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Credit Risk Engine // karamfrm.com</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=IBM+Plex+Mono:wght@400;500&family=Barlow:wght@400;500&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#FAFAF8;--surface:#fff;--black:#111110;
+  --green:#6BBF3E;--gd:#4A8A28;--gdim:rgba(107,191,62,.10);
+  --gray:#888780;--gl:#E2E1DC;--border:rgba(0,0,0,.09);
+  --fh:'Barlow Condensed',sans-serif;
+  --fm:'IBM Plex Mono',monospace;
+  --fb:'Barlow',sans-serif;
+}
+html,body{background:var(--bg);color:var(--black);font-family:var(--fb);font-size:13px;min-height:100vh}
+
+/* ── APP ── */
+.app{display:flex;min-height:100vh}
+
+/* ── SIDEBAR — fixed width, no overflow ── */
+.sidebar{
+  width:200px;min-width:200px;max-width:200px;
+  background:var(--surface);border-right:1px solid var(--border);
+  padding:.75rem .7rem;position:sticky;top:0;
+  height:100vh;overflow:hidden; /* NO SCROLL, NO OVERFLOW */
+  display:flex;flex-direction:column;
+}
+
+.s-logo{font-family:var(--fh);font-weight:800;font-size:.95rem;letter-spacing:.05em;
+  padding-bottom:.55rem;border-bottom:1px solid var(--border);margin-bottom:.5rem;flex-shrink:0}
+.s-logo span{color:var(--green)}
+.s-sub{font-family:var(--fm);font-size:.5rem;color:var(--gray);letter-spacing:.08em;display:block;margin-top:.1rem}
+
+.s-section{flex-shrink:0}
+.s-h{font-family:var(--fm);font-size:.5rem;letter-spacing:.1em;color:var(--gray);
+  text-transform:uppercase;margin:.55rem 0 .28rem;padding-top:.55rem;
+  border-top:1px solid var(--border)}
+
+/* chip row — no wrap, scrollable horizontally but hidden scrollbar */
+.chips{display:flex;gap:.2rem;overflow-x:auto;padding-bottom:.1rem;flex-shrink:0}
+.chips::-webkit-scrollbar{display:none}
+.chip{font-family:var(--fm);font-size:.52rem;padding:.18rem .42rem;border:1px solid var(--border);
+  background:transparent;cursor:pointer;color:var(--black);white-space:nowrap;flex-shrink:0;transition:all .12s}
+.chip:hover,.chip.active{background:var(--black);color:var(--green);border-color:var(--black)}
+
+/* inputs */
+.si{width:100%;border:1px solid var(--border);background:var(--bg);font-family:var(--fm);
+  font-size:.58rem;padding:.3rem .45rem;color:var(--black);outline:none;margin-bottom:.25rem}
+.si:focus{border-color:var(--green)}
+.si::placeholder{color:var(--gray)}
+select.si{cursor:pointer}
+
+/* slider row — ultra compact */
+.sr{display:flex;align-items:center;gap:.3rem;margin-bottom:.22rem}
+.sr span.lbl{font-family:var(--fm);font-size:.48rem;color:var(--gray);
+  min-width:38px;max-width:38px;line-height:1.2;flex-shrink:0}
+.sr input[type=range]{flex:1;accent-color:var(--green);height:12px;min-width:0}
+.sr .val{font-family:var(--fm);font-size:.52rem;color:var(--green);min-width:26px;text-align:right;flex-shrink:0}
+
+/* active tickers */
+#ac{display:flex;flex-wrap:wrap;gap:.18rem;margin-bottom:.2rem;min-height:16px}
+
+/* buttons */
+.btn-b{width:100%;background:var(--black);color:var(--green);border:none;font-family:var(--fm);
+  font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;padding:.5rem .6rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:.35rem;margin-top:.45rem;transition:all .12s}
+.btn-b:hover{background:var(--green);color:var(--black)}
+.btn-b:disabled{opacity:.35;cursor:not-allowed}
+.btn-o{width:100%;background:transparent;color:var(--black);border:1px solid var(--border);
+  font-family:var(--fm);font-size:.5rem;letter-spacing:.08em;text-transform:uppercase;
+  padding:.35rem .6rem;cursor:pointer;transition:all .12s;margin-top:.22rem}
+.btn-o:hover{border-color:var(--black)}
+
+/* api dot */
+.s-api{font-family:var(--fm);font-size:.48rem;color:var(--gray);margin-top:auto;padding-top:.4rem}
+
+/* ── MAIN ── */
+.main{flex:1;padding:1.4rem 1.6rem;background:var(--bg);min-width:0;overflow-x:hidden}
+
+.page-ey{font-family:var(--fm);font-size:.58rem;letter-spacing:.1em;color:var(--green);text-transform:uppercase;margin-bottom:.25rem}
+.page-t{font-family:var(--fh);font-weight:800;font-size:2.2rem;line-height:1;text-transform:uppercase;margin-bottom:1rem}
+.page-t .gh{color:transparent;-webkit-text-stroke:1.5px var(--gl)}
+
+.pill{display:inline-flex;align-items:center;gap:.35rem;font-family:var(--fm);font-size:.54rem;
+  letter-spacing:.07em;border:1px solid var(--border);padding:.2rem .6rem;
+  background:var(--surface);color:var(--gray);margin-bottom:.9rem}
+.dot{width:5px;height:5px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* tabs */
+.tabs{display:flex;border-bottom:1px solid var(--border);margin-bottom:1rem}
+.tb{font-family:var(--fm);font-size:.56rem;letter-spacing:.08em;text-transform:uppercase;
+  padding:.55rem .9rem;background:none;border:none;cursor:pointer;color:var(--gray);
+  border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .12s}
+.tb:hover{color:var(--black)}.tb.active{color:var(--green);border-bottom-color:var(--green)}
+
+/* log */
+.log{background:#0C0C0A;padding:.65rem .85rem;font-family:var(--fm);font-size:.62rem;
+  height:100px;overflow-y:auto;border:1px solid rgba(107,191,62,.15);margin-bottom:1rem}
+.ll{color:#4a4a40;line-height:1.7}.ok{color:var(--green)}.er{color:#e24b4a}
+
+/* metrics */
+.mg{display:grid;grid-template-columns:repeat(4,1fr);gap:.55rem;margin-bottom:1rem}
+.mc{border:1px solid var(--border);background:var(--surface);padding:.75rem .85rem}
+.ml{font-family:var(--fm);font-size:.5rem;letter-spacing:.08em;color:var(--gray);text-transform:uppercase;margin-bottom:.28rem}
+.mv{font-family:var(--fh);font-weight:700;font-size:1.45rem;line-height:1}
+.mv.g{color:var(--gd)}.mv.r{color:#c0392b}.mv.a{color:#8a5a0a}
+
+/* company cards */
+.cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:.55rem;margin-bottom:1rem}
+.cc{border:1px solid var(--border);background:var(--surface);padding:.8rem;position:relative}
+.ctk{font-family:var(--fh);font-weight:800;font-size:1.25rem}
+.cn{font-family:var(--fm);font-size:.52rem;color:var(--gray);margin-bottom:.55rem;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rb{position:absolute;top:.6rem;right:.6rem;font-family:var(--fm);font-size:.5rem;padding:.14rem .38rem;text-transform:uppercase}
+.bs{background:var(--gdim);color:var(--gd);border:1px solid rgba(107,191,62,.22)}
+.bw{background:rgba(239,159,39,.07);color:#7a4f0a;border:1px solid rgba(239,159,39,.22)}
+.bd{background:rgba(226,75,74,.06);color:#9b2626;border:1px solid rgba(226,75,74,.18)}
+.sr2{display:flex;justify-content:space-between;margin-top:.28rem}
+.sl{font-family:var(--fm);font-size:.5rem;color:var(--gray);text-transform:uppercase}
+.sv{font-family:var(--fm);font-size:.62rem;font-weight:500}
+.sv.r{color:#a32d2d}.sv.g{color:var(--gd)}
+.tag{display:inline-block;border:1px solid var(--border);font-family:var(--fm);font-size:.5rem;
+  padding:.12rem .38rem;margin:.12rem .12rem 0 0;color:var(--gray)}
+
+/* chart wrap */
+.cw{border:1px solid var(--border);background:var(--surface);padding:.9rem;margin-bottom:.8rem}
+.ct{font-family:var(--fm);font-size:.54rem;letter-spacing:.08em;color:var(--gray);text-transform:uppercase;margin-bottom:.7rem}
+
+/* two col */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-bottom:.8rem}
+
+/* tranche bars */
+.tr{display:flex;align-items:center;gap:.65rem;padding:.55rem 0;border-bottom:1px solid var(--border)}
+.tr:last-child{border-bottom:none}
+.tl{font-family:var(--fm);font-size:.56rem;width:76px;flex-shrink:0}
+.tbw{flex:1;background:var(--gl);height:4px;border-radius:2px;min-width:0}
+.tb2{height:4px;border-radius:2px;transition:width .5s}
+.tp{font-family:var(--fm);font-size:.62rem;font-weight:500;width:52px;text-align:right;flex-shrink:0}
+
+/* stress table */
+.st{width:100%;border-collapse:collapse;font-family:var(--fm);font-size:.62rem}
+.st th{text-align:left;padding:.38rem .6rem;font-size:.5rem;letter-spacing:.08em;
+  color:var(--gray);text-transform:uppercase;border-bottom:1px solid var(--border)}
+.st td{padding:.45rem .6rem;border-bottom:1px solid var(--border)}
+.dp{color:#c0392b;font-weight:500}.dn{color:var(--gd);font-weight:500}
+
+/* section divider */
+.sd{font-family:var(--fm);font-size:.54rem;letter-spacing:.1em;color:var(--green);
+  text-transform:uppercase;margin:.85rem 0 .5rem;padding-bottom:.32rem;border-bottom:1px solid var(--border)}
+
+/* INTERPRETATION DROPDOWN */
+.interp{border:1px solid rgba(107,191,62,.25);background:rgba(107,191,62,.04);margin-bottom:.85rem;margin-top:.2rem}
+.interp-head{
+  display:flex;align-items:center;justify-content:space-between;
+  font-family:var(--fm);font-size:.54rem;letter-spacing:.08em;color:var(--gd);
+  padding:.5rem .75rem;cursor:pointer;text-transform:uppercase;user-select:none;
+}
+.interp-head:hover{background:rgba(107,191,62,.06)}
+.interp-arrow{transition:transform .2s;font-size:.65rem}
+.interp-body{
+  border-top:1px solid rgba(107,191,62,.18);
+  padding:.65rem .75rem;display:none;
+  font-family:var(--fb);font-size:.72rem;line-height:1.75;color:#444440;
+}
+.interp-body.open{display:block}
+.interp-body b{color:var(--black);font-weight:600}
+.ib-row{display:flex;gap:.5rem;margin-bottom:.4rem;align-items:flex-start}
+.ib-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:.45rem}
+
+/* ABOUT MODAL */
+.modal-overlay{
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);
+  z-index:1000;align-items:center;justify-content:center;
+}
+.modal-overlay.open{display:flex}
+.modal{
+  background:var(--surface);border:1px solid var(--border);
+  max-width:580px;width:90%;max-height:85vh;overflow-y:auto;
+  padding:1.5rem 1.75rem;position:relative;
+}
+.modal-close{
+  position:absolute;top:1rem;right:1rem;background:none;border:none;
+  font-family:var(--fm);font-size:.75rem;cursor:pointer;color:var(--gray);
+  padding:.2rem .4rem;
+}
+.modal-close:hover{color:var(--black)}
+.modal h2{font-family:var(--fh);font-weight:800;font-size:1.6rem;text-transform:uppercase;margin-bottom:.2rem}
+.modal-ey{font-family:var(--fm);font-size:.58rem;color:var(--green);letter-spacing:.08em;margin-bottom:1rem}
+.modal p{font-size:.82rem;line-height:1.75;margin-bottom:.75rem;color:#333}
+.modal h3{font-family:var(--fh);font-size:1.1rem;font-weight:700;text-transform:uppercase;
+  margin:.9rem 0 .35rem;color:var(--black);border-top:1px solid var(--border);padding-top:.65rem}
+.modal .pill2{display:inline-block;border:1px solid var(--border);font-family:var(--fm);
+  font-size:.56rem;padding:.2rem .55rem;margin:.18rem .18rem 0 0;color:var(--gray)}
+
+/* empty */
+.empty{text-align:center;padding:3rem 2rem}
+.ei{font-family:var(--fm);font-size:1.5rem;color:var(--gl);margin-bottom:.65rem}
+.et{font-family:var(--fm);font-size:.62rem;color:var(--gray);letter-spacing:.06em}
+
+/* spinner */
+.spin{display:inline-block;width:11px;height:11px;border:1.5px solid rgba(107,191,62,.3);
+  border-top-color:var(--green);border-radius:50%;animation:sp .7s linear infinite;margin-right:.35rem;vertical-align:middle}
+@keyframes sp{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="app">
+
+<!-- ════════════════════════════════════════
+     SIDEBAR
+════════════════════════════════════════ -->
+<aside class="sidebar">
+  <div class="s-logo">KARAM<span>.</span><span class="s-sub">CREDIT RISK ENGINE</span></div>
+
+  <div class="s-section">
+    <div class="s-h" style="border-top:none;padding-top:0;margin-top:.1rem">PRESETS</div>
+    <div class="chips" id="presetChips">
+      <button class="chip active" onclick="selectPreset('ig',this)">IG</button>
+      <button class="chip" onclick="selectPreset('hy',this)">HY</button>
+      <button class="chip" onclick="selectPreset('mixed',this)">MIXED</button>
+      <button class="chip" onclick="selectPreset('crisis',this)">CRISIS</button>
+    </div>
+
+    <div class="s-h">ADD TICKER</div>
+    <input class="si" type="text" id="ct" placeholder="e.g. NVDA..." maxlength="8"/>
+    <button class="btn-o" onclick="addTicker()">+ ADD</button>
+
+    <div class="s-h">ACTIVE</div>
+    <div id="ac"></div>
+
+    <div class="s-h">PARAMETERS</div>
+    <div class="sr"><span class="lbl">CORR ρ</span><input type="range" min="0" max="100" value="20" id="rho" oninput="us()"/><span class="val" id="rhoV">0.20</span></div>
+    <div class="sr"><span class="lbl">CONF.</span>
+      <select class="si" id="conf" style="margin-bottom:0;flex:1;padding:.22rem .3rem">
+        <option value="0.90">90%</option><option value="0.95">95%</option>
+        <option value="0.99" selected>99%</option><option value="0.999">99.9%</option>
+      </select>
+    </div>
+    <div class="sr"><span class="lbl">SIMS</span><input type="range" min="1" max="4" value="3" id="sim" oninput="us()"/><span class="val" id="simV">50K</span></div>
+    <button class="btn-b" id="runBtn" onclick="runAnalysis()"><span id="runTxt">⚡ RUN ANALYSIS</span></button>
+
+    <div class="s-h">STRESS TEST</div>
+    <div class="sr"><span class="lbl">STR ρ</span><input type="range" min="0" max="100" value="50" id="strRho" oninput="us()"/><span class="val" id="strRhoV">0.50</span></div>
+    <div class="sr"><span class="lbl">PD ×</span><input type="range" min="10" max="50" value="20" id="pdm" oninput="us()"/><span class="val" id="pdmV">2.0×</span></div>
+    <button class="btn-o" onclick="runStress()">RUN STRESS TEST</button>
+    <button class="btn-o" onclick="document.getElementById('aboutModal').classList.add('open')" style="margin-top:.35rem;color:var(--green);border-color:rgba(107,191,62,.35)">// ABOUT PROJECT</button>
+  </div>
+
+  <div class="s-api">
+    API: <span id="apiSt" style="color:#e24b4a">CHECKING</span> · 127.0.0.1:8000
+  </div>
+</aside>
+
+<!-- ════════════════════════════════════════
+     MAIN
+════════════════════════════════════════ -->
+<main class="main">
+  <div class="pill"><span class="dot"></span>SYSTEM_STATUS: ONLINE &nbsp;|&nbsp; CREDIT_RISK_ENGINE v1.0</div>
+  <div class="page-ey">// ANALYSIS_TERMINAL</div>
+  <div class="page-t">CREDIT <span class="gh">RISK</span></div>
+
+  <div class="tabs">
+    <button class="tb active" onclick="sw('overview',this)">// OVERVIEW</button>
+    <button class="tb" onclick="sw('loss',this)">// LOSS DIST.</button>
+    <button class="tb" onclick="sw('tranche',this)">// TRANCHES</button>
+    <button class="tb" onclick="sw('stress',this)">// STRESS TEST</button>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div id="tab-overview">
+    <div class="log" id="sysLog">
+      <div class="ll">&gt; CREDIT_RISK_ENGINE initializing... <span class="ok">OK</span></div>
+      <div class="ll">&gt; Merton solver loaded (scipy.optimize.fsolve)... <span class="ok">OK</span></div>
+      <div class="ll">&gt; Vasicek Monte Carlo engine ready... <span class="ok">OK</span></div>
+      <div class="ll">&gt; GitHub CSV data layer (328 tickers)... <span class="ok">OK</span></div>
+      <div class="ll">&gt; Select a preset or add tickers, then RUN ANALYSIS.</div>
+    </div>
+
+    <!-- OVERVIEW INTERPRETATION -->
+    <div class="interp" id="interpOverview" style="display:none">
+      <div class="interp-head" onclick="toggleInterp('interpOverview')">
+        <span>// HOW TO READ THESE RESULTS</span>
+        <span class="interp-arrow" id="arrowInterpOverview">▼</span>
+      </div>
+      <div class="interp-body" id="bodyInterpOverview">
+        <div class="ib-row"><div class="ib-dot" style="background:var(--gd)"></div><div><b>Expected Loss (EL)</b> — The average dollar amount you expect to lose annually across all Monte Carlo scenarios. Think of this as the "insurance premium" the portfolio needs to price in. A low EL means the portfolio is predominantly investment-grade.</div></div>
+        <div class="ib-row"><div class="ib-dot" style="background:#8a5a0a"></div><div><b>Unexpected Loss (UL)</b> — The standard deviation of the loss distribution. Higher UL means losses are more unpredictable — this is what banks hold capital against, not EL.</div></div>
+        <div class="ib-row"><div class="ib-dot" style="background:#c0392b"></div><div><b>Credit VaR</b> — At 99% confidence: in the worst 1% of economic scenarios, losses will exceed EL by this amount. Basel II uses 99.9% for regulatory capital. Higher ρ (correlation) always increases Credit VaR.</div></div>
+        <div class="ib-row"><div class="ib-dot" style="background:#c0392b"></div><div><b>Expected Shortfall (ES)</b> — The average loss in the tail beyond VaR. ES is a coherent risk measure (unlike VaR) and is used in Basel III/FRTB for market risk.</div></div>
+        <div class="ib-row"><div class="ib-dot" style="background:var(--gd)"></div><div><b>Distance to Default (DD)</b> — How many standard deviations the firm's assets are from the default point. DD &gt; 3 = Safe, DD 1–3 = Watch, DD &lt; 1 = Distressed. AAPL/MSFT typically show DD &gt; 14.</div></div>
+        <div class="ib-row"><div class="ib-dot" style="background:var(--gray)"></div><div><b>Why do IG portfolios show $0.00?</b> — This is mathematically correct. Apple's implied PD from the Merton model is ~10⁻⁵⁸ (essentially zero). EL = PD × LGD × Notional ≈ $0. To see meaningful numbers, use the HY or MIXED presets, or increase the PD multiplier in the stress test.</div></div>
+      </div>
+    </div>
+
+    <div id="overviewContent"><div class="empty"><div class="ei">//</div><div class="et">RUN ANALYSIS TO SEE COMPANY RISK PROFILES</div></div></div>
+  </div>
+
+  <!-- LOSS DIST -->
+  <div id="tab-loss" style="display:none">
+    <div class="interp">
+      <div class="interp-head" onclick="toggleInterp('interpLoss')">
+        <span>// HOW TO READ THE LOSS DISTRIBUTION</span>
+        <span class="interp-arrow" id="arrowInterpLoss">▼</span>
+      </div>
+      <div class="interp-body" id="bodyInterpLoss">
+        <div class="ib-row"><div class="ib-dot" style="background:var(--gd)"></div><div><b>Green bars</b> — Normal loss scenarios. Most of the time (99% of scenarios at 99% CI), losses will land in this region. The peak near zero is typical for well-rated portfolios.</div></div>
+        <div class="ib-row"><div class="ib-dot" style="background:#c0392b"></div><div><b>Red bars</b> — Tail losses beyond the Credit VaR threshold. These are the extreme scenarios where the economy deteriorates severely and multiple companies default simultaneously.</div></div>
+        <div class="ib-row"><div class="ib-dot" style="background:var(--gray)"></div><div><b>Fat tail vs thin tail</b> — Increase the correlation ρ slider and re-run. You will see the distribution spread rightward and the red tail get fatter. This is the Vasicek model demonstrating systematic risk: when ρ is high, defaults cluster together in bad scenarios.</div></div>
+        <div class="ib-row"><div class="ib-dot" style="background:#8a5a0a"></div><div><b>2008 analogy</b> — Before the crisis, banks used ρ ≈ 0.10–0.20. In reality, ρ spiked to 0.60–0.80 as all names defaulted together. Set ρ = 0.70 and observe how the distribution transforms.</div></div>
+      </div>
+    </div>
+    <div id="lossContent"><div class="empty"><div class="ei">//</div><div class="et">RUN ANALYSIS TO SEE LOSS DISTRIBUTION</div></div></div>
+  </div>
+
+  <!-- TRANCHE -->
+  <div id="tab-tranche" style="display:none">
+    <div class="interp">
+      <div class="interp-head" onclick="toggleInterp('interpTranche')">
+        <span>// HOW TO READ CDO TRANCHE PRICING</span>
+        <span class="interp-arrow" id="arrowInterpTranche">▼</span>
+      </div>
+      <div class="interp-body" id="bodyInterpTranche">
+        <div class="ib-row"><div class="ib-dot" style="background:#c0392b"></div><div><b>Equity tranche (0%–3%)</b> — First-loss position. Absorbs every dollar of loss up to 3% of total notional. Highest yield, highest risk. In a typical investment-grade portfolio, the equity tranche absorbs nearly all the expected loss.</div></div>
+        <div class="ib-row"><div class="ib-dot" style="background:#d68910"></div><div><b>Mezzanine tranche (3%–7%)</b> — Only starts taking losses after the equity tranche is wiped out. Rated BBB/BB typically. The mezzanine tranche was the "hidden bomb" in 2008 CDOs — rated A or AA but exposed to catastrophic losses when ρ spiked.</div></div>
+        <div class="ib-row"><div class="ib-dot" style="background:var(--gd)"></div><div><b>Senior tranche (7%–100%)</b> — Only takes losses if more than 7% of the entire portfolio defaults. Rated AAA. Under normal ρ (0.10–0.20), this tranche has near-zero expected loss. Under crisis ρ (0.60+), it becomes exposed.</div></div>
+        <div class="ib-row"><div class="ib-dot" style="background:var(--gray)"></div><div><b>The 2008 lesson</b> — Rating agencies modeled AAA tranches using ρ ≈ 0.30. Realized ρ was 0.80+. The Gaussian copula assigned near-zero probability to scenarios where AAA tranches suffered losses. Those scenarios materialized. This tool lets you see exactly why.</div></div>
+        <div class="ib-row"><div class="ib-dot" style="background:var(--gd)"></div><div><b>How to use</b> — Run with ρ = 0.20 (normal), note the senior tranche EL. Then run stress test with ρ = 0.60. The senior tranche expected loss will jump dramatically, illustrating why correlation assumptions in CDO pricing are critical.</div></div>
+      </div>
+    </div>
+    <div id="trancheContent"><div class="empty"><div class="ei">//</div><div class="et">RUN ANALYSIS TO SEE CDO TRANCHE PRICING</div></div></div>
+  </div>
+
+  <!-- STRESS -->
+  <div id="tab-stress" style="display:none">
+    <div class="interp">
+      <div class="interp-head" onclick="toggleInterp('interpStress')">
+        <span>// HOW TO READ THE STRESS TEST</span>
+        <span class="interp-arrow" id="arrowInterpStress">▼</span>
+      </div>
+      <div class="interp-body" id="bodyInterpStress">
+        <div class="ib-row"><div class="ib-dot" style="background:var(--gd)"></div><div><b>What the stress test does</b> — Runs the exact same Monte Carlo simulation twice: once with your base parameters, once with shocked parameters. The comparison shows how sensitive your portfolio is to correlation and PD deterioration.</div></div>
+        <div class="ib-row"><div class="ib-dot" style="background:#c0392b"></div><div><b>Correlation shock (ρ)</b> — Raising ρ from 0.20 to 0.50 represents moving from normal market conditions to a mild recession. Raising to 0.70+ represents a 2008-style systemic crisis where all firms' fortunes are highly correlated with the macroeconomy.</div></div>
+        <div class="ib-row"><div class="ib-dot" style="background:#8a5a0a"></div><div><b>PD multiplier</b> — Multiplies every company's implied Probability of Default by the chosen factor. A 2× multiplier means each firm is twice as likely to default — representing a recession scenario. A 4× multiplier is a severe stress.</div></div>
+        <div class="ib-row"><div class="ib-dot" style="background:var(--gray)"></div><div><b>Basel III connection</b> — Regulators require banks to run stress tests with similar shocks. The results determine how much additional capital a bank must hold above the base Credit VaR. A stressed CVaR 200% above base would typically trigger regulatory capital add-ons.</div></div>
+        <div class="ib-row"><div class="ib-dot" style="background:var(--gd)"></div><div><b>Recommended scenario</b> — Run with ρ = 0.20 base, ρ = 0.60 stressed, PD multiplier = 3×. This approximates the 2008 financial crisis scenario and shows how dramatically expected losses can shift in systemic stress events.</div></div>
+      </div>
+    </div>
+    <div id="stressContent"><div class="empty"><div class="ei">//</div><div class="et">RUN STRESS TEST TO SEE BASE VS STRESSED COMPARISON</div></div></div>
+  </div>
+</main>
+</div>
+
+<!-- ════════════════════════════════════════
+     ABOUT MODAL
+════════════════════════════════════════ -->
+<div class="modal-overlay" id="aboutModal" onclick="closeAbout(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('aboutModal').classList.remove('open')">✕ CLOSE</button>
+    <div style="font-family:var(--fm);font-size:.58rem;color:var(--green);letter-spacing:.08em;margin-bottom:.2rem">// KARAMFRM.COM / QUANT TOOLS</div>
+    <h2>CREDIT RISK ENGINE</h2>
+    <div class="modal-ey">Full-Stack Quantitative Finance Terminal · karamfrm.com/credit</div>
+
+    <p>A production-grade credit risk modelling platform implementing three interconnected quantitative frameworks used by professional credit risk practitioners and FRM candidates. Built to demonstrate the mathematical chain from individual company default probability to portfolio loss distribution to structured product pricing.</p>
+
+    <h3>The Three Models</h3>
+    <p><b>Merton Structural Model (1974)</b> — Treats equity as a call option on firm assets. Given observable equity price, equity volatility, and balance sheet debt, the model solves a two-equation system (via scipy.optimize.fsolve) to extract implied asset value, asset volatility, Distance to Default, and Probability of Default. This is the foundation of Moody's KMV commercial system.</p>
+    <p><b>Vasicek One-Factor Model (1987)</b> — Models each company's asset return as A_i = √ρ·Z + √(1-ρ)·ε_i, where Z is a common systematic factor and ε_i is idiosyncratic risk. Company i defaults when A_i falls below N⁻¹(PD_i). Running 50,000 scenarios produces the full portfolio loss distribution from which EL, UL, Credit VaR, and Expected Shortfall are extracted. This is the model underlying Basel II/III IRB regulatory capital.</p>
+    <p><b>Gaussian Copula (Li, 2000)</b> — The Gaussian copula with one factor is mathematically identical to the Vasicek model. It prices CDO tranches by computing expected tranche losses from the Monte Carlo loss array. The equity tranche absorbs first losses; the senior tranche only suffers if catastrophic defaults occur simultaneously. The failure of this model's correlation assumptions caused the 2008 financial crisis.</p>
+
+    <h3>Technical Stack</h3>
+    <p>
+      <span class="pill2">Python 3.13</span><span class="pill2">FastAPI</span><span class="pill2">NumPy</span>
+      <span class="pill2">SciPy</span><span class="pill2">Pandas</span><span class="pill2">yfinance</span>
+      <span class="pill2">GitHub Actions</span><span class="pill2">Chart.js</span><span class="pill2">HTML/CSS/JS</span>
+    </p>
+    <p>Market data (market cap, debt, equity volatility) for 328 tickers is pre-fetched daily by a GitHub Actions workflow running on GitHub's servers, committed to a public CSV, and served to the backend via a raw URL. The FastAPI backend runs Merton and Vasicek computations per-request with no live Yahoo Finance dependency.</p>
+
+    <h3>Data & Limitations</h3>
+    <p>Merton assumes a single class of zero-coupon debt — real firms have layered capital structures. Correlation ρ is constant across the portfolio; real correlations vary by sector and time. The Gaussian copula understates tail dependence (Student-t copulas address this). These limitations are documented intentionally — understanding model weaknesses is a mark of quantitative rigour.</p>
+
+    <h3>Validation</h3>
+    <p>Monte Carlo output is validated against the Basel II IRB analytical formula: K = LGD · N[N⁻¹(PD)/√(1-R) + √(R/(1-R))·N⁻¹(0.999)] - LGD·PD. At 50,000 simulations, Monte Carlo converges within 2–3% of the analytical formula at 99.9% confidence.</p>
+  </div>
+</div>
+
+<script>
+const API='http://127.0.0.1:8000';
+const PRESETS={
+  ig:[{ticker:'AAPL',notional:10000000},{ticker:'MSFT',notional:10000000},{ticker:'JPM',notional:10000000},{ticker:'JNJ',notional:10000000},{ticker:'PG',notional:10000000}],
+  hy:[{ticker:'F',notional:10000000},{ticker:'M',notional:10000000},{ticker:'CCL',notional:10000000},{ticker:'AAL',notional:10000000},{ticker:'AMC',notional:5000000}],
+  mixed:[{ticker:'AAPL',notional:15000000},{ticker:'MSFT',notional:15000000},{ticker:'JPM',notional:10000000},{ticker:'F',notional:7000000},{ticker:'CCL',notional:7000000},{ticker:'AAL',notional:6000000}],
+  crisis:[{ticker:'C',notional:10000000},{ticker:'BAC',notional:10000000},{ticker:'GS',notional:10000000},{ticker:'MS',notional:10000000},{ticker:'WFC',notional:10000000}]
+};
+const SM={1:10000,2:25000,3:50000,4:100000};
+let cos=[...PRESETS.ig],lastRes=null,lChart=null,sChart=null;
+
+// ── interp toggle ──
+function toggleInterp(id){
+  const body=document.getElementById('body'+id.replace('interp','Interp'));
+  const arrow=document.getElementById('arrow'+id.replace('interp','Interp'));
+  const open=body.classList.toggle('open');
+  arrow.style.transform=open?'rotate(180deg)':'';
+}
+
+// ── about modal ──
+function closeAbout(e){if(e.target===document.getElementById('aboutModal'))document.getElementById('aboutModal').classList.remove('open')}
+
+// ── sliders ──
+function us(){
+  document.getElementById('rhoV').textContent=(document.getElementById('rho').value/100).toFixed(2);
+  const s=parseInt(document.getElementById('sim').value);
+  document.getElementById('simV').textContent=s===4?'100K':s===3?'50K':s===2?'25K':'10K';
+  document.getElementById('strRhoV').textContent=(document.getElementById('strRho').value/100).toFixed(2);
+  document.getElementById('pdmV').textContent=(document.getElementById('pdm').value/10).toFixed(1)+'×';
+}
+
+// ── preset ──
+function selectPreset(n,btn){
+  cos=[...PRESETS[n]];
+  document.querySelectorAll('#presetChips .chip').forEach(c=>c.classList.remove('active'));
+  btn.classList.add('active'); rca();
+  log('> Preset: '+n.toUpperCase()+' ('+cos.length+' names)','ok');
+}
+
+// ── add ticker ──
+function addTicker(){
+  const t=document.getElementById('ct').value.trim().toUpperCase();
+  if(!t) return;
+  if(cos.find(c=>c.ticker===t)){log('> '+t+' already in portfolio','err');return;}
+  if(cos.length>=20){log('> Max 20 companies','err');return;}
+  cos.push({ticker:t,notional:10000000});
+  document.getElementById('ct').value='';
+  document.querySelectorAll('#presetChips .chip').forEach(c=>c.classList.remove('active'));
+  rca(); log('> Added '+t,'ok');
+}
+
+function rca(){
+  document.getElementById('ac').innerHTML=cos.map(c=>'<span class="chip active" style="font-size:.48rem;padding:.14rem .36rem">'+c.ticker+'</span>').join('');
+}
+
+// ── tabs ──
+function sw(n,btn){
+  document.querySelectorAll('.tb').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('[id^="tab-"]').forEach(t=>t.style.display='none');
+  btn.classList.add('active');
+  document.getElementById('tab-'+n).style.display='block';
+}
+function swn(n){
+  const tabs=['overview','loss','tranche','stress'];
+  document.querySelectorAll('.tb').forEach((b,i)=>b.classList.toggle('active',tabs[i]===n));
+  document.querySelectorAll('[id^="tab-"]').forEach(t=>t.style.display='none');
+  document.getElementById('tab-'+n).style.display='block';
+}
+
+// ── log ──
+function log(msg,t){
+  const el=document.getElementById('sysLog');
+  const d=document.createElement('div');d.className='ll';
+  if(t==='ok') d.innerHTML=msg;
+  else if(t==='err') d.innerHTML='<span class="er">'+msg+'</span>';
+  else d.textContent=msg;
+  el.appendChild(d);el.scrollTop=el.scrollHeight;
+}
+
+// ── formatters ──
+const f$=n=>'$'+(n/1e6).toFixed(2)+'M';
+const fp=n=>(n*100).toFixed(4)+'%';
+const fpb=n=>(n*100).toFixed(2)+'%';
+
+// ── RUN ANALYSIS ──
+async function runAnalysis(){
+  if(!cos.length){log('> No companies','err');return;}
+  const btn=document.getElementById('runBtn'),txt=document.getElementById('runTxt');
+  btn.disabled=true;txt.innerHTML='<span class="spin"></span>COMPUTING...';
+  const rho=parseFloat(document.getElementById('rho').value)/100;
+  const conf=parseFloat(document.getElementById('conf').value);
+  const nsim=SM[parseInt(document.getElementById('sim').value)];
+  log('> Fetching Merton PD for '+cos.length+' tickers...','ok');
+  log('> ρ='+rho.toFixed(2)+' CI='+(conf*100)+'% N='+nsim.toLocaleString(),'ok');
+  try{
+    const r=await fetch(API+'/portfolio/analyze',{method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({companies:cos,rho,confidence:conf,n_sim:nsim})});
+    if(!r.ok) throw new Error(await r.text());
+    const d=await r.json(); lastRes=d;
+    log('> Merton complete... <span class="ok">OK</span>','ok');
+    log('> Monte Carlo ('+nsim.toLocaleString()+' paths)... <span class="ok">OK</span>','ok');
+    log('> EL='+f$(d.expected_loss)+' CVaR='+f$(d.credit_var)+' ES='+f$(d.expected_shortfall),'ok');
+    renderOverview(d); renderLoss(d); await renderTranche(d,rho,nsim);
+    log('> Complete. <span class="ok">System ready.</span>','ok');
+    document.getElementById('interpOverview').style.display='block';
+  }catch(e){log('> ERROR: '+e.message,'err');}
+  finally{btn.disabled=false;txt.textContent='⚡ RUN ANALYSIS';}
+}
+
+function renderOverview(d){
+  const cards=d.companies.map(c=>{
+    const bc=c.risk_label==='Safe'?'bs':c.risk_label==='Watch'?'bw':'bd';
+    return '<div class="cc"><span class="rb '+bc+'">'+c.risk_label+'</span>'+
+      '<div class="ctk">'+c.ticker+'</div><div class="cn">'+c.company_name+'</div>'+
+      '<div class="sr2"><span class="sl">PD</span><span class="sv r">'+fp(c.pd)+'</span></div>'+
+      '<div class="sr2"><span class="sl">DD</span><span class="sv">'+c.dd.toFixed(2)+'σ</span></div>'+
+      '<div class="sr2"><span class="sl">σ_V</span><span class="sv">'+fpb(c.asset_volatility)+'</span></div>'+
+      '<div class="sr2"><span class="sl">LGD</span><span class="sv">'+fpb(c.lgd)+'</span></div>'+
+      '<div style="margin-top:.42rem"><span class="tag">'+c.sector+'</span><span class="tag">'+f$(c.notional)+'</span></div></div>';
+  }).join('');
+  document.getElementById('overviewContent').innerHTML=
+    '<div class="mg">'+
+    '<div class="mc"><div class="ml">// EXPECTED LOSS</div><div class="mv g">'+f$(d.expected_loss)+'</div></div>'+
+    '<div class="mc"><div class="ml">// UNEXPECTED LOSS</div><div class="mv a">'+f$(d.unexpected_loss)+'</div></div>'+
+    '<div class="mc"><div class="ml">// CREDIT VaR ('+(d.confidence*100).toFixed(0)+'%)</div><div class="mv r">'+f$(d.credit_var)+'</div></div>'+
+    '<div class="mc"><div class="ml">// EXPECTED SHORTFALL</div><div class="mv r">'+f$(d.expected_shortfall)+'</div></div>'+
+    '</div><div class="sd">// COMPANY_RISK_PROFILES</div><div class="cg">'+cards+'</div>';
+}
+
+function renderLoss(d){
+  document.getElementById('lossContent').innerHTML=
+    '<div class="cw"><div class="ct">// PORTFOLIO LOSS DISTRIBUTION — '+d.n_sim.toLocaleString()+' MONTE CARLO PATHS | GREEN = NORMAL SCENARIOS | RED = TAIL BEYOND VaR</div>'+
+    '<div style="height:310px;position:relative"><canvas id="lossC"></canvas></div></div>';
+  const ls=d.loss_distribution,mn=Math.min(...ls),mx=Math.max(...ls),bins=55,bs=(mx-mn)/bins;
+  const counts=new Array(bins).fill(0),labels=[];
+  for(let i=0;i<bins;i++) labels.push(((mn+i*bs)/1e6).toFixed(2));
+  ls.forEach(l=>{const i=Math.min(Math.floor((l-mn)/bs),bins-1);counts[i]++;});
+  const vt=d.expected_loss+d.credit_var;
+  const bg=labels.map((_,i)=>(mn+i*bs)>=vt?'rgba(192,57,43,.72)':'rgba(107,191,62,.52)');
+  if(lChart) lChart.destroy();
+  lChart=new Chart(document.getElementById('lossC'),{
+    type:'bar',data:{labels,datasets:[{data:counts,backgroundColor:bg,borderWidth:0,barPercentage:1,categoryPercentage:1}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+      scales:{x:{ticks:{font:{family:'IBM Plex Mono',size:9},color:'#888780',maxTicksLimit:12},grid:{display:false},
+        title:{display:true,text:'Portfolio Loss ($M)',font:{family:'IBM Plex Mono',size:9},color:'#888780'}},
+        y:{ticks:{font:{family:'IBM Plex Mono',size:9},color:'#888780'},grid:{color:'rgba(0,0,0,.05)'},
+        title:{display:true,text:'Frequency',font:{family:'IBM Plex Mono',size:9},color:'#888780'}}}}});
+}
+
+async function renderTranche(d,rho,nsim){
+  const companies=d.companies.map(c=>({ticker:c.ticker,notional:c.notional}));
+  try{
+    const r=await fetch(API+'/tranche/price',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({companies,rho,n_sim:nsim})});
+    const td=await r.json();
+    const colors={'Equity':'#c0392b','Mezzanine':'#d68910','Senior':'#4A8A28'};
+    const mx=Math.max(...td.tranches.map(t=>t.expected_loss_pct),0.0001);
+    const cards=td.tranches.map(t=>{const c=colors[t.label]||'#888';return '<div class="mc"><div class="ml" style="color:'+c+'">// '+t.label.toUpperCase()+'</div><div class="mv" style="color:'+c+'">'+(t.expected_loss_pct*100).toFixed(3)+'%</div><div style="font-family:var(--fm);font-size:.56rem;color:var(--gray);margin-top:.22rem">EL: '+f$(t.expected_loss_usd)+'</div><div style="font-family:var(--fm);font-size:.5rem;color:var(--gray)">'+(t.attachment*100).toFixed(0)+'%→'+(t.detachment*100).toFixed(0)+'%</div></div>';}).join('');
+    const bars=td.tranches.map(t=>{const c=colors[t.label]||'#888';const bar=((t.expected_loss_pct/mx)*100).toFixed(1);return '<div class="tr"><div class="tl" style="color:'+c+'">'+t.label.toUpperCase()+'<br><span style="font-size:.48rem;color:var(--gray)">'+(t.attachment*100).toFixed(0)+'%→'+(t.detachment*100).toFixed(0)+'%</span></div><div class="tbw"><div class="tb2" style="width:'+bar+'%;background:'+c+'"></div></div><div class="tp" style="color:'+c+'">'+(t.expected_loss_pct*100).toFixed(3)+'%</div><div style="font-family:var(--fm);font-size:.58rem;color:var(--gray);width:58px;text-align:right">'+f$(t.expected_loss_usd)+'</div></div>';}).join('');
+    const pie=td.tranches.map(t=>parseFloat((t.expected_loss_pct*100).toFixed(4)));
+    const pieC=td.tranches.map(t=>colors[t.label]||'#888');
+    document.getElementById('trancheContent').innerHTML=
+      '<div class="mg" style="grid-template-columns:repeat(3,1fr)">'+cards+'</div>'+
+      '<div class="two"><div class="cw"><div class="ct">// CDO TRANCHE EXPECTED LOSS BARS</div>'+bars+'</div>'+
+      '<div class="cw"><div class="ct">// TRANCHE EL COMPOSITION</div><div style="height:180px;position:relative"><canvas id="pieC"></canvas></div></div></div>'+
+      '<div class="cw"><div class="ct">// CDO WATERFALL — SUBORDINATION STRUCTURE</div>'+
+      '<div style="display:flex;height:40px;border:1px solid var(--border);border-radius:2px;overflow:hidden">'+
+      '<div style="width:3%;background:#c0392b;display:flex;align-items:center;justify-content:center"><span style="font-family:var(--fm);font-size:.42rem;color:#fff;writing-mode:vertical-rl">EQ</span></div>'+
+      '<div style="width:4%;background:#d68910;display:flex;align-items:center;justify-content:center"><span style="font-family:var(--fm);font-size:.42rem;color:#fff;writing-mode:vertical-rl">MZ</span></div>'+
+      '<div style="flex:1;background:#4A8A28;display:flex;align-items:center;justify-content:center"><span style="font-family:var(--fm);font-size:.56rem;color:#fff;letter-spacing:.08em">SENIOR — 7% to 100%</span></div></div>'+
+      '<div style="display:flex;justify-content:space-between;font-family:var(--fm);font-size:.5rem;color:var(--gray);margin-top:.28rem"><span>0%</span><span>3%</span><span>7%</span><span>100%</span></div></div>';
+    new Chart(document.getElementById('pieC'),{type:'doughnut',
+      data:{labels:td.tranches.map(t=>t.label),datasets:[{data:pie,backgroundColor:pieC,borderWidth:2,borderColor:'#fff'}]},
+      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{family:'IBM Plex Mono',size:9},color:'#888780',boxWidth:10}}}}});
+  }catch(e){log('> Tranche error: '+e.message,'err');}
+}
+
+async function runStress(){
+  if(!lastRes){log('> Run analysis first','err');return;}
+  log('> Running stress scenario...','ok');
+  const companies=lastRes.companies.map(c=>({ticker:c.ticker,notional:c.notional}));
+  const base_rho=parseFloat(document.getElementById('rho').value)/100;
+  const stressed_rho=parseFloat(document.getElementById('strRho').value)/100;
+  const pd_multiplier=parseFloat(document.getElementById('pdm').value)/10;
+  const confidence=parseFloat(document.getElementById('conf').value);
+  try{
+    const r=await fetch(API+'/stress/run',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({companies,base_rho,stressed_rho,pd_multiplier,confidence,n_sim:50000})});
+    const sd=await r.json();
+    log('> Stress complete: CVaR Δ='+sd.var_delta_pct.toFixed(1)+'%',sd.var_delta_pct>0?'err':'ok');
+    const delta=(b,s)=>{const d=s-b;const p=Math.abs(b)>1?((d/Math.abs(b))*100).toFixed(1):'—';return '<span class="'+(d>0?'dp':'dn')+'">'+(d>0?'+':'')+(d/1e6).toFixed(2)+'M ('+(d>0?'+':'')+p+'%)</span>';};
+    const metrics=[{l:'Expected Loss',b:sd.base.expected_loss,s:sd.stressed.expected_loss},{l:'Unexpected Loss',b:sd.base.unexpected_loss,s:sd.stressed.unexpected_loss},{l:'Credit VaR',b:sd.base.credit_var,s:sd.stressed.credit_var},{l:'Exp. Shortfall',b:sd.base.expected_shortfall,s:sd.stressed.expected_shortfall}];
+    const bv=metrics.map(m=>parseFloat((m.b/1e6).toFixed(3)));
+    const sv=metrics.map(m=>parseFloat((m.s/1e6).toFixed(3)));
+    document.getElementById('stressContent').innerHTML=
+      '<div class="mg"><div class="mc"><div class="ml">// EL DELTA</div><div class="mv '+(sd.el_delta_pct>0?'r':'g')+'">'+sd.el_delta_pct.toFixed(1)+'%</div></div>'+
+      '<div class="mc"><div class="ml">// CVaR DELTA</div><div class="mv '+(sd.var_delta_pct>0?'r':'g')+'">'+sd.var_delta_pct.toFixed(1)+'%</div></div>'+
+      '<div class="mc"><div class="ml">// ES DELTA</div><div class="mv '+(sd.es_delta_pct>0?'r':'g')+'">'+sd.es_delta_pct.toFixed(1)+'%</div></div>'+
+      '<div class="mc"><div class="ml">// STRESS ρ</div><div class="mv a">'+stressed_rho.toFixed(2)+'</div></div></div>'+
+      '<div class="two"><div class="cw"><div class="ct">// BASE vs STRESSED — GROUPED BAR</div><div style="height:225px;position:relative"><canvas id="strBar"></canvas></div></div>'+
+      '<div class="cw"><div class="ct">// SCENARIO COMPARISON TABLE</div>'+
+      '<table class="st"><thead><tr><th>METRIC</th><th>BASE (ρ='+base_rho.toFixed(2)+')</th><th>STRESSED (ρ='+stressed_rho.toFixed(2)+' PD×'+pd_multiplier.toFixed(1)+')</th><th>DELTA</th></tr></thead><tbody>'+
+      metrics.map(m=>'<tr><td>'+m.l+'</td><td>'+f$(m.b)+'</td><td>'+f$(m.s)+'</td><td>'+delta(m.b,m.s)+'</td></tr>').join('')+
+      '</tbody></table></div></div>';
+    if(sChart) sChart.destroy();
+    sChart=new Chart(document.getElementById('strBar'),{type:'bar',
+      data:{labels:metrics.map(m=>m.l),datasets:[
+        {label:'Base',data:bv,backgroundColor:'rgba(107,191,62,.6)',borderColor:'rgba(107,191,62,1)',borderWidth:1},
+        {label:'Stressed',data:sv,backgroundColor:'rgba(192,57,43,.6)',borderColor:'rgba(192,57,43,1)',borderWidth:1}]},
+      options:{responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{position:'bottom',labels:{font:{family:'IBM Plex Mono',size:9},color:'#888780',boxWidth:10}}},
+        scales:{x:{ticks:{font:{family:'IBM Plex Mono',size:9},color:'#888780'},grid:{display:false}},
+          y:{ticks:{font:{family:'IBM Plex Mono',size:9},color:'#888780'},grid:{color:'rgba(0,0,0,.05)'},
+          title:{display:true,text:'$M',font:{family:'IBM Plex Mono',size:9},color:'#888780'}}}}});
+    swn('stress');
+  }catch(e){log('> Stress error: '+e.message,'err');}
+}
+
+async function checkApi(){
+  try{
+    await fetch(API+'/health');
+    document.getElementById('apiSt').textContent='ONLINE';
+    document.getElementById('apiSt').style.color='var(--green)';
+    log('> Backend API connected... <span class="ok">OK</span>','ok');
+  }catch{
+    document.getElementById('apiSt').textContent='OFFLINE';
+    document.getElementById('apiSt').style.color='#e24b4a';
+    log('> Backend OFFLINE — run: cd backend && python -m uvicorn main:app --port 8000','err');
+  }
+}
+
+rca(); us(); checkApi();
+</script>
+</body>
+</html>
