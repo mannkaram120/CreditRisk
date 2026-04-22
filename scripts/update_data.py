@@ -6,7 +6,7 @@ GitHub Actions runs this every weekday at 06:00 UTC.
 Estimated runtime: ~33 minutes (500 tickers x 4s). Within 6h job limit.
 """
 
-import time, logging, numpy as np, pandas as pd, yfinance as yf
+import time, logging, signal, numpy as np, pandas as pd, yfinance as yf
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -110,14 +110,41 @@ def get_debt(t,info):
         except: pass
     return float(info.get("totalDebt") or 0)
 
+FETCH_TIMEOUT_SEC = 30  # hard wall-clock timeout per ticker
+
+class _Timeout(Exception): pass
+
+def _timeout_handler(signum, frame):
+    raise _Timeout()
+
 def fetch_one(ticker):
     logger.info("Fetching %-8s...", ticker)
+
+    # Set a hard 30-second alarm — catches hangs on history() or info()
+    signal.signal(signal.SIGALRM, _timeout_handler)
+    signal.alarm(FETCH_TIMEOUT_SEC)
+
+    try:
+        return _fetch_one_inner(ticker)
+    except _Timeout:
+        logger.error("  TIMEOUT after %ds: %s (likely delisted/zombie ticker)", FETCH_TIMEOUT_SEC, ticker)
+        return None
+    finally:
+        signal.alarm(0)  # always cancel alarm
+
+
+def _fetch_one_inner(ticker):
     for attempt in range(1,4):
         try:
             t=yf.Ticker(ticker); info=t.info or {}
             if not info.get("marketCap"):
                 logger.warning("  %s empty info attempt %d",ticker,attempt)
                 time.sleep(attempt*5); continue
+            # Detect delisted: quoteType will be NONE or missing for acquired/delisted tickers
+            quote_type = info.get("quoteType", "")
+            if quote_type in ("", "NONE") or info.get("regularMarketPrice") is None:
+                logger.warning("  %s appears delisted/acquired (quoteType=%r) — skipping", ticker, quote_type)
+                return None
             name=info.get("longName") or info.get("shortName") or ticker
             sector=info.get("sector") or "Unknown"
             mktcap=float(info.get("marketCap") or 0)
