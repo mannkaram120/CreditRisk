@@ -16,14 +16,14 @@
   --fm:'IBM Plex Mono',monospace;
   --fb:'Barlow',sans-serif;
 }
-html,body{background:var(--bg);color:var(--black);font-family:var(--fb);font-size:13px;min-height:100vh}
+html,body{background:var(--bg);color:var(--black);font-family:var(--fb);font-size:16px;min-height:100vh}
 
 /* ── APP ── */
 .app{display:flex;min-height:100vh}
 
 /* ── SIDEBAR — fixed width, no overflow ── */
 .sidebar{
-  width:200px;min-width:200px;max-width:200px;
+  width:245px;min-width:245px;max-width:245px;
   background:var(--surface);border-right:1px solid var(--border);
   padding:.75rem .7rem;position:sticky;top:0;
   height:100vh;overflow:hidden; /* NO SCROLL, NO OVERFLOW */
@@ -35,29 +35,29 @@ html,body{background:var(--bg);color:var(--black);font-family:var(--fb);font-siz
 .s-logo span{color:var(--green)}
 .s-sub{font-family:var(--fm);font-size:.5rem;color:var(--gray);letter-spacing:.08em;display:block;margin-top:.1rem}
 
-.s-section{flex-shrink:0}
+.s-section{flex:1;display:flex;flex-direction:column;justify-content:space-between}
 .s-h{font-family:var(--fm);font-size:.5rem;letter-spacing:.1em;color:var(--gray);
-  text-transform:uppercase;margin:.55rem 0 .28rem;padding-top:.55rem;
+  text-transform:uppercase;margin:.85rem 0 .45rem;padding-top:.85rem;
   border-top:1px solid var(--border)}
 
 /* chip row — no wrap, scrollable horizontally but hidden scrollbar */
-.chips{display:flex;gap:.2rem;overflow-x:auto;padding-bottom:.1rem;flex-shrink:0}
+.chips{display:flex;gap:.35rem;overflow-x:auto;padding-bottom:.1rem;flex-shrink:0}
 .chips::-webkit-scrollbar{display:none}
-.chip{font-family:var(--fm);font-size:.52rem;padding:.18rem .42rem;border:1px solid var(--border);
+.chip{font-family:var(--fm);font-size:.52rem;padding:.28rem .52rem;border:1px solid var(--border);
   background:transparent;cursor:pointer;color:var(--black);white-space:nowrap;flex-shrink:0;transition:all .12s}
 .chip:hover,.chip.active{background:var(--black);color:var(--green);border-color:var(--black)}
 
 /* inputs */
 .si{width:100%;border:1px solid var(--border);background:var(--bg);font-family:var(--fm);
-  font-size:.58rem;padding:.3rem .45rem;color:var(--black);outline:none;margin-bottom:.25rem}
+  font-size:.58rem;padding:.45rem .45rem;color:var(--black);outline:none;margin-bottom:.45rem}
 .si:focus{border-color:var(--green)}
 .si::placeholder{color:var(--gray)}
 select.si{cursor:pointer}
 
 /* slider row — ultra compact */
-.sr{display:flex;align-items:center;gap:.3rem;margin-bottom:.22rem}
+.sr{display:flex;align-items:center;gap:.3rem;margin-bottom:.55rem}
 .sr span.lbl{font-family:var(--fm);font-size:.48rem;color:var(--gray);
-  min-width:38px;max-width:38px;line-height:1.2;flex-shrink:0}
+  min-width:46px;max-width:46px;line-height:1.2;flex-shrink:0}
 .sr input[type=range]{flex:1;accent-color:var(--green);height:12px;min-width:0}
 .sr .val{font-family:var(--fm);font-size:.52rem;color:var(--green);min-width:26px;text-align:right;flex-shrink:0}
 
@@ -66,13 +66,13 @@ select.si{cursor:pointer}
 
 /* buttons */
 .btn-b{width:100%;background:var(--black);color:var(--green);border:none;font-family:var(--fm);
-  font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;padding:.5rem .6rem;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;gap:.35rem;margin-top:.45rem;transition:all .12s}
+  font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;padding:.75rem .6rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:.35rem;margin-top:.65rem;transition:all .12s}
 .btn-b:hover{background:var(--green);color:var(--black)}
 .btn-b:disabled{opacity:.35;cursor:not-allowed}
 .btn-o{width:100%;background:transparent;color:var(--black);border:1px solid var(--border);
   font-family:var(--fm);font-size:.5rem;letter-spacing:.08em;text-transform:uppercase;
-  padding:.35rem .6rem;cursor:pointer;transition:all .12s;margin-top:.22rem}
+  padding:.55rem .6rem;cursor:pointer;transition:all .12s;margin-top:.45rem}
 .btn-o:hover{border-color:var(--black)}
 
 /* api dot */
@@ -82,7 +82,7 @@ select.si{cursor:pointer}
 .main{flex:1;padding:1.4rem 1.6rem;background:var(--bg);min-width:0;overflow-x:hidden}
 
 .page-ey{font-family:var(--fm);font-size:.58rem;letter-spacing:.1em;color:var(--green);text-transform:uppercase;margin-bottom:.25rem}
-.page-t{font-family:var(--fh);font-weight:800;font-size:2.2rem;line-height:1;text-transform:uppercase;margin-bottom:1rem}
+.page-t{font-family:var(--fh);font-weight:800;font-size:2.8rem;line-height:1;text-transform:uppercase;margin-bottom:1rem}
 .page-t .gh{color:transparent;-webkit-text-stroke:1.5px var(--gl)}
 
 .pill{display:inline-flex;align-items:center;gap:.35rem;font-family:var(--fm);font-size:.54rem;
@@ -100,18 +100,21 @@ select.si{cursor:pointer}
 
 /* log */
 .log{background:#0C0C0A;padding:.65rem .85rem;font-family:var(--fm);font-size:.62rem;
-  height:100px;overflow-y:auto;border:1px solid rgba(107,191,62,.15);margin-bottom:1rem}
+  height:130px;overflow-y:auto;border:1px solid rgba(107,191,62,.15);margin-bottom:1rem}
 .ll{color:#4a4a40;line-height:1.7}.ok{color:var(--green)}.er{color:#e24b4a}
 
 /* metrics */
 .mg{display:grid;grid-template-columns:repeat(4,1fr);gap:.55rem;margin-bottom:1rem}
-.mc{border:1px solid var(--border);background:var(--surface);padding:.75rem .85rem}
+.mc{border:1px solid var(--border);background:var(--surface);padding:.75rem .85rem;border-left:3px solid var(--border)}
+.mc.mc-g{border-left-color:var(--gd)}
+.mc.mc-a{border-left-color:#c8870a}
+.mc.mc-r{border-left-color:#c0392b}
 .ml{font-family:var(--fm);font-size:.5rem;letter-spacing:.08em;color:var(--gray);text-transform:uppercase;margin-bottom:.28rem}
-.mv{font-family:var(--fh);font-weight:700;font-size:1.45rem;line-height:1}
+.mv{font-family:var(--fh);font-weight:700;font-size:1.7rem;line-height:1}
 .mv.g{color:var(--gd)}.mv.r{color:#c0392b}.mv.a{color:#8a5a0a}
 
 /* company cards */
-.cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:.55rem;margin-bottom:1rem}
+.cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.55rem;margin-bottom:1rem}
 .cc{border:1px solid var(--border);background:var(--surface);padding:.8rem;position:relative}
 .ctk{font-family:var(--fh);font-weight:800;font-size:1.25rem}
 .cn{font-family:var(--fm);font-size:.52rem;color:var(--gray);margin-bottom:.55rem;
@@ -206,6 +209,13 @@ select.si{cursor:pointer}
 .spin{display:inline-block;width:11px;height:11px;border:1.5px solid rgba(107,191,62,.3);
   border-top-color:var(--green);border-radius:50%;animation:sp .7s linear infinite;margin-right:.35rem;vertical-align:middle}
 @keyframes sp{to{transform:rotate(360deg)}}
+
+/* autocomplete dropdown */
+.ac-item{padding:.38rem .55rem;cursor:pointer;display:flex;align-items:baseline;gap:.5rem;border-bottom:1px solid var(--border);transition:background .1s}
+.ac-item:last-child{border-bottom:none}
+.ac-item:hover,.ac-item.focused{background:var(--gdim)}
+.ac-tk{color:var(--green);font-weight:500;min-width:48px;flex-shrink:0;font-family:var(--fm);font-size:.58rem}
+.ac-nm{color:var(--gray);font-family:var(--fm);font-size:.52rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 </style>
 </head>
 <body>
@@ -227,8 +237,19 @@ select.si{cursor:pointer}
     </div>
 
     <div class="s-h">ADD TICKER</div>
-    <input class="si" type="text" id="ct" placeholder="e.g. NVDA..." maxlength="8"/>
-    <button class="btn-o" onclick="addTicker()">+ ADD</button>
+    <div style="position:relative" id="acWrap">
+      <input class="si" type="text" id="ct" placeholder="e.g. NVDA..." maxlength="8" autocomplete="off"
+        oninput="tickerSearch(this.value)"
+        onkeydown="tickerKey(event)"
+        style="margin-bottom:0"/>
+      <div id="acDrop" style="
+        display:none;position:absolute;left:0;right:0;top:100%;
+        background:var(--surface);border:1px solid var(--green);
+        border-top:none;z-index:999;max-height:160px;overflow-y:auto;
+        font-family:var(--fm);font-size:.58rem;box-shadow:0 4px 12px rgba(0,0,0,.12)
+      "></div>
+    </div>
+    <button class="btn-o" onclick="addTicker()" style="margin-top:.35rem">+ ADD</button>
 
     <div class="s-h">ACTIVE</div>
     <div id="ac"></div>
@@ -277,7 +298,7 @@ select.si{cursor:pointer}
       <div class="ll">&gt; CREDIT_RISK_ENGINE initializing... <span class="ok">OK</span></div>
       <div class="ll">&gt; Merton solver loaded (scipy.optimize.fsolve)... <span class="ok">OK</span></div>
       <div class="ll">&gt; Vasicek Monte Carlo engine ready... <span class="ok">OK</span></div>
-      <div class="ll">&gt; GitHub CSV data layer (328 tickers)... <span class="ok">OK</span></div>
+      <div class="ll">&gt; GitHub CSV data layer (500 tickers)... <span class="ok">OK</span></div>
       <div class="ll">&gt; Select a preset or add tickers, then RUN ANALYSIS.</div>
     </div>
 
@@ -378,7 +399,7 @@ select.si{cursor:pointer}
       <span class="pill2">SciPy</span><span class="pill2">Pandas</span><span class="pill2">yfinance</span>
       <span class="pill2">GitHub Actions</span><span class="pill2">Chart.js</span><span class="pill2">HTML/CSS/JS</span>
     </p>
-    <p>Market data (market cap, debt, equity volatility) for 328 tickers is pre-fetched daily by a GitHub Actions workflow running on GitHub's servers, committed to a public CSV, and served to the backend via a raw URL. The FastAPI backend runs Merton and Vasicek computations per-request with no live Yahoo Finance dependency.</p>
+    <p>Market data (market cap, debt, equity volatility) for 500 tickers is pre-fetched daily by a GitHub Actions workflow running on GitHub's servers, committed to a public CSV, and served to the backend via a raw URL. The FastAPI backend runs Merton and Vasicek computations per-request with no live Yahoo Finance dependency.</p>
 
     <h3>Data & Limitations</h3>
     <p>Merton assumes a single class of zero-coupon debt — real firms have layered capital structures. Correlation ρ is constant across the portfolio; real correlations vary by sector and time. The Gaussian copula understates tail dependence (Student-t copulas address this). These limitations are documented intentionally — understanding model weaknesses is a mark of quantitative rigour.</p>
@@ -390,6 +411,88 @@ select.si{cursor:pointer}
 
 <script>
 const API='http://127.0.0.1:8000';
+
+// ── TICKER AUTOCOMPLETE ──
+const TICKER_CSV='https://raw.githubusercontent.com/karamfrm/credit-risk-engine/main/backend/tickers.csv';
+let allTickers=[]; // [{ticker, name}]
+let acIdx=-1; // keyboard nav index
+
+// Fetch and parse the CSV once on load
+async function loadTickerList(){
+  try{
+    const r=await fetch(TICKER_CSV);
+    const txt=await r.text();
+    const lines=txt.trim().split('\n').slice(1); // skip header
+    allTickers=lines.map(l=>{
+      const parts=l.split(',');
+      return {ticker:(parts[0]||'').replace(/"/g,'').trim(), name:(parts[1]||'').replace(/"/g,'').trim()};
+    }).filter(t=>t.ticker);
+  }catch(e){
+    // Fallback: build from known presets if CSV unavailable
+    const known=[
+      {ticker:'AAPL',name:'Apple Inc.'},{ticker:'MSFT',name:'Microsoft Corporation'},
+      {ticker:'JPM',name:'JPMorgan Chase & Co.'},{ticker:'JNJ',name:'Johnson & Johnson'},
+      {ticker:'PG',name:'Procter & Gamble'},{ticker:'NVDA',name:'NVIDIA Corporation'},
+      {ticker:'GOOGL',name:'Alphabet Inc.'},{ticker:'AMZN',name:'Amazon.com Inc.'},
+      {ticker:'META',name:'Meta Platforms Inc.'},{ticker:'TSLA',name:'Tesla Inc.'},
+      {ticker:'F',name:'Ford Motor Company'},{ticker:'M',name:'Macy\'s Inc.'},
+      {ticker:'CCL',name:'Carnival Corporation'},{ticker:'AAL',name:'American Airlines Group'},
+      {ticker:'AMC',name:'AMC Entertainment'},{ticker:'C',name:'Citigroup Inc.'},
+      {ticker:'BAC',name:'Bank of America'},{ticker:'GS',name:'Goldman Sachs'},
+      {ticker:'MS',name:'Morgan Stanley'},{ticker:'WFC',name:'Wells Fargo'}
+    ];
+    allTickers=known;
+  }
+}
+
+function tickerSearch(val){
+  const drop=document.getElementById('acDrop');
+  acIdx=-1;
+  const q=val.trim().toUpperCase();
+  if(!q){drop.style.display='none';return;}
+  // Match tickers starting with query first, then name contains query
+  const starts=allTickers.filter(t=>t.ticker.startsWith(q));
+  const nameHits=allTickers.filter(t=>!t.ticker.startsWith(q)&&t.name.toUpperCase().includes(q));
+  const results=[...starts,...nameHits].slice(0,12);
+  if(!results.length){drop.style.display='none';return;}
+  drop.innerHTML=results.map((t,i)=>
+    `<div class="ac-item" data-ticker="${t.ticker}" onmousedown="pickTicker('${t.ticker}')" onmouseover="hoverAc(${i})">
+      <span class="ac-tk">${t.ticker}</span>
+      <span class="ac-nm">${t.name||'—'}</span>
+    </div>`
+  ).join('');
+  drop.style.display='block';
+}
+
+function hoverAc(i){
+  acIdx=i;
+  document.querySelectorAll('#acDrop .ac-item').forEach((el,j)=>el.classList.toggle('focused',j===i));
+}
+
+function tickerKey(e){
+  const drop=document.getElementById('acDrop');
+  const items=drop.querySelectorAll('.ac-item');
+  if(!items.length) return;
+  if(e.key==='ArrowDown'){e.preventDefault();acIdx=Math.min(acIdx+1,items.length-1);items.forEach((el,j)=>el.classList.toggle('focused',j===acIdx));}
+  else if(e.key==='ArrowUp'){e.preventDefault();acIdx=Math.max(acIdx-1,0);items.forEach((el,j)=>el.classList.toggle('focused',j===acIdx));}
+  else if(e.key==='Enter'){e.preventDefault();if(acIdx>=0&&items[acIdx]){pickTicker(items[acIdx].dataset.ticker);}else{addTicker();}}
+  else if(e.key==='Escape'){drop.style.display='none';acIdx=-1;}
+}
+
+function pickTicker(ticker){
+  document.getElementById('ct').value=ticker;
+  document.getElementById('acDrop').style.display='none';
+  acIdx=-1;
+  // auto-add immediately
+  addTicker();
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click',e=>{
+  if(!document.getElementById('acWrap').contains(e.target))
+    document.getElementById('acDrop').style.display='none';
+});
+
 const PRESETS={
   ig:[{ticker:'AAPL',notional:10000000},{ticker:'MSFT',notional:10000000},{ticker:'JPM',notional:10000000},{ticker:'JNJ',notional:10000000},{ticker:'PG',notional:10000000}],
   hy:[{ticker:'F',notional:10000000},{ticker:'M',notional:10000000},{ticker:'CCL',notional:10000000},{ticker:'AAL',notional:10000000},{ticker:'AMC',notional:5000000}],
@@ -511,10 +614,10 @@ function renderOverview(d){
   }).join('');
   document.getElementById('overviewContent').innerHTML=
     '<div class="mg">'+
-    '<div class="mc"><div class="ml">// EXPECTED LOSS</div><div class="mv g">'+f$(d.expected_loss)+'</div></div>'+
-    '<div class="mc"><div class="ml">// UNEXPECTED LOSS</div><div class="mv a">'+f$(d.unexpected_loss)+'</div></div>'+
-    '<div class="mc"><div class="ml">// CREDIT VaR ('+(d.confidence*100).toFixed(0)+'%)</div><div class="mv r">'+f$(d.credit_var)+'</div></div>'+
-    '<div class="mc"><div class="ml">// EXPECTED SHORTFALL</div><div class="mv r">'+f$(d.expected_shortfall)+'</div></div>'+
+    '<div class="mc mc-g"><div class="ml">// EXPECTED LOSS</div><div class="mv g">'+f$(d.expected_loss)+'</div></div>'+
+    '<div class="mc mc-a"><div class="ml">// UNEXPECTED LOSS</div><div class="mv a">'+f$(d.unexpected_loss)+'</div></div>'+
+    '<div class="mc mc-r"><div class="ml">// CREDIT VaR ('+(d.confidence*100).toFixed(0)+'%)</div><div class="mv r">'+f$(d.credit_var)+'</div></div>'+
+    '<div class="mc mc-r"><div class="ml">// EXPECTED SHORTFALL</div><div class="mv r">'+f$(d.expected_shortfall)+'</div></div>'+
     '</div><div class="sd">// COMPANY_RISK_PROFILES</div><div class="cg">'+cards+'</div>';
 }
 
@@ -555,10 +658,7 @@ async function renderTranche(d,rho,nsim){
       '<div class="cw"><div class="ct">// TRANCHE EL COMPOSITION</div><div style="height:180px;position:relative"><canvas id="pieC"></canvas></div></div></div>'+
       '<div class="cw"><div class="ct">// CDO WATERFALL — SUBORDINATION STRUCTURE</div>'+
       '<div style="display:flex;height:40px;border:1px solid var(--border);border-radius:2px;overflow:hidden">'+
-      '<div style="width:3%;background:#c0392b;display:flex;align-items:center;justify-content:center"><span style="font-family:var(--fm);font-size:.42rem;color:#fff;writing-mode:vertical-rl">EQ</span></div>'+
-      '<div style="width:4%;background:#d68910;display:flex;align-items:center;justify-content:center"><span style="font-family:var(--fm);font-size:.42rem;color:#fff;writing-mode:vertical-rl">MZ</span></div>'+
-      '<div style="flex:1;background:#4A8A28;display:flex;align-items:center;justify-content:center"><span style="font-family:var(--fm);font-size:.56rem;color:#fff;letter-spacing:.08em">SENIOR — 7% to 100%</span></div></div>'+
-      '<div style="display:flex;justify-content:space-between;font-family:var(--fm);font-size:.5rem;color:var(--gray);margin-top:.28rem"><span>0%</span><span>3%</span><span>7%</span><span>100%</span></div></div>';
+      '<div style="display:flex;height:60px;border:1px solid var(--border);border-radius:3px;overflow:hidden;margin-bottom:.32rem"><div style="width:3%;background:#c0392b;display:flex;flex-direction:column;align-items:center;justify-content:center"><span style="font-family:var(--fm);font-size:.54rem;color:#fff;font-weight:600">3%</span><span style="font-family:var(--fm);font-size:.38rem;color:rgba(255,255,255,.7)">EQ</span></div><div style="width:4%;background:#d68910;display:flex;flex-direction:column;align-items:center;justify-content:center"><span style="font-family:var(--fm);font-size:.54rem;color:#fff;font-weight:600">4%</span><span style="font-family:var(--fm);font-size:.38rem;color:rgba(255,255,255,.7)">MZ</span></div><div style="flex:1;background:#4A8A28;display:flex;flex-direction:column;align-items:center;justify-content:center"><span style="font-family:var(--fm);font-size:.62rem;color:#fff;letter-spacing:.08em;font-weight:600">SENIOR — 93%</span><span style="font-family:var(--fm);font-size:.46rem;color:rgba(255,255,255,.7);margin-top:.12rem">7% to 100% of notional</span></div></div><div style="display:flex;justify-content:space-between;font-family:var(--fm);font-size:.5rem;margin-top:.28rem"><span style="color:#c0392b">0% FIRST LOSS</span><span style="color:var(--gray)">3% EQUITY</span><span style="color:var(--gray)">7% MEZZ</span><span style="color:var(--gd)">100% SENIOR</span></div></div>';
     new Chart(document.getElementById('pieC'),{type:'doughnut',
       data:{labels:td.tranches.map(t=>t.label),datasets:[{data:pie,backgroundColor:pieC,borderWidth:2,borderColor:'#fff'}]},
       options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{family:'IBM Plex Mono',size:9},color:'#888780',boxWidth:10}}}}});
@@ -583,25 +683,14 @@ async function runStress(){
     const bv=metrics.map(m=>parseFloat((m.b/1e6).toFixed(3)));
     const sv=metrics.map(m=>parseFloat((m.s/1e6).toFixed(3)));
     document.getElementById('stressContent').innerHTML=
-      '<div class="mg"><div class="mc"><div class="ml">// EL DELTA</div><div class="mv '+(sd.el_delta_pct>0?'r':'g')+'">'+sd.el_delta_pct.toFixed(1)+'%</div></div>'+
-      '<div class="mc"><div class="ml">// CVaR DELTA</div><div class="mv '+(sd.var_delta_pct>0?'r':'g')+'">'+sd.var_delta_pct.toFixed(1)+'%</div></div>'+
-      '<div class="mc"><div class="ml">// ES DELTA</div><div class="mv '+(sd.es_delta_pct>0?'r':'g')+'">'+sd.es_delta_pct.toFixed(1)+'%</div></div>'+
+      '<div class="mg"><div class="mc mc-g"><div class="ml">// EL DELTA</div><div class="mv '+(sd.el_delta_pct>0?'r':'g')+'">'+sd.el_delta_pct.toFixed(1)+'%</div></div>'+
+      '<div class="mc mc-r"><div class="ml">// CVaR DELTA</div><div class="mv '+(sd.var_delta_pct>0?'r':'g')+'">'+sd.var_delta_pct.toFixed(1)+'%</div></div>'+
+      '<div class="mc mc-r"><div class="ml">// ES DELTA</div><div class="mv '+(sd.es_delta_pct>0?'r':'g')+'">'+sd.es_delta_pct.toFixed(1)+'%</div></div>'+
       '<div class="mc"><div class="ml">// STRESS ρ</div><div class="mv a">'+stressed_rho.toFixed(2)+'</div></div></div>'+
-      '<div class="two"><div class="cw"><div class="ct">// BASE vs STRESSED — GROUPED BAR</div><div style="height:225px;position:relative"><canvas id="strBar"></canvas></div></div>'+
-      '<div class="cw"><div class="ct">// SCENARIO COMPARISON TABLE</div>'+
-      '<table class="st"><thead><tr><th>METRIC</th><th>BASE (ρ='+base_rho.toFixed(2)+')</th><th>STRESSED (ρ='+stressed_rho.toFixed(2)+' PD×'+pd_multiplier.toFixed(1)+')</th><th>DELTA</th></tr></thead><tbody>'+
+      '<div class="cw"><div class="ct">// BASE vs STRESSED SCENARIO COMPARISON</div><table class="st"><thead><tr><th>METRIC</th><th>BASE (ρ='+base_rho.toFixed(2)+')</th><th>STRESSED (ρ='+stressed_rho.toFixed(2)+' PD×'+pd_multiplier.toFixed(1)+')</th><th>DELTA</th></tr></thead><tbody>'+
       metrics.map(m=>'<tr><td>'+m.l+'</td><td>'+f$(m.b)+'</td><td>'+f$(m.s)+'</td><td>'+delta(m.b,m.s)+'</td></tr>').join('')+
       '</tbody></table></div></div>';
-    if(sChart) sChart.destroy();
-    sChart=new Chart(document.getElementById('strBar'),{type:'bar',
-      data:{labels:metrics.map(m=>m.l),datasets:[
-        {label:'Base',data:bv,backgroundColor:'rgba(107,191,62,.6)',borderColor:'rgba(107,191,62,1)',borderWidth:1},
-        {label:'Stressed',data:sv,backgroundColor:'rgba(192,57,43,.6)',borderColor:'rgba(192,57,43,1)',borderWidth:1}]},
-      options:{responsive:true,maintainAspectRatio:false,
-        plugins:{legend:{position:'bottom',labels:{font:{family:'IBM Plex Mono',size:9},color:'#888780',boxWidth:10}}},
-        scales:{x:{ticks:{font:{family:'IBM Plex Mono',size:9},color:'#888780'},grid:{display:false}},
-          y:{ticks:{font:{family:'IBM Plex Mono',size:9},color:'#888780'},grid:{color:'rgba(0,0,0,.05)'},
-          title:{display:true,text:'$M',font:{family:'IBM Plex Mono',size:9},color:'#888780'}}}}});
+    // stress bar chart removed
     swn('stress');
   }catch(e){log('> Stress error: '+e.message,'err');}
 }
@@ -619,7 +708,7 @@ async function checkApi(){
   }
 }
 
-rca(); us(); checkApi();
+rca(); us(); checkApi(); loadTickerList();
 </script>
 </body>
 </html>
