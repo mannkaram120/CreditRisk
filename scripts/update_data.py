@@ -1,12 +1,19 @@
 """
 scripts/update_data.py — Credit Risk Engine
 ──────────────────────────────────────────
-Fetches live market data for 500 tickers and writes market_data.csv.
+Fetches live market data for ~485 active tickers and writes market_data.csv.
 GitHub Actions runs this every weekday at 06:00 UTC.
-Estimated runtime: ~33 minutes (500 tickers x 4s). Within 6h job limit.
+
+TICKER MAINTENANCE LOG:
+  2024-10-xx: Removed K (Mars acq), HES (Chevron acq), MRO (COP acq), PXD (XOM acq)
+  2024-xx-xx: Removed PARA (Skydance), ATVI (MSFT), SGEN (PFE), ANSS (SNPS), JNPR (HPE)
+  2024-xx-xx: Removed SMAR (private), MMP (OKE), DFS (COF), RDFN (RKT), COOP (RKT)
+  2024-xx-xx: Removed LILM/NOVA/HYZN (bankrupt), HBI/JWN (private), FTR (inactive)
+  Fixed: CQPX→CQP, GPS→GAP, FBHS→FBIN, FI→FISV, SQ→XYZ, MYL→VTRS
+  Added: SMPL, PR, CIVI, MTDR, SIRI, ALKS, MNDY, NTRA, CQP, FBIN, FISV, XYZ, VTRS
 """
 
-import time, logging, signal, numpy as np, pandas as pd, yfinance as yf
+import time, logging, numpy as np, pandas as pd, yfinance as yf
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -23,50 +30,49 @@ TICKERS = [
     "AMAT","MU","LRCX","KLAC","SNPS","CDNS","PANW","CRWD","FTNT","NET",
     "DDOG","ZS","TEAM","HUBS","WDAY","SNOW","PLTR","APP","UBER","LYFT",
     "ABNB","DASH","SPOT","RBLX","U","HOOD","COIN","MSTR","BRK-B","V",
-    "MA","AXP","BLK","SCHW","USB","PNC","TFC","COF","DFS","SYF",
-    "AIG","MET","PRU","ALL","TRV","PGR","CB","MMC","AON","ICE",
-    "CME","SPGI","MCO","MSCI","FI","FIS","GPN","WEX","UNH","LLY",
-    "ABBV","MRK","PFE","TMO","ABT","DHR","BMY","AMGN","GILD","ISRG",
-    "SYK","BSX","HCA","ELV","CI","HUM","CNC","MOH","ZBH","BAX",
-    "BDX","EW","HOLX","IDXX","IQV","MCK","COR","CAH","WMT","COST",
-    "HD","LOW","TGT","MCD","SBUX","NKE","TJX","BKNG","EXPE","YUM",
-    "QSR","DPZ","DKNG","LVS","WYNN","CZR","MGM","KO","PEP","MDLZ",
-    "GIS","K","CAG","SJM","HRL","TSN","MKC","CLX","CL","KMB",
-    "CHD","EL","ULTA","XOM","CVX","COP","SLB","EOG","MPC","PSX",
-    "VLO","OXY","HAL","DVN","FANG","BKR","HES","MRO","APA","PXD",
-    "CVI","CTRA","EQT","RRC","AR","NOV","BA","CAT","GE","HON",
-    "RTX","LMT","UPS","FDX","DE","MMM","NOC","GD","HII","LHX",
-    "TDG","HWM","TXT","WWD","AXON","IR","ITW","EMR","ETN","ROK",
-    "AME","PH","DOV","FAST","GWW","MSC","CTAS","VRSK","BR","PAYC",
-    "ADP","PAYX","NEE","DUK","SO","D","AEP","EXC","XEL","ES",
-    "ED","PCG","EIX","WEC","DTE","ETR","FE","AES","NRG","VST",
-    "PLD","AMT","EQIX","SPG","O","WELL","DLR","PSA","EXR","VICI",
-    "WPC","NNN","ARE","BXP","KIM","UAL","DAL","ALK","NCLH","RCL",
-    "HLT","MAR","H","T","VZ","TMUS","LUMN","FTR","DIS","NFLX",
-    "WBD","FOX","PARA","CMCSA","CHTR","EA","TTWO","ATVI","LYV","LIN",
-    "APD","ECL","DD","DOW","LYB","PPG","SHW","NEM","FCX","NUE",
-    "STLD","CLF","X","AA","CF","MOS","IFF","ALB","MP","BIIB",
-    "REGN","VRTX","MRNA","BNTX","ALNY","SGEN","INCY","EXAS","IONS","RARE",
-    "FATE","TSM","AVGO","ASML","MRVL","MPWR","ON","WOLF","NXPI","STM",
-    "SWKS","QRVO","ENTG","MKSI","SAP","INTU","ADSK","ANSS","PTC","PRGS",
-    "GWRE","VEEV","TTD","ROKU","ZM","DOCN","BOX","SMAR","DELL","HPQ",
-    "HPE","WDC","STX","NTAP","PSTG","SMCI","VIAV","CIEN","JNPR","FFIV",
-    "AKAM","LDOS","SAIC","BAH","CTSH","ACN","WIT","INFY","WIX","SHOP",
-    "SQ","PYPL","AFRM","SOFI","NU","MELI","SE","GRAB","BIDU","JD",
-    "PDD","BABA","TCOM","NTES","ALLY","SLM","NAVI","OMF","CACC","TREE",
-    "LC","LPLA","RJF","SF","HLI","LAZ","EVR","PJT","MKTX","CBOE",
-    "NDAQ","IEX","BEN","IVZ","TROW","WTW","AFG","RLI","CINF","HIG",
-    "L","MKL","WRB","ERIE","RE","RNR","DXCM","PODD","ALGN","TECH",
-    "XRAY","HSIC","PRGO","MYL","AGN","JAZZ","UTHR","BMRN","SRPT","PCVX",
-    "KRYS","SMMT","LEGN","CRVS","PHAT","RCKT","ETSY","W","CHWY","PETS",
-    "PRTS","AN","KMX","PAG","LAD","GPC","AAP","AZO","ORLY","BBY",
-    "GPS","PVH","RL","HBI","VFC","TPR","CPRI","KSS","JWN","DDS",
+    "MA","AXP","BLK","SCHW","USB","PNC","TFC","COF","SYF","AIG",
+    "MET","PRU","ALL","TRV","PGR","CB","MMC","AON","ICE","CME",
+    "SPGI","MCO","MSCI","FIS","GPN","WEX","UNH","LLY","ABBV","MRK",
+    "PFE","TMO","ABT","DHR","BMY","AMGN","GILD","ISRG","SYK","BSX",
+    "HCA","ELV","CI","HUM","CNC","MOH","ZBH","BAX","BDX","EW",
+    "HOLX","IDXX","IQV","MCK","COR","CAH","WMT","COST","HD","LOW",
+    "TGT","MCD","SBUX","NKE","TJX","BKNG","EXPE","YUM","QSR","DPZ",
+    "DKNG","LVS","WYNN","CZR","MGM","KO","PEP","MDLZ","GIS","CAG",
+    "SJM","HRL","TSN","MKC","CLX","CL","KMB","CHD","EL","ULTA",
+    "XOM","CVX","COP","SLB","EOG","MPC","PSX","VLO","OXY","HAL",
+    "DVN","FANG","BKR","APA","CVI","CTRA","EQT","RRC","AR","NOV",
+    "BA","CAT","GE","HON","RTX","LMT","UPS","FDX","DE","MMM",
+    "NOC","GD","HII","LHX","TDG","HWM","TXT","WWD","AXON","IR",
+    "ITW","EMR","ETN","ROK","AME","PH","DOV","FAST","GWW","MSC",
+    "CTAS","VRSK","BR","PAYC","ADP","PAYX","NEE","DUK","SO","D",
+    "AEP","EXC","XEL","ES","ED","PCG","EIX","WEC","DTE","ETR",
+    "FE","AES","NRG","VST","PLD","AMT","EQIX","SPG","O","WELL",
+    "DLR","PSA","EXR","VICI","WPC","NNN","ARE","BXP","KIM","UAL",
+    "DAL","ALK","NCLH","RCL","HLT","MAR","H","T","VZ","TMUS",
+    "LUMN","DIS","NFLX","WBD","FOX","CMCSA","CHTR","EA","TTWO","LYV",
+    "LIN","APD","ECL","DD","DOW","LYB","PPG","SHW","NEM","FCX",
+    "NUE","STLD","CLF","AA","CF","MOS","IFF","ALB","MP","BIIB",
+    "REGN","VRTX","MRNA","BNTX","ALNY","INCY","IONS","RARE","FATE","TSM",
+    "AVGO","ASML","MRVL","MPWR","ON","WOLF","NXPI","STM","SWKS","QRVO",
+    "ENTG","MKSI","SAP","INTU","ADSK","PTC","PRGS","GWRE","VEEV","TTD",
+    "ROKU","ZM","DOCN","BOX","DELL","HPQ","HPE","WDC","STX","NTAP",
+    "PSTG","SMCI","VIAV","CIEN","FFIV","AKAM","LDOS","SAIC","BAH","CTSH",
+    "ACN","WIT","INFY","WIX","SHOP","PYPL","AFRM","SOFI","NU","MELI",
+    "SE","GRAB","BIDU","JD","PDD","BABA","TCOM","NTES","ALLY","SLM",
+    "NAVI","OMF","CACC","TREE","LC","LPLA","RJF","SF","HLI","LAZ",
+    "EVR","PJT","MKTX","CBOE","NDAQ","IEX","BEN","IVZ","TROW","WTW",
+    "AFG","RLI","CINF","HIG","L","MKL","WRB","ERIE","RE","RNR",
+    "DXCM","PODD","ALGN","TECH","XRAY","HSIC","PRGO","CVS","JAZZ","UTHR",
+    "BMRN","SRPT","PCVX","KRYS","SMMT","LEGN","CRVS","PHAT","RCKT","ETSY",
+    "W","CHWY","PETS","PRTS","AN","KMX","PAG","LAD","GPC","AAP",
+    "AZO","ORLY","BBY","PVH","RL","VFC","TPR","CPRI","KSS","DDS",
     "BJ","SFM","GO","CASY","CHEF","CARR","TT","JCI","OTIS","ALLE",
-    "MAS","SWK","FBHS","NVT","REXR","GNRC","HUBB","ACHR","JOBY","LILM",
-    "SPCE","RKT","OPEN","RDFN","Z","COOP","TRGP","WES","AM","HESM",
-    "CQPX","LNG","ET","EPD","MMP","PAA","PAGP","KMI","WMB","OKE",
-    "TALO","SM","CRC","VTLE","FSLR","ENPH","SEDG","RUN","NOVA","ARRY",
-    "BE","PLUG","BLDP","HYZN","CHPT","EVGO","BLNK","CEG","EQR","AVB",
+    "MAS","SWK","NVT","REXR","GNRC","HUBB","ACHR","JOBY","SPCE","RKT",
+    "OPEN","Z","TRGP","WES","AM","HESM","LNG","ET","EPD","PAA",
+    "PAGP","KMI","WMB","OKE","TALO","SM","CRC","FSLR","ENPH","SEDG",
+    "RUN","ARRY","BE","PLUG","BLDP","CHPT","EVGO","BLNK","CEG","EQR",
+    "AVB","SMPL","PR","CIVI","MTDR","SIRI","ALKS","MNDY","NTRA","CQP",
+    "GAP","FBIN","FISV","XYZ","VTRS",
 ]
 
 seen = set(); TICKERS = [t for t in TICKERS if not (t in seen or seen.add(t))]
@@ -110,41 +116,14 @@ def get_debt(t,info):
         except: pass
     return float(info.get("totalDebt") or 0)
 
-FETCH_TIMEOUT_SEC = 30  # hard wall-clock timeout per ticker
-
-class _Timeout(Exception): pass
-
-def _timeout_handler(signum, frame):
-    raise _Timeout()
-
 def fetch_one(ticker):
     logger.info("Fetching %-8s...", ticker)
-
-    # Set a hard 30-second alarm — catches hangs on history() or info()
-    signal.signal(signal.SIGALRM, _timeout_handler)
-    signal.alarm(FETCH_TIMEOUT_SEC)
-
-    try:
-        return _fetch_one_inner(ticker)
-    except _Timeout:
-        logger.error("  TIMEOUT after %ds: %s (likely delisted/zombie ticker)", FETCH_TIMEOUT_SEC, ticker)
-        return None
-    finally:
-        signal.alarm(0)  # always cancel alarm
-
-
-def _fetch_one_inner(ticker):
     for attempt in range(1,4):
         try:
             t=yf.Ticker(ticker); info=t.info or {}
             if not info.get("marketCap"):
                 logger.warning("  %s empty info attempt %d",ticker,attempt)
                 time.sleep(attempt*5); continue
-            # Detect delisted: quoteType will be NONE or missing for acquired/delisted tickers
-            quote_type = info.get("quoteType", "")
-            if quote_type in ("", "NONE") or info.get("regularMarketPrice") is None:
-                logger.warning("  %s appears delisted/acquired (quoteType=%r) — skipping", ticker, quote_type)
-                return None
             name=info.get("longName") or info.get("shortName") or ticker
             sector=info.get("sector") or "Unknown"
             mktcap=float(info.get("marketCap") or 0)
