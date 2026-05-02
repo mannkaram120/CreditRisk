@@ -1,125 +1,125 @@
 """
-Data Ingestion Layer — Excel Source
-────────────────────────────────────
-Reads company data from Excel file maintained by user.
+Data Ingestion Layer — GitHub CSV Cache
+────────────────────────────────────────
+Reads market data from a pre-built CSV hosted on GitHub.
+Updated daily by GitHub Actions (scripts/update_data.py).
 
-Zero API calls, no rate limiting, instant responses!
-
-What this version does:
-- Reads from Excel file (user maintains)
-- 15-min in-memory cache
-- 100% reliable (no API dependencies)
-- Supports stress testing with price overrides
-- Compatible with portfolio_snapshot.py
+Zero Yahoo Finance dependency at request time.
 """
 
-import time
 import logging
-import numpy as np
+import httpx
+import pandas as pd
+from io import StringIO
 from datetime import datetime, timedelta
 from typing import Optional
-from services.excel_source import get_excel_source
 
 logger = logging.getLogger(__name__)
 
-# ─── TTL cache ────────────────────────────────────────────────────────────────
-_cache: dict[str, tuple[datetime, dict]] = {}
-_CACHE_TTL_MINUTES = 15
+CSV_URL = "https://raw.githubusercontent.com/mannkaram120/CreditRisk/main/market_data.csv"
+CACHE_TTL_HOURS = 1
+REQUEST_TIMEOUT = 15
+
+_csv_cache: Optional[pd.DataFrame] = None
+_csv_cached_at: Optional[datetime] = None
+_ticker_cache: dict[str, tuple[datetime, dict]] = {}
+_TICKER_TTL = 15
 
 
-def _get_cached(key: str) -> Optional[dict]:
-    """Get cached data if still fresh."""
-    if key in _cache:
-        cached_at, data = _cache[key]
-        if datetime.utcnow() - cached_at < timedelta(minutes=_CACHE_TTL_MINUTES):
+def _get_ticker_cached(key: str) -> Optional[dict]:
+    if key in _ticker_cache:
+        cached_at, data = _ticker_cache[key]
+        if datetime.utcnow() - cached_at < timedelta(minutes=_TICKER_TTL):
             return data
     return None
 
 
-def _set_cache(key: str, data: dict):
-    """Cache data with timestamp."""
-    _cache[key] = (datetime.utcnow(), data)
+def _set_ticker_cache(key: str, data: dict):
+    _ticker_cache[key] = (datetime.utcnow(), data)
 
 
-# ─── Main fetch function ──────────────────────────────────────────────────────
+def _load_csv() -> pd.DataFrame:
+    global _csv_cache, _csv_cached_at
+    now = datetime.utcnow()
+    if (
+        _csv_cache is not None
+        and _csv_cached_at is not None
+        and now - _csv_cached_at < timedelta(hours=CACHE_TTL_HOURS)
+    ):
+        return _csv_cache
+
+    logger.info("Loading market data CSV from GitHub...")
+    try:
+        response = httpx.get(CSV_URL, timeout=REQUEST_TIMEOUT, follow_redirects=True)
+        response.raise_for_status()
+        df = pd.read_csv(StringIO(response.text))
+        df["ticker"] = df["ticker"].str.strip().str.upper()
+        df = df.set_index("ticker")
+        _csv_cache = df
+        _csv_cached_at = now
+        logger.info("CSV loaded: %d tickers", len(df))
+        return df
+    except httpx.HTTPError as e:
+        logger.error("Failed to fetch CSV: %s", e)
+        if _csv_cache is not None:
+            logger.warning("Using stale CSV cache as fallback")
+            return _csv_cache
+        raise RuntimeError(f"Could not load market data CSV from GitHub: {e}") from e
+
+
 def fetch_ticker_data(
     ticker: str,
-    closing_prices_override: Optional[list[float]] = None,
+    closing_prices_override: list[float] | None = None,
 ) -> dict:
-    """
-    Fetch all data needed for the Merton model from Excel.
-
-    Args:
-        ticker: Stock ticker (e.g., 'AAPL')
-        closing_prices_override: Override prices for stress testing
-
-    Returns:
-        dict with keys:
-            company_name: str
-            sector: str
-            market_cap: float (USD)
-            total_debt: float (USD)
-            closing_prices: list[float]  (1 year of daily closes, oldest first)
-            equity_volatility: float     (annualized)
-    """
     ticker_upper = ticker.strip().upper()
-
-    # Check in-memory cache first (15 min TTL)
-    cached = _get_cached(ticker_upper)
+    cached = _get_ticker_cached(ticker_upper)
     if cached:
-        logger.debug("Cache hit for %s", ticker_upper)
-        if closing_prices_override is not None:
-            cached = cached.copy()
-            cached['closing_prices'] = closing_prices_override
-            # Recalculate volatility with override prices
-            arr = np.array(closing_prices_override)
-            log_ret = np.diff(np.log(arr))
-            cached['equity_volatility'] = float(np.std(log_ret, ddof=1) * np.sqrt(252))
         return cached
 
-    try:
-        # Read from Excel
-        logger.info("Reading %s from Excel", ticker_upper)
-        excel = get_excel_source()
-        data = excel.get_ticker_data(ticker_upper)
+    df = _load_csv()
 
-        # Apply override if provided (for stress testing)
-        if closing_prices_override is not None:
-            data['closing_prices'] = closing_prices_override
-            # Recalculate volatility with override prices
-            arr = np.array(closing_prices_override)
-            log_ret = np.diff(np.log(arr))
-            data['equity_volatility'] = float(np.std(log_ret, ddof=1) * np.sqrt(252))
+    if ticker_upper not in df.index:
+        raise RuntimeError(
+            f"Ticker '{ticker_upper}' not found in market_data.csv. "
+            f"Add it to scripts/update_data.py TICKERS list and re-run the GitHub Action."
+        )
 
-        # Cache in memory for 15 minutes
-        _set_cache(ticker_upper, data)
-        return data
+    row = df.loc[ticker_upper]
+    company_name      = str(row.get("company_name", ticker_upper))
+    sector            = str(row.get("sector", "Unknown"))
+    market_cap        = float(row.get("market_cap", 0))
+    total_debt        = float(row.get("total_debt", 0))
+    equity_volatility = float(row.get("equity_volatility", 0.25))
 
-    except ValueError as e:
-        raise RuntimeError(str(e))
-    except Exception as e:
-        raise RuntimeError(f"Error reading {ticker} from Excel: {e}")
+    if market_cap <= 0:
+        raise RuntimeError(
+            f"Market cap is zero for '{ticker_upper}' in the CSV. "
+            "The last GitHub Actions run may have failed for this ticker."
+        )
 
+    closing_prices = closing_prices_override if closing_prices_override is not None else []
 
-# ─── Bulk fetch for portfolio_snapshot.py ────────────────────────────────────
-def fetch_bulk_price_histories(tickers: list[str]) -> dict[str, list[float]]:
-    """
-    Fetch price histories for multiple tickers from Excel.
-    Skips failures silently.
-    """
-    result = {}
-    for ticker in tickers:
-        try:
-            data = fetch_ticker_data(ticker)
-            result[ticker.strip().upper()] = data['closing_prices']
-            # Gentle pacing
-            time.sleep(0.5)
-        except Exception as e:
-            logger.warning("Bulk fetch skipped %s: %s", ticker.upper(), e)
+    result = {
+        "company_name":      company_name,
+        "sector":            sector,
+        "market_cap":        market_cap,
+        "total_debt":        total_debt,
+        "closing_prices":    closing_prices,
+        "equity_volatility": equity_volatility,
+    }
+    _set_ticker_cache(ticker_upper, result)
     return result
 
 
-# ─── Preset portfolios ────────────────────────────────────────────────────────
+def fetch_bulk_price_histories(tickers: list[str]) -> dict[str, list[float]]:
+    """Compatibility stub — volatility is pre-computed in CSV."""
+    return {}
+
+
+def get_available_tickers() -> list[str]:
+    return _load_csv().index.tolist()
+
+
 PRESETS: dict[str, list[dict]] = {
     "ig": [
         {"ticker": "AAPL", "notional": 10_000_000},
