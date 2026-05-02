@@ -71,7 +71,7 @@ TICKERS = [
     "OPEN","Z","TRGP","WES","AM","HESM","LNG","ET","EPD","PAA",
     "PAGP","KMI","WMB","OKE","TALO","SM","CRC","FSLR","ENPH","SEDG",
     "RUN","ARRY","BE","PLUG","BLDP","CHPT","EVGO","BLNK","CEG","EQR",
-    "AVB","SMPL","PR","CIVI","MTDR","SIRI","ALKS","MNDY","NTRA","CQP",
+    "AVB","SMPL","PR","CHRD","MTDR","SIRI","ALKS","MNDY","NTRA","CQP",
     "GAP","FBIN","FISV","XYZ","VTRS",
 ]
 
