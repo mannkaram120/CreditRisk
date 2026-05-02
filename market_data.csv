@@ -1,486 +1,486 @@
 ticker,company_name,sector,market_cap,total_debt,equity_volatility,lgd,last_updated,data_source
-AAPL,Apple Inc.,Technology,3983727394816.0,90509000000.0,0.233945,0.35,2026-05-01,yfinance
-MSFT,Microsoft Corporation,Technology,3029167243264.0,56965000000.0,0.239143,0.35,2026-05-01,yfinance
-JPM,JPMorgan Chase & Co.,Financial Services,839299825664.0,499982000000.0,0.211814,0.55,2026-05-01,yfinance
-JNJ,Johnson & Johnson,Healthcare,553298821120.0,54987000000.0,0.167553,0.35,2026-05-01,yfinance
-PG,The Procter & Gamble Company,Consumer Defensive,342513614848.0,37026000000.0,0.177302,0.35,2026-05-01,yfinance
-F,Ford Motor Company,Consumer Cyclical,48453873664.0,165738000000.0,0.298934,0.4,2026-05-01,yfinance
-M,"Macy's, Inc.",Consumer Cyclical,5156537344.0,5204000000.0,0.441876,0.4,2026-05-01,yfinance
-CCL,Carnival Corporation & plc,Consumer Cyclical,36720050176.0,26607000000.0,0.459053,0.4,2026-05-01,yfinance
-AAL,American Airlines Group Inc.,Industrials,7744820224.0,34892000000.0,0.479493,0.4,2026-05-01,yfinance
-AMC,"AMC Entertainment Holdings, Inc.",Communication Services,885851776.0,8136000000.0,0.620601,0.4,2026-05-01,yfinance
-C,Citigroup Inc.,Financial Services,223877857280.0,367705000000.0,0.28058,0.55,2026-05-01,yfinance
-BAC,Bank of America Corporation,Financial Services,381164879872.0,365904000000.0,0.215065,0.55,2026-05-01,yfinance
-GS,"The Goldman Sachs Group, Inc.",Financial Services,274131451904.0,386150000000.0,0.2701,0.55,2026-05-01,yfinance
-MS,Morgan Stanley,Financial Services,302630273024.0,370538000000.0,0.254471,0.55,2026-05-01,yfinance
-WFC,Wells Fargo & Company,Financial Services,251980693504.0,216223000000.0,0.26161,0.55,2026-05-01,yfinance
-GOOGL,Alphabet Inc.,Communication Services,4662022373376.0,59291000000.0,0.296822,0.4,2026-05-01,yfinance
-AMZN,"Amazon.com, Inc.",Consumer Cyclical,2850521874432.0,152987000000.0,0.306419,0.4,2026-05-01,yfinance
-META,"Meta Platforms, Inc.",Communication Services,1553286561792.0,83897000000.0,0.359706,0.4,2026-05-01,yfinance
-NVDA,NVIDIA Corporation,Technology,4850548998144.0,11040000000.0,0.338435,0.35,2026-05-01,yfinance
-TSLA,"Tesla, Inc.",Consumer Cyclical,1433296830464.0,15890000000.0,0.47487,0.4,2026-05-01,yfinance
-ORCL,Oracle Corporation,Technology,464165076992.0,153117000000.0,0.58719,0.35,2026-05-01,yfinance
-CRM,"Salesforce, Inc.",Technology,144411033600.0,17176000000.0,0.348595,0.35,2026-05-01,yfinance
-ADBE,Adobe Inc.,Technology,99473620992.0,6656000000.0,0.316723,0.35,2026-05-01,yfinance
-INTC,Intel Corporation,Technology,474856488960.0,45031000000.0,0.664978,0.35,2026-05-01,yfinance
-AMD,"Advanced Micro Devices, Inc.",Technology,577964343296.0,3847000000.0,0.593536,0.35,2026-05-01,yfinance
-QCOM,QUALCOMM Incorporated,Technology,189277323264.0,15270000000.0,0.356104,0.35,2026-05-01,yfinance
-TXN,Texas Instruments Incorporated,Technology,255808864256.0,14050000000.0,0.387316,0.35,2026-05-01,yfinance
-CSCO,"Cisco Systems, Inc.",Technology,361415213056.0,30086000000.0,0.259849,0.35,2026-05-01,yfinance
-IBM,International Business Machines Corporation,Technology,217094701056.0,69802000000.0,0.336296,0.35,2026-05-01,yfinance
-NOW,"ServiceNow, Inc.",Technology,91074805760.0,2431000000.0,0.439326,0.35,2026-05-01,yfinance
-AMAT,"Applied Materials, Inc.",Technology,313071140864.0,7190000000.0,0.454521,0.35,2026-05-01,yfinance
-MU,"Micron Technology, Inc.",Technology,583218888704.0,10798000000.0,0.588218,0.35,2026-05-01,yfinance
-LRCX,Lam Research Corporation,Technology,322472214528.0,3734479000.0,0.487169,0.35,2026-05-01,yfinance
-KLAC,KLA Corporation,Technology,229982568448.0,6145360000.0,0.453179,0.35,2026-05-01,yfinance
-SNPS,"Synopsys, Inc.",Technology,92447834112.0,10868557000.0,0.62317,0.35,2026-05-01,yfinance
-CDNS,"Cadence Design Systems, Inc.",Technology,90997178368.0,2616439000.0,0.372843,0.35,2026-05-01,yfinance
-PANW,"Palo Alto Networks, Inc.",Technology,145428529152.0,372000000.0,0.349502,0.35,2026-05-01,yfinance
-CRWD,"CrowdStrike Holdings, Inc.",Technology,113048485888.0,820077000.0,0.423446,0.35,2026-05-01,yfinance
-FTNT,"Fortinet, Inc.",Technology,61723521024.0,996300000.0,0.411357,0.35,2026-05-01,yfinance
-NET,"Cloudflare, Inc.",Technology,72431083520.0,3518327000.0,0.515694,0.35,2026-05-01,yfinance
-DDOG,"Datadog, Inc.",Technology,47052001280.0,1279005000.0,0.533522,0.35,2026-05-01,yfinance
-ZS,"Zscaler, Inc.",Technology,21012127744.0,1864388000.0,0.455552,0.35,2026-05-01,yfinance
-TEAM,Atlassian Corporation,Technology,18090205184.0,1215079000.0,0.529065,0.35,2026-05-01,yfinance
-HUBS,"HubSpot, Inc.",Technology,11415823360.0,262305000.0,0.553746,0.35,2026-05-01,yfinance
-WDAY,"Workday, Inc.",Technology,31462797312.0,3821000000.0,0.405385,0.35,2026-05-01,yfinance
-SNOW,Snowflake Inc.,Technology,47177678848.0,2741114000.0,0.518646,0.35,2026-05-01,yfinance
-PLTR,Palantir Technologies Inc.,Technology,333468532736.0,229338000.0,0.53123,0.35,2026-05-01,yfinance
-APP,AppLovin Corporation,Communication Services,150090072064.0,3544741000.0,0.719374,0.4,2026-05-01,yfinance
-UBER,"Uber Technologies, Inc.",Technology,153556041728.0,12080000000.0,0.32487,0.35,2026-05-01,yfinance
-LYFT,"Lyft, Inc.",Technology,5407053312.0,1276733000.0,0.560544,0.35,2026-05-01,yfinance
-ABNB,"Airbnb, Inc.",Consumer Cyclical,83447562240.0,2067000000.0,0.298611,0.4,2026-05-01,yfinance
-DASH,"DoorDash, Inc.",Consumer Cyclical,73488629760.0,3290000000.0,0.447424,0.4,2026-05-01,yfinance
-SPOT,Spotify Technology S.A.,Communication Services,91819638784.0,476000000.0,0.442348,0.4,2026-05-01,yfinance
-RBLX,Roblox Corporation,Communication Services,39554838528.0,1802704000.0,0.552757,0.4,2026-05-01,yfinance
-U,Unity Software Inc.,Technology,11527838720.0,2235350000.0,0.78068,0.35,2026-05-01,yfinance
-HOOD,"Robinhood Markets, Inc.",Financial Services,65637814272.0,13387000000.0,0.671736,0.55,2026-05-01,yfinance
-COIN,"Coinbase Global, Inc.",Financial Services,49585393664.0,7831459000.0,0.723983,0.55,2026-05-01,yfinance
-MSTR,Strategy Inc,Technology,57971503104.0,8236290000.0,0.680898,0.35,2026-05-01,yfinance
-BRK-B,Berkshire Hathaway Inc.,Financial Services,1021494099968.0,129081000000.0,0.153966,0.55,2026-05-01,yfinance
-V,Visa Inc.,Financial Services,627271139328.0,23976000000.0,0.21976,0.55,2026-05-01,yfinance
-MA,Mastercard Incorporated,Financial Services,444770680832.0,19000000000.0,0.218918,0.55,2026-05-01,yfinance
-AXP,American Express Company,Financial Services,220425551872.0,60442000000.0,0.269675,0.55,2026-05-01,yfinance
-BLK,"BlackRock, Inc.",Financial Services,165556895744.0,14996000000.0,0.251617,0.55,2026-05-01,yfinance
-SCHW,The Charles Schwab Corporation,Financial Services,160572555264.0,30951000000.0,0.233385,0.55,2026-05-01,yfinance
-USB,U.S. Bancorp,Financial Services,88106303488.0,68413000000.0,0.221799,0.55,2026-05-01,yfinance
-PNC,"The PNC Financial Services Group, Inc.",Financial Services,89951715328.0,57101000000.0,0.219355,0.55,2026-05-01,yfinance
-TFC,Truist Financial Corporation,Financial Services,64162770944.0,64305000000.0,0.232641,0.55,2026-05-01,yfinance
-COF,Capital One Financial Corporation,Financial Services,121321676800.0,50413000000.0,0.320701,0.55,2026-05-01,yfinance
-SYF,Synchrony Financial,Financial Services,25631412224.0,16428000000.0,0.306536,0.55,2026-05-01,yfinance
-AIG,"American International Group, Inc.",Financial Services,40008036352.0,9191000000.0,0.233004,0.55,2026-05-01,yfinance
-MET,"MetLife, Inc.",Financial Services,51679326208.0,20183000000.0,0.23204,0.55,2026-05-01,yfinance
-PRU,"Prudential Financial, Inc.",Financial Services,34142279680.0,22958000000.0,0.230794,0.55,2026-05-01,yfinance
-ALL,The Allstate Corporation,Financial Services,55927271424.0,7491000000.0,0.231035,0.55,2026-05-01,yfinance
-TRV,"The Travelers Companies, Inc.",Financial Services,64886403072.0,9268000000.0,0.185669,0.55,2026-05-01,yfinance
-PGR,The Progressive Corporation,Financial Services,117628035072.0,6897000000.0,0.223882,0.55,2026-05-01,yfinance
-CB,Chubb Limited,Financial Services,126830247936.0,17470000000.0,0.176512,0.55,2026-05-01,yfinance
-MMC,Marsh & McLennan Companies,Financial Services,98000000000.0,12000000000.0,0.195,0.55,2026-04-21,cached — fetch failed 2026-05-01
-AON,Aon plc,Financial Services,66560200704.0,16071000000.0,0.238385,0.55,2026-05-01,yfinance
-ICE,"Intercontinental Exchange, Inc.",Financial Services,89547038720.0,20279000000.0,0.214471,0.55,2026-05-01,yfinance
-CME,CME Group Inc.,Financial Services,104294277120.0,3423200000.0,0.191393,0.55,2026-05-01,yfinance
-SPGI,S&P Global Inc.,Financial Services,127644082176.0,13776000000.0,0.27192,0.55,2026-05-01,yfinance
-MCO,Moody's Corporation,Financial Services,80674308096.0,7313000000.0,0.262559,0.55,2026-05-01,yfinance
-MSCI,MSCI Inc.,Financial Services,43011821568.0,6547700000.0,0.281205,0.55,2026-05-01,yfinance
-FIS,"Fidelity National Information Services, Inc.",Technology,24049922048.0,13331000000.0,0.287468,0.35,2026-05-01,yfinance
-GPN,Global Payments Inc.,Industrials,19806486528.0,21865376000.0,0.380181,0.4,2026-05-01,yfinance
-WEX,WEX Inc.,Technology,5211662336.0,5237100000.0,0.382573,0.35,2026-05-01,yfinance
-UNH,UnitedHealth Group Incorporated,Healthcare,336474832896.0,78389000000.0,0.480922,0.35,2026-05-01,yfinance
-LLY,Eli Lilly and Company,Healthcare,836297687040.0,42503000000.0,0.386959,0.35,2026-05-01,yfinance
-ABBV,AbbVie Inc.,Healthcare,373774876672.0,67496000000.0,0.252571,0.35,2026-05-01,yfinance
-MRK,"Merck & Co., Inc.",Healthcare,269661421568.0,49339000000.0,0.278225,0.35,2026-05-01,yfinance
-PFE,Pfizer Inc.,Healthcare,151879122944.0,63961000000.0,0.250137,0.35,2026-05-01,yfinance
-TMO,Thermo Fisher Scientific Inc.,Healthcare,177991778304.0,39385000000.0,0.314132,0.35,2026-05-01,yfinance
-ABT,Abbott Laboratories,Healthcare,158139219968.0,34047000000.0,0.239179,0.35,2026-05-01,yfinance
-DHR,Danaher Corporation,Healthcare,126655553536.0,18484000000.0,0.290213,0.35,2026-05-01,yfinance
-BMY,Bristol-Myers Squibb Company,Healthcare,123708751872.0,47139000000.0,0.27812,0.35,2026-05-01,yfinance
-AMGN,Amgen Inc.,Healthcare,186866106368.0,54604000000.0,0.274449,0.35,2026-05-01,yfinance
-GILD,"Gilead Sciences, Inc.",Healthcare,162399092736.0,24936000000.0,0.277601,0.35,2026-05-01,yfinance
-ISRG,"Intuitive Surgical, Inc.",Healthcare,162068463616.0,0.0,0.292578,0.35,2026-05-01,yfinance
-SYK,Stryker Corporation,Healthcare,120689827840.0,15859000000.0,0.200534,0.35,2026-05-01,yfinance
-BSX,Boston Scientific Corporation,Healthcare,85618548736.0,11436000000.0,0.325265,0.35,2026-05-01,yfinance
-HCA,"HCA Healthcare, Inc.",Healthcare,96378306560.0,49845000000.0,0.269604,0.35,2026-05-01,yfinance
-ELV,"Elevance Health, Inc.",Healthcare,81744265216.0,31842000000.0,0.412837,0.35,2026-05-01,yfinance
-CI,The Cigna Group,Healthcare,76857827328.0,31463000000.0,0.341106,0.35,2026-05-01,yfinance
-HUM,Humana Inc.,Healthcare,28387342336.0,13993000000.0,0.49783,0.35,2026-05-01,yfinance
-CNC,Centene Corporation,Healthcare,26511960064.0,16371000000.0,0.72347,0.35,2026-05-01,yfinance
-MOH,"Molina Healthcare, Inc.",Healthcare,10139701248.0,3947000000.0,0.630854,0.35,2026-05-01,yfinance
-ZBH,"Zimmer Biomet Holdings, Inc.",Healthcare,15955900416.0,7519100000.0,0.335591,0.35,2026-05-01,yfinance
-BAX,Baxter International Inc.,Healthcare,9075719168.0,9780000000.0,0.481967,0.35,2026-05-01,yfinance
-BDX,"Becton, Dickinson and Company",Healthcare,42396909568.0,19539000000.0,0.237681,0.35,2026-05-01,yfinance
-EW,Edwards Lifesciences Corporation,Healthcare,48141230080.0,705400000.0,0.229888,0.35,2026-05-01,yfinance
-HOLX,"Hologic, Inc.",Healthcare,16968846336.0,2520300000.0,0.236935,0.35,2026-05-01,yfinance
-IDXX,"IDEXX Laboratories, Inc.",Healthcare,44653154304.0,976062000.0,0.387896,0.35,2026-05-01,yfinance
-IQV,IQVIA Holdings Inc.,Healthcare,26584991744.0,15949000000.0,0.408408,0.35,2026-05-01,yfinance
-MCK,McKesson Corporation,Healthcare,99851771904.0,8624000000.0,0.27676,0.35,2026-05-01,yfinance
-COR,"Cencora, Inc.",Healthcare,59917398016.0,7921735000.0,0.255768,0.35,2026-05-01,yfinance
-CAH,"Cardinal Health, Inc.",Healthcare,45387755520.0,9027000000.0,0.290325,0.35,2026-05-01,yfinance
-WMT,Walmart Inc.,Consumer Defensive,1051612741632.0,67095000000.0,0.218735,0.35,2026-05-01,yfinance
-COST,Costco Wholesale Corporation,Consumer Defensive,450098823168.0,8165000000.0,0.183011,0.35,2026-05-01,yfinance
-HD,"The Home Depot, Inc.",Consumer Cyclical,327493877760.0,65350000000.0,0.228943,0.4,2026-05-01,yfinance
-LOW,"Lowe's Companies, Inc.",Consumer Cyclical,133737422848.0,44677000000.0,0.251822,0.4,2026-05-01,yfinance
-TGT,Target Corporation,Consumer Defensive,58929369088.0,20290000000.0,0.304777,0.35,2026-05-01,yfinance
-MCD,McDonald's Corporation,Consumer Cyclical,208691888128.0,54814000000.0,0.160954,0.4,2026-05-01,yfinance
-SBUX,Starbucks Corporation,Consumer Cyclical,120044601344.0,24391400000.0,0.299107,0.4,2026-05-01,yfinance
-NKE,"NIKE, Inc.",Consumer Cyclical,65692151808.0,11178000000.0,0.391656,0.4,2026-05-01,yfinance
-TJX,"The TJX Companies, Inc.",Consumer Cyclical,174065713152.0,13489000000.0,0.170054,0.4,2026-05-01,yfinance
-BKNG,Booking Holdings Inc.,Consumer Cyclical,130458542080.0,18943000000.0,0.311306,0.4,2026-05-01,yfinance
-EXPE,"Expedia Group, Inc.",Consumer Cyclical,30433986560.0,6415000000.0,0.463431,0.4,2026-05-01,yfinance
-YUM,"Yum! Brands, Inc.",Consumer Cyclical,44132069376.0,13189000000.0,0.210534,0.4,2026-05-01,yfinance
-QSR,Restaurant Brands International Inc.,Consumer Cyclical,36841631744.0,15704000000.0,0.224744,0.4,2026-05-01,yfinance
-DPZ,"Domino's Pizza, Inc.",Consumer Cyclical,11289744384.0,5135773000.0,0.255845,0.4,2026-05-01,yfinance
-DKNG,DraftKings Inc.,Consumer Cyclical,11560722432.0,1889826000.0,0.470286,0.4,2026-05-01,yfinance
-LVS,Las Vegas Sands Corp.,Consumer Cyclical,36186624000.0,15724000000.0,0.370759,0.4,2026-05-01,yfinance
-WYNN,"Wynn Resorts, Limited",Consumer Cyclical,11169783808.0,12175929000.0,0.356621,0.4,2026-05-01,yfinance
-CZR,"Caesars Entertainment, Inc.",Consumer Cyclical,5662218240.0,24928000000.0,0.519666,0.4,2026-05-01,yfinance
-MGM,MGM Resorts International,Consumer Cyclical,9962668032.0,31336426000.0,0.365265,0.4,2026-05-01,yfinance
-KO,The Coca-Cola Company,Consumer Defensive,338904285184.0,45492000000.0,0.160851,0.35,2026-05-01,yfinance
-PEP,"PepsiCo, Inc.",Consumer Defensive,216646467584.0,52728000000.0,0.210348,0.35,2026-05-01,yfinance
-MDLZ,"Mondelez International, Inc.",Consumer Defensive,78867439616.0,21622000000.0,0.222532,0.35,2026-05-01,yfinance
-GIS,"General Mills, Inc.",Consumer Defensive,18844284928.0,13967700000.0,0.233567,0.35,2026-05-01,yfinance
-CAG,"Conagra Brands, Inc.",Consumer Defensive,6865573376.0,7332400000.0,0.274603,0.35,2026-05-01,yfinance
-SJM,The J. M. Smucker Company,Consumer Defensive,10454734848.0,7454300000.0,0.303003,0.35,2026-05-01,yfinance
-HRL,Hormel Foods Corporation,Consumer Defensive,11814601728.0,2857492000.0,0.271781,0.35,2026-05-01,yfinance
-TSN,"Tyson Foods, Inc.",Consumer Defensive,22557700096.0,8362000000.0,0.231709,0.35,2026-05-01,yfinance
-MKC,"McCormick & Company, Incorporated",Consumer Defensive,13667988480.0,4923400000.0,0.276403,0.35,2026-05-01,yfinance
-CLX,The Clorox Company,Consumer Defensive,11660740608.0,3217000000.0,0.243855,0.35,2026-05-01,yfinance
-CL,Colgate-Palmolive Company,Consumer Defensive,68484489216.0,8554000000.0,0.204321,0.35,2026-05-01,yfinance
-KMB,Kimberly-Clark Corporation,Consumer Defensive,32672888832.0,7084000000.0,0.255022,0.35,2026-05-01,yfinance
-CHD,"Church & Dwight Co., Inc.",Consumer Defensive,22991095808.0,2205100000.0,0.207964,0.35,2026-05-01,yfinance
-EL,The Estée Lauder Companies Inc.,Consumer Defensive,27748081664.0,9390000000.0,0.477086,0.35,2026-05-01,yfinance
-ULTA,"Ulta Beauty, Inc.",Consumer Cyclical,23507564544.0,2182061000.0,0.346744,0.4,2026-05-01,yfinance
-XOM,Exxon Mobil Corporation,Energy,641481834496.0,43537000000.0,0.231371,0.45,2026-05-01,yfinance
-CVX,Chevron Corporation,Energy,385053949952.0,40758000000.0,0.212088,0.45,2026-05-01,yfinance
-COP,ConocoPhillips,Energy,153237012480.0,23444000000.0,0.290556,0.45,2026-05-01,yfinance
-SLB,SLB N.V.,Energy,85038882816.0,11608000000.0,0.332028,0.45,2026-05-01,yfinance
-EOG,"EOG Resources, Inc.",Energy,75305574400.0,8408000000.0,0.252602,0.45,2026-05-01,yfinance
-MPC,Marathon Petroleum Corporation,Energy,73120620544.0,34358000000.0,0.307027,0.45,2026-05-01,yfinance
-PSX,Phillips 66,Energy,71827505152.0,27124000000.0,0.311378,0.45,2026-05-01,yfinance
-VLO,Valero Energy Corporation,Energy,75528044544.0,11703000000.0,0.343573,0.45,2026-05-01,yfinance
-OXY,Occidental Petroleum Corporation,Energy,60076896256.0,23351000000.0,0.337418,0.45,2026-05-01,yfinance
-HAL,Halliburton Company,Energy,35337326592.0,8081000000.0,0.365519,0.45,2026-05-01,yfinance
-DVN,Devon Energy Corporation,Energy,31923388416.0,8586000000.0,0.322276,0.45,2026-05-01,yfinance
-FANG,"Diamondback Energy, Inc.",Energy,57846136832.0,14879000000.0,0.302523,0.45,2026-05-01,yfinance
-BKR,Baker Hughes Company,Energy,69117419520.0,16164000000.0,0.312372,0.45,2026-05-01,yfinance
-APA,APA Corporation,Energy,14393998336.0,4590000000.0,0.455885,0.45,2026-05-01,yfinance
-CVI,"CVR Energy, Inc.",Energy,3331584000.0,1801000000.0,0.513148,0.45,2026-05-01,yfinance
-CTRA,Coterra Energy Inc.,Energy,27268495360.0,4017000000.0,0.297827,0.45,2026-05-01,yfinance
-EQT,EQT Corporation,Energy,37578719232.0,5992411000.0,0.328354,0.45,2026-05-01,yfinance
-RRC,Range Resources Corporation,Energy,10249568256.0,979138000.0,0.326991,0.45,2026-05-01,yfinance
-AR,Antero Resources Corporation,Energy,12164160512.0,4750665000.0,0.390732,0.45,2026-05-01,yfinance
-NOV,NOV Inc.,Energy,7342857728.0,2339000000.0,0.375324,0.45,2026-05-01,yfinance
-BA,The Boeing Company,Industrials,180544880640.0,47209000000.0,0.304323,0.4,2026-05-01,yfinance
-CAT,Caterpillar Inc.,Industrials,414156881920.0,43330000000.0,0.326427,0.4,2026-05-01,yfinance
-GE,GE Aerospace,Industrials,302927446016.0,20277000000.0,0.298684,0.4,2026-05-01,yfinance
-HON,Honeywell International Inc.,Industrials,135810875392.0,36739000000.0,0.216266,0.4,2026-05-01,yfinance
-RTX,RTX Corporation,Industrials,237110558720.0,38935000000.0,0.234427,0.4,2026-05-01,yfinance
-LMT,Lockheed Martin Corporation,Industrials,119425032192.0,20697000000.0,0.271111,0.4,2026-05-01,yfinance
-UPS,"United Parcel Service, Inc.",Industrials,92444409856.0,28590000000.0,0.279152,0.4,2026-05-01,yfinance
-FDX,FedEx Corporation,Industrials,96232488960.0,37766000000.0,0.270033,0.4,2026-05-01,yfinance
-DE,Deere & Company,Industrials,159328190464.0,62799000000.0,0.285835,0.4,2026-05-01,yfinance
-MMM,3M Company,Industrials,76420038656.0,12556000000.0,0.262871,0.4,2026-05-01,yfinance
-NOC,Northrop Grumman Corporation,Industrials,82305556480.0,16316000000.0,0.258973,0.4,2026-05-01,yfinance
-GD,General Dynamics Corporation,Industrials,93109108736.0,9832000000.0,0.207871,0.4,2026-05-01,yfinance
-HII,"Huntington Ingalls Industries, Inc.",Industrials,14344710144.0,2923000000.0,0.322234,0.4,2026-05-01,yfinance
-LHX,"L3Harris Technologies, Inc.",Industrials,59874213888.0,11116000000.0,0.241382,0.4,2026-05-01,yfinance
-TDG,TransDigm Group Incorporated,Industrials,65508204544.0,30046000000.0,0.27904,0.4,2026-05-01,yfinance
-HWM,Howmet Aerospace Inc.,Industrials,97444470784.0,3213000000.0,0.290239,0.4,2026-05-01,yfinance
-TXT,Textron Inc.,Industrials,16706530304.0,3878000000.0,0.256779,0.4,2026-05-01,yfinance
-WWD,"Woodward, Inc.",Industrials,21639962624.0,907117000.0,0.335746,0.4,2026-05-01,yfinance
-AXON,"Axon Enterprise, Inc.",Industrials,32370688000.0,1909664000.0,0.535433,0.4,2026-05-01,yfinance
-IR,Ingersoll Rand Inc.,Industrials,31252160512.0,4843600000.0,0.328825,0.4,2026-05-01,yfinance
-ITW,Illinois Tool Works Inc.,Industrials,74358480896.0,9211000000.0,0.205198,0.4,2026-05-01,yfinance
-EMR,Emerson Electric Co.,Industrials,78927282176.0,13920000000.0,0.291039,0.4,2026-05-01,yfinance
-ETN,Eaton Corporation plc,Industrials,168001536000.0,10532000000.0,0.303522,0.4,2026-05-01,yfinance
-ROK,"Rockwell Automation, Inc.",Industrials,45975052288.0,3773000000.0,0.282395,0.4,2026-05-01,yfinance
-AME,"AMETEK, Inc.",Industrials,53944905728.0,2344442000.0,0.214342,0.4,2026-05-01,yfinance
-PH,Parker-Hannifin Corporation,Industrials,114783830016.0,9870000000.0,0.242708,0.4,2026-05-01,yfinance
-DOV,Dover Corporation,Industrials,30488690688.0,3290113000.0,0.239595,0.4,2026-05-01,yfinance
-FAST,Fastenal Company,Industrials,51581214720.0,445500000.0,0.252606,0.4,2026-05-01,yfinance
-GWW,"W.W. Grainger, Inc.",Industrials,54966677504.0,2862000000.0,0.245113,0.4,2026-05-01,yfinance
-MSC,Studio City International Holdings Limited,Consumer Cyclical,452582208.0,2038666000.0,0.991345,0.4,2026-05-01,yfinance
-CTAS,Cintas Corporation,Industrials,69899223040.0,2918187000.0,0.186389,0.4,2026-05-01,yfinance
-VRSK,"Verisk Analytics, Inc.",Industrials,24172220416.0,4625200000.0,0.303019,0.4,2026-05-01,yfinance
-BR,"Broadridge Financial Solutions, Inc.",Technology,17976967168.0,3363000000.0,0.241809,0.35,2026-05-01,yfinance
-PAYC,"Paycom Software, Inc.",Technology,6879911424.0,90300000.0,0.361182,0.35,2026-05-01,yfinance
-ADP,"Automatic Data Processing, Inc.",Technology,84903165952.0,4324000000.0,0.225096,0.35,2026-05-01,yfinance
-PAYX,"Paychex, Inc.",Technology,33188483072.0,5013400000.0,0.254013,0.35,2026-05-01,yfinance
-NEE,"NextEra Energy, Inc.",Utilities,204113215488.0,104403000000.0,0.246437,0.4,2026-05-01,yfinance
-DUK,Duke Energy Corporation,Utilities,100817977344.0,90869000000.0,0.152916,0.4,2026-05-01,yfinance
-SO,The Southern Company,Utilities,109010296832.0,76005000000.0,0.163515,0.4,2026-05-01,yfinance
-D,"Dominion Energy, Inc.",Utilities,56693227520.0,48941000000.0,0.184972,0.4,2026-05-01,yfinance
-AEP,"American Electric Power Company, Inc.",Utilities,74527989760.0,49508000000.0,0.175372,0.4,2026-05-01,yfinance
-EXC,Exelon Corporation,Utilities,47055822848.0,50080000000.0,0.181287,0.4,2026-05-01,yfinance
-XEL,Xcel Energy Inc.,Utilities,51774251008.0,34781000000.0,0.191552,0.4,2026-05-01,yfinance
-ES,Eversource Energy,Utilities,26572265472.0,30114898000.0,0.252152,0.4,2026-05-01,yfinance
-ED,"Consolidated Edison, Inc.",Utilities,41075286016.0,28376000000.0,0.174921,0.4,2026-05-01,yfinance
-PCG,PG&E Corporation,Utilities,36600975360.0,62941000000.0,0.272794,0.4,2026-05-01,yfinance
-EIX,Edison International,Utilities,26739331072.0,42697000000.0,0.259835,0.4,2026-05-01,yfinance
-WEC,"WEC Energy Group, Inc.",Utilities,38413012992.0,22314200000.0,0.152263,0.4,2026-05-01,yfinance
-DTE,DTE Energy Company,Utilities,31555784704.0,26290000000.0,0.158466,0.4,2026-05-01,yfinance
-ETR,Entergy Corporation,Utilities,53982982144.0,30934935000.0,0.191459,0.4,2026-05-01,yfinance
-FE,FirstEnergy Corp.,Utilities,27487049728.0,28060000000.0,0.148141,0.4,2026-05-01,yfinance
-AES,The AES Corporation,Utilities,10303884288.0,29897000000.0,0.463718,0.4,2026-05-01,yfinance
-NRG,"NRG Energy, Inc.",Utilities,33041487872.0,16622000000.0,0.488479,0.4,2026-05-01,yfinance
-VST,Vistra Corp.,Utilities,53436616704.0,20068000000.0,0.486814,0.4,2026-05-01,yfinance
-PLD,"Prologis, Inc.",Real Estate,132395401216.0,35680534000.0,0.215589,0.5,2026-05-01,yfinance
-AMT,American Tower Corporation,Real Estate,85123325952.0,45131200000.0,0.235388,0.5,2026-05-01,yfinance
-EQIX,"Equinix, Inc.",Real Estate,106793287680.0,23336000000.0,0.260641,0.5,2026-05-01,yfinance
-SPG,"Simon Property Group, Inc.",Real Estate,77540786176.0,29186714000.0,0.198997,0.5,2026-05-01,yfinance
-O,Realty Income Corporation,Real Estate,59900624896.0,29345846000.0,0.156096,0.5,2026-05-01,yfinance
-WELL,Welltower Inc.,Real Estate,153423446016.0,19984841000.0,0.205365,0.5,2026-05-01,yfinance
-DLR,"Digital Realty Trust, Inc.",Real Estate,71356407808.0,19655352000.0,0.216964,0.5,2026-05-01,yfinance
-PSA,Public Storage,Real Estate,53093814272.0,10032266000.0,0.221879,0.5,2026-05-01,yfinance
-EXR,Extra Space Storage Inc.,Real Estate,31622912000.0,13991757000.0,0.248492,0.5,2026-05-01,yfinance
-VICI,VICI Properties Inc.,Real Estate,31441981440.0,17701677000.0,0.162636,0.5,2026-05-01,yfinance
-WPC,W. P. Carey Inc.,Real Estate,16244363264.0,8753749000.0,0.164462,0.5,2026-05-01,yfinance
-NNN,"NNN REIT, Inc.",Real Estate,8331283968.0,4820424000.0,0.164925,0.5,2026-05-01,yfinance
-ARE,"Alexandria Real Estate Equities, Inc.",Real Estate,7059656192.0,12878605000.0,0.435657,0.5,2026-05-01,yfinance
-BXP,"BXP, Inc.",Real Estate,10350089216.0,17358735000.0,0.288198,0.5,2026-05-01,yfinance
-KIM,Kimco Realty Corporation,Real Estate,15942879232.0,8305981000.0,0.185076,0.5,2026-05-01,yfinance
-UAL,"United Airlines Holdings, Inc.",Industrials,29211275264.0,30971000000.0,0.481406,0.4,2026-05-01,yfinance
-DAL,"Delta Air Lines, Inc.",Industrials,44669046784.0,20299000000.0,0.41315,0.4,2026-05-01,yfinance
-ALK,"Alaska Air Group, Inc.",Industrials,4431560192.0,6893000000.0,0.48161,0.4,2026-05-01,yfinance
-NCLH,Norwegian Cruise Line Holdings Ltd.,Consumer Cyclical,8281819648.0,14606176000.0,0.521717,0.4,2026-05-01,yfinance
-RCL,Royal Caribbean Cruises Ltd.,Consumer Cyclical,71354556416.0,22035000000.0,0.440927,0.4,2026-05-01,yfinance
-HLT,Hilton Worldwide Holdings Inc.,Consumer Cyclical,73774006272.0,13058000000.0,0.230178,0.4,2026-05-01,yfinance
-MAR,"Marriott International, Inc.",Consumer Cyclical,95842263040.0,17083000000.0,0.262783,0.4,2026-05-01,yfinance
-H,Hyatt Hotels Corporation,Consumer Cyclical,15337786368.0,4556000000.0,0.33126,0.4,2026-04-29,cached — fetch failed 2026-05-01
-T,AT&T Inc.,Communication Services,181560082432.0,155043000000.0,0.218486,0.4,2026-05-01,yfinance
-VZ,Verizon Communications Inc.,Communication Services,200573272064.0,181643000000.0,0.22011,0.4,2026-05-01,yfinance
-TMUS,"T-Mobile US, Inc.",Communication Services,211571015680.0,121217000000.0,0.246963,0.4,2026-05-01,yfinance
-LUMN,"Lumen Technologies, Inc.",Communication Services,9106601984.0,17707000000.0,0.77364,0.4,2026-05-01,yfinance
-DIS,The Walt Disney Company,Communication Services,183795187712.0,46640000000.0,0.256338,0.4,2026-05-01,yfinance
-NFLX,"Netflix, Inc.",Communication Services,394172858368.0,14360516000.0,0.331757,0.4,2026-05-01,yfinance
-WBD,"Warner Bros. Discovery, Inc.",Communication Services,67808083968.0,32567000000.0,0.458692,0.4,2026-05-01,yfinance
-FOX,Fox Corporation,Communication Services,24256083968.0,7495000000.0,0.270268,0.4,2026-05-01,yfinance
-CMCSA,Comcast Corporation,Communication Services,96593068032.0,94612000000.0,0.282364,0.4,2026-05-01,yfinance
-CHTR,"Charter Communications, Inc.",Communication Services,23318431744.0,96822000000.0,0.500352,0.4,2026-05-01,yfinance
-EA,Electronic Arts Inc.,Communication Services,50643841024.0,1950000000.0,0.220112,0.4,2026-05-01,yfinance
-TTWO,"Take-Two Interactive Software, Inc.",Communication Services,39583105024.0,3511300000.0,0.294841,0.4,2026-05-01,yfinance
-LYV,"Live Nation Entertainment, Inc.",Communication Services,37135613952.0,10404386000.0,0.307389,0.4,2026-05-01,yfinance
-LIN,Linde plc,Basic Materials,232225341440.0,28069000000.0,0.164769,0.45,2026-05-01,yfinance
-APD,"Air Products and Chemicals, Inc.",Basic Materials,66807930880.0,18138800000.0,0.248338,0.45,2026-05-01,yfinance
-ECL,Ecolab Inc.,Basic Materials,73599639552.0,8997500000.0,0.198214,0.45,2026-05-01,yfinance
-DD,"DuPont de Nemours, Inc.",Basic Materials,18714992640.0,3194000000.0,0.294173,0.45,2026-05-01,yfinance
-DOW,Dow Inc.,Basic Materials,29182822400.0,19629000000.0,0.496949,0.45,2026-05-01,yfinance
-LYB,LyondellBasell Industries N.V.,Basic Materials,24078587904.0,14635000000.0,0.46527,0.45,2026-05-01,yfinance
-PPG,"PPG Industries, Inc.",Basic Materials,24184649728.0,7896000000.0,0.282318,0.45,2026-05-01,yfinance
-SHW,The Sherwin-Williams Company,Basic Materials,79320473600.0,13786700000.0,0.240609,0.45,2026-05-01,yfinance
-NEM,Newmont Corporation,Basic Materials,118594437120.0,5532000000.0,0.462729,0.45,2026-05-01,yfinance
-FCX,Freeport-McMoRan Inc.,Basic Materials,82943279104.0,10492000000.0,0.469775,0.45,2026-05-01,yfinance
-NUE,Nucor Corporation,Basic Materials,51306561536.0,7121000000.0,0.310657,0.45,2026-05-01,yfinance
-STLD,"Steel Dynamics, Inc.",Basic Materials,32975695872.0,4200793000.0,0.342902,0.45,2026-05-01,yfinance
-CLF,Cleveland-Cliffs Inc.,Basic Materials,5818229248.0,7763000000.0,0.732414,0.45,2026-05-01,yfinance
-AA,Alcoa Corporation,Basic Materials,16831795200.0,2698000000.0,0.516802,0.45,2026-05-01,yfinance
-CF,"CF Industries Holdings, Inc.",Basic Materials,19079159808.0,3636000000.0,0.397181,0.45,2026-05-01,yfinance
-MOS,The Mosaic Company,Basic Materials,7396291584.0,5279500000.0,0.426267,0.45,2026-05-01,yfinance
-IFF,International Flavors & Fragrances Inc.,Basic Materials,17931735040.0,6619000000.0,0.290796,0.45,2026-05-01,yfinance
-ALB,Albemarle Corporation,Basic Materials,23188350976.0,3296651000.0,0.614501,0.45,2026-05-01,yfinance
-MP,MP Materials Corp.,Basic Materials,11733158912.0,1007170000.0,0.881549,0.45,2026-05-01,yfinance
-BIIB,Biogen Inc.,Healthcare,27944753152.0,6561900000.0,0.333247,0.35,2026-05-01,yfinance
-REGN,"Regeneron Pharmaceuticals, Inc.",Healthcare,74127482880.0,2706200000.0,0.397122,0.35,2026-05-01,yfinance
-VRTX,Vertex Pharmaceuticals Incorporated,Healthcare,108708257792.0,2030500000.0,0.371486,0.35,2026-05-01,yfinance
-MRNA,"Moderna, Inc.",Healthcare,18219198464.0,1305000000.0,0.640204,0.35,2026-05-01,yfinance
-BNTX,BioNTech SE,Healthcare,26160875520.0,267400000.0,0.460089,0.35,2026-05-01,yfinance
-ALNY,"Alnylam Pharmaceuticals, Inc.",Healthcare,41294602240.0,1278389000.0,0.379358,0.35,2026-05-01,yfinance
-INCY,Incyte Corporation,Healthcare,19033245696.0,39430000.0,0.323932,0.35,2026-05-01,yfinance
-IONS,"Ionis Pharmaceuticals, Inc.",Healthcare,12355028992.0,2040954000.0,0.441446,0.35,2026-05-01,yfinance
-RARE,Ultragenyx Pharmaceutical Inc.,Healthcare,2427452416.0,36000000.0,0.80387,0.35,2026-05-01,yfinance
-FATE,"Fate Therapeutics, Inc.",Healthcare,145352128.0,77849000.0,0.860444,0.35,2026-05-01,yfinance
-TSM,Taiwan Semiconductor Manufacturing Company Limited,Technology,2054125649920.0,1064582700000.0,0.350152,0.35,2026-05-01,yfinance
-AVGO,Broadcom Inc.,Technology,1976392613888.0,66057000000.0,0.423184,0.35,2026-05-01,yfinance
-ASML,ASML Holding N.V.,Technology,554612162560.0,2705600000.0,0.386975,0.35,2026-05-01,yfinance
-MRVL,"Marvell Technology, Inc.",Technology,144416768000.0,4790300000.0,0.57685,0.35,2026-05-01,yfinance
-MPWR,"Monolithic Power Systems, Inc.",Technology,79296593920.0,19972000.0,0.459601,0.35,2026-05-01,yfinance
-ON,ON Semiconductor Corporation,Technology,39651328000.0,3004800000.0,0.52407,0.35,2026-05-01,yfinance
-WOLF,"Wolfspeed, Inc.",Technology,1427440128.0,2066100000.0,1.079507,0.35,2026-05-01,yfinance
-NXPI,NXP Semiconductors N.V.,Technology,74122977280.0,11724000000.0,0.432122,0.35,2026-05-01,yfinance
-STM,STMicroelectronics N.V.,Technology,49008107520.0,2569000000.0,0.489804,0.35,2026-05-01,yfinance
-SWKS,"Skyworks Solutions, Inc.",Technology,10553986048.0,1192900000.0,0.357756,0.35,2026-05-01,yfinance
-QRVO,"Qorvo, Inc.",Technology,8734729216.0,1549170000.0,0.316726,0.35,2026-05-01,yfinance
-ENTG,"Entegris, Inc.",Technology,21524948992.0,3796200000.0,0.565062,0.35,2026-05-01,yfinance
-MKSI,MKS Inc.,Technology,19102531584.0,4447000000.0,0.522293,0.35,2026-05-01,yfinance
-SAP,SAP SE,Technology,199817248768.0,7862000000.0,0.323286,0.35,2026-05-01,yfinance
-INTU,Intuit Inc.,Technology,108109479936.0,6888000000.0,0.368887,0.35,2026-05-01,yfinance
-ADSK,"Autodesk, Inc.",Technology,50006999040.0,2734000000.0,0.306609,0.35,2026-05-01,yfinance
-PTC,PTC Inc.,Technology,16219170816.0,1381059000.0,0.320063,0.35,2026-05-01,yfinance
-PRGS,Progress Software Corporation,Technology,1171889280.0,1375509000.0,0.46475,0.35,2026-05-01,yfinance
-GWRE,"Guidewire Software, Inc.",Technology,11765804032.0,704996000.0,0.452667,0.35,2026-05-01,yfinance
-VEEV,Veeva Systems Inc.,Healthcare,25638637568.0,95859000.0,0.367304,0.35,2026-05-01,yfinance
-TTD,"The Trade Desk, Inc.",Communication Services,11228299264.0,436330000.0,0.721429,0.4,2026-05-01,yfinance
-ROKU,"Roku, Inc.",Communication Services,17215182848.0,523324000.0,0.47011,0.4,2026-05-01,yfinance
-ZM,"Zoom Communications, Inc.",Technology,28626888704.0,58475000.0,0.365863,0.35,2026-05-01,yfinance
-DOCN,"DigitalOcean Holdings, Inc.",Technology,10062801920.0,1602105000.0,0.694365,0.35,2026-05-01,yfinance
-BOX,"Box, Inc.",Technology,3350480128.0,527981000.0,0.33847,0.35,2026-05-01,yfinance
-DELL,Dell Technologies Inc.,Technology,135856930816.0,31503000000.0,0.492651,0.35,2026-05-01,yfinance
-HPQ,HP Inc.,Technology,19149158400.0,10938000000.0,0.34322,0.35,2026-05-01,yfinance
-HPE,Hewlett Packard Enterprise Company,Technology,38173593600.0,21611000000.0,0.384211,0.35,2026-05-01,yfinance
-WDC,Western Digital Corporation,Technology,148562083840.0,4655000000.0,0.60973,0.35,2026-05-01,yfinance
-STX,Seagate Technology Holdings plc,Technology,151049617408.0,4178000000.0,0.602535,0.35,2026-05-01,yfinance
-NTAP,"NetApp, Inc.",Technology,21939144704.0,2734000000.0,0.305877,0.35,2026-05-01,yfinance
-PSTG,Everpure Inc,Technology,22405251072.0,216715000.0,0.632988,0.35,2026-05-01,yfinance
-SMCI,"Super Micro Computer, Inc.",Technology,16453203968.0,4909659000.0,0.793574,0.35,2026-05-01,yfinance
-VIAV,Viavi Solutions Inc.,Technology,9989078016.0,1329800000.0,0.551958,0.35,2026-04-29,cached — fetch failed 2026-05-01
-CIEN,Ciena Corporation,Technology,74598989824.0,1588665000.0,0.626932,0.35,2026-05-01,yfinance
-FFIV,"F5, Inc.",Technology,18382297088.0,267718000.0,0.327711,0.35,2026-05-01,yfinance
-AKAM,"Akamai Technologies, Inc.",Technology,15161029632.0,5675388000.0,0.449899,0.35,2026-05-01,yfinance
-LDOS,"Leidos Holdings, Inc.",Technology,18860316672.0,5235000000.0,0.290016,0.35,2026-05-01,yfinance
-SAIC,Science Applications International Corporation,Technology,4171017984.0,2685000000.0,0.396341,0.35,2026-05-01,yfinance
-BAH,Booz Allen Hamilton Holding Corporation,Industrials,9378625536.0,4137000000.0,0.413483,0.4,2026-05-01,yfinance
-CTSH,Cognizant Technology Solutions Corporation,Technology,25021700096.0,1092000000.0,0.299533,0.35,2026-05-01,yfinance
-ACN,Accenture plc,Technology,109984415744.0,8347367000.0,0.336969,0.35,2026-05-01,yfinance
-WIT,Wipro Limited,Technology,22094528512.0,198046000000.0,0.31748,0.35,2026-05-01,yfinance
-INFY,Infosys Limited,Technology,50421121024.0,967000000.0,0.332496,0.35,2026-05-01,yfinance
-WIX,Wix.com Ltd.,Technology,4355484160.0,1586609000.0,0.59608,0.35,2026-05-01,yfinance
-SHOP,Shopify Inc.,Technology,157588570112.0,188000000.0,0.540706,0.35,2026-05-01,yfinance
-PYPL,"PayPal Holdings, Inc.",Financial Services,45109653504.0,9987000000.0,0.400434,0.55,2026-05-01,yfinance
-AFRM,"Affirm Holdings, Inc.",Financial Services,21412352000.0,9181844000.0,0.642165,0.55,2026-05-01,yfinance
-SOFI,"SoFi Technologies, Inc.",Financial Services,20630693888.0,1934625000.0,0.558635,0.55,2026-05-01,yfinance
-NU,Nu Holdings Ltd.,Financial Services,70381477888.0,1897823000.0,0.376371,0.55,2026-05-01,yfinance
-MELI,"MercadoLibre, Inc.",Consumer Cyclical,90881294336.0,11392000000.0,0.373484,0.4,2026-05-01,yfinance
-SE,Sea Limited,Consumer Cyclical,51987685376.0,3375847000.0,0.486231,0.4,2026-05-01,yfinance
-GRAB,Grab Holdings Limited,Technology,15663840256.0,2053000000.0,0.383117,0.35,2026-05-01,yfinance
-BIDU,"Baidu, Inc.",Communication Services,43052171264.0,97077000000.0,0.468808,0.4,2026-05-01,yfinance
-JD,"JD.com, Inc.",Consumer Cyclical,41411682304.0,107105000000.0,0.323741,0.4,2026-05-01,yfinance
-PDD,PDD Holdings Inc.,Consumer Cyclical,142168834048.0,5378795000.0,0.336333,0.4,2026-05-01,yfinance
-BABA,Alibaba Group Holding Limited,Consumer Cyclical,325424644096.0,262740000000.0,0.427073,0.4,2026-05-01,yfinance
-TCOM,Trip.com Group Limited,Consumer Cyclical,34136320000.0,31614000000.0,0.377599,0.4,2026-05-01,yfinance
-NTES,"NetEase, Inc.",Communication Services,74986438656.0,6729742000.0,0.31873,0.4,2026-05-01,yfinance
-ALLY,Ally Financial Inc.,Financial Services,13645841408.0,21344000000.0,0.299044,0.55,2026-05-01,yfinance
-SLM,SLM Corporation,Financial Services,4352726016.0,6169182000.0,0.383934,0.55,2026-05-01,yfinance
-NAVI,Navient Corporation,Financial Services,868462208.0,44645000000.0,0.381489,0.55,2026-05-01,yfinance
-OMF,"OneMain Holdings, Inc.",Financial Services,6789900288.0,22694000000.0,0.291534,0.55,2026-05-01,yfinance
-CACC,Credit Acceptance Corporation,Financial Services,5262766592.0,6353900000.0,0.409726,0.55,2026-05-01,yfinance
-TREE,"LendingTree, Inc.",Financial Services,691930176.0,439611000.0,0.674975,0.55,2026-05-01,yfinance
-LC,LendingClub Corporation,Financial Services,1971548928.0,15826000.0,0.546494,0.55,2026-05-01,yfinance
-LPLA,LPL Financial Holdings Inc.,Financial Services,26793242624.0,7462664000.0,0.355654,0.55,2026-05-01,yfinance
-RJF,"Raymond James Financial, Inc.",Financial Services,30809073664.0,4221000000.0,0.244932,0.55,2026-05-01,yfinance
-SF,Stifel Financial Corp.,Financial Services,12120536064.0,1528342000.0,0.269887,0.55,2026-05-01,yfinance
-HLI,"Houlihan Lokey, Inc.",Financial Services,10799275008.0,497131000.0,0.259456,0.55,2026-05-01,yfinance
-LAZ,"Lazard, Inc.",Financial Services,4554532352.0,2173235000.0,0.370306,0.55,2026-05-01,yfinance
-EVR,Evercore Inc.,Financial Services,12427488256.0,1155081000.0,0.365299,0.55,2026-05-01,yfinance
-PJT,PJT Partners Inc.,Financial Services,6235321344.0,413918000.0,0.295099,0.55,2026-05-01,yfinance
-MKTX,MarketAxess Holdings Inc.,Financial Services,5530076160.0,284938000.0,0.267637,0.55,2026-05-01,yfinance
-CBOE,"Cboe Global Markets, Inc.",Financial Services,31432108032.0,1590700000.0,0.217794,0.55,2026-05-01,yfinance
-NDAQ,"Nasdaq, Inc.",Financial Services,51978858496.0,9445000000.0,0.240462,0.55,2026-05-01,yfinance
-IEX,IDEX Corporation,Industrials,16196673536.0,1848600000.0,0.266215,0.4,2026-05-01,yfinance
-BEN,"Franklin Resources, Inc.",Financial Services,15573525504.0,15394100000.0,0.27769,0.55,2026-05-01,yfinance
-IVZ,Invesco Ltd.,Financial Services,11618892800.0,9784500000.0,0.344894,0.55,2026-05-01,yfinance
-TROW,"T. Rowe Price Group, Inc.",Financial Services,22108911616.0,447200000.0,0.24589,0.55,2026-05-01,yfinance
-WTW,Willis Towers Watson Public Limited Company,Financial Services,24154001408.0,6903000000.0,0.27138,0.55,2026-05-01,yfinance
-AFG,"American Financial Group, Inc.",Financial Services,11072871424.0,1820000000.0,0.206252,0.55,2026-05-01,yfinance
-RLI,RLI Corp.,Financial Services,4759647232.0,347247000.0,0.21416,0.55,2026-05-01,yfinance
-CINF,Cincinnati Financial Corporation,Financial Services,25306750976.0,884000000.0,0.198627,0.55,2026-05-01,yfinance
-HIG,"The Hartford Insurance Group, Inc.",Financial Services,37503836160.0,4371000000.0,0.185631,0.55,2026-05-01,yfinance
-L,Loews Corporation,Financial Services,23171500032.0,9489000000.0,0.147597,0.55,2026-05-01,yfinance
-MKL,Markel Group Inc.,Financial Services,22180175872.0,4382845000.0,0.194586,0.55,2026-05-01,yfinance
-WRB,W. R. Berkley Corporation,Financial Services,26064971776.0,2839725000.0,0.207948,0.55,2026-05-01,yfinance
-ERIE,Erie Indemnity Company,Financial Services,11447820288.0,49621000.0,0.299171,0.55,2026-05-01,yfinance
-RE,Everest Group Ltd.,Financial Services,18000000000.0,3500000000.0,0.225,0.55,2026-04-21,cached — fetch failed 2026-05-01
-RNR,RenaissanceRe Holdings Ltd.,Financial Services,13191660544.0,2329201000.0,0.226171,0.55,2026-05-01,yfinance
-DXCM,"DexCom, Inc.",Healthcare,22978736128.0,1389700000.0,0.419037,0.35,2026-05-01,yfinance
-PODD,Insulet Corporation,Healthcare,11923055616.0,949200000.0,0.394538,0.35,2026-05-01,yfinance
-ALGN,"Align Technology, Inc.",Healthcare,12605356032.0,114446000.0,0.589546,0.35,2026-05-01,yfinance
-TECH,Bio-Techne Corporation,Healthcare,8654996480.0,350895000.0,0.429411,0.35,2026-05-01,yfinance
-XRAY,DENTSPLY SIRONA Inc.,Healthcare,2353765888.0,2468000000.0,0.466844,0.35,2026-05-01,yfinance
-HSIC,"Henry Schein, Inc.",Healthcare,8559056384.0,3436000000.0,0.270282,0.35,2026-05-01,yfinance
-PRGO,Perrigo Company plc,Healthcare,1629768192.0,3640200000.0,0.473183,0.35,2026-05-01,yfinance
-CVS,CVS Health Corporation,Healthcare,106744823808.0,79950000000.0,0.312771,0.35,2026-05-01,yfinance
-JAZZ,Jazz Pharmaceuticals plc,Healthcare,12737234944.0,5423866000.0,0.372916,0.35,2026-05-01,yfinance
-UTHR,United Therapeutics Corporation,Healthcare,24246511616.0,37600000.0,0.467187,0.35,2026-05-01,yfinance
-BMRN,BioMarin Pharmaceutical Inc.,Healthcare,10419187712.0,605861000.0,0.313138,0.35,2026-05-01,yfinance
-SRPT,"Sarepta Therapeutics, Inc.",Healthcare,2204325376.0,1039745000.0,1.187151,0.35,2026-05-01,yfinance
-PCVX,"Vaxcyte, Inc.",Healthcare,8264725504.0,117481000.0,0.507093,0.35,2026-05-01,yfinance
-KRYS,"Krystal Biotech, Inc.",Healthcare,7719819264.0,9339000.0,0.417636,0.35,2026-05-01,yfinance
-SMMT,Summit Therapeutics Inc.,Healthcare,16654674944.0,20890000.0,0.829148,0.35,2026-05-01,yfinance
-LEGN,Legend Biotech Corporation,Healthcare,4350156800.0,413700000.0,0.516772,0.35,2026-05-01,yfinance
-CRVS,"Corvus Pharmaceuticals, Inc.",Healthcare,1277333504.0,937000.0,1.238693,0.35,2026-05-01,yfinance
-PHAT,"Phathom Pharmaceuticals, Inc.",Healthcare,889617344.0,211800000.0,0.999529,0.35,2026-05-01,yfinance
-RCKT,"Rocket Pharmaceuticals, Inc.",Healthcare,379927264.0,24877000.0,1.292245,0.35,2026-05-01,yfinance
-ETSY,"Etsy, Inc.",Consumer Cyclical,6105623040.0,3075773000.0,0.55704,0.4,2026-05-01,yfinance
-W,Wayfair Inc.,Consumer Cyclical,8414139392.0,4297000000.0,0.655146,0.4,2026-05-01,yfinance
-CHWY,"Chewy, Inc.",Consumer Cyclical,10591928320.0,518700000.0,0.454417,0.4,2026-05-01,yfinance
-PETS,"PetMed Express, Inc.",Healthcare,47937112.0,652000.0,0.881813,0.35,2026-05-01,yfinance
-PRTS,"CarParts.com, Inc.",Consumer Cyclical,72857808.0,54639000.0,0.770555,0.4,2026-05-01,yfinance
-AN,"AutoNation, Inc.",Consumer Cyclical,7290047488.0,10184200000.0,0.269304,0.4,2026-05-01,yfinance
-KMX,"CarMax, Inc.",Consumer Cyclical,5574972928.0,18544558000.0,0.545949,0.4,2026-05-01,yfinance
-PAG,"Penske Automotive Group, Inc.",Consumer Cyclical,11277313024.0,8721300000.0,0.25326,0.4,2026-05-01,yfinance
-LAD,"Lithia Motors, Inc.",Consumer Cyclical,6616424448.0,16129500000.0,0.322283,0.4,2026-05-01,yfinance
-GPC,Genuine Parts Company,Consumer Cyclical,14918064128.0,6713816000.0,0.292319,0.4,2026-05-01,yfinance
-AAP,"Advance Auto Parts, Inc.",Consumer Cyclical,3590191104.0,5224000000.0,0.69103,0.4,2026-05-01,yfinance
-AZO,"AutoZone, Inc.",Consumer Cyclical,61367709696.0,12411277000.0,0.253268,0.4,2026-05-01,yfinance
-ORLY,"O'Reilly Automotive, Inc.",Consumer Cyclical,82729902080.0,8491499000.0,0.22116,0.4,2026-05-01,yfinance
-BBY,"Best Buy Co., Inc.",Consumer Cyclical,12674779136.0,4133000000.0,0.345973,0.4,2026-05-01,yfinance
-PVH,PVH Corp.,Consumer Cyclical,4189006336.0,4298900000.0,0.458273,0.4,2026-05-01,yfinance
-RL,Ralph Lauren Corporation,Consumer Cyclical,21748166656.0,2858700000.0,0.31134,0.4,2026-05-01,yfinance
-VFC,V.F. Corporation,Consumer Cyclical,7406615040.0,5338701000.0,0.536202,0.4,2026-05-01,yfinance
-TPR,"Tapestry, Inc.",Consumer Cyclical,29682399232.0,3943700000.0,0.394419,0.4,2026-05-01,yfinance
-CPRI,Capri Holdings Limited,Consumer Cyclical,2324847872.0,1311000000.0,0.490474,0.4,2026-05-01,yfinance
-KSS,Kohl's Corporation,Consumer Cyclical,1590627200.0,6630000000.0,0.823445,0.4,2026-05-01,yfinance
-DDS,"Dillard's, Inc.",Consumer Cyclical,8889548800.0,557562000.0,0.409644,0.4,2026-05-01,yfinance
-BJ,"BJ's Wholesale Club Holdings, Inc.",Consumer Defensive,12175335424.0,2726040000.0,0.290366,0.35,2026-05-01,yfinance
-SFM,"Sprouts Farmers Market, Inc.",Consumer Defensive,7697526272.0,2060857000.0,0.476051,0.35,2026-05-01,yfinance
-GO,Grocery Outlet Holding Corp.,Consumer Defensive,782478336.0,1809702000.0,0.645807,0.35,2026-05-01,yfinance
-CASY,"Casey's General Stores, Inc.",Consumer Cyclical,30474579968.0,2895721000.0,0.252623,0.4,2026-05-01,yfinance
-CHEF,"The Chefs' Warehouse, Inc.",Consumer Defensive,3164343808.0,978187000.0,0.383475,0.35,2026-05-01,yfinance
-CARR,Carrier Global Corporation,Industrials,56116056064.0,12251000000.0,0.338177,0.4,2026-05-01,yfinance
-TT,Trane Technologies plc,Industrials,108911468544.0,4615100000.0,0.261548,0.4,2026-05-01,yfinance
-JCI,Johnson Controls International plc,Industrials,89380020224.0,9705000000.0,0.258329,0.4,2026-05-01,yfinance
-OTIS,Otis Worldwide Corporation,Industrials,29883805696.0,8218000000.0,0.235493,0.4,2026-05-01,yfinance
-ALLE,Allegion plc,Industrials,11814462464.0,2030700000.0,0.244101,0.4,2026-05-01,yfinance
-MAS,Masco Corporation,Industrials,14488566784.0,3302000000.0,0.331721,0.4,2026-05-01,yfinance
-SWK,"Stanley Black & Decker, Inc.",Industrials,12150408192.0,6501200000.0,0.402862,0.4,2026-05-01,yfinance
-NVT,nVent Electric plc,Industrials,23106686976.0,1695100000.0,0.388321,0.4,2026-05-01,yfinance
-REXR,"Rexford Industrial Realty, Inc.",Real Estate,8303670272.0,3247451000.0,0.244477,0.5,2026-05-01,yfinance
-GNRC,Generac Holdings Inc.,Industrials,15245767680.0,1498263000.0,0.501496,0.4,2026-05-01,yfinance
-HUBB,Hubbell Incorporated,Industrials,27015131136.0,2487300000.0,0.290892,0.4,2026-05-01,yfinance
-ACHR,Archer Aviation Inc.,Industrials,4304220672.0,121900000.0,0.757786,0.4,2026-05-01,yfinance
-JOBY,"Joby Aviation, Inc.",Industrials,9035325440.0,36825000.0,0.789496,0.4,2026-05-01,yfinance
-SPCE,"Virgin Galactic Holdings, Inc.",Industrials,224710560.0,324192000.0,0.834447,0.4,2026-05-01,yfinance
-RKT,"Rocket Companies, Inc.",Financial Services,41360793600.0,15561000000.0,0.568009,0.55,2026-05-01,yfinance
-OPEN,Opendoor Technologies Inc.,Real Estate,5190109696.0,1320000000.0,1.492702,0.5,2026-05-01,yfinance
-Z,"Zillow Group, Inc.",Communication Services,10641579008.0,457000000.0,0.443466,0.4,2026-05-01,yfinance
-TRGP,Targa Resources Corp.,Energy,55904657408.0,17522000000.0,0.269857,0.45,2026-05-01,yfinance
-WES,"Western Midstream Partners, LP",Energy,17739653120.0,8709290000.0,0.193413,0.45,2026-05-01,yfinance
-AM,Antero Midstream Corporation,Energy,10383063040.0,3712528000.0,0.206489,0.45,2026-05-01,yfinance
-HESM,Hess Midstream LP,Energy,8147752960.0,3772000000.0,0.236484,0.45,2026-05-01,yfinance
-LNG,"Cheniere Energy, Inc.",Energy,57777147904.0,25515000000.0,0.264478,0.45,2026-05-01,yfinance
-ET,Energy Transfer LP,Energy,69459951616.0,70093000000.0,0.179787,0.45,2026-05-01,yfinance
-EPD,Enterprise Products Partners L.P.,Energy,83660144640.0,34772000000.0,0.151702,0.45,2026-05-01,yfinance
-PAA,"Plains All American Pipeline, L.P.",Energy,16241340416.0,11461000000.0,0.190033,0.45,2026-05-01,yfinance
-PAGP,"Plains GP Holdings, L.P.",Energy,5696860672.0,11461000000.0,0.188694,0.45,2026-05-01,yfinance
-KMI,"Kinder Morgan, Inc.",Energy,73130024960.0,31946000000.0,0.199375,0.45,2026-05-01,yfinance
-WMB,"The Williams Companies, Inc.",Energy,93316210688.0,29393000000.0,0.224301,0.45,2026-05-01,yfinance
-OKE,"ONEOK, Inc.",Energy,58252836864.0,33652000000.0,0.248289,0.45,2026-05-01,yfinance
-TALO,Talos Energy Inc.,Energy,2657244672.0,1241802000.0,0.488138,0.45,2026-05-01,yfinance
-SM,SM Energy Company,Energy,7439191040.0,2715000000.0,0.4998,0.45,2026-05-01,yfinance
-CRC,California Resources Corporation,Energy,6057180672.0,1359000000.0,0.344321,0.45,2026-05-01,yfinance
-FSLR,"First Solar, Inc.",Technology,21693233152.0,655335000.0,0.60502,0.35,2026-05-01,yfinance
-ENPH,"Enphase Energy, Inc.",Technology,4344069120.0,581113000.0,0.796917,0.35,2026-05-01,yfinance
-SEDG,"SolarEdge Technologies, Inc.",Technology,2606656512.0,415925000.0,1.065407,0.35,2026-05-01,yfinance
-RUN,Sunrun Inc.,Technology,2998063104.0,14776833000.0,1.226065,0.35,2026-05-01,yfinance
-ARRY,"Array Technologies, Inc.",Technology,1184562688.0,766193000.0,0.896793,0.35,2026-05-01,yfinance
-BE,Bloom Energy Corporation,Industrials,80600014848.0,2949133000.0,1.029026,0.4,2026-05-01,yfinance
-PLUG,Plug Power Inc.,Industrials,4363079680.0,997172000.0,1.070529,0.4,2026-05-01,yfinance
-BLDP,Ballard Power Systems Inc.,Industrials,1025017856.0,22140000.0,0.710368,0.4,2026-05-01,yfinance
-CHPT,"ChargePoint Holdings, Inc.",Consumer Cyclical,156508064.0,271528000.0,0.731285,0.4,2026-05-01,yfinance
-EVGO,"EVgo, Inc.",Consumer Cyclical,658517952.0,311210000.0,0.662853,0.4,2026-05-01,yfinance
-BLNK,Blink Charging Co.,Industrials,103765608.0,7956000.0,0.938416,0.4,2026-05-01,yfinance
-CEG,Constellation Energy Corporation,Utilities,113398226944.0,8992000000.0,0.461163,0.4,2026-05-01,yfinance
-EQR,Equity Residential,Real Estate,25258813440.0,8479585000.0,0.204132,0.5,2026-05-01,yfinance
-AVB,"AvalonBay Communities, Inc.",Real Estate,25457508352.0,9493752000.0,0.205182,0.5,2026-05-01,yfinance
-SMPL,The Simply Good Foods Company,Consumer Defensive,1237731200.0,442372000.0,0.444284,0.35,2026-05-01,yfinance
-PR,Permian Resources Corporation,Energy,18979149824.0,3680196000.0,0.33632,0.45,2026-05-01,yfinance
-CIVI,Civitas Resources Inc,Energy,8500000000.0,3800000000.0,0.368,0.45,2026-04-24,cached — fetch failed 2026-05-01
-MTDR,Matador Resources Company,Energy,7879303680.0,3487111000.0,0.399133,0.45,2026-05-01,yfinance
-SIRI,Sirius XM Holdings Inc.,Communication Services,9066665984.0,9706000000.0,0.35258,0.4,2026-05-01,yfinance
-ALKS,Alkermes plc,Healthcare,5617768960.0,69999000.0,0.388739,0.35,2026-05-01,yfinance
-MNDY,monday.com Ltd.,Technology,3395695104.0,168767000.0,0.641259,0.35,2026-05-01,yfinance
-NTRA,"Natera, Inc.",Healthcare,29435215872.0,214377000.0,0.401452,0.35,2026-05-01,yfinance
-CQP,"Cheniere Energy Partners, L.P.",Energy,32441305088.0,14467000000.0,0.264362,0.45,2026-05-01,yfinance
-GAP,"The Gap, Inc.",Consumer Cyclical,8983715840.0,5611000000.0,0.474967,0.4,2026-05-01,yfinance
-FBIN,"Fortune Brands Innovations, Inc.",Industrials,4858494464.0,2788700000.0,0.454183,0.4,2026-05-01,yfinance
-FISV,"Fiserv, Inc.",Unknown,33503811584.0,29123000000.0,0.691932,0.4,2026-05-01,yfinance
-XYZ,"Block, Inc.",Technology,41999659008.0,8966376000.0,0.52353,0.35,2026-05-01,yfinance
-VTRS,Viatris Inc.,Healthcare,17396447232.0,14698000000.0,0.320062,0.35,2026-05-01,yfinance
+AAPL,Apple Inc.,Technology,3971820552192,90509000000,0.234618,0.35,2026-04-21,template — run update_data.py to get live data
+MSFT,Microsoft Corporation,Technology,3142335070208,57607000000,0.245551,0.35,2026-04-21,template — run update_data.py to get live data
+JPM,JPMorgan Chase & Co.,Financial Services,836862214144,499982000000,0.213289,0.55,2026-04-21,template — run update_data.py to get live data
+JNJ,Johnson & Johnson,Healthcare,564350156800,47933000000,0.164551,0.35,2026-04-21,template — run update_data.py to get live data
+PG,The Procter & Gamble Company,Consumer Defensive,343336222720,36639000000,0.17836,0.35,2026-04-21,template — run update_data.py to get live data
+F,Ford Motor Company,Consumer Cyclical,51622629376,165738000000,0.300885,0.4,2026-04-21,template — run update_data.py to get live data
+M,Macys Inc.,Consumer Cyclical,5195356160,5204000000,0.443278,0.4,2026-04-21,template — run update_data.py to get live data
+CCL,Carnival Corporation & plc,Consumer Cyclical,40473776128,26607000000,0.45573,0.4,2026-04-21,template — run update_data.py to get live data
+AAL,American Airlines Group Inc.,Industrials,8438693252,36884000000,0.473156,0.4,2026-04-21,template — run update_data.py to get live data
+AMC,AMC Entertainment Holdings,Communication Services,1100000000,8100000000,0.612,0.4,2026-04-21,template — run update_data.py to get live data
+C,Citigroup Inc.,Financial Services,231200000000,367700000000,0.283,0.55,2026-04-21,template — run update_data.py to get live data
+BAC,Bank of America Corporation,Financial Services,385200000000,365900000000,0.218,0.55,2026-04-21,template — run update_data.py to get live data
+GS,The Goldman Sachs Group Inc.,Financial Services,274800000000,386100000000,0.271,0.55,2026-04-21,template — run update_data.py to get live data
+MS,Morgan Stanley,Financial Services,299800000000,370500000000,0.257,0.55,2026-04-21,template — run update_data.py to get live data
+WFC,Wells Fargo & Company,Financial Services,250300000000,193000000000,0.266,0.55,2026-04-21,template — run update_data.py to get live data
+GOOGL,Alphabet Inc.,Technology,4133300000000,59300000000,0.284,0.35,2026-04-21,template — run update_data.py to get live data
+AMZN,Amazon.com Inc.,Consumer Cyclical,2694600000000,153000000000,0.312,0.4,2026-04-21,template — run update_data.py to get live data
+META,Meta Platforms Inc.,Communication Services,1747800000000,83900000000,0.354,0.4,2026-04-21,template — run update_data.py to get live data
+NVDA,NVIDIA Corporation,Technology,4901800000000,11000000000,0.337,0.35,2026-04-21,template — run update_data.py to get live data
+TSLA,Tesla Inc.,Consumer Cyclical,1503300000000,14700000000,0.489,0.4,2026-04-21,template — run update_data.py to get live data
+ORCL,Oracle Corporation,Technology,503500000000,153100000000,0.586,0.35,2026-04-21,template — run update_data.py to get live data
+CRM,Salesforce Inc.,Technology,168100000000,17200000000,0.342,0.35,2026-04-21,template — run update_data.py to get live data
+ADBE,Adobe Inc.,Technology,99600000000,6700000000,0.307,0.35,2026-04-21,template — run update_data.py to get live data
+INTC,Intel Corporation,Technology,343900000000,46600000000,0.63,0.35,2026-04-21,template — run update_data.py to get live data
+AMD,Advanced Micro Devices Inc.,Technology,453900000000,3800000000,0.574,0.35,2026-04-21,template — run update_data.py to get live data
+QCOM,QUALCOMM Incorporated,Technology,145500000000,14800000000,0.325,0.35,2026-04-21,template — run update_data.py to get live data
+TXN,Texas Instruments Incorporated,Technology,209200000000,14000000000,0.348,0.35,2026-04-21,template — run update_data.py to get live data
+CSCO,Cisco Systems Inc.,Technology,340800000000,30100000000,0.256,0.35,2026-04-21,template — run update_data.py to get live data
+IBM,International Business Machines,Technology,237900000000,64600000000,0.332,0.35,2026-04-21,template — run update_data.py to get live data
+NOW,ServiceNow Inc.,Technology,101100000000,2400000000,0.419,0.35,2026-04-21,template — run update_data.py to get live data
+AMAT,Applied Materials Inc.,Technology,148000000000,8500000000,0.425,0.35,2026-04-21,template — run update_data.py to get live data
+MU,Micron Technology Inc.,Technology,103000000000,13000000000,0.485,0.35,2026-04-21,template — run update_data.py to get live data
+LRCX,Lam Research Corporation,Technology,92000000000,5500000000,0.418,0.35,2026-04-21,template — run update_data.py to get live data
+KLAC,KLA Corporation,Technology,89000000000,5800000000,0.385,0.35,2026-04-21,template — run update_data.py to get live data
+SNPS,Synopsys Inc.,Technology,73000000000,400000000,0.365,0.35,2026-04-21,template — run update_data.py to get live data
+CDNS,Cadence Design Systems,Technology,72000000000,700000000,0.358,0.35,2026-04-21,template — run update_data.py to get live data
+PANW,Palo Alto Networks,Technology,118000000000,7300000000,0.445,0.35,2026-04-21,template — run update_data.py to get live data
+CRWD,CrowdStrike Holdings,Technology,85000000000,3000000000,0.498,0.35,2026-04-21,template — run update_data.py to get live data
+FTNT,Fortinet Inc.,Technology,55000000000,2800000000,0.388,0.35,2026-04-21,template — run update_data.py to get live data
+NET,Cloudflare Inc.,Technology,37000000000,1500000000,0.518,0.35,2026-04-21,template — run update_data.py to get live data
+DDOG,Datadog Inc.,Technology,33000000000,750000000,0.485,0.35,2026-04-21,template — run update_data.py to get live data
+ZS,Zscaler Inc.,Technology,31000000000,2200000000,0.512,0.35,2026-04-21,template — run update_data.py to get live data
+TEAM,Atlassian Corporation,Technology,47000000000,1800000000,0.425,0.35,2026-04-21,template — run update_data.py to get live data
+HUBS,HubSpot Inc.,Technology,22000000000,1200000000,0.455,0.35,2026-04-21,template — run update_data.py to get live data
+WDAY,Workday Inc.,Technology,55000000000,3000000000,0.398,0.35,2026-04-21,template — run update_data.py to get live data
+SNOW,Snowflake Inc.,Technology,42000000000,2500000000,0.558,0.35,2026-04-21,template — run update_data.py to get live data
+PLTR,Palantir Technologies,Technology,180000000000,500000000,0.685,0.35,2026-04-21,template — run update_data.py to get live data
+APP,Applovin Corporation,Technology,95000000000,3500000000,0.725,0.35,2026-04-21,template — run update_data.py to get live data
+UBER,Uber Technologies Inc.,Technology,170000000000,10000000000,0.425,0.35,2026-04-21,template — run update_data.py to get live data
+LYFT,Lyft Inc.,Technology,5500000000,900000000,0.685,0.35,2026-04-21,template — run update_data.py to get live data
+ABNB,Airbnb Inc.,Consumer Cyclical,75000000000,2000000000,0.418,0.4,2026-04-21,template — run update_data.py to get live data
+DASH,DoorDash Inc.,Consumer Cyclical,55000000000,3500000000,0.525,0.4,2026-04-21,template — run update_data.py to get live data
+SPOT,Spotify Technology,Communication Services,75000000000,1800000000,0.458,0.4,2026-04-21,template — run update_data.py to get live data
+RBLX,Roblox Corporation,Technology,22000000000,1000000000,0.585,0.35,2026-04-21,template — run update_data.py to get live data
+U,Unity Software Inc.,Technology,8000000000,900000000,0.685,0.35,2026-04-21,template — run update_data.py to get live data
+HOOD,Robinhood Markets,Financial Services,15000000000,2000000000,0.785,0.55,2026-04-21,template — run update_data.py to get live data
+COIN,Coinbase Global Inc.,Financial Services,55000000000,4500000000,0.885,0.55,2026-04-21,template — run update_data.py to get live data
+MSTR,MicroStrategy Inc.,Technology,95000000000,7000000000,0.999,0.35,2026-04-21,template — run update_data.py to get live data
+BRK-B,Berkshire Hathaway Inc.,Financial Services,1023600000000,129100000000,0.156,0.55,2026-04-21,template — run update_data.py to get live data
+V,Visa Inc.,Financial Services,611200000000,21200000000,0.208,0.55,2026-04-21,template — run update_data.py to get live data
+MA,Mastercard Incorporated,Financial Services,465200000000,19000000000,0.215,0.55,2026-04-21,template — run update_data.py to get live data
+AXP,American Express Company,Financial Services,227700000000,57800000000,0.27,0.55,2026-04-21,template — run update_data.py to get live data
+BLK,BlackRock Inc.,Financial Services,163700000000,15000000000,0.254,0.55,2026-04-21,template — run update_data.py to get live data
+SCHW,The Charles Schwab Corporation,Financial Services,161700000000,31000000000,0.232,0.55,2026-04-21,template — run update_data.py to get live data
+USB,U.S. Bancorp,Financial Services,88500000000,68400000000,0.224,0.55,2026-04-21,template — run update_data.py to get live data
+PNC,PNC Financial Services,Financial Services,90700000000,57100000000,0.22,0.55,2026-04-21,template — run update_data.py to get live data
+TFC,Truist Financial Corporation,Financial Services,64700000000,64300000000,0.236,0.55,2026-04-21,template — run update_data.py to get live data
+COF,Capital One Financial,Financial Services,128400000000,50400000000,0.326,0.55,2026-04-21,template — run update_data.py to get live data
+SYF,Synchrony Financial,Financial Services,28200000000,15200000000,0.31,0.55,2026-04-21,template — run update_data.py to get live data
+AIG,American International Group,Financial Services,42200000000,9200000000,0.233,0.55,2026-04-21,template — run update_data.py to get live data
+MET,MetLife Inc.,Financial Services,51400000000,20200000000,0.236,0.55,2026-04-21,template — run update_data.py to get live data
+PRU,Prudential Financial Inc.,Financial Services,35400000000,23000000000,0.225,0.55,2026-04-21,template — run update_data.py to get live data
+ALL,The Allstate Corporation,Financial Services,55000000000,8500000000,0.248,0.55,2026-04-21,template — run update_data.py to get live data
+TRV,The Travelers Companies,Financial Services,62000000000,7200000000,0.198,0.55,2026-04-21,template — run update_data.py to get live data
+PGR,Progressive Corporation,Financial Services,148000000000,6500000000,0.225,0.55,2026-04-21,template — run update_data.py to get live data
+CB,Chubb Limited,Financial Services,115000000000,16000000000,0.185,0.55,2026-04-21,template — run update_data.py to get live data
+MMC,Marsh & McLennan Companies,Financial Services,98000000000,12000000000,0.195,0.55,2026-04-21,template — run update_data.py to get live data
+AON,Aon plc,Financial Services,72000000000,18000000000,0.212,0.55,2026-04-21,template — run update_data.py to get live data
+ICE,Intercontinental Exchange,Financial Services,85000000000,17000000000,0.218,0.55,2026-04-21,template — run update_data.py to get live data
+CME,CME Group Inc.,Financial Services,78000000000,3500000000,0.188,0.55,2026-04-21,template — run update_data.py to get live data
+SPGI,S&P Global Inc.,Financial Services,148000000000,11000000000,0.195,0.55,2026-04-21,template — run update_data.py to get live data
+MCO,Moody's Corporation,Financial Services,75000000000,8000000000,0.205,0.55,2026-04-21,template — run update_data.py to get live data
+MSCI,MSCI Inc.,Financial Services,42000000000,4500000000,0.215,0.55,2026-04-21,template — run update_data.py to get live data
+FIS,Fidelity National Information,Financial Services,38000000000,18000000000,0.298,0.55,2026-04-21,template — run update_data.py to get live data
+GPN,Global Payments Inc.,Financial Services,22000000000,14000000000,0.348,0.55,2026-04-21,template — run update_data.py to get live data
+WEX,WEX Inc.,Financial Services,8000000000,4500000000,0.365,0.55,2026-04-21,template — run update_data.py to get live data
+UNH,UnitedHealth Group Incorporated,Healthcare,294700000000,78400000000,0.477,0.35,2026-04-21,template — run update_data.py to get live data
+LLY,Eli Lilly and Company,Healthcare,829700000000,42500000000,0.396,0.35,2026-04-21,template — run update_data.py to get live data
+ABBV,AbbVie Inc.,Healthcare,368600000000,67500000000,0.253,0.35,2026-04-21,template — run update_data.py to get live data
+MRK,Merck & Co. Inc.,Healthcare,294400000000,49300000000,0.277,0.35,2026-04-21,template — run update_data.py to get live data
+PFE,Pfizer Inc.,Healthcare,156800000000,64000000000,0.254,0.35,2026-04-21,template — run update_data.py to get live data
+TMO,Thermo Fisher Scientific,Healthcare,195700000000,39400000000,0.3,0.35,2026-04-21,template — run update_data.py to get live data
+ABT,Abbott Laboratories,Healthcare,168200000000,13900000000,0.235,0.35,2026-04-21,template — run update_data.py to get live data
+DHR,Danaher Corporation,Healthcare,137800000000,19700000000,0.287,0.35,2026-04-21,template — run update_data.py to get live data
+BMY,Bristol-Myers Squibb,Healthcare,122900000000,47100000000,0.276,0.35,2026-04-21,template — run update_data.py to get live data
+AMGN,Amgen Inc.,Healthcare,191500000000,54600000000,0.275,0.35,2026-04-21,template — run update_data.py to get live data
+GILD,Gilead Sciences Inc.,Healthcare,170800000000,24900000000,0.281,0.35,2026-04-21,template — run update_data.py to get live data
+ISRG,Intuitive Surgical Inc.,Healthcare,166600000000,200000000,0.285,0.35,2026-04-21,template — run update_data.py to get live data
+SYK,Stryker Corporation,Healthcare,131500000000,15900000000,0.2,0.35,2026-04-21,template — run update_data.py to get live data
+BSX,Boston Scientific Corporation,Healthcare,95500000000,11400000000,0.305,0.35,2026-04-21,template — run update_data.py to get live data
+HCA,HCA Healthcare Inc.,Healthcare,109100000000,48700000000,0.257,0.35,2026-04-21,template — run update_data.py to get live data
+ELV,Elevance Health Inc.,Healthcare,100000000000,25000000000,0.248,0.35,2026-04-21,template — run update_data.py to get live data
+CI,The Cigna Group,Healthcare,88000000000,32000000000,0.262,0.35,2026-04-21,template — run update_data.py to get live data
+HUM,Humana Inc.,Healthcare,38000000000,8500000000,0.318,0.35,2026-04-21,template — run update_data.py to get live data
+CNC,Centene Corporation,Healthcare,28000000000,18000000000,0.342,0.35,2026-04-21,template — run update_data.py to get live data
+MOH,Molina Healthcare Inc.,Healthcare,15000000000,3500000000,0.358,0.35,2026-04-21,template — run update_data.py to get live data
+ZBH,Zimmer Biomet Holdings,Healthcare,22000000000,7200000000,0.278,0.35,2026-04-21,template — run update_data.py to get live data
+BAX,Baxter International Inc.,Healthcare,15000000000,10500000000,0.388,0.35,2026-04-21,template — run update_data.py to get live data
+BDX,Becton Dickinson and Company,Healthcare,65000000000,18000000000,0.225,0.35,2026-04-21,template — run update_data.py to get live data
+EW,Edwards Lifesciences,Healthcare,42000000000,600000000,0.298,0.35,2026-04-21,template — run update_data.py to get live data
+HOLX,Hologic Inc.,Healthcare,17000000000,3200000000,0.285,0.35,2026-04-21,template — run update_data.py to get live data
+IDXX,IDEXX Laboratories Inc.,Healthcare,35000000000,900000000,0.285,0.35,2026-04-21,template — run update_data.py to get live data
+IQV,IQVIA Holdings Inc.,Healthcare,38000000000,14000000000,0.268,0.35,2026-04-21,template — run update_data.py to get live data
+MCK,McKesson Corporation,Healthcare,78000000000,9500000000,0.245,0.35,2026-04-21,template — run update_data.py to get live data
+COR,Cencora Inc.,Healthcare,52000000000,5800000000,0.228,0.35,2026-04-21,template — run update_data.py to get live data
+CAH,Cardinal Health Inc.,Healthcare,28000000000,6200000000,0.265,0.35,2026-04-21,template — run update_data.py to get live data
+WMT,Walmart Inc.,Consumer Defensive,1016500000000,67100000000,0.217,0.35,2026-04-21,template — run update_data.py to get live data
+COST,Costco Wholesale Corporation,Consumer Defensive,443800000000,8200000000,0.184,0.35,2026-04-21,template — run update_data.py to get live data
+HD,The Home Depot Inc.,Consumer Cyclical,348000000000,65300000000,0.227,0.4,2026-04-21,template — run update_data.py to get live data
+LOW,Lowe's Companies Inc.,Consumer Cyclical,141000000000,44700000000,0.251,0.4,2026-04-21,template — run update_data.py to get live data
+TGT,Target Corporation,Consumer Defensive,57900000000,20300000000,0.306,0.35,2026-04-21,template — run update_data.py to get live data
+MCD,McDonald's Corporation,Consumer Cyclical,221300000000,54800000000,0.161,0.4,2026-04-21,template — run update_data.py to get live data
+SBUX,Starbucks Corporation,Consumer Cyclical,113900000000,25500000000,0.295,0.4,2026-04-21,template — run update_data.py to get live data
+NKE,NIKE Inc.,Consumer Cyclical,68200000000,11200000000,0.393,0.4,2026-04-21,template — run update_data.py to get live data
+TJX,The TJX Companies Inc.,Consumer Cyclical,178400000000,13500000000,0.171,0.4,2026-04-21,template — run update_data.py to get live data
+BKNG,Booking Holdings Inc.,Consumer Cyclical,168000000000,14000000000,0.285,0.4,2026-04-21,template — run update_data.py to get live data
+EXPE,Expedia Group Inc.,Consumer Cyclical,18000000000,8500000000,0.385,0.4,2026-04-21,template — run update_data.py to get live data
+YUM,Yum! Brands Inc.,Consumer Cyclical,35000000000,11500000000,0.225,0.4,2026-04-21,template — run update_data.py to get live data
+QSR,Restaurant Brands International,Consumer Cyclical,25000000000,14500000000,0.255,0.4,2026-04-21,template — run update_data.py to get live data
+DPZ,Domino's Pizza Inc.,Consumer Cyclical,14000000000,5200000000,0.248,0.4,2026-04-21,template — run update_data.py to get live data
+DKNG,DraftKings Inc.,Consumer Cyclical,22000000000,1200000000,0.685,0.4,2026-04-21,template — run update_data.py to get live data
+LVS,Las Vegas Sands Corp.,Consumer Cyclical,38000000000,14000000000,0.358,0.4,2026-04-21,template — run update_data.py to get live data
+WYNN,Wynn Resorts Limited,Consumer Cyclical,10000000000,12000000000,0.425,0.4,2026-04-21,template — run update_data.py to get live data
+CZR,Caesars Entertainment Inc.,Consumer Cyclical,8500000000,13000000000,0.485,0.4,2026-04-21,template — run update_data.py to get live data
+MGM,MGM Resorts International,Consumer Cyclical,10600000000,13400000000,0.368,0.4,2026-04-21,template — run update_data.py to get live data
+KO,The Coca-Cola Company,Consumer Defensive,268000000000,35000000000,0.155,0.35,2026-04-21,template — run update_data.py to get live data
+PEP,PepsiCo Inc.,Consumer Defensive,198000000000,42000000000,0.175,0.35,2026-04-21,template — run update_data.py to get live data
+MDLZ,Mondelez International,Consumer Defensive,82000000000,19000000000,0.198,0.35,2026-04-21,template — run update_data.py to get live data
+GIS,General Mills Inc.,Consumer Defensive,32000000000,14000000000,0.215,0.35,2026-04-21,template — run update_data.py to get live data
+CAG,Conagra Brands Inc.,Consumer Defensive,12000000000,9200000000,0.258,0.35,2026-04-21,template — run update_data.py to get live data
+SJM,J.M. Smucker Company,Consumer Defensive,10000000000,4800000000,0.228,0.35,2026-04-21,template — run update_data.py to get live data
+HRL,Hormel Foods Corporation,Consumer Defensive,15000000000,3500000000,0.195,0.35,2026-04-21,template — run update_data.py to get live data
+TSN,Tyson Foods Inc.,Consumer Defensive,18000000000,8500000000,0.285,0.35,2026-04-21,template — run update_data.py to get live data
+MKC,McCormick & Company,Consumer Defensive,18000000000,5200000000,0.198,0.35,2026-04-21,template — run update_data.py to get live data
+CLX,The Clorox Company,Consumer Defensive,18000000000,2800000000,0.218,0.35,2026-04-21,template — run update_data.py to get live data
+CL,Colgate-Palmolive Company,Consumer Defensive,68000000000,9500000000,0.172,0.35,2026-04-21,template — run update_data.py to get live data
+KMB,Kimberly-Clark Corporation,Consumer Defensive,42000000000,8200000000,0.188,0.35,2026-04-21,template — run update_data.py to get live data
+CHD,Church & Dwight Co.,Consumer Defensive,22000000000,2800000000,0.198,0.35,2026-04-21,template — run update_data.py to get live data
+EL,The Estee Lauder Companies,Consumer Defensive,28000000000,8500000000,0.325,0.35,2026-04-21,template — run update_data.py to get live data
+ULTA,Ulta Beauty Inc.,Consumer Cyclical,18000000000,500000000,0.265,0.4,2026-04-21,template — run update_data.py to get live data
+XOM,Exxon Mobil Corporation,Energy,608700000000,43500000000,0.233,0.45,2026-04-21,template — run update_data.py to get live data
+CVX,Chevron Corporation,Energy,366500000000,40800000000,0.214,0.45,2026-04-21,template — run update_data.py to get live data
+COP,ConocoPhillips,Energy,141800000000,23400000000,0.289,0.45,2026-04-21,template — run update_data.py to get live data
+SLB,SLB,Energy,79000000000,11600000000,0.333,0.45,2026-04-21,template — run update_data.py to get live data
+EOG,EOG Resources Inc.,Energy,68900000000,8400000000,0.253,0.45,2026-04-21,template — run update_data.py to get live data
+MPC,Marathon Petroleum Corporation,Energy,63000000000,34400000000,0.305,0.45,2026-04-21,template — run update_data.py to get live data
+PSX,Phillips 66,Energy,62700000000,19700000000,0.31,0.45,2026-04-21,template — run update_data.py to get live data
+VLO,Valero Energy Corporation,Energy,66900000000,11700000000,0.342,0.45,2026-04-21,template — run update_data.py to get live data
+OXY,Occidental Petroleum,Energy,53300000000,23400000000,0.336,0.45,2026-04-21,template — run update_data.py to get live data
+HAL,Halliburton Company,Energy,31100000000,8100000000,0.371,0.45,2026-04-21,template — run update_data.py to get live data
+DVN,Devon Energy Corporation,Energy,18000000000,7500000000,0.348,0.45,2026-04-21,template — run update_data.py to get live data
+FANG,Diamondback Energy Inc.,Energy,22000000000,9500000000,0.298,0.45,2026-04-21,template — run update_data.py to get live data
+BKR,Baker Hughes Company,Energy,38000000000,6800000000,0.295,0.45,2026-04-21,template — run update_data.py to get live data
+APA,APA Corporation,Energy,10000000000,7800000000,0.428,0.45,2026-04-21,template — run update_data.py to get live data
+CVI,CVR Energy Inc.,Energy,2500000000,1800000000,0.458,0.45,2026-04-21,template — run update_data.py to get live data
+CTRA,Coterra Energy Inc.,Energy,18000000000,3200000000,0.318,0.45,2026-04-21,template — run update_data.py to get live data
+EQT,EQT Corporation,Energy,15000000000,7500000000,0.368,0.45,2026-04-21,template — run update_data.py to get live data
+RRC,Range Resources Corporation,Energy,8000000000,3200000000,0.398,0.45,2026-04-21,template — run update_data.py to get live data
+AR,Antero Resources Corporation,Energy,10000000000,4200000000,0.448,0.45,2026-04-21,template — run update_data.py to get live data
+NOV,NOV Inc.,Energy,6500000000,2800000000,0.418,0.45,2026-04-21,template — run update_data.py to get live data
+BA,The Boeing Company,Industrials,175500000000,54400000000,0.304,0.4,2026-04-21,template — run update_data.py to get live data
+CAT,Caterpillar Inc.,Industrials,371900000000,43300000000,0.315,0.4,2026-04-21,template — run update_data.py to get live data
+GE,GE Aerospace,Industrials,320800000000,20500000000,0.295,0.4,2026-04-21,template — run update_data.py to get live data
+HON,Honeywell International Inc.,Industrials,148000000000,35600000000,0.218,0.4,2026-04-21,template — run update_data.py to get live data
+RTX,RTX Corporation,Industrials,264400000000,39500000000,0.255,0.4,2026-04-21,template — run update_data.py to get live data
+LMT,Lockheed Martin Corporation,Industrials,136500000000,21700000000,0.263,0.4,2026-04-21,template — run update_data.py to get live data
+UPS,United Parcel Service Inc.,Industrials,90400000000,28600000000,0.275,0.4,2026-04-21,template — run update_data.py to get live data
+FDX,FedEx Corporation,Industrials,93600000000,37800000000,0.269,0.4,2026-04-21,template — run update_data.py to get live data
+DE,Deere & Company,Industrials,159500000000,62800000000,0.28,0.4,2026-04-21,template — run update_data.py to get live data
+MMM,3M Company,Industrials,81400000000,12600000000,0.272,0.4,2026-04-21,template — run update_data.py to get live data
+NOC,Northrop Grumman Corporation,Industrials,68000000000,16800000000,0.225,0.4,2026-04-21,template — run update_data.py to get live data
+GD,General Dynamics Corporation,Industrials,78000000000,12500000000,0.215,0.4,2026-04-21,template — run update_data.py to get live data
+HII,Huntington Ingalls Industries,Industrials,10000000000,3200000000,0.265,0.4,2026-04-21,template — run update_data.py to get live data
+LHX,L3Harris Technologies Inc.,Industrials,42000000000,7500000000,0.245,0.4,2026-04-21,template — run update_data.py to get live data
+TDG,TransDigm Group Incorporated,Industrials,65000000000,22000000000,0.288,0.4,2026-04-21,template — run update_data.py to get live data
+HWM,Howmet Aerospace Inc.,Industrials,28000000000,5800000000,0.265,0.4,2026-04-21,template — run update_data.py to get live data
+TXT,Textron Inc.,Industrials,14000000000,3500000000,0.288,0.4,2026-04-21,template — run update_data.py to get live data
+WWD,Woodward Inc.,Industrials,8000000000,900000000,0.285,0.4,2026-04-21,template — run update_data.py to get live data
+AXON,Axon Enterprise Inc.,Industrials,32000000000,1200000000,0.445,0.4,2026-04-21,template — run update_data.py to get live data
+IR,Ingersoll Rand Inc.,Industrials,38000000000,4200000000,0.265,0.4,2026-04-21,template — run update_data.py to get live data
+ITW,Illinois Tool Works Inc.,Industrials,72000000000,8800000000,0.215,0.4,2026-04-21,template — run update_data.py to get live data
+EMR,Emerson Electric Co.,Industrials,52000000000,7500000000,0.228,0.4,2026-04-21,template — run update_data.py to get live data
+ETN,Eaton Corporation plc,Industrials,135000000000,9500000000,0.248,0.4,2026-04-21,template — run update_data.py to get live data
+ROK,Rockwell Automation Inc.,Industrials,28000000000,3200000000,0.275,0.4,2026-04-21,template — run update_data.py to get live data
+AME,AMETEK Inc.,Industrials,45000000000,3200000000,0.228,0.4,2026-04-21,template — run update_data.py to get live data
+PH,Parker-Hannifin Corporation,Industrials,72000000000,9200000000,0.255,0.4,2026-04-21,template — run update_data.py to get live data
+DOV,Dover Corporation,Industrials,22000000000,3800000000,0.248,0.4,2026-04-21,template — run update_data.py to get live data
+FAST,Fastenal Company,Industrials,42000000000,400000000,0.228,0.4,2026-04-21,template — run update_data.py to get live data
+GWW,W.W. Grainger Inc.,Industrials,38000000000,2200000000,0.235,0.4,2026-04-21,template — run update_data.py to get live data
+MSC,MSC Industrial Direct,Industrials,5500000000,1200000000,0.255,0.4,2026-04-21,template — run update_data.py to get live data
+CTAS,Cintas Corporation,Industrials,68000000000,2800000000,0.198,0.4,2026-04-21,template — run update_data.py to get live data
+VRSK,Verisk Analytics Inc.,Industrials,38000000000,2800000000,0.218,0.4,2026-04-21,template — run update_data.py to get live data
+BR,Broadridge Financial Solutions,Industrials,22000000000,3500000000,0.218,0.4,2026-04-21,template — run update_data.py to get live data
+PAYC,Paycom Software Inc.,Technology,10000000000,500000000,0.388,0.35,2026-04-21,template — run update_data.py to get live data
+ADP,Automatic Data Processing,Industrials,98000000000,3500000000,0.188,0.4,2026-04-21,template — run update_data.py to get live data
+PAYX,Paychex Inc.,Industrials,42000000000,2800000000,0.198,0.4,2026-04-21,template — run update_data.py to get live data
+NEE,NextEra Energy Inc.,Utilities,191800000000,95600000000,0.235,0.4,2026-04-21,template — run update_data.py to get live data
+DUK,Duke Energy Corporation,Utilities,99600000000,90900000000,0.15,0.4,2026-04-21,template — run update_data.py to get live data
+SO,Southern Company,Utilities,106500000000,74100000000,0.159,0.4,2026-04-21,template — run update_data.py to get live data
+D,Dominion Energy Inc.,Utilities,54900000000,48900000000,0.183,0.4,2026-04-21,template — run update_data.py to get live data
+AEP,American Electric Power,Utilities,72700000000,49500000000,0.175,0.4,2026-04-21,template — run update_data.py to get live data
+EXC,Exelon Corporation,Utilities,42000000000,38000000000,0.185,0.4,2026-04-21,template — run update_data.py to get live data
+XEL,Xcel Energy Inc.,Utilities,32000000000,22000000000,0.178,0.4,2026-04-21,template — run update_data.py to get live data
+ES,Eversource Energy,Utilities,18000000000,22000000000,0.225,0.4,2026-04-21,template — run update_data.py to get live data
+ED,Consolidated Edison Inc.,Utilities,28000000000,18000000000,0.165,0.4,2026-04-21,template — run update_data.py to get live data
+PCG,PG&E Corporation,Utilities,42000000000,48000000000,0.248,0.4,2026-04-21,template — run update_data.py to get live data
+EIX,Edison International,Utilities,22000000000,18000000000,0.238,0.4,2026-04-21,template — run update_data.py to get live data
+WEC,WEC Energy Group Inc.,Utilities,28000000000,18000000000,0.172,0.4,2026-04-21,template — run update_data.py to get live data
+DTE,DTE Energy Company,Utilities,22000000000,22000000000,0.185,0.4,2026-04-21,template — run update_data.py to get live data
+ETR,Entergy Corporation,Utilities,22000000000,22000000000,0.188,0.4,2026-04-21,template — run update_data.py to get live data
+FE,FirstEnergy Corp.,Utilities,22000000000,22000000000,0.198,0.4,2026-04-21,template — run update_data.py to get live data
+AES,The AES Corporation,Utilities,12000000000,28000000000,0.285,0.4,2026-04-21,template — run update_data.py to get live data
+NRG,NRG Energy Inc.,Utilities,12000000000,12000000000,0.348,0.4,2026-04-21,template — run update_data.py to get live data
+VST,Vistra Corp.,Utilities,35000000000,12000000000,0.385,0.4,2026-04-21,template — run update_data.py to get live data
+PLD,Prologis Inc.,Real Estate,135300000000,35700000000,0.214,0.5,2026-04-21,template — run update_data.py to get live data
+AMT,American Tower Corporation,Real Estate,85000000000,45000000000,0.239,0.5,2026-04-21,template — run update_data.py to get live data
+EQIX,Equinix Inc.,Real Estate,107400000000,22700000000,0.262,0.5,2026-04-21,template — run update_data.py to get live data
+SPG,Simon Property Group Inc.,Real Estate,78500000000,29200000000,0.2,0.5,2026-04-21,template — run update_data.py to get live data
+O,Realty Income Corporation,Real Estate,60700000000,29300000000,0.154,0.5,2026-04-21,template — run update_data.py to get live data
+WELL,Welltower Inc.,Real Estate,85000000000,18000000000,0.205,0.5,2026-04-21,template — run update_data.py to get live data
+DLR,Digital Realty Trust Inc.,Real Estate,55000000000,18000000000,0.228,0.5,2026-04-21,template — run update_data.py to get live data
+PSA,Public Storage,Real Estate,55000000000,8500000000,0.205,0.5,2026-04-21,template — run update_data.py to get live data
+EXR,Extra Space Storage Inc.,Real Estate,28000000000,8200000000,0.225,0.5,2026-04-21,template — run update_data.py to get live data
+VICI,VICI Properties Inc.,Real Estate,32000000000,16000000000,0.185,0.5,2026-04-21,template — run update_data.py to get live data
+WPC,W. P. Carey Inc.,Real Estate,12000000000,8500000000,0.218,0.5,2026-04-21,template — run update_data.py to get live data
+NNN,National Retail Properties,Real Estate,8500000000,5500000000,0.188,0.5,2026-04-21,template — run update_data.py to get live data
+ARE,Alexandria Real Estate Equities,Real Estate,18000000000,12000000000,0.225,0.5,2026-04-21,template — run update_data.py to get live data
+BXP,Boston Properties Inc.,Real Estate,10000000000,15000000000,0.278,0.5,2026-04-21,template — run update_data.py to get live data
+KIM,Kimco Realty Corporation,Real Estate,15000000000,9200000000,0.228,0.5,2026-04-21,template — run update_data.py to get live data
+UAL,United Airlines Holdings,Industrials,33000000000,31000000000,0.477,0.4,2026-04-21,template — run update_data.py to get live data
+DAL,Delta Air Lines Inc.,Industrials,47100000000,20300000000,0.413,0.4,2026-04-21,template — run update_data.py to get live data
+ALK,Alaska Air Group Inc.,Industrials,5200000000,6900000000,0.489,0.4,2026-04-21,template — run update_data.py to get live data
+NCLH,Norwegian Cruise Line Holdings,Consumer Cyclical,9600000000,14600000000,0.525,0.4,2026-04-21,template — run update_data.py to get live data
+RCL,Royal Caribbean Cruises,Consumer Cyclical,77900000000,22000000000,0.442,0.4,2026-04-21,template — run update_data.py to get live data
+HLT,Hilton Worldwide Holdings,Consumer Cyclical,78200000000,13100000000,0.231,0.4,2026-04-21,template — run update_data.py to get live data
+MAR,Marriott International Inc.,Consumer Cyclical,100100000000,17100000000,0.266,0.4,2026-04-21,template — run update_data.py to get live data
+H,Hyatt Hotels Corporation,Consumer Cyclical,12000000000,4000000000,0.298,0.4,2026-04-21,template — run update_data.py to get live data
+T,AT&T Inc.,Communication Services,185600000000,155000000000,0.217,0.4,2026-04-21,template — run update_data.py to get live data
+VZ,Verizon Communications Inc.,Communication Services,196300000000,181600000000,0.219,0.4,2026-04-21,template — run update_data.py to get live data
+TMUS,T-Mobile US Inc.,Communication Services,221100000000,122300000000,0.263,0.4,2026-04-21,template — run update_data.py to get live data
+LUMN,Lumen Technologies Inc.,Communication Services,1500000000,19000000000,0.785,0.4,2026-04-21,template — run update_data.py to get live data
+DIS,The Walt Disney Company,Communication Services,188500000000,46600000000,0.258,0.4,2026-04-21,template — run update_data.py to get live data
+NFLX,Netflix Inc.,Communication Services,410900000000,14500000000,0.337,0.4,2026-04-21,template — run update_data.py to get live data
+WBD,Warner Bros. Discovery Inc.,Communication Services,20000000000,40000000000,0.498,0.4,2026-04-21,template — run update_data.py to get live data
+FOX,Fox Corporation,Communication Services,27300000000,7500000000,0.269,0.4,2026-04-21,template — run update_data.py to get live data
+CMCSA,Comcast Corporation,Communication Services,142000000000,98000000000,0.218,0.4,2026-04-21,template — run update_data.py to get live data
+CHTR,Charter Communications Inc.,Communication Services,42000000000,95000000000,0.285,0.4,2026-04-21,template — run update_data.py to get live data
+EA,Electronic Arts Inc.,Technology,35000000000,1800000000,0.258,0.35,2026-04-21,template — run update_data.py to get live data
+TTWO,Take-Two Interactive Software,Technology,28000000000,5500000000,0.418,0.35,2026-04-21,template — run update_data.py to get live data
+LYV,Live Nation Entertainment,Communication Services,22000000000,7500000000,0.385,0.4,2026-04-21,template — run update_data.py to get live data
+LIN,Linde plc,Basic Materials,215000000000,13500000000,0.195,0.45,2026-04-21,template — run update_data.py to get live data
+APD,Air Products and Chemicals,Basic Materials,48000000000,12000000000,0.228,0.45,2026-04-21,template — run update_data.py to get live data
+ECL,Ecolab Inc.,Basic Materials,55000000000,8500000000,0.205,0.45,2026-04-21,template — run update_data.py to get live data
+DD,DuPont de Nemours Inc.,Basic Materials,32000000000,8800000000,0.268,0.45,2026-04-21,template — run update_data.py to get live data
+DOW,Dow Inc.,Basic Materials,28000000000,16000000000,0.305,0.45,2026-04-21,template — run update_data.py to get live data
+LYB,LyondellBasell Industries,Basic Materials,22000000000,12000000000,0.318,0.45,2026-04-21,template — run update_data.py to get live data
+PPG,PPG Industries Inc.,Basic Materials,28000000000,7200000000,0.248,0.45,2026-04-21,template — run update_data.py to get live data
+SHW,The Sherwin-Williams Company,Basic Materials,85000000000,12000000000,0.228,0.45,2026-04-21,template — run update_data.py to get live data
+NEM,Newmont Corporation,Basic Materials,48000000000,7500000000,0.298,0.45,2026-04-21,template — run update_data.py to get live data
+FCX,Freeport-McMoRan Inc.,Basic Materials,65000000000,9500000000,0.358,0.45,2026-04-21,template — run update_data.py to get live data
+NUE,Nucor Corporation,Basic Materials,35000000000,5800000000,0.285,0.45,2026-04-21,template — run update_data.py to get live data
+STLD,Steel Dynamics Inc.,Basic Materials,18000000000,3200000000,0.298,0.45,2026-04-21,template — run update_data.py to get live data
+CLF,Cleveland-Cliffs Inc.,Basic Materials,8000000000,5500000000,0.428,0.45,2026-04-21,template — run update_data.py to get live data
+AA,Alcoa Corporation,Basic Materials,8000000000,2200000000,0.485,0.45,2026-04-21,template — run update_data.py to get live data
+CF,CF Industries Holdings,Basic Materials,15000000000,3500000000,0.318,0.45,2026-04-21,template — run update_data.py to get live data
+MOS,The Mosaic Company,Basic Materials,8500000000,3800000000,0.365,0.45,2026-04-21,template — run update_data.py to get live data
+IFF,International Flavors & Fragrances,Basic Materials,22000000000,12000000000,0.285,0.45,2026-04-21,template — run update_data.py to get live data
+ALB,Albemarle Corporation,Basic Materials,12000000000,3800000000,0.548,0.45,2026-04-21,template — run update_data.py to get live data
+MP,MP Materials Corp.,Basic Materials,2500000000,400000000,0.685,0.45,2026-04-21,template — run update_data.py to get live data
+BIIB,Biogen Inc.,Healthcare,28000000000,7500000000,0.298,0.35,2026-04-21,template — run update_data.py to get live data
+REGN,Regeneron Pharmaceuticals,Healthcare,88000000000,2500000000,0.258,0.35,2026-04-21,template — run update_data.py to get live data
+VRTX,Vertex Pharmaceuticals,Healthcare,128000000000,1200000000,0.258,0.35,2026-04-21,template — run update_data.py to get live data
+MRNA,Moderna Inc.,Healthcare,18000000000,3500000000,0.548,0.35,2026-04-21,template — run update_data.py to get live data
+BNTX,BioNTech SE,Healthcare,25000000000,2800000000,0.485,0.35,2026-04-21,template — run update_data.py to get live data
+ALNY,Alnylam Pharmaceuticals,Healthcare,28000000000,2500000000,0.425,0.35,2026-04-21,template — run update_data.py to get live data
+INCY,Incyte Corporation,Healthcare,12000000000,1500000000,0.318,0.35,2026-04-21,template — run update_data.py to get live data
+IONS,Ionis Pharmaceuticals,Healthcare,10000000000,2200000000,0.418,0.35,2026-04-21,template — run update_data.py to get live data
+RARE,Ultragenyx Pharmaceutical,Healthcare,5500000000,800000000,0.548,0.35,2026-04-21,template — run update_data.py to get live data
+FATE,Fate Therapeutics Inc.,Healthcare,800000000,400000000,0.885,0.35,2026-04-21,template — run update_data.py to get live data
+TSM,Taiwan Semiconductor Manufacturing,Technology,850000000000,28000000000,0.298,0.35,2026-04-21,template — run update_data.py to get live data
+AVGO,Broadcom Inc.,Technology,850000000000,75000000000,0.298,0.35,2026-04-21,template — run update_data.py to get live data
+ASML,ASML Holding N.V.,Technology,285000000000,3500000000,0.318,0.35,2026-04-21,template — run update_data.py to get live data
+MRVL,Marvell Technology Inc.,Technology,65000000000,4200000000,0.428,0.35,2026-04-21,template — run update_data.py to get live data
+MPWR,Monolithic Power Systems,Technology,22000000000,800000000,0.378,0.35,2026-04-21,template — run update_data.py to get live data
+ON,ON Semiconductor Corporation,Technology,28000000000,3200000000,0.398,0.35,2026-04-21,template — run update_data.py to get live data
+WOLF,Wolfspeed Inc.,Technology,2000000000,3200000000,0.885,0.35,2026-04-21,template — run update_data.py to get live data
+NXPI,NXP Semiconductors N.V.,Technology,55000000000,12000000000,0.295,0.35,2026-04-21,template — run update_data.py to get live data
+STM,STMicroelectronics N.V.,Technology,22000000000,3500000000,0.385,0.35,2026-04-21,template — run update_data.py to get live data
+SWKS,Skyworks Solutions Inc.,Technology,18000000000,3200000000,0.345,0.35,2026-04-21,template — run update_data.py to get live data
+QRVO,Qorvo Inc.,Technology,8500000000,2200000000,0.418,0.35,2026-04-21,template — run update_data.py to get live data
+ENTG,Entegris Inc.,Technology,15000000000,5500000000,0.428,0.35,2026-04-21,template — run update_data.py to get live data
+MKSI,MKS Instruments Inc.,Technology,8000000000,3800000000,0.448,0.35,2026-04-21,template — run update_data.py to get live data
+SAP,SAP SE,Technology,245000000000,11000000000,0.225,0.35,2026-04-21,template — run update_data.py to get live data
+INTU,Intuit Inc.,Technology,165000000000,6200000000,0.268,0.35,2026-04-21,template — run update_data.py to get live data
+ADSK,Autodesk Inc.,Technology,52000000000,2200000000,0.295,0.35,2026-04-21,template — run update_data.py to get live data
+PTC,PTC Inc.,Technology,18000000000,1500000000,0.298,0.35,2026-04-21,template — run update_data.py to get live data
+PRGS,Progress Software Corporation,Technology,3500000000,600000000,0.318,0.35,2026-04-21,template — run update_data.py to get live data
+GWRE,Guidewire Software Inc.,Technology,12000000000,500000000,0.365,0.35,2026-04-21,template — run update_data.py to get live data
+VEEV,Veeva Systems Inc.,Technology,32000000000,900000000,0.295,0.35,2026-04-21,template — run update_data.py to get live data
+TTD,The Trade Desk Inc.,Technology,45000000000,500000000,0.485,0.35,2026-04-21,template — run update_data.py to get live data
+ROKU,Roku Inc.,Technology,12000000000,1200000000,0.685,0.35,2026-04-21,template — run update_data.py to get live data
+ZM,Zoom Video Communications,Technology,22000000000,1500000000,0.418,0.35,2026-04-21,template — run update_data.py to get live data
+DOCN,DigitalOcean Holdings,Technology,3500000000,1500000000,0.585,0.35,2026-04-21,template — run update_data.py to get live data
+BOX,Box Inc.,Technology,4200000000,1000000000,0.348,0.35,2026-04-21,template — run update_data.py to get live data
+DELL,Dell Technologies Inc.,Technology,52000000000,28000000000,0.445,0.35,2026-04-21,template — run update_data.py to get live data
+HPQ,HP Inc.,Technology,32000000000,9500000000,0.298,0.35,2026-04-21,template — run update_data.py to get live data
+HPE,Hewlett Packard Enterprise,Technology,28000000000,12000000000,0.318,0.35,2026-04-21,template — run update_data.py to get live data
+WDC,Western Digital Corporation,Technology,18000000000,8500000000,0.485,0.35,2026-04-21,template — run update_data.py to get live data
+STX,Seagate Technology Holdings,Technology,22000000000,7200000000,0.428,0.35,2026-04-21,template — run update_data.py to get live data
+NTAP,NetApp Inc.,Technology,22000000000,2800000000,0.325,0.35,2026-04-21,template — run update_data.py to get live data
+PSTG,Pure Storage Inc.,Technology,18000000000,800000000,0.418,0.35,2026-04-21,template — run update_data.py to get live data
+SMCI,Super Micro Computer Inc.,Technology,42000000000,1200000000,0.785,0.35,2026-04-21,template — run update_data.py to get live data
+VIAV,Viavi Solutions Inc.,Technology,2200000000,900000000,0.425,0.35,2026-04-21,template — run update_data.py to get live data
+CIEN,Ciena Corporation,Technology,8500000000,1800000000,0.418,0.35,2026-04-21,template — run update_data.py to get live data
+FFIV,F5 Inc.,Technology,10000000000,2200000000,0.298,0.35,2026-04-21,template — run update_data.py to get live data
+AKAM,Akamai Technologies Inc.,Technology,15000000000,3500000000,0.258,0.35,2026-04-21,template — run update_data.py to get live data
+LDOS,Leidos Holdings Inc.,Technology,22000000000,5500000000,0.245,0.35,2026-04-21,template — run update_data.py to get live data
+SAIC,Science Applications International,Technology,5800000000,1800000000,0.255,0.35,2026-04-21,template — run update_data.py to get live data
+BAH,Booz Allen Hamilton Holding,Technology,22000000000,3800000000,0.248,0.35,2026-04-21,template — run update_data.py to get live data
+CTSH,Cognizant Technology Solutions,Technology,38000000000,2200000000,0.225,0.35,2026-04-21,template — run update_data.py to get live data
+ACN,Accenture plc,Technology,195000000000,8500000000,0.198,0.35,2026-04-21,template — run update_data.py to get live data
+WIT,Wipro Limited,Technology,28000000000,1500000000,0.265,0.35,2026-04-21,template — run update_data.py to get live data
+INFY,Infosys Limited,Technology,68000000000,1200000000,0.248,0.35,2026-04-21,template — run update_data.py to get live data
+WIX,Wix.com Ltd.,Technology,12000000000,900000000,0.525,0.35,2026-04-21,template — run update_data.py to get live data
+SHOP,Shopify Inc.,Technology,120000000000,1200000000,0.518,0.35,2026-04-21,template — run update_data.py to get live data
+PYPL,PayPal Holdings Inc.,Technology,72000000000,12000000000,0.358,0.35,2026-04-21,template — run update_data.py to get live data
+AFRM,Affirm Holdings Inc.,Technology,18000000000,3500000000,0.785,0.35,2026-04-21,template — run update_data.py to get live data
+SOFI,SoFi Technologies Inc.,Financial Services,12000000000,22000000000,0.685,0.55,2026-04-21,template — run update_data.py to get live data
+NU,Nu Holdings Ltd.,Financial Services,65000000000,4500000000,0.485,0.55,2026-04-21,template — run update_data.py to get live data
+MELI,MercadoLibre Inc.,Consumer Cyclical,88000000000,5500000000,0.418,0.4,2026-04-21,template — run update_data.py to get live data
+SE,Sea Limited,Technology,45000000000,3800000000,0.585,0.35,2026-04-21,template — run update_data.py to get live data
+GRAB,Grab Holdings Limited,Technology,15000000000,1800000000,0.685,0.35,2026-04-21,template — run update_data.py to get live data
+BIDU,Baidu Inc.,Technology,32000000000,8500000000,0.385,0.35,2026-04-21,template — run update_data.py to get live data
+JD,JD.com Inc.,Consumer Cyclical,42000000000,9500000000,0.418,0.4,2026-04-21,template — run update_data.py to get live data
+PDD,PDD Holdings Inc.,Consumer Cyclical,145000000000,6200000000,0.448,0.4,2026-04-21,template — run update_data.py to get live data
+BABA,Alibaba Group Holding,Consumer Cyclical,185000000000,25000000000,0.378,0.4,2026-04-21,template — run update_data.py to get live data
+TCOM,Trip.com Group Limited,Consumer Cyclical,22000000000,4500000000,0.385,0.4,2026-04-21,template — run update_data.py to get live data
+NTES,NetEase Inc.,Communication Services,55000000000,3800000000,0.325,0.4,2026-04-21,template — run update_data.py to get live data
+ALLY,Ally Financial Inc.,Financial Services,12000000000,165000000000,0.385,0.55,2026-04-21,template — run update_data.py to get live data
+SLM,SLM Corporation,Financial Services,5500000000,90000000000,0.418,0.55,2026-04-21,template — run update_data.py to get live data
+NAVI,Navient Corporation,Financial Services,2200000000,58000000000,0.548,0.55,2026-04-21,template — run update_data.py to get live data
+OMF,OneMain Holdings Inc.,Financial Services,5500000000,22000000000,0.418,0.55,2026-04-21,template — run update_data.py to get live data
+CACC,Credit Acceptance Corporation,Financial Services,8500000000,7500000000,0.348,0.55,2026-04-21,template — run update_data.py to get live data
+TREE,LendingTree Inc.,Financial Services,600000000,1200000000,0.785,0.55,2026-04-21,template — run update_data.py to get live data
+LC,LendingClub Corporation,Financial Services,1500000000,8500000000,0.685,0.55,2026-04-21,template — run update_data.py to get live data
+LPLA,LPL Financial Holdings,Financial Services,22000000000,3800000000,0.285,0.55,2026-04-21,template — run update_data.py to get live data
+RJF,Raymond James Financial,Financial Services,28000000000,4500000000,0.255,0.55,2026-04-21,template — run update_data.py to get live data
+SF,Stifel Financial Corp.,Financial Services,8500000000,3200000000,0.298,0.55,2026-04-21,template — run update_data.py to get live data
+HLI,Houlihan Lokey Inc.,Financial Services,12000000000,600000000,0.285,0.55,2026-04-21,template — run update_data.py to get live data
+LAZ,Lazard Inc.,Financial Services,4200000000,2200000000,0.348,0.55,2026-04-21,template — run update_data.py to get live data
+EVR,Evercore Inc.,Financial Services,8500000000,900000000,0.298,0.55,2026-04-21,template — run update_data.py to get live data
+PJT,PJT Partners Inc.,Financial Services,3200000000,500000000,0.318,0.55,2026-04-21,template — run update_data.py to get live data
+MKTX,MarketAxess Holdings,Financial Services,8000000000,500000000,0.265,0.55,2026-04-21,template — run update_data.py to get live data
+CBOE,Cboe Global Markets Inc.,Financial Services,22000000000,3200000000,0.195,0.55,2026-04-21,template — run update_data.py to get live data
+NDAQ,Nasdaq Inc.,Financial Services,35000000000,12000000000,0.215,0.55,2026-04-21,template — run update_data.py to get live data
+IEX,IDEX Corporation,Industrials,18000000000,2500000000,0.228,0.4,2026-04-21,template — run update_data.py to get live data
+BEN,Franklin Resources Inc.,Financial Services,12000000000,3200000000,0.298,0.55,2026-04-21,template — run update_data.py to get live data
+IVZ,Invesco Ltd.,Financial Services,8500000000,2800000000,0.345,0.55,2026-04-21,template — run update_data.py to get live data
+TROW,T. Rowe Price Group,Financial Services,22000000000,1200000000,0.258,0.55,2026-04-21,template — run update_data.py to get live data
+WTW,Willis Towers Watson,Financial Services,28000000000,7500000000,0.225,0.55,2026-04-21,template — run update_data.py to get live data
+AFG,American Financial Group,Financial Services,12000000000,2800000000,0.215,0.55,2026-04-21,template — run update_data.py to get live data
+RLI,RLI Corp.,Financial Services,6500000000,800000000,0.188,0.55,2026-04-21,template — run update_data.py to get live data
+CINF,Cincinnati Financial,Financial Services,22000000000,3200000000,0.185,0.55,2026-04-21,template — run update_data.py to get live data
+HIG,The Hartford Financial Services,Financial Services,35000000000,7200000000,0.215,0.55,2026-04-21,template — run update_data.py to get live data
+L,Loews Corporation,Financial Services,18000000000,8500000000,0.195,0.55,2026-04-21,template — run update_data.py to get live data
+MKL,Markel Group Inc.,Financial Services,22000000000,4200000000,0.215,0.55,2026-04-21,template — run update_data.py to get live data
+WRB,W.R. Berkley Corporation,Financial Services,22000000000,4500000000,0.208,0.55,2026-04-21,template — run update_data.py to get live data
+ERIE,Erie Indemnity Company,Financial Services,45000000000,200000000,0.215,0.55,2026-04-21,template — run update_data.py to get live data
+RE,Everest Group Ltd.,Financial Services,18000000000,3500000000,0.225,0.55,2026-04-21,template — run update_data.py to get live data
+RNR,RenaissanceRe Holdings,Financial Services,12000000000,2200000000,0.248,0.55,2026-04-21,template — run update_data.py to get live data
+DXCM,DexCom Inc.,Healthcare,32000000000,2800000000,0.378,0.35,2026-04-21,template — run update_data.py to get live data
+PODD,Insulet Corporation,Healthcare,12000000000,1500000000,0.385,0.35,2026-04-21,template — run update_data.py to get live data
+ALGN,Align Technology Inc.,Healthcare,15000000000,900000000,0.378,0.35,2026-04-21,template — run update_data.py to get live data
+TECH,Bio-Techne Corporation,Healthcare,12000000000,800000000,0.298,0.35,2026-04-21,template — run update_data.py to get live data
+XRAY,Dentsply Sirona Inc.,Healthcare,8000000000,2200000000,0.348,0.35,2026-04-21,template — run update_data.py to get live data
+HSIC,Henry Schein Inc.,Healthcare,10000000000,3500000000,0.258,0.35,2026-04-21,template — run update_data.py to get live data
+PRGO,Perrigo Company plc,Healthcare,5000000000,4500000000,0.385,0.35,2026-04-21,template — run update_data.py to get live data
+CVS,CVS Health Corporation,Healthcare,80000000000,60000000000,0.285,0.35,2026-04-21,template — run update_data.py to get live data
+JAZZ,Jazz Pharmaceuticals plc,Healthcare,8500000000,7500000000,0.348,0.35,2026-04-21,template — run update_data.py to get live data
+UTHR,United Therapeutics Corporation,Healthcare,18000000000,900000000,0.285,0.35,2026-04-21,template — run update_data.py to get live data
+BMRN,BioMarin Pharmaceutical,Healthcare,15000000000,1500000000,0.348,0.35,2026-04-21,template — run update_data.py to get live data
+SRPT,Sarepta Therapeutics Inc.,Healthcare,10000000000,2800000000,0.485,0.35,2026-04-21,template — run update_data.py to get live data
+PCVX,Vaxcyte Inc.,Healthcare,12000000000,200000000,0.585,0.35,2026-04-21,template — run update_data.py to get live data
+KRYS,Krystal Biotech Inc.,Healthcare,5500000000,500000000,0.525,0.35,2026-04-21,template — run update_data.py to get live data
+SMMT,Summit Therapeutics Inc.,Healthcare,8000000000,300000000,0.785,0.35,2026-04-21,template — run update_data.py to get live data
+LEGN,Legend Biotech Corporation,Healthcare,12000000000,1500000000,0.585,0.35,2026-04-21,template — run update_data.py to get live data
+CRVS,Corvus Pharmaceuticals,Healthcare,400000000,100000000,0.885,0.35,2026-04-21,template — run update_data.py to get live data
+PHAT,Phathom Pharmaceuticals,Healthcare,1200000000,500000000,0.885,0.35,2026-04-21,template — run update_data.py to get live data
+RCKT,Rocket Pharmaceuticals,Healthcare,1800000000,300000000,0.785,0.35,2026-04-21,template — run update_data.py to get live data
+ETSY,Etsy Inc.,Consumer Cyclical,8000000000,1200000000,0.485,0.4,2026-04-21,template — run update_data.py to get live data
+W,Wayfair Inc.,Consumer Cyclical,5500000000,3800000000,0.685,0.4,2026-04-21,template — run update_data.py to get live data
+CHWY,Chewy Inc.,Consumer Cyclical,12000000000,400000000,0.585,0.4,2026-04-21,template — run update_data.py to get live data
+PETS,PetMed Express Inc.,Consumer Cyclical,300000000,100000000,0.585,0.4,2026-04-21,template — run update_data.py to get live data
+PRTS,CarParts.com Inc.,Consumer Cyclical,180000000,200000000,0.785,0.4,2026-04-21,template — run update_data.py to get live data
+AN,AutoNation Inc.,Consumer Cyclical,8000000000,8500000000,0.298,0.4,2026-04-21,template — run update_data.py to get live data
+KMX,CarMax Inc.,Consumer Cyclical,12000000000,18000000000,0.348,0.4,2026-04-21,template — run update_data.py to get live data
+PAG,Penske Automotive Group,Consumer Cyclical,10000000000,8500000000,0.285,0.4,2026-04-21,template — run update_data.py to get live data
+LAD,Lithia Motors Inc.,Consumer Cyclical,8500000000,12000000000,0.318,0.4,2026-04-21,template — run update_data.py to get live data
+GPC,Genuine Parts Company,Consumer Cyclical,18000000000,5500000000,0.215,0.4,2026-04-21,template — run update_data.py to get live data
+AAP,Advance Auto Parts Inc.,Consumer Cyclical,3500000000,3500000000,0.548,0.4,2026-04-21,template — run update_data.py to get live data
+AZO,AutoZone Inc.,Consumer Cyclical,55000000000,8500000000,0.198,0.4,2026-04-21,template — run update_data.py to get live data
+ORLY,O'Reilly Automotive Inc.,Consumer Cyclical,68000000000,5200000000,0.195,0.4,2026-04-21,template — run update_data.py to get live data
+BBY,Best Buy Co. Inc.,Consumer Cyclical,18000000000,1800000000,0.298,0.4,2026-04-21,template — run update_data.py to get live data
+PVH,PVH Corp.,Consumer Cyclical,5500000000,3200000000,0.385,0.4,2026-04-21,template — run update_data.py to get live data
+RL,Ralph Lauren Corporation,Consumer Cyclical,15000000000,1800000000,0.285,0.4,2026-04-21,template — run update_data.py to get live data
+VFC,V.F. Corporation,Consumer Cyclical,3500000000,6500000000,0.685,0.4,2026-04-21,template — run update_data.py to get live data
+TPR,Tapestry Inc.,Consumer Cyclical,12000000000,3200000000,0.348,0.4,2026-04-21,template — run update_data.py to get live data
+CPRI,Capri Holdings Limited,Consumer Cyclical,5500000000,2800000000,0.485,0.4,2026-04-21,template — run update_data.py to get live data
+KSS,Kohl's Corporation,Consumer Cyclical,2800000000,3500000000,0.585,0.4,2026-04-21,template — run update_data.py to get live data
+DDS,Dillard's Inc.,Consumer Cyclical,8500000000,800000000,0.348,0.4,2026-04-21,template — run update_data.py to get live data
+BJ,BJ's Wholesale Club Holdings,Consumer Defensive,12000000000,2800000000,0.258,0.35,2026-04-21,template — run update_data.py to get live data
+SFM,Sprouts Farmers Market Inc.,Consumer Defensive,8500000000,500000000,0.285,0.35,2026-04-21,template — run update_data.py to get live data
+GO,Grocery Outlet Holding Corp.,Consumer Defensive,3500000000,900000000,0.385,0.35,2026-04-21,template — run update_data.py to get live data
+CASY,Casey's General Stores,Consumer Defensive,15000000000,1800000000,0.225,0.35,2026-04-21,template — run update_data.py to get live data
+CHEF,The Chefs' Warehouse Inc.,Consumer Defensive,1200000000,800000000,0.385,0.35,2026-04-21,template — run update_data.py to get live data
+CARR,Carrier Global Corporation,Industrials,65000000000,12000000000,0.245,0.4,2026-04-21,template — run update_data.py to get live data
+TT,Trane Technologies plc,Industrials,72000000000,5500000000,0.258,0.4,2026-04-21,template — run update_data.py to get live data
+JCI,Johnson Controls International,Industrials,42000000000,12000000000,0.248,0.4,2026-04-21,template — run update_data.py to get live data
+OTIS,Otis Worldwide Corporation,Industrials,35000000000,8200000000,0.215,0.4,2026-04-21,template — run update_data.py to get live data
+ALLE,Allegion plc,Industrials,12000000000,2800000000,0.225,0.4,2026-04-21,template — run update_data.py to get live data
+MAS,Masco Corporation,Industrials,18000000000,3800000000,0.248,0.4,2026-04-21,template — run update_data.py to get live data
+SWK,Stanley Black & Decker Inc.,Industrials,15000000000,9500000000,0.348,0.4,2026-04-21,template — run update_data.py to get live data
+NVT,nVent Electric plc,Industrials,12000000000,2500000000,0.265,0.4,2026-04-21,template — run update_data.py to get live data
+REXR,Rexnord Corporation,Industrials,5500000000,1800000000,0.285,0.4,2026-04-21,template — run update_data.py to get live data
+GNRC,Generac Holdings Inc.,Industrials,8500000000,2200000000,0.485,0.4,2026-04-21,template — run update_data.py to get live data
+HUBB,Hubbell Incorporated,Industrials,22000000000,3200000000,0.245,0.4,2026-04-21,template — run update_data.py to get live data
+ACHR,Archer Aviation Inc.,Industrials,2800000000,500000000,0.885,0.4,2026-04-21,template — run update_data.py to get live data
+JOBY,Joby Aviation Inc.,Industrials,5500000000,400000000,0.785,0.4,2026-04-21,template — run update_data.py to get live data
+SPCE,Virgin Galactic Holdings,Industrials,300000000,200000000,0.985,0.4,2026-04-21,template — run update_data.py to get live data
+RKT,Rocket Companies Inc.,Financial Services,22000000000,12000000000,0.585,0.55,2026-04-21,template — run update_data.py to get live data
+OPEN,Opendoor Technologies Inc.,Real Estate,1800000000,5500000000,0.885,0.5,2026-04-21,template — run update_data.py to get live data
+Z,Zillow Group Inc.,Real Estate,15000000000,2200000000,0.485,0.5,2026-04-21,template — run update_data.py to get live data
+TRGP,Targa Resources Corp.,Energy,45000000000,15000000000,0.285,0.45,2026-04-21,template — run update_data.py to get live data
+WES,Western Midstream Partners,Energy,22000000000,9500000000,0.285,0.45,2026-04-21,template — run update_data.py to get live data
+AM,Antero Midstream Corporation,Energy,8500000000,5500000000,0.318,0.45,2026-04-21,template — run update_data.py to get live data
+HESM,Hess Midstream LP,Energy,8000000000,3800000000,0.285,0.45,2026-04-21,template — run update_data.py to get live data
+LNG,Cheniere Energy Inc.,Energy,42000000000,28000000000,0.285,0.45,2026-04-21,template — run update_data.py to get live data
+ET,Energy Transfer LP,Energy,55000000000,52000000000,0.298,0.45,2026-04-21,template — run update_data.py to get live data
+EPD,Enterprise Products Partners,Energy,65000000000,32000000000,0.215,0.45,2026-04-21,template — run update_data.py to get live data
+PAA,Plains All American Pipeline,Energy,12000000000,8500000000,0.285,0.45,2026-04-21,template — run update_data.py to get live data
+PAGP,Plains GP Holdings,Energy,4500000000,1500000000,0.285,0.45,2026-04-21,template — run update_data.py to get live data
+KMI,Kinder Morgan Inc.,Energy,42000000000,32000000000,0.225,0.45,2026-04-21,template — run update_data.py to get live data
+WMB,Williams Companies Inc.,Energy,55000000000,22000000000,0.228,0.45,2026-04-21,template — run update_data.py to get live data
+OKE,ONEOK Inc.,Energy,55000000000,18000000000,0.235,0.45,2026-04-21,template — run update_data.py to get live data
+TALO,Talos Energy Inc.,Energy,2800000000,2200000000,0.585,0.45,2026-04-21,template — run update_data.py to get live data
+SM,SM Energy Company,Energy,5500000000,3200000000,0.448,0.45,2026-04-21,template — run update_data.py to get live data
+CRC,California Resources Corporation,Energy,4500000000,1800000000,0.485,0.45,2026-04-21,template — run update_data.py to get live data
+FSLR,First Solar Inc.,Technology,22000000000,600000000,0.485,0.35,2026-04-21,template — run update_data.py to get live data
+ENPH,Enphase Energy Inc.,Technology,18000000000,1500000000,0.585,0.35,2026-04-21,template — run update_data.py to get live data
+SEDG,SolarEdge Technologies,Technology,5500000000,900000000,0.685,0.35,2026-04-21,template — run update_data.py to get live data
+RUN,Sunrun Inc.,Consumer Cyclical,5500000000,8500000000,0.685,0.4,2026-04-21,template — run update_data.py to get live data
+ARRY,Array Technologies Inc.,Industrials,3500000000,900000000,0.585,0.4,2026-04-21,template — run update_data.py to get live data
+BE,Bloom Energy Corporation,Industrials,3500000000,2200000000,0.685,0.4,2026-04-21,template — run update_data.py to get live data
+PLUG,Plug Power Inc.,Industrials,2800000000,2800000000,0.885,0.4,2026-04-21,template — run update_data.py to get live data
+BLDP,Ballard Power Systems,Industrials,900000000,400000000,0.785,0.4,2026-04-21,template — run update_data.py to get live data
+CHPT,ChargePoint Holdings Inc.,Consumer Cyclical,1200000000,900000000,0.885,0.4,2026-04-21,template — run update_data.py to get live data
+EVGO,EVgo Inc.,Consumer Cyclical,2200000000,1200000000,0.885,0.4,2026-04-21,template — run update_data.py to get live data
+BLNK,Blink Charging Co.,Consumer Cyclical,300000000,300000000,0.985,0.4,2026-04-21,template — run update_data.py to get live data
+CEG,Constellation Energy Corporation,Utilities,85000000000,8500000000,0.325,0.4,2026-04-21,template — run update_data.py to get live data
+EQR,Equity Residential,Real Estate,28000000000,8500000000,0.198,0.5,2026-04-21,template — run update_data.py to get live data
+AVB,AvalonBay Communities Inc.,Real Estate,32000000000,8500000000,0.195,0.5,2026-04-21,template — run update_data.py to get live data
+SMPL,Simply Good Foods Co,Consumer Defensive,3200000000,400000000,0.298,0.35,2026-04-24,template — run update_data.py to get live data
+PR,Permian Resources Corporation,Energy,10000000000,4500000000,0.385,0.45,2026-04-24,template — run update_data.py to get live data
+CIVI,Civitas Resources Inc,Energy,8500000000,3800000000,0.368,0.45,2026-04-24,template — run update_data.py to get live data
+MTDR,Matador Resources Company,Energy,8000000000,3200000000,0.398,0.45,2026-04-24,template — run update_data.py to get live data
+SIRI,Sirius XM Holdings Inc,Communication Services,8500000000,9500000000,0.385,0.4,2026-04-24,template — run update_data.py to get live data
+ALKS,Alkermes plc,Healthcare,4200000000,800000000,0.348,0.35,2026-04-24,template — run update_data.py to get live data
+MNDY,Monday.com Ltd,Technology,15000000000,500000000,0.485,0.35,2026-04-24,template — run update_data.py to get live data
+NTRA,Natera Inc,Healthcare,22000000000,900000000,0.548,0.35,2026-04-24,template — run update_data.py to get live data
+CQP,Cheniere Energy Partners LP,Energy,28000000000,22000000000,0.258,0.45,2026-04-24,template — run update_data.py to get live data
+GAP,The Gap Inc,Consumer Cyclical,5500000000,2800000000,0.448,0.4,2026-04-24,template — run update_data.py to get live data
+FBIN,Fortune Brands Innovations,Industrials,8500000000,3200000000,0.298,0.4,2026-04-24,template — run update_data.py to get live data
+FISV,Fiserv Inc,Financial Services,102000000000,22000000000,0.225,0.55,2026-04-24,template — run update_data.py to get live data
+XYZ,Block Inc,Financial Services,45000000000,5500000000,0.548,0.55,2026-04-24,template — run update_data.py to get live data
+VTRS,Viatris Inc,Healthcare,12000000000,18000000000,0.348,0.35,2026-04-24,template — run update_data.py to get live data

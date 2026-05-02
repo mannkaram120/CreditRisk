@@ -413,7 +413,7 @@ select.si{cursor:pointer}
 const API='http://127.0.0.1:8000';
 
 // ── TICKER AUTOCOMPLETE ──
-const TICKER_CSV='https://raw.githubusercontent.com/karamfrm/credit-risk-engine/main/backend/tickers.csv';
+const TICKER_CSV='https://raw.githubusercontent.com/mannkaram120/CreditRisk/main/market_data.csv';
 let allTickers=[]; // [{ticker, name}]
 let acIdx=-1; // keyboard nav index
 
@@ -425,8 +425,18 @@ async function loadTickerList(){
     const lines=txt.trim().split('\n').slice(1); // skip header
     allTickers=lines.map(l=>{
       const parts=l.split(',');
-      return {ticker:(parts[0]||'').replace(/"/g,'').trim(), name:(parts[1]||'').replace(/"/g,'').trim()};
-    }).filter(t=>t.ticker);
+      const ticker=(parts[0]||'').replace(/"/g,'').trim().toUpperCase();
+      const name=(parts[1]||'').replace(/"/g,'').trim();
+      const sector=(parts[2]||'').replace(/"/g,'').trim();
+      const lastUpdated=(parts[7]||'').replace(/"/g,'').trim();
+      return {ticker, name, sector, lastUpdated};
+    }).filter(t=>t.ticker && t.ticker!=='TICKER');
+    // Show data date in sidebar
+    if(allTickers.length && allTickers[0].lastUpdated){
+      const el=document.getElementById('dataDate');
+      if(el) el.textContent=allTickers[0].lastUpdated;
+    }
+    log('> Market data: '+allTickers.length+' tickers loaded... <span class="ok">OK</span>','ok');
   }catch(e){
     // Fallback: build from known presets if CSV unavailable
     const known=[
@@ -450,15 +460,26 @@ function tickerSearch(val){
   acIdx=-1;
   const q=val.trim().toUpperCase();
   if(!q){drop.style.display='none';return;}
-  // Match tickers starting with query first, then name contains query
+  if(!allTickers.length){
+    drop.innerHTML='<div style="padding:.5rem .75rem;font-family:var(--fm);font-size:.58rem;color:var(--gray)">Loading ticker list...</div>';
+    drop.style.display='block';
+    return;
+  }
+  // Match: ticker starts with q, OR name contains q, OR sector contains q
   const starts=allTickers.filter(t=>t.ticker.startsWith(q));
   const nameHits=allTickers.filter(t=>!t.ticker.startsWith(q)&&t.name.toUpperCase().includes(q));
-  const results=[...starts,...nameHits].slice(0,12);
-  if(!results.length){drop.style.display='none';return;}
+  const sectorHits=allTickers.filter(t=>!t.ticker.startsWith(q)&&!t.name.toUpperCase().includes(q)&&(t.sector||'').toUpperCase().includes(q));
+  const results=[...starts,...nameHits,...sectorHits].slice(0,12);
+  if(!results.length){
+    drop.innerHTML='<div style="padding:.5rem .75rem;font-family:var(--fm);font-size:.58rem;color:var(--gray)">No match — try ticker, name or sector (e.g. Technology)</div>';
+    drop.style.display='block';
+    return;
+  }
   drop.innerHTML=results.map((t,i)=>
     `<div class="ac-item" data-ticker="${t.ticker}" onmousedown="pickTicker('${t.ticker}')" onmouseover="hoverAc(${i})">
       <span class="ac-tk">${t.ticker}</span>
       <span class="ac-nm">${t.name||'—'}</span>
+      ${t.sector?`<span class="ac-sec">${t.sector.split(' ')[0]}</span>`:''}
     </div>`
   ).join('');
   drop.style.display='block';
@@ -523,6 +544,13 @@ function us(){
 }
 
 // ── preset ──
+function clearAll(){
+  cos=[];
+  document.querySelectorAll('#presetChips .chip').forEach(c=>c.classList.remove('active'));
+  rca(); updateTotal();
+  log('> Portfolio cleared','ok');
+}
+
 function selectPreset(n,btn){
   cos=[...PRESETS[n]];
   document.querySelectorAll('#presetChips .chip').forEach(c=>c.classList.remove('active'));
@@ -543,7 +571,56 @@ function addTicker(){
 }
 
 function rca(){
-  document.getElementById('ac').innerHTML=cos.map(c=>'<span class="chip active" style="font-size:.48rem;padding:.14rem .36rem">'+c.ticker+'</span>').join('');
+  const el=document.getElementById('ac');
+  if(!cos.length){
+    el.innerHTML='<span style="font-family:var(--fm);font-size:.52rem;color:var(--gray);opacity:.6">No tickers — select a preset</span>';
+    return;
+  }
+  el.innerHTML=cos.map((c,i)=>
+    '<div style="display:flex;align-items:center;gap:.3rem;padding:.22rem .4rem;'+
+    'background:var(--bg);border:1px solid var(--border);border-radius:2px;margin-bottom:.15rem">'+
+      '<span style="font-family:var(--fm);font-size:.6rem;font-weight:600;color:var(--black);min-width:42px;flex-shrink:0">'+c.ticker+'</span>'+
+      '<span style="font-family:var(--fm);font-size:.52rem;color:var(--gray);flex:1;cursor:pointer;text-align:right" '+
+        'onclick="editNotional('+i+',this)" title="Click to edit notional">'+
+        '$'+(c.notional/1e6).toFixed(1)+'M'+
+      '</span>'+
+      '<button onclick="removeTicker('+i+')" '+
+        'style="background:none;border:none;font-size:.6rem;color:var(--gray);cursor:pointer;'+
+        'padding:0 .1rem;line-height:1;flex-shrink:0;opacity:.5;transition:all .12s" '+
+        'onmouseover="this.style.opacity=1;this.style.color='#c0392b'" '+
+        'onmouseout="this.style.opacity=.5;this.style.color='var(--gray)'" '+
+        'title="Remove '+c.ticker+'">✕</button>'+
+    '</div>'
+  ).join('');
+}
+
+function updateTotal(){
+  const total=cos.reduce((s,c)=>s+c.notional,0);
+  const el=document.getElementById('portTotal');
+  if(el) el.textContent=cos.length+' names · $'+(total/1e6).toFixed(1)+'M total';
+}
+
+function removeTicker(i){
+  const t=cos[i].ticker;
+  cos.splice(i,1);
+  document.querySelectorAll('#presetChips .chip').forEach(c=>c.classList.remove('active'));
+  rca(); updateTotal();
+  log('> Removed '+t+' from portfolio','ok');
+}
+
+function editNotional(i,el){
+  const current=(cos[i].notional/1e6).toFixed(1);
+  const val=prompt('Enter notional for '+cos[i].ticker+' ($M):', current);
+  if(val===null) return;
+  const n=parseFloat(val.replace(/[$MmBbKk,\s]/g,''));
+  if(isNaN(n)||n<=0){log('> Invalid notional — use a number like 10 or 15.5','err');return;}
+  // Handle M/B/K suffix if typed
+  let notional=n*1e6;
+  if(val.toUpperCase().includes('B')) notional=n*1e9;
+  else if(val.toUpperCase().includes('K')) notional=n*1e3;
+  cos[i].notional=Math.round(notional);
+  rca(); updateTotal();
+  log('> '+cos[i].ticker+' notional → $'+(cos[i].notional/1e6).toFixed(1)+'M','ok');
 }
 
 // ── tabs ──
@@ -708,7 +785,7 @@ async function checkApi(){
   }
 }
 
-rca(); us(); checkApi(); loadTickerList();
+rca(); us(); updateTotal(); checkApi(); loadTickerList();
 </script>
 </body>
 </html>
