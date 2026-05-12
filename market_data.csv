@@ -1,486 +1,486 @@
 ticker,company_name,sector,market_cap,total_debt,equity_volatility,lgd,last_updated,data_source
-AAPL,Apple Inc.,Technology,4307169837056.0,84711000000.0,0.232499,0.35,2026-05-11,yfinance
-MSFT,Microsoft Corporation,Technology,3083246239744.0,56965000000.0,0.239314,0.35,2026-05-11,yfinance
-JPM,JPMorgan Chase & Co.,Financial Services,809480355840.0,516812000000.0,0.213513,0.55,2026-05-11,yfinance
-JNJ,Johnson & Johnson,Healthcare,532765245440.0,54987000000.0,0.16724,0.35,2026-05-11,yfinance
-PG,The Procter & Gamble Company,Consumer Defensive,340953464832.0,37026000000.0,0.180711,0.35,2026-05-11,yfinance
-F,Ford Motor Company,Consumer Cyclical,49091411968.0,159511000000.0,0.302328,0.4,2026-05-11,yfinance
-M,"Macy's, Inc.",Consumer Cyclical,5138074112.0,5204000000.0,0.442722,0.4,2026-05-11,yfinance
-CCL,Carnival Corporation Ltd.,Consumer Cyclical,36539981824.0,26607000000.0,0.463033,0.4,2026-05-11,yfinance
-AAL,American Airlines Group Inc.,Industrials,8829492224.0,34892000000.0,0.479218,0.4,2026-05-11,yfinance
-AMC,"AMC Entertainment Holdings, Inc.",Communication Services,1112625920.0,7929300000.0,0.633983,0.4,2026-05-11,yfinance
-C,Citigroup Inc.,Financial Services,214135193600.0,367705000000.0,0.280279,0.55,2026-05-11,yfinance
-BAC,Bank of America Corporation,Financial Services,364126076928.0,383594000000.0,0.217806,0.55,2026-05-11,yfinance
-GS,"The Goldman Sachs Group, Inc.",Financial Services,276268548096.0,434737000000.0,0.269959,0.55,2026-05-11,yfinance
-MS,Morgan Stanley,Financial Services,304557916160.0,394234000000.0,0.253851,0.55,2026-05-11,yfinance
-WFC,Wells Fargo & Company,Financial Services,231472726016.0,216223000000.0,0.265304,0.55,2026-05-11,yfinance
-GOOGL,Alphabet Inc.,Communication Services,4854816178176.0,90484000000.0,0.285903,0.4,2026-05-11,yfinance
-AMZN,"Amazon.com, Inc.",Consumer Cyclical,2933248491520.0,209888000000.0,0.305479,0.4,2026-05-11,yfinance
-META,"Meta Platforms, Inc.",Communication Services,1547498946560.0,86769000000.0,0.356751,0.4,2026-05-11,yfinance
-NVDA,NVIDIA Corporation,Technology,5230849163264.0,11040000000.0,0.341502,0.35,2026-05-11,yfinance
-TSLA,"Tesla, Inc.",Consumer Cyclical,1608764358656.0,15890000000.0,0.473929,0.4,2026-05-11,yfinance
-ORCL,Oracle Corporation,Technology,563561234432.0,153117000000.0,0.593432,0.35,2026-05-11,yfinance
-CRM,"Salesforce, Inc.",Technology,148738539520.0,17176000000.0,0.353026,0.35,2026-05-11,yfinance
-ADBE,Adobe Inc.,Technology,102278766592.0,6656000000.0,0.319128,0.35,2026-05-11,yfinance
-INTC,Intel Corporation,Technology,627722223616.0,45031000000.0,0.689523,0.35,2026-05-11,yfinance
-AMD,"Advanced Micro Devices, Inc.",Technology,742233079808.0,3847000000.0,0.6289,0.35,2026-05-11,yfinance
-QCOM,QUALCOMM Incorporated,Technology,230920863744.0,15270000000.0,0.384033,0.35,2026-05-11,yfinance
-TXN,Texas Instruments Incorporated,Technology,261924700160.0,14050000000.0,0.384222,0.35,2026-05-11,yfinance
-CSCO,"Cisco Systems, Inc.",Technology,381441179648.0,30086000000.0,0.26538,0.35,2026-05-11,yfinance
-IBM,International Business Machines Corporation,Technology,215948050432.0,69802000000.0,0.335834,0.35,2026-05-11,yfinance
-NOW,"ServiceNow, Inc.",Technology,94034665472.0,2431000000.0,0.44429,0.35,2026-05-11,yfinance
-AMAT,"Applied Materials, Inc.",Technology,345504022528.0,7190000000.0,0.462385,0.35,2026-05-11,yfinance
-MU,"Micron Technology, Inc.",Technology,842180460544.0,10798000000.0,0.615854,0.35,2026-05-11,yfinance
-LRCX,Lam Research Corporation,Technology,367730393088.0,3734479000.0,0.496031,0.35,2026-05-11,yfinance
-KLAC,KLA Corporation,Technology,244167639040.0,6145360000.0,0.458203,0.35,2026-05-11,yfinance
-SNPS,"Synopsys, Inc.",Technology,98937954304.0,10868557000.0,0.623026,0.35,2026-05-11,yfinance
-CDNS,"Cadence Design Systems, Inc.",Technology,100038467584.0,3083354000.0,0.374375,0.35,2026-05-11,yfinance
-PANW,"Palo Alto Networks, Inc.",Technology,168590688256.0,372000000.0,0.360896,0.35,2026-05-11,yfinance
-CRWD,"CrowdStrike Holdings, Inc.",Technology,134336749568.0,820077000.0,0.429,0.35,2026-05-11,yfinance
-FTNT,"Fortinet, Inc.",Technology,83510878208.0,996300000.0,0.445962,0.35,2026-05-11,yfinance
-NET,"Cloudflare, Inc.",Technology,69307260928.0,3518327000.0,0.590171,0.35,2026-05-11,yfinance
-DDOG,"Datadog, Inc.",Technology,71248994304.0,1285052000.0,0.605459,0.35,2026-05-11,yfinance
-ZS,"Zscaler, Inc.",Technology,24461090816.0,1864388000.0,0.471443,0.35,2026-05-11,yfinance
-TEAM,Atlassian Corporation,Technology,23245135872.0,1243018000.0,0.589325,0.35,2026-05-11,yfinance
-HUBS,"HubSpot, Inc.",Technology,10107309056.0,247291000.0,0.593117,0.35,2026-05-11,yfinance
-WDAY,"Workday, Inc.",Technology,31917303808.0,3821000000.0,0.414776,0.35,2026-05-11,yfinance
-SNOW,Snowflake Inc.,Technology,52701962240.0,2741114000.0,0.528849,0.35,2026-05-11,yfinance
-PLTR,Palantir Technologies Inc.,Technology,330349608960.0,211977000.0,0.512088,0.35,2026-05-11,yfinance
-APP,AppLovin Corporation,Communication Services,157404463104.0,3514022000.0,0.710328,0.4,2026-05-11,yfinance
-UBER,"Uber Technologies, Inc.",Technology,153585942528.0,12419000000.0,0.333438,0.35,2026-05-11,yfinance
-LYFT,"Lyft, Inc.",Technology,5490356224.0,1256349000.0,0.49929,0.35,2026-05-11,yfinance
-ABNB,"Airbnb, Inc.",Consumer Cyclical,84119379968.0,2534000000.0,0.29685,0.4,2026-05-11,yfinance
-DASH,"DoorDash, Inc.",Consumer Cyclical,71427366912.0,3287000000.0,0.438146,0.4,2026-05-11,yfinance
-SPOT,Spotify Technology S.A.,Communication Services,85914230784.0,476000000.0,0.438002,0.4,2026-05-11,yfinance
-RBLX,Roblox Corporation,Communication Services,30006669312.0,1788000000.0,0.594013,0.4,2026-05-11,yfinance
-U,Unity Software Inc.,Technology,12292826112.0,2236370000.0,0.782684,0.35,2026-05-11,yfinance
-HOOD,"Robinhood Markets, Inc.",Financial Services,69365907456.0,13387000000.0,0.667974,0.55,2026-05-11,yfinance
-COIN,"Coinbase Global, Inc.",Financial Services,52996239360.0,7964423000.0,0.725422,0.55,2026-05-11,yfinance
-MSTR,Strategy Inc,Technology,65740513280.0,8236290000.0,0.684627,0.35,2026-05-11,yfinance
-BRK-B,Berkshire Hathaway Inc.,Financial Services,1026532966400.0,128886000000.0,0.143993,0.55,2026-05-11,yfinance
-V,Visa Inc.,Financial Services,606256889856.0,23976000000.0,0.220102,0.55,2026-05-11,yfinance
-MA,Mastercard Incorporated,Financial Services,437798141952.0,18960000000.0,0.220262,0.55,2026-05-11,yfinance
-AXP,American Express Company,Financial Services,215635623936.0,60442000000.0,0.267933,0.55,2026-05-11,yfinance
-BLK,"BlackRock, Inc.",Financial Services,168402468864.0,14996000000.0,0.2525,0.55,2026-05-11,yfinance
-SCHW,The Charles Schwab Corporation,Financial Services,155263369216.0,30951000000.0,0.234221,0.55,2026-05-11,yfinance
-USB,U.S. Bancorp,Financial Services,86199205888.0,79220000000.0,0.221301,0.55,2026-05-11,yfinance
-PNC,"The PNC Financial Services Group, Inc.",Financial Services,87079297024.0,66666000000.0,0.218852,0.55,2026-05-11,yfinance
-TFC,Truist Financial Corporation,Financial Services,61185122304.0,69063000000.0,0.234379,0.55,2026-05-11,yfinance
-COF,Capital One Financial Corporation,Financial Services,117912035328.0,50413000000.0,0.318484,0.55,2026-05-11,yfinance
-SYF,Synchrony Financial,Financial Services,24602118144.0,16428000000.0,0.304784,0.55,2026-05-11,yfinance
-AIG,"American International Group, Inc.",Financial Services,40486547456.0,9156000000.0,0.237289,0.55,2026-05-11,yfinance
-MET,"MetLife, Inc.",Financial Services,50239545344.0,20183000000.0,0.231825,0.55,2026-05-11,yfinance
-PRU,"Prudential Financial, Inc.",Financial Services,35013844992.0,22958000000.0,0.230795,0.55,2026-05-11,yfinance
-ALL,The Allstate Corporation,Financial Services,54869270528.0,7491000000.0,0.231798,0.55,2026-05-11,yfinance
-TRV,"The Travelers Companies, Inc.",Financial Services,63376625664.0,9268000000.0,0.184778,0.55,2026-05-11,yfinance
-PGR,The Progressive Corporation,Financial Services,113361272832.0,8386000000.0,0.222984,0.55,2026-05-11,yfinance
-CB,Chubb Limited,Financial Services,123975606272.0,17470000000.0,0.176173,0.55,2026-05-11,yfinance
-MMC,Marsh & McLennan Companies,Financial Services,98000000000.0,12000000000.0,0.195,0.55,2026-04-21,cached — fetch failed 2026-05-11
-AON,Aon plc,Financial Services,66804736000.0,15474000000.0,0.239362,0.55,2026-05-11,yfinance
-ICE,"Intercontinental Exchange, Inc.",Financial Services,88118165504.0,20985000000.0,0.215856,0.55,2026-05-11,yfinance
-CME,CME Group Inc.,Financial Services,101913567232.0,3423200000.0,0.192019,0.55,2026-05-11,yfinance
-SPGI,S&P Global Inc.,Financial Services,124355518464.0,13776000000.0,0.272438,0.55,2026-05-11,yfinance
-MCO,Moody's Corporation,Financial Services,78834966528.0,7313000000.0,0.262902,0.55,2026-05-11,yfinance
-MSCI,MSCI Inc.,Financial Services,42576187392.0,6547700000.0,0.280353,0.55,2026-05-11,yfinance
-FIS,"Fidelity National Information Services, Inc.",Technology,22478641152.0,13331000000.0,0.297262,0.35,2026-05-11,yfinance
-GPN,Global Payments Inc.,Industrials,18916327424.0,21865376000.0,0.380499,0.4,2026-05-11,yfinance
-WEX,WEX Inc.,Technology,4910395904.0,5237100000.0,0.383505,0.35,2026-05-11,yfinance
-UNH,UnitedHealth Group Incorporated,Healthcare,345076727808.0,77917000000.0,0.480951,0.35,2026-05-11,yfinance
-LLY,Eli Lilly and Company,Healthcare,845772095488.0,43370000000.0,0.381463,0.35,2026-05-11,yfinance
-ABBV,AbbVie Inc.,Healthcare,356494049280.0,67496000000.0,0.247758,0.35,2026-05-11,yfinance
-MRK,"Merck & Co., Inc.",Healthcare,275089031168.0,49117000000.0,0.27387,0.35,2026-05-11,yfinance
-PFE,Pfizer Inc.,Healthcare,146361729024.0,63730000000.0,0.246219,0.35,2026-05-11,yfinance
-TMO,Thermo Fisher Scientific Inc.,Healthcare,172803981312.0,43161000000.0,0.313221,0.35,2026-05-11,yfinance
-ABT,Abbott Laboratories,Healthcare,146869682176.0,34047000000.0,0.24184,0.35,2026-05-11,yfinance
-DHR,Danaher Corporation,Healthcare,121142026240.0,18484000000.0,0.287619,0.35,2026-05-11,yfinance
-BMY,Bristol-Myers Squibb Company,Healthcare,114682724352.0,46428000000.0,0.275477,0.35,2026-05-11,yfinance
-AMGN,Amgen Inc.,Healthcare,179118014464.0,57323000000.0,0.275646,0.35,2026-05-11,yfinance
-GILD,"Gilead Sciences, Inc.",Healthcare,163055386624.0,24936000000.0,0.274448,0.35,2026-05-11,yfinance
-ISRG,"Intuitive Surgical, Inc.",Healthcare,159394529280.0,0.0,0.291617,0.35,2026-05-11,yfinance
-SYK,Stryker Corporation,Healthcare,109330513920.0,15859000000.0,0.213005,0.35,2026-05-11,yfinance
-BSX,Boston Scientific Corporation,Healthcare,80159137792.0,11029000000.0,0.328573,0.35,2026-05-11,yfinance
-HCA,"HCA Healthcare, Inc.",Healthcare,96542466048.0,49845000000.0,0.268268,0.35,2026-05-11,yfinance
-ELV,"Elevance Health, Inc.",Healthcare,82102583296.0,31842000000.0,0.412525,0.35,2026-05-11,yfinance
-CI,The Cigna Group,Healthcare,76201205760.0,30900000000.0,0.343707,0.35,2026-05-11,yfinance
-HUM,Humana Inc.,Healthcare,33012109312.0,13993000000.0,0.509788,0.35,2026-05-11,yfinance
-CNC,Centene Corporation,Healthcare,27632879616.0,16371000000.0,0.722986,0.35,2026-05-11,yfinance
-MOH,"Molina Healthcare, Inc.",Healthcare,9687474176.0,3947000000.0,0.631798,0.35,2026-05-11,yfinance
-ZBH,"Zimmer Biomet Holdings, Inc.",Healthcare,15927766016.0,7471000000.0,0.310793,0.35,2026-05-11,yfinance
-BAX,Baxter International Inc.,Healthcare,9291277312.0,9687000000.0,0.484356,0.35,2026-05-11,yfinance
-BDX,"Becton, Dickinson and Company",Healthcare,41174003712.0,19539000000.0,0.246223,0.35,2026-05-11,yfinance
-EW,Edwards Lifesciences Corporation,Healthcare,46040969216.0,705400000.0,0.232227,0.35,2026-05-11,yfinance
-HOLX,"Hologic, Inc.",Healthcare,16968846336.0,2520300000.0,0.225578,0.35,2026-05-11,yfinance
-IDXX,"IDEXX Laboratories, Inc.",Healthcare,44183154688.0,1105451000.0,0.388979,0.35,2026-05-11,yfinance
-IQV,IQVIA Holdings Inc.,Healthcare,29826699264.0,16065000000.0,0.413135,0.35,2026-05-11,yfinance
-MCK,McKesson Corporation,Healthcare,88330805248.0,8624000000.0,0.284308,0.35,2026-05-11,yfinance
-COR,"Cencora, Inc.",Healthcare,50795999232.0,7921735000.0,0.309532,0.35,2026-05-11,yfinance
-CAH,"Cardinal Health, Inc.",Healthcare,43011903488.0,8916000000.0,0.28937,0.35,2026-05-11,yfinance
-WMT,Walmart Inc.,Consumer Defensive,1039656222720.0,67095000000.0,0.217923,0.35,2026-05-11,yfinance
-COST,Costco Wholesale Corporation,Consumer Defensive,447552225280.0,8165000000.0,0.184471,0.35,2026-05-11,yfinance
-HD,"The Home Depot, Inc.",Consumer Cyclical,316188983296.0,65350000000.0,0.233033,0.4,2026-05-11,yfinance
-LOW,"Lowe's Companies, Inc.",Consumer Cyclical,128366419968.0,44677000000.0,0.25785,0.4,2026-05-11,yfinance
-TGT,Target Corporation,Consumer Defensive,56885575680.0,20290000000.0,0.303914,0.35,2026-05-11,yfinance
-MCD,McDonald's Corporation,Consumer Cyclical,195921985536.0,54814000000.0,0.164178,0.4,2026-05-11,yfinance
-SBUX,Starbucks Corporation,Consumer Cyclical,119588716544.0,24391400000.0,0.295036,0.4,2026-05-11,yfinance
-NKE,"NIKE, Inc.",Consumer Cyclical,65366351872.0,11178000000.0,0.390364,0.4,2026-05-11,yfinance
-TJX,"The TJX Companies, Inc.",Consumer Cyclical,169587671040.0,13489000000.0,0.170516,0.4,2026-05-11,yfinance
-BKNG,Booking Holdings Inc.,Consumer Cyclical,128625180672.0,18943000000.0,0.313374,0.4,2026-05-11,yfinance
-EXPE,"Expedia Group, Inc.",Consumer Cyclical,27602677760.0,6415000000.0,0.467074,0.4,2026-05-11,yfinance
-YUM,"Yum! Brands, Inc.",Consumer Cyclical,41880641536.0,11954000000.0,0.214159,0.4,2026-05-11,yfinance
-QSR,Restaurant Brands International Inc.,Consumer Cyclical,36374614016.0,15706000000.0,0.232796,0.4,2026-05-11,yfinance
-DPZ,"Domino's Pizza, Inc.",Consumer Cyclical,10759549952.0,5135773000.0,0.259562,0.4,2026-05-11,yfinance
-DKNG,DraftKings Inc.,Consumer Cyclical,12651357184.0,1889826000.0,0.47173,0.4,2026-05-11,yfinance
-LVS,Las Vegas Sands Corp.,Consumer Cyclical,35192668160.0,15724000000.0,0.371702,0.4,2026-05-11,yfinance
-WYNN,"Wynn Resorts, Limited",Consumer Cyclical,10629836800.0,12175929000.0,0.358818,0.4,2026-05-11,yfinance
-CZR,"Caesars Entertainment, Inc.",Consumer Cyclical,5711101440.0,24928000000.0,0.519975,0.4,2026-05-11,yfinance
-MGM,MGM Resorts International,Consumer Cyclical,9924469760.0,31336426000.0,0.363319,0.4,2026-05-11,yfinance
-KO,The Coca-Cola Company,Consumer Defensive,337400659968.0,43890000000.0,0.160023,0.35,2026-05-11,yfinance
-PEP,"PepsiCo, Inc.",Consumer Defensive,211356401664.0,52728000000.0,0.210633,0.35,2026-05-11,yfinance
-MDLZ,"Mondelez International, Inc.",Consumer Defensive,79004794880.0,21622000000.0,0.222464,0.35,2026-05-11,yfinance
-GIS,"General Mills, Inc.",Consumer Defensive,18508064768.0,13967700000.0,0.237008,0.35,2026-05-11,yfinance
-CAG,"Conagra Brands, Inc.",Consumer Defensive,6760316928.0,7332400000.0,0.276022,0.35,2026-05-11,yfinance
-SJM,The J. M. Smucker Company,Consumer Defensive,10584845312.0,7454300000.0,0.303955,0.35,2026-05-11,yfinance
-HRL,Hormel Foods Corporation,Consumer Defensive,11247809536.0,2857492000.0,0.274248,0.35,2026-05-11,yfinance
-TSN,"Tyson Foods, Inc.",Consumer Defensive,24078608384.0,8083000000.0,0.228087,0.35,2026-05-11,yfinance
-MKC,"McCormick & Company, Incorporated",Consumer Defensive,12990502912.0,4923400000.0,0.279534,0.35,2026-05-11,yfinance
-CLX,The Clorox Company,Consumer Defensive,11144112128.0,4486000000.0,0.266687,0.35,2026-05-11,yfinance
-CL,Colgate-Palmolive Company,Consumer Defensive,70056574976.0,7973000000.0,0.207932,0.35,2026-05-11,yfinance
-KMB,Kimberly-Clark Corporation,Consumer Defensive,32633055232.0,7084000000.0,0.257009,0.35,2026-05-11,yfinance
-CHD,"Church & Dwight Co., Inc.",Consumer Defensive,22140010496.0,2205700000.0,0.211602,0.35,2026-05-11,yfinance
-EL,The Estée Lauder Companies Inc.,Consumer Defensive,31186720768.0,9300000000.0,0.479116,0.35,2026-05-11,yfinance
-ULTA,"Ulta Beauty, Inc.",Consumer Cyclical,22815215616.0,2182061000.0,0.34847,0.4,2026-05-11,yfinance
-XOM,Exxon Mobil Corporation,Energy,599235035136.0,47661000000.0,0.233924,0.45,2026-05-11,yfinance
-CVX,Chevron Corporation,Energy,361713958912.0,40758000000.0,0.215294,0.45,2026-05-11,yfinance
-COP,ConocoPhillips,Energy,138727145472.0,23327000000.0,0.293229,0.45,2026-05-11,yfinance
-SLB,SLB N.V.,Energy,79641722880.0,11608000000.0,0.332759,0.45,2026-05-11,yfinance
-EOG,"EOG Resources, Inc.",Energy,69257691136.0,8306000000.0,0.257605,0.45,2026-05-11,yfinance
-MPC,Marathon Petroleum Corporation,Energy,71486521344.0,34326000000.0,0.312862,0.45,2026-05-11,yfinance
-PSX,Phillips 66,Energy,68784406528.0,27124000000.0,0.313497,0.45,2026-05-11,yfinance
-VLO,Valero Energy Corporation,Energy,71578615808.0,11491000000.0,0.348547,0.45,2026-05-11,yfinance
-OXY,Occidental Petroleum Corporation,Energy,52745478144.0,16611000000.0,0.340957,0.45,2026-05-11,yfinance
-HAL,Halliburton Company,Energy,33273894912.0,8081000000.0,0.363142,0.45,2026-05-11,yfinance
-DVN,Devon Energy Corporation,Energy,52587872256.0,8586000000.0,0.331531,0.45,2026-05-11,yfinance
-FANG,"Diamondback Energy, Inc.",Energy,53083820032.0,13898000000.0,0.30626,0.45,2026-05-11,yfinance
-BKR,Baker Hughes Company,Energy,63393189888.0,16164000000.0,0.316607,0.45,2026-05-11,yfinance
-APA,APA Corporation,Energy,12569402368.0,4590000000.0,0.462624,0.45,2026-05-11,yfinance
-CVI,"CVR Energy, Inc.",Energy,3372801536.0,1801000000.0,0.517745,0.45,2026-05-11,yfinance
-CTRA,Coterra Energy Inc.,Energy,24724652032.0,4017000000.0,0.293563,0.45,2026-05-11,yfinance
-EQT,EQT Corporation,Energy,35001749504.0,5992411000.0,0.325056,0.45,2026-05-11,yfinance
-RRC,Range Resources Corporation,Energy,9547413504.0,979138000.0,0.327363,0.45,2026-05-11,yfinance
-AR,Antero Resources Corporation,Energy,11135505408.0,4750665000.0,0.391672,0.45,2026-05-11,yfinance
-NOV,NOV Inc.,Energy,6908603392.0,2339000000.0,0.374099,0.45,2026-05-11,yfinance
-BA,The Boeing Company,Industrials,187111440384.0,47209000000.0,0.305674,0.4,2026-05-11,yfinance
-CAT,Caterpillar Inc.,Industrials,413358260224.0,43330000000.0,0.329919,0.4,2026-05-11,yfinance
-GE,GE Aerospace,Industrials,310471131136.0,20277000000.0,0.306749,0.4,2026-05-11,yfinance
-HON,Honeywell International Inc.,Industrials,135044153344.0,36739000000.0,0.217712,0.4,2026-05-11,yfinance
-RTX,RTX Corporation,Industrials,237137477632.0,38935000000.0,0.234344,0.4,2026-05-11,yfinance
-LMT,Lockheed Martin Corporation,Industrials,116782776320.0,20697000000.0,0.272118,0.4,2026-05-11,yfinance
-UPS,"United Parcel Service, Inc.",Industrials,85663629312.0,28590000000.0,0.29895,0.4,2026-05-11,yfinance
-FDX,FedEx Corporation,Industrials,90331742208.0,37766000000.0,0.286591,0.4,2026-05-11,yfinance
-DE,Deere & Company,Industrials,155268481024.0,62799000000.0,0.286172,0.4,2026-05-11,yfinance
-MMM,3M Company,Industrials,74735370240.0,12556000000.0,0.263151,0.4,2026-05-11,yfinance
-NOC,Northrop Grumman Corporation,Industrials,78050238464.0,16316000000.0,0.260132,0.4,2026-05-11,yfinance
-GD,General Dynamics Corporation,Industrials,93712171008.0,9832000000.0,0.207764,0.4,2026-05-11,yfinance
-HII,"Huntington Ingalls Industries, Inc.",Industrials,12462705664.0,2931000000.0,0.341196,0.4,2026-05-11,yfinance
-LHX,"L3Harris Technologies, Inc.",Industrials,55821418496.0,11357000000.0,0.243699,0.4,2026-05-11,yfinance
-TDG,TransDigm Group Incorporated,Industrials,67963777024.0,32003000000.0,0.278045,0.4,2026-05-11,yfinance
-HWM,Howmet Aerospace Inc.,Industrials,108253077504.0,4686000000.0,0.299171,0.4,2026-05-11,yfinance
-TXT,Textron Inc.,Industrials,15825636352.0,3805000000.0,0.259154,0.4,2026-05-11,yfinance
-WWD,"Woodward, Inc.",Industrials,22041487360.0,1142272000.0,0.340677,0.4,2026-05-11,yfinance
-AXON,"Axon Enterprise, Inc.",Industrials,32526163968.0,1909664000.0,0.531705,0.4,2026-05-11,yfinance
-IR,Ingersoll Rand Inc.,Industrials,29643765760.0,4843600000.0,0.332619,0.4,2026-05-11,yfinance
-ITW,Illinois Tool Works Inc.,Industrials,73294446592.0,9211000000.0,0.207738,0.4,2026-05-11,yfinance
-EMR,Emerson Electric Co.,Industrials,79147728896.0,14057000000.0,0.301794,0.4,2026-05-11,yfinance
-ETN,Eaton Corporation plc,Industrials,155906342912.0,21833000000.0,0.310905,0.4,2026-05-11,yfinance
-ROK,"Rockwell Automation, Inc.",Industrials,50506137600.0,4054000000.0,0.277639,0.4,2026-05-11,yfinance
-AME,"AMETEK, Inc.",Industrials,53266776064.0,2177549000.0,0.218695,0.4,2026-05-11,yfinance
-PH,Parker-Hannifin Corporation,Industrials,110808506368.0,9582000000.0,0.245885,0.4,2026-05-11,yfinance
-DOV,Dover Corporation,Industrials,29602617344.0,3290113000.0,0.240974,0.4,2026-05-11,yfinance
-FAST,Fastenal Company,Industrials,50708705280.0,445500000.0,0.247406,0.4,2026-05-11,yfinance
-GWW,"W.W. Grainger, Inc.",Industrials,58247294976.0,2862000000.0,0.251465,0.4,2026-05-11,yfinance
-MSC,Studio City International Holdings Limited,Consumer Cyclical,481470432.0,2026988000.0,0.986371,0.4,2026-05-11,yfinance
-CTAS,Cintas Corporation,Industrials,66802544640.0,2918187000.0,0.190033,0.4,2026-05-11,yfinance
-VRSK,"Verisk Analytics, Inc.",Industrials,22518722560.0,4625200000.0,0.30573,0.4,2026-05-11,yfinance
-BR,"Broadridge Financial Solutions, Inc.",Technology,17290915840.0,3407300000.0,0.24167,0.35,2026-05-11,yfinance
-PAYC,"Paycom Software, Inc.",Technology,6381850624.0,763600000.0,0.366678,0.35,2026-05-11,yfinance
-ADP,"Automatic Data Processing, Inc.",Technology,85141397504.0,4295500000.0,0.227903,0.35,2026-05-11,yfinance
-PAYX,"Paychex, Inc.",Technology,33654261760.0,5013400000.0,0.255251,0.35,2026-05-11,yfinance
-NEE,"NextEra Energy, Inc.",Utilities,194145288192.0,104403000000.0,0.245612,0.4,2026-05-11,yfinance
-DUK,Duke Energy Corporation,Utilities,96802463744.0,91209000000.0,0.151686,0.4,2026-05-11,yfinance
-SO,The Southern Company,Utilities,103486242816.0,76005000000.0,0.164715,0.4,2026-05-11,yfinance
-D,"Dominion Energy, Inc.",Utilities,54429495296.0,51765000000.0,0.186742,0.4,2026-05-11,yfinance
-AEP,"American Electric Power Company, Inc.",Utilities,70820700160.0,51776000000.0,0.179136,0.4,2026-05-11,yfinance
-EXC,Exelon Corporation,Utilities,44929069056.0,50080000000.0,0.182066,0.4,2026-05-11,yfinance
-XEL,Xcel Energy Inc.,Utilities,49560760320.0,39203000000.0,0.192375,0.4,2026-05-11,yfinance
-ES,Eversource Energy,Utilities,25013084160.0,30114898000.0,0.249551,0.4,2026-05-11,yfinance
-ED,"Consolidated Edison, Inc.",Utilities,39178391552.0,28376000000.0,0.172251,0.4,2026-05-11,yfinance
-PCG,PG&E Corporation,Utilities,35389751296.0,62941000000.0,0.272974,0.4,2026-05-11,yfinance
-EIX,Edison International,Utilities,26531540992.0,42697000000.0,0.259756,0.4,2026-05-11,yfinance
-WEC,"WEC Energy Group, Inc.",Utilities,36370530304.0,22314200000.0,0.153004,0.4,2026-05-11,yfinance
-DTE,DTE Energy Company,Utilities,29248782336.0,26972000000.0,0.160737,0.4,2026-05-11,yfinance
-ETR,Entergy Corporation,Utilities,51095592960.0,34058443000.0,0.19461,0.4,2026-05-11,yfinance
-FE,FirstEnergy Corp.,Utilities,25641854976.0,28060000000.0,0.150862,0.4,2026-05-11,yfinance
-AES,The AES Corporation,Utilities,10219549696.0,30999000000.0,0.459474,0.4,2026-05-11,yfinance
-NRG,"NRG Energy, Inc.",Utilities,29139341312.0,16622000000.0,0.494734,0.4,2026-05-11,yfinance
-VST,Vistra Corp.,Utilities,49781641216.0,19913000000.0,0.486783,0.4,2026-05-11,yfinance
-PLD,"Prologis, Inc.",Real Estate,134340575232.0,34669592000.0,0.216267,0.5,2026-05-11,yfinance
-AMT,American Tower Corporation,Real Estate,82244100096.0,45131200000.0,0.23582,0.5,2026-05-11,yfinance
-EQIX,"Equinix, Inc.",Real Estate,105733079040.0,23336000000.0,0.260511,0.5,2026-05-11,yfinance
-SPG,"Simon Property Group, Inc.",Real Estate,76935553024.0,29186714000.0,0.199724,0.5,2026-05-11,yfinance
-O,Realty Income Corporation,Real Estate,57739935744.0,29345846000.0,0.160118,0.5,2026-05-11,yfinance
-WELL,Welltower Inc.,Real Estate,151510417408.0,19984841000.0,0.205643,0.5,2026-05-11,yfinance
-DLR,"Digital Realty Trust, Inc.",Real Estate,69862203392.0,19215142000.0,0.218616,0.5,2026-05-11,yfinance
-PSA,Public Storage,Real Estate,54601748480.0,10032266000.0,0.225234,0.5,2026-05-11,yfinance
-EXR,Extra Space Storage Inc.,Real Estate,31625439232.0,13940213000.0,0.250445,0.5,2026-05-11,yfinance
-VICI,VICI Properties Inc.,Real Estate,31054340096.0,17701677000.0,0.164823,0.5,2026-05-11,yfinance
-WPC,W. P. Carey Inc.,Real Estate,16504967168.0,8753749000.0,0.163528,0.5,2026-05-11,yfinance
-NNN,"NNN REIT, Inc.",Real Estate,8439409152.0,4854123000.0,0.16392,0.5,2026-05-11,yfinance
-ARE,"Alexandria Real Estate Equities, Inc.",Real Estate,8061705728.0,12878605000.0,0.441925,0.5,2026-05-11,yfinance
-BXP,"BXP, Inc.",Real Estate,10521824256.0,17358735000.0,0.289032,0.5,2026-05-11,yfinance
-KIM,Kimco Realty Corporation,Real Estate,15834671104.0,8305308000.0,0.184813,0.5,2026-05-11,yfinance
-UAL,"United Airlines Holdings, Inc.",Industrials,32320653312.0,30971000000.0,0.479439,0.4,2026-05-11,yfinance
-DAL,"Delta Air Lines, Inc.",Industrials,48177397760.0,20299000000.0,0.404387,0.4,2026-05-11,yfinance
-ALK,"Alaska Air Group, Inc.",Industrials,4550759424.0,6893000000.0,0.479724,0.4,2026-05-11,yfinance
-NCLH,Norwegian Cruise Line Holdings Ltd.,Consumer Cyclical,7841601024.0,15154872000.0,0.52852,0.4,2026-05-11,yfinance
-RCL,Royal Caribbean Cruises Ltd.,Consumer Cyclical,73817980928.0,21792000000.0,0.448192,0.4,2026-05-11,yfinance
-HLT,Hilton Worldwide Holdings Inc.,Consumer Cyclical,72114446336.0,13058000000.0,0.231054,0.4,2026-05-11,yfinance
-MAR,"Marriott International, Inc.",Consumer Cyclical,93129547776.0,17083000000.0,0.264097,0.4,2026-05-11,yfinance
-H,Hyatt Hotels Corporation,Consumer Cyclical,15781485568.0,4514000000.0,0.334996,0.4,2026-05-11,yfinance
-T,AT&T Inc.,Communication Services,174820196352.0,155043000000.0,0.216435,0.4,2026-05-11,yfinance
-VZ,Verizon Communications Inc.,Communication Services,197190729728.0,195872000000.0,0.219784,0.4,2026-05-11,yfinance
-TMUS,"T-Mobile US, Inc.",Communication Services,209547296768.0,121217000000.0,0.245031,0.4,2026-05-11,yfinance
-LUMN,"Lumen Technologies, Inc.",Communication Services,8737037312.0,13250000000.0,0.779638,0.4,2026-05-11,yfinance
-DIS,The Walt Disney Company,Communication Services,187577958400.0,46640000000.0,0.244468,0.4,2026-05-11,yfinance
-NFLX,"Netflix, Inc.",Communication Services,368348004352.0,14360516000.0,0.332443,0.4,2026-05-11,yfinance
-WBD,"Warner Bros. Discovery, Inc.",Communication Services,67968479232.0,32567000000.0,0.455621,0.4,2026-05-11,yfinance
-FOX,Fox Corporation,Communication Services,24077416448.0,7495000000.0,0.268976,0.4,2026-05-11,yfinance
-CMCSA,Comcast Corporation,Communication Services,90716749824.0,94612000000.0,0.284519,0.4,2026-05-11,yfinance
-CHTR,"Charter Communications, Inc.",Communication Services,21862881280.0,96822000000.0,0.505267,0.4,2026-05-11,yfinance
-EA,Electronic Arts Inc.,Communication Services,50160852992.0,1950000000.0,0.214757,0.4,2026-05-11,yfinance
-TTWO,"Take-Two Interactive Software, Inc.",Communication Services,40821927936.0,3511300000.0,0.286734,0.4,2026-05-11,yfinance
-LYV,"Live Nation Entertainment, Inc.",Communication Services,37997346816.0,10583403000.0,0.313237,0.4,2026-05-11,yfinance
-LIN,Linde plc,Basic Materials,228011196416.0,26317000000.0,0.167739,0.45,2026-05-11,yfinance
-APD,"Air Products and Chemicals, Inc.",Basic Materials,65782104064.0,18357900000.0,0.246961,0.45,2026-05-11,yfinance
-ECL,Ecolab Inc.,Basic Materials,71547043840.0,8997500000.0,0.201539,0.45,2026-05-11,yfinance
-DD,"DuPont de Nemours, Inc.",Basic Materials,20397684736.0,3172000000.0,0.306022,0.45,2026-05-11,yfinance
-DOW,Dow Inc.,Basic Materials,26573735936.0,19629000000.0,0.498248,0.45,2026-05-11,yfinance
-LYB,LyondellBasell Industries N.V.,Basic Materials,23163035648.0,14252000000.0,0.467853,0.45,2026-05-11,yfinance
-PPG,"PPG Industries, Inc.",Basic Materials,24432068608.0,7730000000.0,0.288195,0.45,2026-05-11,yfinance
-SHW,The Sherwin-Williams Company,Basic Materials,78139097088.0,13786700000.0,0.243588,0.45,2026-05-11,yfinance
-NEM,Newmont Corporation,Basic Materials,124380577792.0,5532000000.0,0.46452,0.45,2026-05-11,yfinance
-FCX,Freeport-McMoRan Inc.,Basic Materials,88623775744.0,10492000000.0,0.473168,0.45,2026-05-11,yfinance
-NUE,Nucor Corporation,Basic Materials,51809861632.0,7121000000.0,0.309615,0.45,2026-05-11,yfinance
-STLD,"Steel Dynamics, Inc.",Basic Materials,33904427008.0,4200793000.0,0.344432,0.45,2026-05-11,yfinance
-CLF,Cleveland-Cliffs Inc.,Basic Materials,6285969920.0,7763000000.0,0.71454,0.45,2026-05-11,yfinance
-AA,Alcoa Corporation,Basic Materials,16672562176.0,2442000000.0,0.512826,0.45,2026-05-11,yfinance
-CF,"CF Industries Holdings, Inc.",Basic Materials,17670438912.0,3636000000.0,0.404971,0.45,2026-05-11,yfinance
-MOS,The Mosaic Company,Basic Materials,7053017600.0,5279500000.0,0.426244,0.45,2026-05-11,yfinance
-IFF,International Flavors & Fragrances Inc.,Basic Materials,20692346880.0,6435000000.0,0.330244,0.45,2026-05-11,yfinance
-ALB,Albemarle Corporation,Basic Materials,24002060288.0,3296651000.0,0.613513,0.45,2026-05-11,yfinance
-MP,MP Materials Corp.,Basic Materials,12003820544.0,1007170000.0,0.879837,0.45,2026-05-11,yfinance
-BIIB,Biogen Inc.,Healthcare,28560400384.0,6561900000.0,0.329831,0.35,2026-05-11,yfinance
-REGN,"Regeneron Pharmaceuticals, Inc.",Healthcare,74948378624.0,2706200000.0,0.387329,0.35,2026-05-11,yfinance
-VRTX,Vertex Pharmaceuticals Incorporated,Healthcare,109090652160.0,1986500000.0,0.354919,0.35,2026-05-11,yfinance
-MRNA,"Moderna, Inc.",Healthcare,21565333504.0,1298000000.0,0.638024,0.35,2026-05-11,yfinance
-BNTX,BioNTech SE,Healthcare,23802730496.0,302800000.0,0.458482,0.35,2026-05-11,yfinance
-ALNY,"Alnylam Pharmaceuticals, Inc.",Healthcare,39392882688.0,1273058000.0,0.370485,0.35,2026-05-11,yfinance
-INCY,Incyte Corporation,Healthcare,19690528768.0,39430000.0,0.322543,0.35,2026-05-11,yfinance
-IONS,"Ionis Pharmaceuticals, Inc.",Healthcare,12512028672.0,2040954000.0,0.434726,0.35,2026-05-11,yfinance
-RARE,Ultragenyx Pharmaceutical Inc.,Healthcare,2572538624.0,36000000.0,0.792936,0.35,2026-05-11,yfinance
-FATE,"Fate Therapeutics, Inc.",Healthcare,277913280.0,77849000.0,0.909067,0.35,2026-05-11,yfinance
-TSM,Taiwan Semiconductor Manufacturing Company Limited,Technology,2135137189888.0,1064582700000.0,0.352858,0.35,2026-05-11,yfinance
-AVGO,Broadcom Inc.,Technology,2035907428352.0,66057000000.0,0.425255,0.35,2026-05-11,yfinance
-ASML,ASML Holding N.V.,Technology,613592662016.0,2705600000.0,0.396339,0.35,2026-05-11,yfinance
-MRVL,"Marvell Technology, Inc.",Technology,148771586048.0,4790300000.0,0.577454,0.35,2026-05-11,yfinance
-MPWR,"Monolithic Power Systems, Inc.",Technology,78649270272.0,19968000.0,0.460749,0.35,2026-05-11,yfinance
-ON,ON Semiconductor Corporation,Technology,40443232256.0,3006500000.0,0.516609,0.35,2026-05-11,yfinance
-WOLF,"Wolfspeed, Inc.",Technology,2252580608.0,2066100000.0,1.115412,0.35,2026-05-11,yfinance
-NXPI,NXP Semiconductors N.V.,Technology,74415849472.0,11724000000.0,0.433923,0.35,2026-05-11,yfinance
-STM,STMicroelectronics N.V.,Technology,52589944832.0,2783000000.0,0.492732,0.35,2026-05-11,yfinance
-SWKS,"Skyworks Solutions, Inc.",Technology,10044110848.0,1189600000.0,0.378832,0.35,2026-05-11,yfinance
-QRVO,"Qorvo, Inc.",Technology,7943192576.0,1549170000.0,0.329052,0.35,2026-05-11,yfinance
-ENTG,"Entegris, Inc.",Technology,22709452800.0,3757500000.0,0.568443,0.35,2026-05-11,yfinance
-MKSI,MKS Inc.,Technology,21155495936.0,4447000000.0,0.519918,0.35,2026-05-11,yfinance
-SAP,SAP SE,Technology,204780552192.0,7862000000.0,0.321033,0.35,2026-05-11,yfinance
-INTU,Intuit Inc.,Technology,110282801152.0,6888000000.0,0.373691,0.35,2026-05-11,yfinance
-ADSK,"Autodesk, Inc.",Technology,51625013248.0,2734000000.0,0.310126,0.35,2026-05-11,yfinance
-PTC,PTC Inc.,Technology,16938924032.0,1381059000.0,0.326969,0.35,2026-05-11,yfinance
-PRGS,Progress Software Corporation,Technology,1256888064.0,1375509000.0,0.469448,0.35,2026-05-11,yfinance
-GWRE,"Guidewire Software, Inc.",Technology,11770904576.0,704996000.0,0.462399,0.35,2026-05-11,yfinance
-VEEV,Veeva Systems Inc.,Healthcare,27146471424.0,95859000.0,0.379051,0.35,2026-05-11,yfinance
-TTD,"The Trade Desk, Inc.",Communication Services,10840697856.0,423575000.0,0.697415,0.4,2026-05-11,yfinance
-ROKU,"Roku, Inc.",Communication Services,19130771456.0,501117000.0,0.46511,0.4,2026-05-11,yfinance
-ZM,"Zoom Communications, Inc.",Technology,32188723200.0,58475000.0,0.375139,0.35,2026-05-11,yfinance
-DOCN,"DigitalOcean Holdings, Inc.",Technology,17110507520.0,1299895000.0,0.766782,0.35,2026-05-11,yfinance
-BOX,"Box, Inc.",Technology,3560923136.0,527981000.0,0.346978,0.35,2026-05-11,yfinance
-DELL,Dell Technologies Inc.,Technology,169348153344.0,31503000000.0,0.516993,0.35,2026-05-11,yfinance
-HPQ,HP Inc.,Technology,20819888128.0,10938000000.0,0.351722,0.35,2026-05-11,yfinance
-HPE,Hewlett Packard Enterprise Company,Technology,41596878848.0,21611000000.0,0.389497,0.35,2026-05-11,yfinance
-WDC,Western Digital Corporation,Technology,165449154560.0,1581000000.0,0.613878,0.35,2026-05-11,yfinance
-STX,Seagate Technology Holdings plc,Technology,175490580480.0,4178000000.0,0.60787,0.35,2026-05-11,yfinance
-NTAP,"NetApp, Inc.",Technology,23371120640.0,2734000000.0,0.309313,0.35,2026-05-11,yfinance
-PSTG,Everpure Inc,Technology,22405251072.0,216715000.0,0.633209,0.35,2026-05-11,yfinance
-SMCI,"Super Micro Computer, Inc.",Technology,21239044096.0,4909659000.0,0.824133,0.35,2026-05-11,yfinance
-VIAV,Viavi Solutions Inc.,Technology,11978422272.0,1136500000.0,0.559447,0.35,2026-05-11,yfinance
-CIEN,Ciena Corporation,Technology,77501890560.0,1588665000.0,0.63323,0.35,2026-05-11,yfinance
-FFIV,"F5, Inc.",Technology,19974107136.0,259861000.0,0.329373,0.35,2026-05-11,yfinance
-AKAM,"Akamai Technologies, Inc.",Technology,21565661184.0,5675388000.0,0.508165,0.35,2026-05-11,yfinance
-LDOS,"Leidos Holdings, Inc.",Technology,16365946880.0,6944000000.0,0.299117,0.35,2026-05-11,yfinance
-SAIC,Science Applications International Corporation,Technology,4048607232.0,2685000000.0,0.395341,0.35,2026-05-11,yfinance
-BAH,Booz Allen Hamilton Holding Corporation,Industrials,9290592256.0,4137000000.0,0.412472,0.4,2026-05-11,yfinance
-CTSH,Cognizant Technology Solutions Corporation,Technology,24444639232.0,1092000000.0,0.297685,0.35,2026-05-11,yfinance
-ACN,Accenture plc,Technology,111036809216.0,8347367000.0,0.338515,0.35,2026-05-11,yfinance
-WIT,Wipro Limited,Technology,20440756224.0,198046000000.0,0.316198,0.35,2026-05-11,yfinance
-INFY,Infosys Limited,Technology,51923107840.0,967000000.0,0.334011,0.35,2026-05-11,yfinance
-WIX,Wix.com Ltd.,Technology,4672130048.0,1586609000.0,0.605976,0.35,2026-05-11,yfinance
-SHOP,Shopify Inc.,Technology,143397322752.0,179000000.0,0.569955,0.35,2026-05-11,yfinance
-PYPL,"PayPal Holdings, Inc.",Financial Services,40021123072.0,9409000000.0,0.406056,0.55,2026-05-11,yfinance
-AFRM,"Affirm Holdings, Inc.",Financial Services,21436858368.0,9090749000.0,0.622805,0.55,2026-05-11,yfinance
-SOFI,"SoFi Technologies, Inc.",Financial Services,20203173888.0,1914705000.0,0.558995,0.55,2026-05-11,yfinance
-NU,Nu Holdings Ltd.,Financial Services,67076272128.0,1897823000.0,0.377426,0.55,2026-05-11,yfinance
-MELI,"MercadoLibre, Inc.",Consumer Cyclical,82764169216.0,11392000000.0,0.393299,0.4,2026-05-11,yfinance
-SE,Sea Limited,Consumer Cyclical,53120786432.0,3375847000.0,0.487758,0.4,2026-05-11,yfinance
-GRAB,Grab Holdings Limited,Technology,15214799872.0,1948000000.0,0.385575,0.35,2026-05-11,yfinance
-BIDU,"Baidu, Inc.",Communication Services,47992639488.0,97077000000.0,0.477481,0.4,2026-05-11,yfinance
-JD,"JD.com, Inc.",Consumer Cyclical,41152176128.0,107105000000.0,0.322182,0.4,2026-05-11,yfinance
-PDD,PDD Holdings Inc.,Consumer Cyclical,140603097088.0,5378795000.0,0.339271,0.4,2026-05-11,yfinance
-BABA,Alibaba Group Holding Limited,Consumer Cyclical,336011001856.0,262740000000.0,0.428469,0.4,2026-05-11,yfinance
-TCOM,Trip.com Group Limited,Consumer Cyclical,33172871168.0,31614000000.0,0.380403,0.4,2026-05-11,yfinance
-NTES,"NetEase, Inc.",Communication Services,73965436928.0,6729742000.0,0.317757,0.4,2026-05-11,yfinance
-ALLY,Ally Financial Inc.,Financial Services,13560581120.0,21070000000.0,0.296253,0.55,2026-05-11,yfinance
-SLM,SLM Corporation,Financial Services,4237684480.0,6169182000.0,0.381424,0.55,2026-05-11,yfinance
-NAVI,Navient Corporation,Financial Services,802669632.0,44645000000.0,0.379828,0.55,2026-05-11,yfinance
-OMF,"OneMain Holdings, Inc.",Financial Services,6480131072.0,22396000000.0,0.292027,0.55,2026-05-11,yfinance
-CACC,Credit Acceptance Corporation,Financial Services,5576786944.0,6408600000.0,0.410167,0.55,2026-05-11,yfinance
-TREE,"LendingTree, Inc.",Financial Services,544167680.0,437853000.0,0.673537,0.55,2026-05-11,yfinance
-LC,LendingClub Corporation,Financial Services,1919439360.0,12481000.0,0.544256,0.55,2026-05-11,yfinance
-LPLA,LPL Financial Holdings Inc.,Financial Services,24276398080.0,7413170000.0,0.356238,0.55,2026-05-11,yfinance
-RJF,"Raymond James Financial, Inc.",Financial Services,30076299264.0,4221000000.0,0.24595,0.55,2026-05-11,yfinance
-SF,Stifel Financial Corp.,Financial Services,11765271552.0,1521704000.0,0.269882,0.55,2026-05-11,yfinance
-HLI,"Houlihan Lokey, Inc.",Financial Services,10622417920.0,497131000.0,0.255227,0.55,2026-05-11,yfinance
-LAZ,"Lazard, Inc.",Financial Services,4732883968.0,2161384000.0,0.374788,0.55,2026-05-11,yfinance
-EVR,Evercore Inc.,Financial Services,13198076928.0,1098294000.0,0.36249,0.55,2026-05-11,yfinance
-PJT,PJT Partners Inc.,Financial Services,6309018624.0,421499000.0,0.293277,0.55,2026-05-11,yfinance
-MKTX,MarketAxess Holdings Inc.,Financial Services,5243135488.0,284938000.0,0.272492,0.55,2026-05-11,yfinance
-CBOE,"Cboe Global Markets, Inc.",Financial Services,36478124032.0,1584600000.0,0.235269,0.55,2026-05-11,yfinance
-NDAQ,"Nasdaq, Inc.",Financial Services,50282233856.0,9445000000.0,0.240508,0.55,2026-05-11,yfinance
-IEX,IDEX Corporation,Industrials,16055346176.0,1899300000.0,0.263798,0.4,2026-05-11,yfinance
-BEN,"Franklin Resources, Inc.",Financial Services,16134732800.0,15394100000.0,0.271866,0.55,2026-05-11,yfinance
-IVZ,Invesco Ltd.,Financial Services,12230554624.0,9439700000.0,0.3454,0.55,2026-05-11,yfinance
-TROW,"T. Rowe Price Group, Inc.",Financial Services,22568701952.0,438100000.0,0.244434,0.55,2026-05-11,yfinance
-WTW,Willis Towers Watson Public Limited Company,Financial Services,24212682752.0,6906000000.0,0.273073,0.55,2026-05-11,yfinance
-AFG,"American Financial Group, Inc.",Financial Services,10910864384.0,1820000000.0,0.194161,0.55,2026-05-11,yfinance
-RLI,RLI Corp.,Financial Services,4509575168.0,347247000.0,0.215291,0.55,2026-05-11,yfinance
-CINF,Cincinnati Financial Corporation,Financial Services,24981907456.0,884000000.0,0.197677,0.55,2026-05-11,yfinance
-HIG,"The Hartford Insurance Group, Inc.",Financial Services,36190752768.0,4372000000.0,0.183703,0.55,2026-05-11,yfinance
-L,Loews Corporation,Financial Services,21502846976.0,8934000000.0,0.158228,0.55,2026-05-11,yfinance
-MKL,Markel Group Inc.,Financial Services,22707877888.0,4382845000.0,0.193592,0.55,2026-05-11,yfinance
-WRB,W. R. Berkley Corporation,Financial Services,24451135488.0,2841035000.0,0.207462,0.55,2026-05-11,yfinance
-ERIE,Erie Indemnity Company,Financial Services,11289381888.0,49621000.0,0.303718,0.55,2026-05-11,yfinance
-RE,Everest Group Ltd.,Financial Services,18000000000.0,3500000000.0,0.225,0.55,2026-04-21,cached — fetch failed 2026-05-11
-RNR,RenaissanceRe Holdings Ltd.,Financial Services,12796733440.0,2330051000.0,0.226071,0.55,2026-05-11,yfinance
-DXCM,"DexCom, Inc.",Healthcare,23387762688.0,1384800000.0,0.390711,0.35,2026-05-11,yfinance
-PODD,Insulet Corporation,Healthcare,10677841920.0,948100000.0,0.364265,0.35,2026-05-11,yfinance
-ALGN,"Align Technology, Inc.",Healthcare,12087707648.0,114446000.0,0.590044,0.35,2026-05-11,yfinance
-TECH,Bio-Techne Corporation,Healthcare,7571664896.0,350895000.0,0.471769,0.35,2026-05-11,yfinance
-XRAY,DENTSPLY SIRONA Inc.,Healthcare,2203593472.0,2331000000.0,0.442852,0.35,2026-05-11,yfinance
-HSIC,"Henry Schein, Inc.",Healthcare,8067585024.0,3749000000.0,0.273156,0.35,2026-05-11,yfinance
-PRGO,Perrigo Company plc,Healthcare,1620286720.0,3640200000.0,0.474291,0.35,2026-05-11,yfinance
-CVS,CVS Health Corporation,Healthcare,115535216640.0,78345000000.0,0.321422,0.35,2026-05-11,yfinance
-JAZZ,Jazz Pharmaceuticals plc,Healthcare,14166701056.0,5416900000.0,0.360655,0.35,2026-05-11,yfinance
-UTHR,United Therapeutics Corporation,Healthcare,23979855872.0,0.0,0.469841,0.35,2026-05-11,yfinance
-BMRN,BioMarin Pharmaceutical Inc.,Healthcare,10448956416.0,1439601000.0,0.314824,0.35,2026-05-11,yfinance
-SRPT,"Sarepta Therapeutics, Inc.",Healthcare,2106773504.0,1039745000.0,1.128722,0.35,2026-05-11,yfinance
-PCVX,"Vaxcyte, Inc.",Healthcare,7653966848.0,117481000.0,0.489088,0.35,2026-05-11,yfinance
-KRYS,"Krystal Biotech, Inc.",Healthcare,9012255744.0,9112000.0,0.393397,0.35,2026-05-11,yfinance
-SMMT,Summit Therapeutics Inc.,Healthcare,14033019904.0,20038000.0,0.860661,0.35,2026-05-11,yfinance
-LEGN,Legend Biotech Corporation,Healthcare,5200952832.0,413700000.0,0.531365,0.35,2026-05-11,yfinance
-CRVS,"Corvus Pharmaceuticals, Inc.",Healthcare,1307606144.0,937000.0,1.207521,0.35,2026-05-11,yfinance
-PHAT,"Phathom Pharmaceuticals, Inc.",Healthcare,969832384.0,166303000.0,0.925717,0.35,2026-05-11,yfinance
-RCKT,"Rocket Pharmaceuticals, Inc.",Healthcare,396372608.0,24877000.0,1.275549,0.35,2026-05-11,yfinance
-ETSY,"Etsy, Inc.",Consumer Cyclical,6109419008.0,3075773000.0,0.555166,0.4,2026-05-11,yfinance
-W,Wayfair Inc.,Consumer Cyclical,8746088448.0,3635000000.0,0.638918,0.4,2026-05-11,yfinance
-CHWY,"Chewy, Inc.",Consumer Cyclical,9571069952.0,518700000.0,0.455459,0.4,2026-05-11,yfinance
-PETS,"PetMed Express, Inc.",Healthcare,48793132.0,652000.0,0.882265,0.35,2026-05-11,yfinance
-PRTS,"CarParts.com, Inc.",Consumer Cyclical,65188568.0,54639000.0,0.767988,0.4,2026-05-11,yfinance
-AN,"AutoNation, Inc.",Consumer Cyclical,6899995136.0,10478900000.0,0.271088,0.4,2026-05-11,yfinance
-KMX,"CarMax, Inc.",Consumer Cyclical,5721048064.0,18544558000.0,0.550944,0.4,2026-05-11,yfinance
-PAG,"Penske Automotive Group, Inc.",Consumer Cyclical,11427877888.0,9214200000.0,0.255408,0.4,2026-05-11,yfinance
-LAD,"Lithia Motors, Inc.",Consumer Cyclical,6704683008.0,16129500000.0,0.323199,0.4,2026-05-11,yfinance
-GPC,Genuine Parts Company,Consumer Cyclical,14568867840.0,6713816000.0,0.291313,0.4,2026-05-11,yfinance
-AAP,"Advance Auto Parts, Inc.",Consumer Cyclical,3387485184.0,5224000000.0,0.69018,0.4,2026-05-11,yfinance
-AZO,"AutoZone, Inc.",Consumer Cyclical,57924251648.0,12411277000.0,0.25718,0.4,2026-05-11,yfinance
-ORLY,"O'Reilly Automotive, Inc.",Consumer Cyclical,77369933824.0,8491499000.0,0.224806,0.4,2026-05-11,yfinance
-BBY,"Best Buy Co., Inc.",Consumer Cyclical,12515294208.0,4133000000.0,0.347658,0.4,2026-05-11,yfinance
-PVH,PVH Corp.,Consumer Cyclical,4099215616.0,4298900000.0,0.458063,0.4,2026-05-11,yfinance
-RL,Ralph Lauren Corporation,Consumer Cyclical,21736644608.0,2858700000.0,0.313002,0.4,2026-05-11,yfinance
-VFC,V.F. Corporation,Consumer Cyclical,7426177536.0,5338701000.0,0.53295,0.4,2026-05-11,yfinance
-TPR,"Tapestry, Inc.",Consumer Cyclical,26968928256.0,3943700000.0,0.418504,0.4,2026-05-11,yfinance
-CPRI,Capri Holdings Limited,Consumer Cyclical,2208069376.0,1311000000.0,0.490136,0.4,2026-05-11,yfinance
-KSS,Kohl's Corporation,Consumer Cyclical,1627670656.0,6630000000.0,0.811966,0.4,2026-05-11,yfinance
-DDS,"Dillard's, Inc.",Consumer Cyclical,8796315648.0,557562000.0,0.409051,0.4,2026-05-11,yfinance
-BJ,"BJ's Wholesale Club Holdings, Inc.",Consumer Defensive,11871565824.0,2726040000.0,0.28915,0.35,2026-05-11,yfinance
-SFM,"Sprouts Farmers Market, Inc.",Consumer Defensive,7789689856.0,2060857000.0,0.474151,0.35,2026-05-11,yfinance
-GO,Grocery Outlet Holding Corp.,Consumer Defensive,810176640.0,1809702000.0,0.646352,0.35,2026-05-11,yfinance
-CASY,"Casey's General Stores, Inc.",Consumer Cyclical,31858657280.0,2895721000.0,0.25151,0.4,2026-05-11,yfinance
-CHEF,"The Chefs' Warehouse, Inc.",Consumer Defensive,3331939840.0,978187000.0,0.382109,0.35,2026-05-11,yfinance
-CARR,Carrier Global Corporation,Industrials,55507689472.0,12573000000.0,0.343158,0.4,2026-05-11,yfinance
-TT,Trane Technologies plc,Industrials,103049428992.0,4616000000.0,0.265722,0.4,2026-05-11,yfinance
-JCI,Johnson Controls International plc,Industrials,85123325952.0,9705000000.0,0.259287,0.4,2026-05-11,yfinance
-OTIS,Otis Worldwide Corporation,Industrials,28709636096.0,8218000000.0,0.238478,0.4,2026-05-11,yfinance
-ALLE,Allegion plc,Industrials,11547201536.0,2030700000.0,0.246753,0.4,2026-05-11,yfinance
-MAS,Masco Corporation,Industrials,14472427520.0,3302000000.0,0.333123,0.4,2026-05-11,yfinance
-SWK,"Stanley Black & Decker, Inc.",Industrials,12602782720.0,6501200000.0,0.403858,0.4,2026-05-11,yfinance
-NVT,nVent Electric plc,Industrials,27484389376.0,1697400000.0,0.401845,0.4,2026-05-11,yfinance
-REXR,"Rexford Industrial Realty, Inc.",Real Estate,8391589376.0,3247451000.0,0.243005,0.5,2026-05-11,yfinance
-GNRC,Generac Holdings Inc.,Industrials,15859811328.0,1487231000.0,0.499628,0.4,2026-05-11,yfinance
-HUBB,Hubbell Incorporated,Industrials,26028802048.0,2738700000.0,0.289732,0.4,2026-05-11,yfinance
-ACHR,Archer Aviation Inc.,Industrials,4922194944.0,121900000.0,0.756145,0.4,2026-05-11,yfinance
-JOBY,"Joby Aviation, Inc.",Industrials,10692198400.0,36825000.0,0.815459,0.4,2026-05-11,yfinance
-SPCE,"Virgin Galactic Holdings, Inc.",Industrials,277583648.0,324192000.0,0.857367,0.4,2026-05-11,yfinance
-RKT,"Rocket Companies, Inc.",Financial Services,44387885056.0,15561000000.0,0.575198,0.55,2026-05-11,yfinance
-OPEN,Opendoor Technologies Inc.,Real Estate,4833330688.0,1338000000.0,1.455041,0.5,2026-05-11,yfinance
-Z,"Zillow Group, Inc.",Communication Services,9479259136.0,429000000.0,0.447722,0.4,2026-05-11,yfinance
-TRGP,Targa Resources Corp.,Energy,53257445376.0,19131800000.0,0.274131,0.45,2026-05-11,yfinance
-WES,"Western Midstream Partners, LP",Energy,17125551104.0,8709290000.0,0.201329,0.45,2026-05-11,yfinance
-AM,Antero Midstream Corporation,Energy,9936581632.0,3712528000.0,0.205616,0.45,2026-05-11,yfinance
-HESM,Hess Midstream LP,Energy,7913788416.0,3772000000.0,0.243439,0.45,2026-05-11,yfinance
-LNG,"Cheniere Energy, Inc.",Energy,50455973888.0,25515000000.0,0.273223,0.45,2026-05-11,yfinance
-ET,Energy Transfer LP,Energy,66552016896.0,70093000000.0,0.164162,0.45,2026-05-11,yfinance
-EPD,Enterprise Products Partners L.P.,Energy,80461242368.0,34772000000.0,0.153412,0.45,2026-05-11,yfinance
-PAA,"Plains All American Pipeline, L.P.",Energy,15324148736.0,11461000000.0,0.185283,0.45,2026-05-11,yfinance
-PAGP,"Plains GP Holdings, L.P.",Energy,5403280384.0,11461000000.0,0.182772,0.45,2026-05-11,yfinance
-KMI,"Kinder Morgan, Inc.",Energy,69881782272.0,31946000000.0,0.198103,0.45,2026-05-11,yfinance
-WMB,"The Williams Companies, Inc.",Energy,88006950912.0,30302000000.0,0.222886,0.45,2026-05-11,yfinance
-OKE,"ONEOK, Inc.",Energy,53653598208.0,33652000000.0,0.251829,0.45,2026-05-11,yfinance
-TALO,Talos Energy Inc.,Energy,2502217984.0,1242152000.0,0.48519,0.45,2026-05-11,yfinance
-SM,SM Energy Company,Energy,7058202112.0,2715000000.0,0.494683,0.45,2026-05-11,yfinance
-CRC,California Resources Corporation,Energy,5231795712.0,1359000000.0,0.356829,0.45,2026-05-11,yfinance
-FSLR,"First Solar, Inc.",Technology,23634366464.0,587123000.0,0.60414,0.35,2026-05-11,yfinance
-ENPH,"Enphase Energy, Inc.",Technology,4804045312.0,581113000.0,0.795448,0.35,2026-05-11,yfinance
-SEDG,"SolarEdge Technologies, Inc.",Technology,2511791616.0,472546000.0,1.046134,0.35,2026-05-11,yfinance
-RUN,Sunrun Inc.,Technology,3485204992.0,14874268000.0,1.218868,0.35,2026-05-11,yfinance
-ARRY,"Array Technologies, Inc.",Technology,1318292096.0,766193000.0,0.891156,0.35,2026-05-11,yfinance
-BE,Bloom Energy Corporation,Industrials,74248380416.0,2949133000.0,1.034941,0.4,2026-05-11,yfinance
-PLUG,Plug Power Inc.,Industrials,4351855616.0,997172000.0,1.068288,0.4,2026-05-11,yfinance
-BLDP,Ballard Power Systems Inc.,Industrials,1245095296.0,20929000.0,0.773393,0.4,2026-05-11,yfinance
-CHPT,"ChargePoint Holdings, Inc.",Consumer Cyclical,152357312.0,271528000.0,0.72914,0.4,2026-05-11,yfinance
-EVGO,"EVgo, Inc.",Consumer Cyclical,617752640.0,311210000.0,0.602828,0.4,2026-05-11,yfinance
-BLNK,Blink Charging Co.,Industrials,121431416.0,7956000.0,0.952322,0.4,2026-05-11,yfinance
-CEG,Constellation Energy Corporation,Utilities,110003527680.0,8992000000.0,0.453852,0.4,2026-05-11,yfinance
-EQR,Equity Residential,Real Estate,25320433664.0,8643319000.0,0.20342,0.5,2026-05-11,yfinance
-AVB,"AvalonBay Communities, Inc.",Real Estate,25607749632.0,9493752000.0,0.204377,0.5,2026-05-11,yfinance
-SMPL,The Simply Good Foods Company,Consumer Defensive,1134972672.0,442372000.0,0.443261,0.35,2026-05-11,yfinance
-PR,Permian Resources Corporation,Energy,16989492224.0,3687598000.0,0.334726,0.45,2026-05-11,yfinance
-CHRD,Chord Energy Corporation,Energy,7681460736.0,1615390000.0,0.375991,0.45,2026-05-11,yfinance
-MTDR,Matador Resources Company,Energy,6863340544.0,3566052000.0,0.4048,0.45,2026-05-11,yfinance
-SIRI,Sirius XM Holdings Inc.,Communication Services,9122400256.0,9747000000.0,0.347093,0.4,2026-05-11,yfinance
-ALKS,Alkermes plc,Healthcare,5831986688.0,1581660000.0,0.391425,0.35,2026-05-11,yfinance
-MNDY,monday.com Ltd.,Technology,3715313920.0,168767000.0,0.655983,0.35,2026-05-11,yfinance
-NTRA,"Natera, Inc.",Healthcare,27733295104.0,240081000.0,0.415632,0.35,2026-05-11,yfinance
-CQP,"Cheniere Energy Partners, L.P.",Energy,30190454784.0,14467000000.0,0.26125,0.45,2026-05-11,yfinance
-GAP,"The Gap, Inc.",Consumer Cyclical,8538000384.0,5611000000.0,0.476553,0.4,2026-05-11,yfinance
-FBIN,"Fortune Brands Innovations, Inc.",Industrials,4551692288.0,2962900000.0,0.445199,0.4,2026-05-11,yfinance
-FISV,"Fiserv, Inc.",Unknown,29584930816.0,29123000000.0,0.69785,0.4,2026-05-11,yfinance
-XYZ,"Block, Inc.",Technology,44549296128.0,8133391000.0,0.472392,0.35,2026-05-11,yfinance
-VTRS,Viatris Inc.,Healthcare,19995369472.0,14698000000.0,0.325092,0.35,2026-05-11,yfinance
+AAPL,Apple Inc.,Technology,4298695245824.0,84711000000.0,0.224603,0.35,2026-05-12,yfinance
+MSFT,Microsoft Corporation,Technology,3065418088448.0,56965000000.0,0.238165,0.35,2026-05-12,yfinance
+JPM,JPMorgan Chase & Co.,Financial Services,803853369344.0,516812000000.0,0.21199,0.55,2026-05-12,yfinance
+JNJ,Johnson & Johnson,Healthcare,533030010880.0,54987000000.0,0.16723,0.35,2026-05-12,yfinance
+PG,The Procter & Gamble Company,Consumer Defensive,333827964928.0,37026000000.0,0.18074,0.35,2026-05-12,yfinance
+F,Ford Motor Company,Consumer Cyclical,48015548416.0,159511000000.0,0.302149,0.4,2026-05-12,yfinance
+M,"Macy's, Inc.",Consumer Cyclical,4929702400.0,5204000000.0,0.441021,0.4,2026-05-12,yfinance
+CCL,Carnival Corporation Ltd.,Consumer Cyclical,35237953536.0,26607000000.0,0.455444,0.4,2026-05-12,yfinance
+AAL,American Airlines Group Inc.,Industrials,8459116032.0,34892000000.0,0.47871,0.4,2026-05-12,yfinance
+AMC,"AMC Entertainment Holdings, Inc.",Communication Services,1045868288.0,7929300000.0,0.636783,0.4,2026-05-12,yfinance
+C,Citigroup Inc.,Financial Services,214646865920.0,367705000000.0,0.276593,0.55,2026-05-12,yfinance
+BAC,Bank of America Corporation,Financial Services,358732660736.0,383594000000.0,0.215343,0.55,2026-05-12,yfinance
+GS,"The Goldman Sachs Group, Inc.",Financial Services,278740697088.0,434737000000.0,0.267058,0.55,2026-05-12,yfinance
+MS,Morgan Stanley,Financial Services,301419134976.0,394234000000.0,0.250734,0.55,2026-05-12,yfinance
+WFC,Wells Fargo & Company,Financial Services,225168752640.0,216223000000.0,0.264714,0.55,2026-05-12,yfinance
+GOOGL,Alphabet Inc.,Communication Services,4708546117632.0,90484000000.0,0.286092,0.4,2026-05-12,yfinance
+AMZN,"Amazon.com, Inc.",Consumer Cyclical,2893554909184.0,209888000000.0,0.296026,0.4,2026-05-12,yfinance
+META,"Meta Platforms, Inc.",Communication Services,1520160079872.0,86769000000.0,0.348852,0.4,2026-05-12,yfinance
+NVDA,NVIDIA Corporation,Technology,5333489549312.0,11040000000.0,0.338123,0.35,2026-05-12,yfinance
+TSLA,"Tesla, Inc.",Consumer Cyclical,1671297105920.0,15890000000.0,0.471004,0.4,2026-05-12,yfinance
+ORCL,Oracle Corporation,Technology,557492731904.0,153117000000.0,0.591916,0.35,2026-05-12,yfinance
+CRM,"Salesforce, Inc.",Technology,145196367872.0,17176000000.0,0.350249,0.35,2026-05-12,yfinance
+ADBE,Adobe Inc.,Technology,99493830656.0,6656000000.0,0.318321,0.35,2026-05-12,yfinance
+INTC,Intel Corporation,Technology,650565451776.0,45031000000.0,0.689551,0.35,2026-05-12,yfinance
+AMD,"Advanced Micro Devices, Inc.",Technology,748103270400.0,3847000000.0,0.627329,0.35,2026-05-12,yfinance
+QCOM,QUALCOMM Incorporated,Technology,250356613120.0,15270000000.0,0.389563,0.35,2026-05-12,yfinance
+TXN,Texas Instruments Incorporated,Technology,270989246464.0,14050000000.0,0.376751,0.35,2026-05-12,yfinance
+CSCO,"Cisco Systems, Inc.",Technology,389933465600.0,30086000000.0,0.264506,0.35,2026-05-12,yfinance
+IBM,International Business Machines Corporation,Technology,210111365120.0,69802000000.0,0.336441,0.35,2026-05-12,yfinance
+NOW,"ServiceNow, Inc.",Technology,94354366464.0,2431000000.0,0.442625,0.35,2026-05-12,yfinance
+AMAT,"Applied Materials, Inc.",Technology,352061194240.0,7190000000.0,0.45683,0.35,2026-05-12,yfinance
+MU,"Micron Technology, Inc.",Technology,896920715264.0,10798000000.0,0.614956,0.35,2026-05-12,yfinance
+LRCX,Lam Research Corporation,Technology,370231541760.0,3734479000.0,0.489096,0.35,2026-05-12,yfinance
+KLAC,KLA Corporation,Technology,241032593408.0,6145360000.0,0.451854,0.35,2026-05-12,yfinance
+SNPS,"Synopsys, Inc.",Technology,98882404352.0,10868557000.0,0.621325,0.35,2026-05-12,yfinance
+CDNS,"Cadence Design Systems, Inc.",Technology,100452188160.0,3083354000.0,0.373916,0.35,2026-05-12,yfinance
+PANW,"Palo Alto Networks, Inc.",Technology,173278265344.0,372000000.0,0.360285,0.35,2026-05-12,yfinance
+CRWD,"CrowdStrike Holdings, Inc.",Technology,138024976384.0,820077000.0,0.427522,0.35,2026-05-12,yfinance
+FTNT,"Fortinet, Inc.",Technology,84576927744.0,996300000.0,0.443726,0.35,2026-05-12,yfinance
+NET,"Cloudflare, Inc.",Technology,68402786304.0,3518327000.0,0.58595,0.35,2026-05-12,yfinance
+DDOG,"Datadog, Inc.",Technology,72017870848.0,1285052000.0,0.603613,0.35,2026-05-12,yfinance
+ZS,"Zscaler, Inc.",Technology,23936911360.0,1864388000.0,0.47037,0.35,2026-05-12,yfinance
+TEAM,Atlassian Corporation,Technology,22156470272.0,1243018000.0,0.585676,0.35,2026-05-12,yfinance
+HUBS,"HubSpot, Inc.",Technology,9800002560.0,247291000.0,0.585298,0.35,2026-05-12,yfinance
+WDAY,"Workday, Inc.",Technology,30316818432.0,3821000000.0,0.416458,0.35,2026-05-12,yfinance
+SNOW,Snowflake Inc.,Technology,52373549056.0,2741114000.0,0.527588,0.35,2026-05-12,yfinance
+PLTR,Palantir Technologies Inc.,Technology,328168046592.0,211977000.0,0.512056,0.35,2026-05-12,yfinance
+APP,AppLovin Corporation,Communication Services,160720191488.0,3514022000.0,0.708369,0.4,2026-05-12,yfinance
+UBER,"Uber Technologies, Inc.",Technology,155010859008.0,12419000000.0,0.327621,0.35,2026-05-12,yfinance
+LYFT,"Lyft, Inc.",Technology,5266196480.0,1256349000.0,0.499255,0.35,2026-05-12,yfinance
+ABNB,"Airbnb, Inc.",Consumer Cyclical,81479688192.0,2534000000.0,0.293501,0.4,2026-05-12,yfinance
+DASH,"DoorDash, Inc.",Consumer Cyclical,68551626752.0,3287000000.0,0.437559,0.4,2026-05-12,yfinance
+SPOT,Spotify Technology S.A.,Communication Services,86257614848.0,476000000.0,0.436036,0.4,2026-05-12,yfinance
+RBLX,Roblox Corporation,Communication Services,29577082880.0,1788000000.0,0.593633,0.4,2026-05-12,yfinance
+U,Unity Software Inc.,Technology,11729695744.0,2236370000.0,0.781891,0.35,2026-05-12,yfinance
+HOOD,"Robinhood Markets, Inc.",Financial Services,72742797312.0,13387000000.0,0.667825,0.55,2026-05-12,yfinance
+COIN,"Coinbase Global, Inc.",Financial Services,57065603072.0,7964423000.0,0.728172,0.55,2026-05-12,yfinance
+MSTR,Strategy Inc,Technology,68666757120.0,8236290000.0,0.685802,0.35,2026-05-12,yfinance
+BRK-B,Berkshire Hathaway Inc.,Financial Services,1034319167488.0,128886000000.0,0.144203,0.55,2026-05-12,yfinance
+V,Visa Inc.,Financial Services,615898677248.0,23976000000.0,0.220484,0.55,2026-05-12,yfinance
+MA,Mastercard Incorporated,Financial Services,439856889856.0,18960000000.0,0.219633,0.55,2026-05-12,yfinance
+AXP,American Express Company,Financial Services,213104214016.0,60442000000.0,0.26363,0.55,2026-05-12,yfinance
+BLK,"BlackRock, Inc.",Financial Services,167857602560.0,14996000000.0,0.249901,0.55,2026-05-12,yfinance
+SCHW,The Charles Schwab Corporation,Financial Services,152748277760.0,30951000000.0,0.234164,0.55,2026-05-12,yfinance
+USB,U.S. Bancorp,Financial Services,84584816640.0,79220000000.0,0.217534,0.55,2026-05-12,yfinance
+PNC,"The PNC Financial Services Group, Inc.",Financial Services,86171754496.0,66666000000.0,0.213525,0.55,2026-05-12,yfinance
+TFC,Truist Financial Corporation,Financial Services,59764817920.0,69063000000.0,0.229846,0.55,2026-05-12,yfinance
+COF,Capital One Financial Corporation,Financial Services,114458312704.0,50413000000.0,0.313536,0.55,2026-05-12,yfinance
+SYF,Synchrony Financial,Financial Services,23640100864.0,16428000000.0,0.296631,0.55,2026-05-12,yfinance
+AIG,"American International Group, Inc.",Financial Services,40327483392.0,9156000000.0,0.236956,0.55,2026-05-12,yfinance
+MET,"MetLife, Inc.",Financial Services,50175205376.0,20183000000.0,0.229111,0.55,2026-05-12,yfinance
+PRU,"Prudential Financial, Inc.",Financial Services,35121516544.0,22958000000.0,0.228016,0.55,2026-05-12,yfinance
+ALL,The Allstate Corporation,Financial Services,55036596224.0,7491000000.0,0.231812,0.55,2026-05-12,yfinance
+TRV,"The Travelers Companies, Inc.",Financial Services,63183118336.0,9268000000.0,0.184687,0.55,2026-05-12,yfinance
+PGR,The Progressive Corporation,Financial Services,115061694464.0,8386000000.0,0.223136,0.55,2026-05-12,yfinance
+CB,Chubb Limited,Financial Services,124216074240.0,17470000000.0,0.176175,0.55,2026-05-12,yfinance
+MMC,Marsh & McLennan Companies,Financial Services,98000000000.0,12000000000.0,0.195,0.55,2026-04-21,cached — fetch failed 2026-05-12
+AON,Aon plc,Financial Services,66650959872.0,15474000000.0,0.239363,0.55,2026-05-12,yfinance
+ICE,"Intercontinental Exchange, Inc.",Financial Services,89249185792.0,20985000000.0,0.214499,0.55,2026-05-12,yfinance
+CME,CME Group Inc.,Financial Services,102395502592.0,3423200000.0,0.185298,0.55,2026-05-12,yfinance
+SPGI,S&P Global Inc.,Financial Services,124615999488.0,13776000000.0,0.271595,0.55,2026-05-12,yfinance
+MCO,Moody's Corporation,Financial Services,78323171328.0,7313000000.0,0.260685,0.55,2026-05-12,yfinance
+MSCI,MSCI Inc.,Financial Services,42518732800.0,6547700000.0,0.279495,0.55,2026-05-12,yfinance
+FIS,"Fidelity National Information Services, Inc.",Technology,21895000064.0,13331000000.0,0.298098,0.35,2026-05-12,yfinance
+GPN,Global Payments Inc.,Industrials,18811586560.0,21865376000.0,0.379096,0.4,2026-05-12,yfinance
+WEX,WEX Inc.,Technology,4870874112.0,5237100000.0,0.378341,0.35,2026-05-12,yfinance
+UNH,UnitedHealth Group Incorporated,Healthcare,349127016448.0,77917000000.0,0.481064,0.35,2026-05-12,yfinance
+LLY,Eli Lilly and Company,Healthcare,862304993280.0,43370000000.0,0.38093,0.35,2026-05-12,yfinance
+ABBV,AbbVie Inc.,Healthcare,358270238720.0,67496000000.0,0.246128,0.35,2026-05-12,yfinance
+MRK,"Merck & Co., Inc.",Healthcare,274842075136.0,49117000000.0,0.268132,0.35,2026-05-12,yfinance
+PFE,Pfizer Inc.,Healthcare,147102646272.0,63730000000.0,0.243736,0.35,2026-05-12,yfinance
+TMO,Thermo Fisher Scientific Inc.,Healthcare,168195883008.0,43161000000.0,0.306413,0.35,2026-05-12,yfinance
+ABT,Abbott Laboratories,Healthcare,143804088320.0,34047000000.0,0.242498,0.35,2026-05-12,yfinance
+DHR,Danaher Corporation,Healthcare,117857968128.0,18484000000.0,0.283061,0.35,2026-05-12,yfinance
+BMY,Bristol-Myers Squibb Company,Healthcare,113682104320.0,46428000000.0,0.273297,0.35,2026-05-12,yfinance
+AMGN,Amgen Inc.,Healthcare,177978605568.0,57323000000.0,0.273859,0.35,2026-05-12,yfinance
+GILD,"Gilead Sciences, Inc.",Healthcare,165774426112.0,24936000000.0,0.26632,0.35,2026-05-12,yfinance
+ISRG,"Intuitive Surgical, Inc.",Healthcare,148769652736.0,0.0,0.295897,0.35,2026-05-12,yfinance
+SYK,Stryker Corporation,Healthcare,108223684608.0,15859000000.0,0.212266,0.35,2026-05-12,yfinance
+BSX,Boston Scientific Corporation,Healthcare,79326773248.0,11029000000.0,0.328657,0.35,2026-05-12,yfinance
+HCA,"HCA Healthcare, Inc.",Healthcare,94585839616.0,49845000000.0,0.267847,0.35,2026-05-12,yfinance
+ELV,"Elevance Health, Inc.",Healthcare,82901737472.0,31842000000.0,0.411561,0.35,2026-05-12,yfinance
+CI,The Cigna Group,Healthcare,76468379648.0,30900000000.0,0.339374,0.35,2026-05-12,yfinance
+HUM,Humana Inc.,Healthcare,32928069632.0,13993000000.0,0.509633,0.35,2026-05-12,yfinance
+CNC,Centene Corporation,Healthcare,27830398976.0,16371000000.0,0.723024,0.35,2026-05-12,yfinance
+MOH,"Molina Healthcare, Inc.",Healthcare,9648399360.0,3947000000.0,0.631507,0.35,2026-05-12,yfinance
+ZBH,"Zimmer Biomet Holdings, Inc.",Healthcare,15395744768.0,7471000000.0,0.310953,0.35,2026-05-12,yfinance
+BAX,Baxter International Inc.,Healthcare,9053702144.0,9687000000.0,0.483772,0.35,2026-05-12,yfinance
+BDX,"Becton, Dickinson and Company",Healthcare,39443607552.0,19539000000.0,0.245547,0.35,2026-05-12,yfinance
+EW,Edwards Lifesciences Corporation,Healthcare,44434485248.0,705400000.0,0.234518,0.35,2026-05-12,yfinance
+HOLX,"Hologic, Inc.",Healthcare,16968846336.0,2520300000.0,0.22312,0.35,2026-05-12,yfinance
+IDXX,"IDEXX Laboratories, Inc.",Healthcare,41965756416.0,1105451000.0,0.390851,0.35,2026-05-12,yfinance
+IQV,IQVIA Holdings Inc.,Healthcare,28965494784.0,16065000000.0,0.411607,0.35,2026-05-12,yfinance
+MCK,McKesson Corporation,Healthcare,87168368640.0,8624000000.0,0.284579,0.35,2026-05-12,yfinance
+COR,"Cencora, Inc.",Healthcare,50527510528.0,7921735000.0,0.309144,0.35,2026-05-12,yfinance
+CAH,"Cardinal Health, Inc.",Healthcare,42742566912.0,8916000000.0,0.289454,0.35,2026-05-12,yfinance
+WMT,Walmart Inc.,Consumer Defensive,1017018646528.0,67095000000.0,0.219168,0.35,2026-05-12,yfinance
+COST,Costco Wholesale Corporation,Consumer Defensive,443417395200.0,8165000000.0,0.184533,0.35,2026-05-12,yfinance
+HD,"The Home Depot, Inc.",Consumer Cyclical,310163013632.0,65350000000.0,0.230627,0.4,2026-05-12,yfinance
+LOW,"Lowe's Companies, Inc.",Consumer Cyclical,126607818752.0,44677000000.0,0.254017,0.4,2026-05-12,yfinance
+TGT,Target Corporation,Consumer Defensive,53792636928.0,20290000000.0,0.305721,0.35,2026-05-12,yfinance
+MCD,McDonald's Corporation,Consumer Cyclical,195104915456.0,54814000000.0,0.164138,0.4,2026-05-12,yfinance
+SBUX,Starbucks Corporation,Consumer Cyclical,120511873024.0,24391400000.0,0.288076,0.4,2026-05-12,yfinance
+NKE,"NIKE, Inc.",Consumer Cyclical,62774800384.0,11178000000.0,0.385594,0.4,2026-05-12,yfinance
+TJX,"The TJX Companies, Inc.",Consumer Cyclical,164666802176.0,13489000000.0,0.171279,0.4,2026-05-12,yfinance
+BKNG,Booking Holdings Inc.,Consumer Cyclical,122275823616.0,18943000000.0,0.316296,0.4,2026-05-12,yfinance
+EXPE,"Expedia Group, Inc.",Consumer Cyclical,26580090880.0,6415000000.0,0.464279,0.4,2026-05-12,yfinance
+YUM,"Yum! Brands, Inc.",Consumer Cyclical,41423110144.0,11954000000.0,0.214439,0.4,2026-05-12,yfinance
+QSR,Restaurant Brands International Inc.,Consumer Cyclical,35699236864.0,15706000000.0,0.232403,0.4,2026-05-12,yfinance
+DPZ,"Domino's Pizza, Inc.",Consumer Cyclical,10418282496.0,5135773000.0,0.261255,0.4,2026-05-12,yfinance
+DKNG,DraftKings Inc.,Consumer Cyclical,12160117760.0,1889826000.0,0.470932,0.4,2026-05-12,yfinance
+LVS,Las Vegas Sands Corp.,Consumer Cyclical,34503524352.0,15724000000.0,0.366992,0.4,2026-05-12,yfinance
+WYNN,"Wynn Resorts, Limited",Consumer Cyclical,10313287680.0,12175929000.0,0.351355,0.4,2026-05-12,yfinance
+CZR,"Caesars Entertainment, Inc.",Consumer Cyclical,5656108544.0,24928000000.0,0.51517,0.4,2026-05-12,yfinance
+MGM,MGM Resorts International,Consumer Cyclical,9543250944.0,31336426000.0,0.360248,0.4,2026-05-12,yfinance
+KO,The Coca-Cola Company,Consumer Defensive,338433277952.0,43890000000.0,0.159356,0.35,2026-05-12,yfinance
+PEP,"PepsiCo, Inc.",Consumer Defensive,204234653696.0,52728000000.0,0.213381,0.35,2026-05-12,yfinance
+MDLZ,"Mondelez International, Inc.",Consumer Defensive,78828937216.0,21622000000.0,0.222328,0.35,2026-05-12,yfinance
+GIS,"General Mills, Inc.",Consumer Defensive,18038425600.0,13967700000.0,0.238108,0.35,2026-05-12,yfinance
+CAG,"Conagra Brands, Inc.",Consumer Defensive,6664629760.0,7332400000.0,0.276084,0.35,2026-05-12,yfinance
+SJM,The J. M. Smucker Company,Consumer Defensive,10581646336.0,7454300000.0,0.303823,0.35,2026-05-12,yfinance
+HRL,Hormel Foods Corporation,Consumer Defensive,11093730304.0,2857492000.0,0.274232,0.35,2026-05-12,yfinance
+TSN,"Tyson Foods, Inc.",Consumer Defensive,23620841472.0,8083000000.0,0.228692,0.35,2026-05-12,yfinance
+MKC,"McCormick & Company, Incorporated",Consumer Defensive,12654449664.0,4923400000.0,0.280518,0.35,2026-05-12,yfinance
+CLX,The Clorox Company,Consumer Defensive,10749907968.0,4486000000.0,0.267701,0.35,2026-05-12,yfinance
+CL,Colgate-Palmolive Company,Consumer Defensive,69408415744.0,7973000000.0,0.208006,0.35,2026-05-12,yfinance
+KMB,Kimberly-Clark Corporation,Consumer Defensive,31783288832.0,7084000000.0,0.256721,0.35,2026-05-12,yfinance
+CHD,"Church & Dwight Co., Inc.",Consumer Defensive,21495523328.0,2205700000.0,0.210107,0.35,2026-05-12,yfinance
+EL,The Estée Lauder Companies Inc.,Consumer Defensive,29938528256.0,9300000000.0,0.476096,0.35,2026-05-12,yfinance
+ULTA,"Ulta Beauty, Inc.",Consumer Cyclical,22392281088.0,2182061000.0,0.345492,0.4,2026-05-12,yfinance
+XOM,Exxon Mobil Corporation,Energy,620415680512.0,47661000000.0,0.235791,0.45,2026-05-12,yfinance
+CVX,Chevron Corporation,Energy,367927754752.0,40758000000.0,0.214833,0.45,2026-05-12,yfinance
+COP,ConocoPhillips,Energy,140773883904.0,23327000000.0,0.291274,0.45,2026-05-12,yfinance
+SLB,SLB N.V.,Energy,82123513856.0,11608000000.0,0.33215,0.45,2026-05-12,yfinance
+EOG,"EOG Resources, Inc.",Energy,71004708864.0,8306000000.0,0.257488,0.45,2026-05-12,yfinance
+MPC,Marathon Petroleum Corporation,Energy,73708158976.0,34326000000.0,0.310914,0.45,2026-05-12,yfinance
+PSX,Phillips 66,Energy,70307962880.0,27124000000.0,0.307091,0.45,2026-05-12,yfinance
+VLO,Valero Energy Corporation,Energy,73677930496.0,11491000000.0,0.344814,0.45,2026-05-12,yfinance
+OXY,Occidental Petroleum Corporation,Energy,54844157952.0,16611000000.0,0.340898,0.45,2026-05-12,yfinance
+HAL,Halliburton Company,Energy,33633112064.0,8081000000.0,0.360989,0.45,2026-05-12,yfinance
+DVN,Devon Energy Corporation,Energy,53879218176.0,8586000000.0,0.331003,0.45,2026-05-12,yfinance
+FANG,"Diamondback Energy, Inc.",Energy,55179603968.0,13898000000.0,0.306603,0.45,2026-05-12,yfinance
+BKR,Baker Hughes Company,Energy,64087633920.0,16164000000.0,0.315454,0.45,2026-05-12,yfinance
+APA,APA Corporation,Energy,12972357632.0,4590000000.0,0.460265,0.45,2026-05-12,yfinance
+CVI,"CVR Energy, Inc.",Energy,3506507520.0,1801000000.0,0.518378,0.45,2026-05-12,yfinance
+CTRA,Coterra Energy Inc.,Energy,24724652032.0,4017000000.0,0.292619,0.45,2026-05-12,yfinance
+EQT,EQT Corporation,Energy,35308232704.0,5992411000.0,0.324506,0.45,2026-05-12,yfinance
+RRC,Range Resources Corporation,Energy,9653444608.0,979138000.0,0.326205,0.45,2026-05-12,yfinance
+AR,Antero Resources Corporation,Energy,11336899584.0,4750665000.0,0.391684,0.45,2026-05-12,yfinance
+NOV,NOV Inc.,Energy,7095225344.0,2339000000.0,0.373409,0.45,2026-05-12,yfinance
+BA,The Boeing Company,Industrials,187781496832.0,47209000000.0,0.305153,0.4,2026-05-12,yfinance
+CAT,Caterpillar Inc.,Industrials,426872012800.0,43330000000.0,0.32779,0.4,2026-05-12,yfinance
+GE,GE Aerospace,Industrials,314253410304.0,20277000000.0,0.30646,0.4,2026-05-12,yfinance
+HON,Honeywell International Inc.,Industrials,138839736320.0,36739000000.0,0.217519,0.4,2026-05-12,yfinance
+RTX,RTX Corporation,Industrials,240531128320.0,38935000000.0,0.234323,0.4,2026-05-12,yfinance
+LMT,Lockheed Martin Corporation,Industrials,118106210304.0,20697000000.0,0.272335,0.4,2026-05-12,yfinance
+UPS,"United Parcel Service, Inc.",Industrials,85000626176.0,28590000000.0,0.294149,0.4,2026-05-12,yfinance
+FDX,FedEx Corporation,Industrials,90408099840.0,37766000000.0,0.279048,0.4,2026-05-12,yfinance
+DE,Deere & Company,Industrials,159022972928.0,62799000000.0,0.287069,0.4,2026-05-12,yfinance
+MMM,3M Company,Industrials,74761453568.0,12556000000.0,0.257734,0.4,2026-05-12,yfinance
+NOC,Northrop Grumman Corporation,Industrials,77864173568.0,16316000000.0,0.260031,0.4,2026-05-12,yfinance
+GD,General Dynamics Corporation,Industrials,93036093440.0,9832000000.0,0.207299,0.4,2026-05-12,yfinance
+HII,"Huntington Ingalls Industries, Inc.",Industrials,12520630272.0,2931000000.0,0.341077,0.4,2026-05-12,yfinance
+LHX,"L3Harris Technologies, Inc.",Industrials,56326279168.0,11357000000.0,0.243798,0.4,2026-05-12,yfinance
+TDG,TransDigm Group Incorporated,Industrials,67045912576.0,32003000000.0,0.276541,0.4,2026-05-12,yfinance
+HWM,Howmet Aerospace Inc.,Industrials,109461397504.0,4686000000.0,0.299261,0.4,2026-05-12,yfinance
+TXT,Textron Inc.,Industrials,15938664448.0,3805000000.0,0.252569,0.4,2026-05-12,yfinance
+WWD,"Woodward, Inc.",Industrials,22060554240.0,1142272000.0,0.339926,0.4,2026-05-12,yfinance
+AXON,"Axon Enterprise, Inc.",Industrials,31786235904.0,1909664000.0,0.531916,0.4,2026-05-12,yfinance
+IR,Ingersoll Rand Inc.,Industrials,29232859136.0,4843600000.0,0.327333,0.4,2026-05-12,yfinance
+ITW,Illinois Tool Works Inc.,Industrials,72526290944.0,9211000000.0,0.205594,0.4,2026-05-12,yfinance
+EMR,Emerson Electric Co.,Industrials,78094737408.0,14057000000.0,0.296379,0.4,2026-05-12,yfinance
+ETN,Eaton Corporation plc,Industrials,162697707520.0,21833000000.0,0.311415,0.4,2026-05-12,yfinance
+ROK,"Rockwell Automation, Inc.",Industrials,50814361600.0,4054000000.0,0.277263,0.4,2026-05-12,yfinance
+AME,"AMETEK, Inc.",Industrials,53211770880.0,2177549000.0,0.214522,0.4,2026-05-12,yfinance
+PH,Parker-Hannifin Corporation,Industrials,110244896768.0,9582000000.0,0.243983,0.4,2026-05-12,yfinance
+DOV,Dover Corporation,Industrials,29621469184.0,3290113000.0,0.23751,0.4,2026-05-12,yfinance
+FAST,Fastenal Company,Industrials,49709916160.0,445500000.0,0.247512,0.4,2026-05-12,yfinance
+GWW,"W.W. Grainger, Inc.",Industrials,57887531008.0,2862000000.0,0.249645,0.4,2026-05-12,yfinance
+MSC,Studio City International Holdings Limited,Consumer Cyclical,481470432.0,2026988000.0,0.986057,0.4,2026-05-12,yfinance
+CTAS,Cintas Corporation,Industrials,65882341376.0,2918187000.0,0.190124,0.4,2026-05-12,yfinance
+VRSK,"Verisk Analytics, Inc.",Industrials,22086352896.0,4625200000.0,0.305747,0.4,2026-05-12,yfinance
+BR,"Broadridge Financial Solutions, Inc.",Technology,17248122880.0,3407300000.0,0.241663,0.35,2026-05-12,yfinance
+PAYC,"Paycom Software, Inc.",Technology,6455055360.0,763600000.0,0.366102,0.35,2026-05-12,yfinance
+ADP,"Automatic Data Processing, Inc.",Technology,84611751936.0,4295500000.0,0.227854,0.35,2026-05-12,yfinance
+PAYX,"Paychex, Inc.",Technology,33636345856.0,5013400000.0,0.255086,0.35,2026-05-12,yfinance
+NEE,"NextEra Energy, Inc.",Utilities,197773770752.0,104403000000.0,0.246011,0.4,2026-05-12,yfinance
+DUK,Duke Energy Corporation,Utilities,97371570176.0,91209000000.0,0.146817,0.4,2026-05-12,yfinance
+SO,The Southern Company,Utilities,104951734272.0,76005000000.0,0.162679,0.4,2026-05-12,yfinance
+D,"Dominion Energy, Inc.",Utilities,55018733568.0,51765000000.0,0.186949,0.4,2026-05-12,yfinance
+AEP,"American Electric Power Company, Inc.",Utilities,71114514432.0,51776000000.0,0.175261,0.4,2026-05-12,yfinance
+EXC,Exelon Corporation,Utilities,45215563776.0,50080000000.0,0.180103,0.4,2026-05-12,yfinance
+XEL,Xcel Energy Inc.,Utilities,50316128256.0,39203000000.0,0.188325,0.4,2026-05-12,yfinance
+ES,Eversource Energy,Utilities,25287620608.0,30114898000.0,0.24946,0.4,2026-05-12,yfinance
+ED,"Consolidated Edison, Inc.",Utilities,39141539840.0,28376000000.0,0.167641,0.4,2026-05-12,yfinance
+PCG,PG&E Corporation,Utilities,35698061312.0,62941000000.0,0.273066,0.4,2026-05-12,yfinance
+EIX,Edison International,Utilities,27158757376.0,42697000000.0,0.260663,0.4,2026-05-12,yfinance
+WEC,"WEC Energy Group, Inc.",Utilities,36732080128.0,22314200000.0,0.151181,0.4,2026-05-12,yfinance
+DTE,DTE Energy Company,Utilities,29629472768.0,26972000000.0,0.1596,0.4,2026-05-12,yfinance
+ETR,Entergy Corporation,Utilities,51727478784.0,34058443000.0,0.193723,0.4,2026-05-12,yfinance
+FE,FirstEnergy Corp.,Utilities,25798029312.0,28060000000.0,0.149739,0.4,2026-05-12,yfinance
+AES,The AES Corporation,Utilities,10233812992.0,30999000000.0,0.454915,0.4,2026-05-12,yfinance
+NRG,"NRG Energy, Inc.",Utilities,28968441856.0,16622000000.0,0.435914,0.4,2026-05-12,yfinance
+VST,Vistra Corp.,Utilities,51268595712.0,19913000000.0,0.482051,0.4,2026-05-12,yfinance
+PLD,"Prologis, Inc.",Real Estate,134321938432.0,34669592000.0,0.214124,0.5,2026-05-12,yfinance
+AMT,American Tower Corporation,Real Estate,82682044416.0,45131200000.0,0.229137,0.5,2026-05-12,yfinance
+EQIX,"Equinix, Inc.",Real Estate,107127627776.0,23336000000.0,0.260726,0.5,2026-05-12,yfinance
+SPG,"Simon Property Group, Inc.",Real Estate,76509241344.0,29186714000.0,0.193814,0.5,2026-05-12,yfinance
+O,Realty Income Corporation,Real Estate,58150236160.0,29345846000.0,0.159636,0.5,2026-05-12,yfinance
+WELL,Welltower Inc.,Real Estate,151658659840.0,19984841000.0,0.204017,0.5,2026-05-12,yfinance
+DLR,"Digital Realty Trust, Inc.",Real Estate,70194864128.0,19215142000.0,0.218611,0.5,2026-05-12,yfinance
+PSA,Public Storage,Real Estate,54691274752.0,10032266000.0,0.225212,0.5,2026-05-12,yfinance
+EXR,Extra Space Storage Inc.,Real Estate,31907928064.0,13940213000.0,0.250584,0.5,2026-05-12,yfinance
+VICI,VICI Properties Inc.,Real Estate,31140483072.0,17701677000.0,0.164504,0.5,2026-05-12,yfinance
+WPC,W. P. Carey Inc.,Real Estate,16493831168.0,8753749000.0,0.162942,0.5,2026-05-12,yfinance
+NNN,"NNN REIT, Inc.",Real Estate,8427994112.0,4854123000.0,0.163852,0.5,2026-05-12,yfinance
+ARE,"Alexandria Real Estate Equities, Inc.",Real Estate,8016395776.0,12878605000.0,0.441926,0.5,2026-05-12,yfinance
+BXP,"BXP, Inc.",Real Estate,10509675520.0,17358735000.0,0.286772,0.5,2026-05-12,yfinance
+KIM,Kimco Realty Corporation,Real Estate,15827927040.0,8305308000.0,0.181472,0.5,2026-05-12,yfinance
+UAL,"United Airlines Holdings, Inc.",Industrials,31359928320.0,30971000000.0,0.480175,0.4,2026-05-12,yfinance
+DAL,"Delta Air Lines, Inc.",Industrials,46777995264.0,20299000000.0,0.401831,0.4,2026-05-12,yfinance
+ALK,"Alaska Air Group, Inc.",Industrials,4352415744.0,6893000000.0,0.480793,0.4,2026-05-12,yfinance
+NCLH,Norwegian Cruise Line Holdings Ltd.,Consumer Cyclical,7612046336.0,15154872000.0,0.523329,0.4,2026-05-12,yfinance
+RCL,Royal Caribbean Cruises Ltd.,Consumer Cyclical,70658646016.0,21792000000.0,0.448864,0.4,2026-05-12,yfinance
+HLT,Hilton Worldwide Holdings Inc.,Consumer Cyclical,71829889024.0,13058000000.0,0.228089,0.4,2026-05-12,yfinance
+MAR,"Marriott International, Inc.",Consumer Cyclical,93166469120.0,17083000000.0,0.258942,0.4,2026-05-12,yfinance
+H,Hyatt Hotels Corporation,Consumer Cyclical,15550788608.0,4514000000.0,0.330149,0.4,2026-05-12,yfinance
+T,AT&T Inc.,Communication Services,172805193728.0,155043000000.0,0.214617,0.4,2026-05-12,yfinance
+VZ,Verizon Communications Inc.,Communication Services,197232476160.0,195872000000.0,0.219287,0.4,2026-05-12,yfinance
+TMUS,"T-Mobile US, Inc.",Communication Services,206538768384.0,121217000000.0,0.245033,0.4,2026-05-12,yfinance
+LUMN,"Lumen Technologies, Inc.",Communication Services,8592794624.0,13250000000.0,0.779879,0.4,2026-05-12,yfinance
+DIS,The Walt Disney Company,Communication Services,181847490560.0,46640000000.0,0.242787,0.4,2026-05-12,yfinance
+NFLX,"Netflix, Inc.",Communication Services,359812726784.0,14360516000.0,0.332202,0.4,2026-05-12,yfinance
+WBD,"Warner Bros. Discovery, Inc.",Communication Services,68294406144.0,32567000000.0,0.455429,0.4,2026-05-12,yfinance
+FOX,Fox Corporation,Communication Services,26025732096.0,7495000000.0,0.276828,0.4,2026-05-12,yfinance
+CMCSA,Comcast Corporation,Communication Services,89412886528.0,94612000000.0,0.284489,0.4,2026-05-12,yfinance
+CHTR,"Charter Communications, Inc.",Communication Services,20864749568.0,96822000000.0,0.507065,0.4,2026-05-12,yfinance
+EA,Electronic Arts Inc.,Communication Services,50105798656.0,1950000000.0,0.212943,0.4,2026-05-12,yfinance
+TTWO,"Take-Two Interactive Software, Inc.",Communication Services,41010806784.0,3511300000.0,0.28677,0.4,2026-05-12,yfinance
+LYV,"Live Nation Entertainment, Inc.",Communication Services,37932187648.0,10583403000.0,0.311746,0.4,2026-05-12,yfinance
+LIN,Linde plc,Basic Materials,233207971840.0,26317000000.0,0.169171,0.45,2026-05-12,yfinance
+APD,"Air Products and Chemicals, Inc.",Basic Materials,67806269440.0,18357900000.0,0.248111,0.45,2026-05-12,yfinance
+ECL,Ecolab Inc.,Basic Materials,70668959744.0,8997500000.0,0.201797,0.45,2026-05-12,yfinance
+DD,"DuPont de Nemours, Inc.",Basic Materials,20733820928.0,3172000000.0,0.299736,0.45,2026-05-12,yfinance
+DOW,Dow Inc.,Basic Materials,27935936512.0,19629000000.0,0.498284,0.45,2026-05-12,yfinance
+LYB,LyondellBasell Industries N.V.,Basic Materials,23734364160.0,14252000000.0,0.464182,0.45,2026-05-12,yfinance
+PPG,"PPG Industries, Inc.",Basic Materials,24062054400.0,7730000000.0,0.284102,0.45,2026-05-12,yfinance
+SHW,The Sherwin-Williams Company,Basic Materials,77122961408.0,13786700000.0,0.24343,0.45,2026-05-12,yfinance
+NEM,Newmont Corporation,Basic Materials,128821592064.0,5532000000.0,0.461084,0.45,2026-05-12,yfinance
+FCX,Freeport-McMoRan Inc.,Basic Materials,92533858304.0,10492000000.0,0.473986,0.45,2026-05-12,yfinance
+NUE,Nucor Corporation,Basic Materials,52834668544.0,7121000000.0,0.307598,0.45,2026-05-12,yfinance
+STLD,"Steel Dynamics, Inc.",Basic Materials,34029891584.0,4200793000.0,0.341737,0.45,2026-05-12,yfinance
+CLF,Cleveland-Cliffs Inc.,Basic Materials,6411460608.0,7763000000.0,0.71143,0.45,2026-05-12,yfinance
+AA,Alcoa Corporation,Basic Materials,17242562560.0,2442000000.0,0.507698,0.45,2026-05-12,yfinance
+CF,"CF Industries Holdings, Inc.",Basic Materials,19123773440.0,3636000000.0,0.411803,0.45,2026-05-12,yfinance
+MOS,The Mosaic Company,Basic Materials,6925878784.0,5279500000.0,0.426457,0.45,2026-05-12,yfinance
+IFF,International Flavors & Fragrances Inc.,Basic Materials,20105148416.0,6435000000.0,0.329256,0.45,2026-05-12,yfinance
+ALB,Albemarle Corporation,Basic Materials,24765097984.0,3296651000.0,0.611501,0.45,2026-05-12,yfinance
+MP,MP Materials Corp.,Basic Materials,12000476160.0,1007170000.0,0.878827,0.45,2026-05-12,yfinance
+BIIB,Biogen Inc.,Healthcare,29224767488.0,6561900000.0,0.326744,0.35,2026-05-12,yfinance
+REGN,"Regeneron Pharmaceuticals, Inc.",Healthcare,74726121472.0,2706200000.0,0.377627,0.35,2026-05-12,yfinance
+VRTX,Vertex Pharmaceuticals Incorporated,Healthcare,110448508928.0,1986500000.0,0.353556,0.35,2026-05-12,yfinance
+MRNA,"Moderna, Inc.",Healthcare,20982059008.0,1298000000.0,0.636358,0.35,2026-05-12,yfinance
+BNTX,BioNTech SE,Healthcare,23604215808.0,302800000.0,0.45607,0.35,2026-05-12,yfinance
+ALNY,"Alnylam Pharmaceuticals, Inc.",Healthcare,38029721600.0,1273058000.0,0.364971,0.35,2026-05-12,yfinance
+INCY,Incyte Corporation,Healthcare,20042145792.0,39430000.0,0.321591,0.35,2026-05-12,yfinance
+IONS,"Ionis Pharmaceuticals, Inc.",Healthcare,12457491456.0,2040954000.0,0.433343,0.35,2026-05-12,yfinance
+RARE,Ultragenyx Pharmaceutical Inc.,Healthcare,2590266624.0,36000000.0,0.79245,0.35,2026-05-12,yfinance
+FATE,"Fate Therapeutics, Inc.",Healthcare,253494112.0,77849000.0,0.913727,0.35,2026-05-12,yfinance
+TSM,Taiwan Semiconductor Manufacturing Company Limited,Technology,2098106466304.0,1064582700000.0,0.349233,0.35,2026-05-12,yfinance
+AVGO,Broadcom Inc.,Technology,2028473942016.0,66057000000.0,0.421074,0.35,2026-05-12,yfinance
+ASML,ASML Holding N.V.,Technology,603490877440.0,2705600000.0,0.392627,0.35,2026-05-12,yfinance
+MRVL,"Marvell Technology, Inc.",Technology,149392441344.0,4790300000.0,0.57262,0.35,2026-05-12,yfinance
+MPWR,"Monolithic Power Systems, Inc.",Technology,81609842688.0,19968000.0,0.450286,0.35,2026-05-12,yfinance
+ON,ON Semiconductor Corporation,Technology,42027700224.0,3006500000.0,0.511262,0.35,2026-05-12,yfinance
+WOLF,"Wolfspeed, Inc.",Technology,2431917056.0,2066100000.0,1.115541,0.35,2026-05-12,yfinance
+NXPI,NXP Semiconductors N.V.,Technology,77253623808.0,11724000000.0,0.428947,0.35,2026-05-12,yfinance
+STM,STMicroelectronics N.V.,Technology,53434302464.0,2783000000.0,0.489563,0.35,2026-05-12,yfinance
+SWKS,"Skyworks Solutions, Inc.",Technology,10547970048.0,1189600000.0,0.37577,0.35,2026-05-12,yfinance
+QRVO,"Qorvo, Inc.",Technology,8221357568.0,1549170000.0,0.323273,0.35,2026-05-12,yfinance
+ENTG,"Entegris, Inc.",Technology,22715543552.0,3757500000.0,0.563623,0.35,2026-05-12,yfinance
+MKSI,MKS Inc.,Technology,21594531840.0,4447000000.0,0.505898,0.35,2026-05-12,yfinance
+SAP,SAP SE,Technology,200536408064.0,7862000000.0,0.321596,0.35,2026-05-12,yfinance
+INTU,Intuit Inc.,Technology,109442416640.0,6888000000.0,0.373437,0.35,2026-05-12,yfinance
+ADSK,"Autodesk, Inc.",Technology,49845059584.0,2734000000.0,0.311363,0.35,2026-05-12,yfinance
+PTC,PTC Inc.,Technology,16854604800.0,1381059000.0,0.323789,0.35,2026-05-12,yfinance
+PRGS,Progress Software Corporation,Technology,1193770112.0,1375509000.0,0.471475,0.35,2026-05-12,yfinance
+GWRE,"Guidewire Software, Inc.",Technology,11419776000.0,704996000.0,0.463271,0.35,2026-05-12,yfinance
+VEEV,Veeva Systems Inc.,Healthcare,26002450432.0,95859000.0,0.38082,0.35,2026-05-12,yfinance
+TTD,"The Trade Desk, Inc.",Communication Services,10116731904.0,423575000.0,0.690677,0.4,2026-05-12,yfinance
+ROKU,"Roku, Inc.",Communication Services,18915139584.0,501117000.0,0.449814,0.4,2026-05-12,yfinance
+ZM,"Zoom Communications, Inc.",Technology,31572713472.0,58475000.0,0.375378,0.35,2026-05-12,yfinance
+DOCN,"DigitalOcean Holdings, Inc.",Technology,16982139904.0,1299895000.0,0.763334,0.35,2026-05-12,yfinance
+BOX,"Box, Inc.",Technology,3392014848.0,527981000.0,0.349945,0.35,2026-05-12,yfinance
+DELL,Dell Technologies Inc.,Technology,160622624768.0,31503000000.0,0.51512,0.35,2026-05-12,yfinance
+HPQ,HP Inc.,Technology,19892723712.0,10938000000.0,0.348253,0.35,2026-05-12,yfinance
+HPE,Hewlett Packard Enterprise Company,Technology,40959987712.0,21611000000.0,0.387077,0.35,2026-05-12,yfinance
+WDC,Western Digital Corporation,Technology,177797398528.0,1581000000.0,0.615423,0.35,2026-05-12,yfinance
+STX,Seagate Technology Holdings plc,Technology,187009220608.0,4178000000.0,0.607907,0.35,2026-05-12,yfinance
+NTAP,"NetApp, Inc.",Technology,23317645312.0,2734000000.0,0.305042,0.35,2026-05-12,yfinance
+PSTG,Everpure Inc,Technology,22405251072.0,216715000.0,0.636376,0.35,2026-05-12,yfinance
+SMCI,"Super Micro Computer, Inc.",Technology,20128153600.0,4909659000.0,0.82459,0.35,2026-05-12,yfinance
+VIAV,Viavi Solutions Inc.,Technology,12848559104.0,1136500000.0,0.562523,0.35,2026-05-12,yfinance
+CIEN,Ciena Corporation,Technology,82218942464.0,1588665000.0,0.633508,0.35,2026-05-12,yfinance
+FFIV,"F5, Inc.",Technology,20215015424.0,259861000.0,0.327525,0.35,2026-05-12,yfinance
+AKAM,"Akamai Technologies, Inc.",Technology,22245427200.0,5675388000.0,0.50832,0.35,2026-05-12,yfinance
+LDOS,"Leidos Holdings, Inc.",Technology,16060288000.0,6944000000.0,0.299655,0.35,2026-05-12,yfinance
+SAIC,Science Applications International Corporation,Technology,3993436416.0,2685000000.0,0.395404,0.35,2026-05-12,yfinance
+BAH,Booz Allen Hamilton Holding Corporation,Industrials,9038548992.0,4137000000.0,0.41318,0.4,2026-05-12,yfinance
+CTSH,Cognizant Technology Solutions Corporation,Technology,23295250432.0,1092000000.0,0.2993,0.35,2026-05-12,yfinance
+ACN,Accenture plc,Technology,106070245376.0,8347367000.0,0.337995,0.35,2026-05-12,yfinance
+WIT,Wipro Limited,Technology,19916634112.0,198046000000.0,0.311334,0.35,2026-05-12,yfinance
+INFY,Infosys Limited,Technology,49778196480.0,967000000.0,0.330005,0.35,2026-05-12,yfinance
+WIX,Wix.com Ltd.,Technology,4624895488.0,1586609000.0,0.603947,0.35,2026-05-12,yfinance
+SHOP,Shopify Inc.,Technology,133061509120.0,179000000.0,0.560217,0.35,2026-05-12,yfinance
+PYPL,"PayPal Holdings, Inc.",Financial Services,39756492800.0,9409000000.0,0.40492,0.55,2026-05-12,yfinance
+AFRM,"Affirm Holdings, Inc.",Financial Services,22254008320.0,9090749000.0,0.606445,0.55,2026-05-12,yfinance
+SOFI,"SoFi Technologies, Inc.",Financial Services,20857372672.0,1914705000.0,0.556328,0.55,2026-05-12,yfinance
+NU,Nu Holdings Ltd.,Financial Services,65618092032.0,1897823000.0,0.377977,0.55,2026-05-12,yfinance
+MELI,"MercadoLibre, Inc.",Consumer Cyclical,78950727680.0,11392000000.0,0.395218,0.4,2026-05-12,yfinance
+SE,Sea Limited,Consumer Cyclical,51981565952.0,3375847000.0,0.487498,0.4,2026-05-12,yfinance
+GRAB,Grab Holdings Limited,Technology,14928499712.0,1948000000.0,0.385499,0.35,2026-05-12,yfinance
+BIDU,"Baidu, Inc.",Communication Services,49602035712.0,97077000000.0,0.476099,0.4,2026-05-12,yfinance
+JD,"JD.com, Inc.",Consumer Cyclical,41698504704.0,107105000000.0,0.316164,0.4,2026-05-12,yfinance
+PDD,PDD Holdings Inc.,Consumer Cyclical,140631572480.0,5378795000.0,0.333841,0.4,2026-05-12,yfinance
+BABA,Alibaba Group Holding Limited,Consumer Cyclical,329389637632.0,262740000000.0,0.425285,0.4,2026-05-12,yfinance
+TCOM,Trip.com Group Limited,Consumer Cyclical,32870612992.0,31614000000.0,0.374854,0.4,2026-05-12,yfinance
+NTES,"NetEase, Inc.",Communication Services,74156867584.0,6729742000.0,0.316163,0.4,2026-05-12,yfinance
+ALLY,Ally Financial Inc.,Financial Services,13100796928.0,21070000000.0,0.294205,0.55,2026-05-12,yfinance
+SLM,SLM Corporation,Financial Services,4103783424.0,6169182000.0,0.380947,0.55,2026-05-12,yfinance
+NAVI,Navient Corporation,Financial Services,781991936.0,44645000000.0,0.379574,0.55,2026-05-12,yfinance
+OMF,"OneMain Holdings, Inc.",Financial Services,6142780416.0,22396000000.0,0.288832,0.55,2026-05-12,yfinance
+CACC,Credit Acceptance Corporation,Financial Services,5457437184.0,6408600000.0,0.410499,0.55,2026-05-12,yfinance
+TREE,"LendingTree, Inc.",Financial Services,518494144.0,437853000.0,0.675103,0.55,2026-05-12,yfinance
+LC,LendingClub Corporation,Financial Services,1911364864.0,12481000.0,0.542054,0.55,2026-05-12,yfinance
+LPLA,LPL Financial Holdings Inc.,Financial Services,23118247936.0,7413170000.0,0.356615,0.55,2026-05-12,yfinance
+RJF,"Raymond James Financial, Inc.",Financial Services,29435133952.0,4221000000.0,0.243335,0.55,2026-05-12,yfinance
+SF,Stifel Financial Corp.,Financial Services,11473061888.0,1521704000.0,0.261114,0.55,2026-05-12,yfinance
+HLI,"Houlihan Lokey, Inc.",Financial Services,10343081984.0,497131000.0,0.255577,0.55,2026-05-12,yfinance
+LAZ,"Lazard, Inc.",Financial Services,4526164992.0,2161384000.0,0.368262,0.55,2026-05-12,yfinance
+EVR,Evercore Inc.,Financial Services,12973331456.0,1098294000.0,0.356105,0.55,2026-05-12,yfinance
+PJT,PJT Partners Inc.,Financial Services,6255981056.0,421499000.0,0.291302,0.55,2026-05-12,yfinance
+MKTX,MarketAxess Holdings Inc.,Financial Services,5160684032.0,284938000.0,0.266933,0.55,2026-05-12,yfinance
+CBOE,"Cboe Global Markets, Inc.",Financial Services,36679057408.0,1584600000.0,0.230177,0.55,2026-05-12,yfinance
+NDAQ,"Nasdaq, Inc.",Financial Services,50039050240.0,9445000000.0,0.239823,0.55,2026-05-12,yfinance
+IEX,IDEX Corporation,Industrials,15839962112.0,1899300000.0,0.260922,0.4,2026-05-12,yfinance
+BEN,"Franklin Resources, Inc.",Financial Services,16394551296.0,15394100000.0,0.270157,0.55,2026-05-12,yfinance
+IVZ,Invesco Ltd.,Financial Services,12407872512.0,9439700000.0,0.342299,0.55,2026-05-12,yfinance
+TROW,"T. Rowe Price Group, Inc.",Financial Services,22444427264.0,438100000.0,0.240242,0.55,2026-05-12,yfinance
+WTW,Willis Towers Watson Public Limited Company,Financial Services,23585548288.0,6906000000.0,0.274239,0.55,2026-05-12,yfinance
+AFG,"American Financial Group, Inc.",Financial Services,10964870144.0,1820000000.0,0.193774,0.55,2026-05-12,yfinance
+RLI,RLI Corp.,Financial Services,4444298752.0,347247000.0,0.215651,0.55,2026-05-12,yfinance
+CINF,Cincinnati Financial Corporation,Financial Services,25264984064.0,884000000.0,0.197451,0.55,2026-05-12,yfinance
+HIG,"The Hartford Insurance Group, Inc.",Financial Services,36215422976.0,4372000000.0,0.183502,0.55,2026-05-12,yfinance
+L,Loews Corporation,Financial Services,21342349312.0,8934000000.0,0.158172,0.55,2026-05-12,yfinance
+MKL,Markel Group Inc.,Financial Services,23009835008.0,4382845000.0,0.193833,0.55,2026-05-12,yfinance
+WRB,W. R. Berkley Corporation,Financial Services,24722898944.0,2841035000.0,0.20774,0.55,2026-05-12,yfinance
+ERIE,Erie Indemnity Company,Financial Services,11351607296.0,49621000.0,0.303486,0.55,2026-05-12,yfinance
+RE,Everest Group Ltd.,Financial Services,18000000000.0,3500000000.0,0.225,0.55,2026-04-21,cached — fetch failed 2026-05-12
+RNR,RenaissanceRe Holdings Ltd.,Financial Services,12617248768.0,2330051000.0,0.226033,0.55,2026-05-12,yfinance
+DXCM,"DexCom, Inc.",Healthcare,22893844480.0,1384800000.0,0.391182,0.35,2026-05-12,yfinance
+PODD,Insulet Corporation,Healthcare,10678534144.0,948100000.0,0.363606,0.35,2026-05-12,yfinance
+ALGN,"Align Technology, Inc.",Healthcare,11789060096.0,114446000.0,0.589269,0.35,2026-05-12,yfinance
+TECH,Bio-Techne Corporation,Healthcare,7424489984.0,350895000.0,0.465838,0.35,2026-05-12,yfinance
+XRAY,DENTSPLY SIRONA Inc.,Healthcare,2185564160.0,2331000000.0,0.438884,0.35,2026-05-12,yfinance
+HSIC,"Henry Schein, Inc.",Healthcare,7859117056.0,3749000000.0,0.273147,0.35,2026-05-12,yfinance
+PRGO,Perrigo Company plc,Healthcare,1531731200.0,3640200000.0,0.477264,0.35,2026-05-12,yfinance
+CVS,CVS Health Corporation,Healthcare,117666013184.0,78345000000.0,0.320019,0.35,2026-05-12,yfinance
+JAZZ,Jazz Pharmaceuticals plc,Healthcare,14029922304.0,5416900000.0,0.356713,0.35,2026-05-12,yfinance
+UTHR,United Therapeutics Corporation,Healthcare,24189544448.0,0.0,0.469028,0.35,2026-05-12,yfinance
+BMRN,BioMarin Pharmaceutical Inc.,Healthcare,10162895872.0,1439601000.0,0.313148,0.35,2026-05-12,yfinance
+SRPT,"Sarepta Therapeutics, Inc.",Healthcare,2048178688.0,1039745000.0,1.129013,0.35,2026-05-12,yfinance
+PCVX,"Vaxcyte, Inc.",Healthcare,7795466752.0,117481000.0,0.489221,0.35,2026-05-12,yfinance
+KRYS,"Krystal Biotech, Inc.",Healthcare,9223625728.0,9112000.0,0.390667,0.35,2026-05-12,yfinance
+SMMT,Summit Therapeutics Inc.,Healthcare,14483194880.0,20038000.0,0.859576,0.35,2026-05-12,yfinance
+LEGN,Legend Biotech Corporation,Healthcare,4731165696.0,413700000.0,0.539352,0.35,2026-05-12,yfinance
+CRVS,"Corvus Pharmaceuticals, Inc.",Healthcare,1329469696.0,937000.0,1.203892,0.35,2026-05-12,yfinance
+PHAT,"Phathom Pharmaceuticals, Inc.",Healthcare,974617728.0,166303000.0,0.925715,0.35,2026-05-12,yfinance
+RCKT,"Rocket Pharmaceuticals, Inc.",Healthcare,392004832.0,24877000.0,1.27557,0.35,2026-05-12,yfinance
+ETSY,"Etsy, Inc.",Consumer Cyclical,5680488448.0,3075773000.0,0.559975,0.4,2026-05-12,yfinance
+W,Wayfair Inc.,Consumer Cyclical,8101944832.0,3635000000.0,0.616204,0.4,2026-05-12,yfinance
+CHWY,"Chewy, Inc.",Consumer Cyclical,9371064320.0,518700000.0,0.455856,0.4,2026-05-12,yfinance
+PETS,"PetMed Express, Inc.",Healthcare,48365120.0,652000.0,0.881804,0.35,2026-05-12,yfinance
+PRTS,"CarParts.com, Inc.",Consumer Cyclical,60625368.0,54639000.0,0.771415,0.4,2026-05-12,yfinance
+AN,"AutoNation, Inc.",Consumer Cyclical,6716079616.0,10478900000.0,0.268126,0.4,2026-05-12,yfinance
+KMX,"CarMax, Inc.",Consumer Cyclical,5542353920.0,18544558000.0,0.54981,0.4,2026-05-12,yfinance
+PAG,"Penske Automotive Group, Inc.",Consumer Cyclical,11391715328.0,9214200000.0,0.252552,0.4,2026-05-12,yfinance
+LAD,"Lithia Motors, Inc.",Consumer Cyclical,6537744896.0,16129500000.0,0.319966,0.4,2026-05-12,yfinance
+GPC,Genuine Parts Company,Consumer Cyclical,14109764608.0,6713816000.0,0.290446,0.4,2026-05-12,yfinance
+AAP,"Advance Auto Parts, Inc.",Consumer Cyclical,3126862848.0,5224000000.0,0.690934,0.4,2026-05-12,yfinance
+AZO,"AutoZone, Inc.",Consumer Cyclical,56791179264.0,12411277000.0,0.257929,0.4,2026-05-12,yfinance
+ORLY,"O'Reilly Automotive, Inc.",Consumer Cyclical,75703123968.0,8491499000.0,0.225013,0.4,2026-05-12,yfinance
+BBY,"Best Buy Co., Inc.",Consumer Cyclical,12140256256.0,4133000000.0,0.342935,0.4,2026-05-12,yfinance
+PVH,PVH Corp.,Consumer Cyclical,3837968384.0,4298900000.0,0.460067,0.4,2026-05-12,yfinance
+RL,Ralph Lauren Corporation,Consumer Cyclical,20805810176.0,2858700000.0,0.310421,0.4,2026-05-12,yfinance
+VFC,V.F. Corporation,Consumer Cyclical,7019264512.0,5338701000.0,0.529626,0.4,2026-05-12,yfinance
+TPR,"Tapestry, Inc.",Consumer Cyclical,26940641280.0,3943700000.0,0.414732,0.4,2026-05-12,yfinance
+CPRI,Capri Holdings Limited,Consumer Cyclical,2102015232.0,1311000000.0,0.484467,0.4,2026-05-12,yfinance
+KSS,Kohl's Corporation,Consumer Cyclical,1469393792.0,6630000000.0,0.810196,0.4,2026-05-12,yfinance
+DDS,"Dillard's, Inc.",Consumer Cyclical,8695429120.0,557562000.0,0.398573,0.4,2026-05-12,yfinance
+BJ,"BJ's Wholesale Club Holdings, Inc.",Consumer Defensive,11634057216.0,2726040000.0,0.288715,0.35,2026-05-12,yfinance
+SFM,"Sprouts Farmers Market, Inc.",Consumer Defensive,7672134656.0,2060857000.0,0.473521,0.35,2026-05-12,yfinance
+GO,Grocery Outlet Holding Corp.,Consumer Defensive,776542976.0,1809702000.0,0.647475,0.35,2026-05-12,yfinance
+CASY,"Casey's General Stores, Inc.",Consumer Cyclical,32510294016.0,2895721000.0,0.250375,0.4,2026-05-12,yfinance
+CHEF,"The Chefs' Warehouse, Inc.",Consumer Defensive,3290347008.0,978187000.0,0.382353,0.35,2026-05-12,yfinance
+CARR,Carrier Global Corporation,Industrials,54718636032.0,12573000000.0,0.342299,0.4,2026-05-12,yfinance
+TT,Trane Technologies plc,Industrials,105332932608.0,4616000000.0,0.265175,0.4,2026-05-12,yfinance
+JCI,Johnson Controls International plc,Industrials,86502187008.0,9705000000.0,0.257397,0.4,2026-05-12,yfinance
+OTIS,Otis Worldwide Corporation,Industrials,28394989568.0,8218000000.0,0.238421,0.4,2026-05-12,yfinance
+ALLE,Allegion plc,Industrials,11373612032.0,2030700000.0,0.246812,0.4,2026-05-12,yfinance
+MAS,Masco Corporation,Industrials,14240433152.0,3302000000.0,0.315599,0.4,2026-05-12,yfinance
+SWK,"Stanley Black & Decker, Inc.",Industrials,12291871744.0,6501200000.0,0.377396,0.4,2026-05-12,yfinance
+NVT,nVent Electric plc,Industrials,28040708096.0,1697400000.0,0.395007,0.4,2026-05-12,yfinance
+REXR,"Rexford Industrial Realty, Inc.",Real Estate,8303670272.0,3247451000.0,0.238304,0.5,2026-05-12,yfinance
+GNRC,Generac Holdings Inc.,Industrials,15976958976.0,1487231000.0,0.497481,0.4,2026-05-12,yfinance
+HUBB,Hubbell Incorporated,Industrials,25900924928.0,2738700000.0,0.283901,0.4,2026-05-12,yfinance
+ACHR,Archer Aviation Inc.,Industrials,4967771136.0,121900000.0,0.755556,0.4,2026-05-12,yfinance
+JOBY,"Joby Aviation, Inc.",Industrials,10564324352.0,36825000.0,0.81496,0.4,2026-05-12,yfinance
+SPCE,"Virgin Galactic Holdings, Inc.",Industrials,275695296.0,324192000.0,0.856891,0.4,2026-05-12,yfinance
+RKT,"Rocket Companies, Inc.",Financial Services,41954897920.0,15561000000.0,0.576083,0.55,2026-05-12,yfinance
+OPEN,Opendoor Technologies Inc.,Real Estate,4678972416.0,1338000000.0,1.454921,0.5,2026-05-12,yfinance
+Z,"Zillow Group, Inc.",Communication Services,9252745216.0,429000000.0,0.445522,0.4,2026-05-12,yfinance
+TRGP,Targa Resources Corp.,Energy,54343540736.0,19131800000.0,0.271953,0.45,2026-05-12,yfinance
+WES,"Western Midstream Partners, LP",Energy,17306689536.0,8709290000.0,0.199469,0.45,2026-05-12,yfinance
+AM,Antero Midstream Corporation,Energy,10121823232.0,3712528000.0,0.2063,0.45,2026-05-12,yfinance
+HESM,Hess Midstream LP,Energy,8125264896.0,3772000000.0,0.242529,0.45,2026-05-12,yfinance
+LNG,"Cheniere Energy, Inc.",Energy,50439135232.0,25515000000.0,0.272873,0.45,2026-05-12,yfinance
+ET,Energy Transfer LP,Energy,67481133056.0,70093000000.0,0.164208,0.45,2026-05-12,yfinance
+EPD,Enterprise Products Partners L.P.,Energy,81997340672.0,34772000000.0,0.154242,0.45,2026-05-12,yfinance
+PAA,"Plains All American Pipeline, L.P.",Energy,15514642432.0,11461000000.0,0.181258,0.45,2026-05-12,yfinance
+PAGP,"Plains GP Holdings, L.P.",Energy,5477840384.0,11461000000.0,0.179523,0.45,2026-05-12,yfinance
+KMI,"Kinder Morgan, Inc.",Energy,71750631424.0,31946000000.0,0.199771,0.45,2026-05-12,yfinance
+WMB,"The Williams Companies, Inc.",Energy,90722009088.0,30302000000.0,0.224585,0.45,2026-05-12,yfinance
+OKE,"ONEOK, Inc.",Energy,55310581760.0,33652000000.0,0.251536,0.45,2026-05-12,yfinance
+TALO,Talos Energy Inc.,Energy,2558972928.0,1242152000.0,0.484405,0.45,2026-05-12,yfinance
+SM,SM Energy Company,Energy,7353092608.0,2715000000.0,0.491714,0.45,2026-05-12,yfinance
+CRC,California Resources Corporation,Energy,5299279872.0,1359000000.0,0.355101,0.45,2026-05-12,yfinance
+FSLR,"First Solar, Inc.",Technology,25065646080.0,587123000.0,0.597951,0.35,2026-05-12,yfinance
+ENPH,"Enphase Energy, Inc.",Technology,4962203136.0,581113000.0,0.794138,0.35,2026-05-12,yfinance
+SEDG,"SolarEdge Technologies, Inc.",Technology,2541592576.0,472546000.0,1.045476,0.35,2026-05-12,yfinance
+RUN,Sunrun Inc.,Technology,3451808256.0,14874268000.0,1.209004,0.35,2026-05-12,yfinance
+ARRY,"Array Technologies, Inc.",Technology,1342904320.0,766193000.0,0.880419,0.35,2026-05-12,yfinance
+BE,Bloom Energy Corporation,Industrials,80759308288.0,2949133000.0,1.035812,0.4,2026-05-12,yfinance
+PLUG,Plug Power Inc.,Industrials,4909786112.0,997172000.0,1.07381,0.4,2026-05-12,yfinance
+BLDP,Ballard Power Systems Inc.,Industrials,1257154304.0,20929000.0,0.772742,0.4,2026-05-12,yfinance
+CHPT,"ChargePoint Holdings, Inc.",Consumer Cyclical,156508064.0,271528000.0,0.725746,0.4,2026-05-12,yfinance
+EVGO,"EVgo, Inc.",Consumer Cyclical,620888384.0,311210000.0,0.602387,0.4,2026-05-12,yfinance
+BLNK,Blink Charging Co.,Industrials,137348368.0,7956000.0,0.959831,0.4,2026-05-12,yfinance
+CEG,Constellation Energy Corporation,Utilities,108576088064.0,8992000000.0,0.451297,0.4,2026-05-12,yfinance
+EQR,Equity Residential,Real Estate,25567688704.0,8643319000.0,0.203191,0.5,2026-05-12,yfinance
+AVB,"AvalonBay Communities, Inc.",Real Estate,26051516416.0,9493752000.0,0.204571,0.5,2026-05-12,yfinance
+SMPL,The Simply Good Foods Company,Consumer Defensive,1052580672.0,442372000.0,0.448887,0.35,2026-05-12,yfinance
+PR,Permian Resources Corporation,Energy,17359951872.0,3687598000.0,0.332279,0.45,2026-05-12,yfinance
+CHRD,Chord Energy Corporation,Energy,7885827072.0,1615390000.0,0.373892,0.45,2026-05-12,yfinance
+MTDR,Matador Resources Company,Energy,6994959360.0,3566052000.0,0.402862,0.45,2026-05-12,yfinance
+SIRI,Sirius XM Holdings Inc.,Communication Services,9016365056.0,9747000000.0,0.34673,0.4,2026-05-12,yfinance
+ALKS,Alkermes plc,Healthcare,5911991296.0,1581660000.0,0.389913,0.35,2026-05-12,yfinance
+MNDY,monday.com Ltd.,Technology,3964823296.0,168767000.0,0.659725,0.35,2026-05-12,yfinance
+NTRA,"Natera, Inc.",Healthcare,28519909376.0,240081000.0,0.414957,0.35,2026-05-12,yfinance
+CQP,"Cheniere Energy Partners, L.P.",Energy,29933905920.0,14467000000.0,0.261273,0.45,2026-05-12,yfinance
+GAP,"The Gap, Inc.",Consumer Cyclical,7942495744.0,5611000000.0,0.473416,0.4,2026-05-12,yfinance
+FBIN,"Fortune Brands Innovations, Inc.",Industrials,4506905088.0,2962900000.0,0.430367,0.4,2026-05-12,yfinance
+FISV,"Fiserv, Inc.",Unknown,29003683840.0,29123000000.0,0.69773,0.4,2026-05-12,yfinance
+XYZ,"Block, Inc.",Technology,43549392896.0,8133391000.0,0.464818,0.35,2026-05-12,yfinance
+VTRS,Viatris Inc.,Healthcare,19704231936.0,14698000000.0,0.325027,0.35,2026-05-12,yfinance
