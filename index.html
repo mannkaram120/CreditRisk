@@ -216,7 +216,12 @@ select.si{cursor:pointer}
 .ac-item:hover,.ac-item.focused{background:var(--gdim)}
 .ac-tk{color:var(--green);font-weight:500;min-width:48px;flex-shrink:0;font-family:var(--fm);font-size:.58rem}
 .ac-nm{color:var(--gray);font-family:var(--fm);font-size:.52rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* body text → black */
+.ib-row div, .interp-body li, .interp-body div:not(.ct):not(.ml) {color:var(--black)}
+.cw > div:not(.ct):not([class]) {color:var(--black)}
 </style>
+<script>MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]]},svg:{fontCache:"global"}};</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="app">
@@ -230,10 +235,10 @@ select.si{cursor:pointer}
   <div class="s-section">
     <div class="s-h" style="border-top:none;padding-top:0;margin-top:.1rem">PRESETS</div>
     <div class="chips" id="presetChips">
-      <button class="chip active" onclick="selectPreset('ig',this)">IG</button>
-      <button class="chip" onclick="selectPreset('hy',this)">HY</button>
+      <button class="chip" onclick="selectPreset('ig',this)">IG</button>
+      <button class="chip active" onclick="selectPreset('hy',this)">HY</button>
       <button class="chip" onclick="selectPreset('mixed',this)">MIXED</button>
-      <button class="chip" onclick="selectPreset('crisis',this)">CRISIS</button>
+      <button class="chip" onclick="selectPreset('crisis',this)">DISTRESSED</button>
     </div>
 
     <div class="s-h">ADD TICKER</div>
@@ -273,7 +278,7 @@ select.si{cursor:pointer}
   </div>
 
   <div class="s-api">
-    API: <span id="apiSt" style="color:#e24b4a">CHECKING</span> · 127.0.0.1:8000
+    API: <span id="apiSt" style="color:#e24b4a">CHECKING</span> · 127.0.0.1:8000<br>DATA: <span id="dataDate" style="color:var(--gray)">loading...</span>
   </div>
 </aside>
 
@@ -290,6 +295,7 @@ select.si{cursor:pointer}
     <button class="tb" onclick="sw('loss',this)">// LOSS DIST.</button>
     <button class="tb" onclick="sw('tranche',this)">// TRANCHES</button>
     <button class="tb" onclick="sw('stress',this)">// STRESS TEST</button>
+    <button class="tb" onclick="sw('corrsens',this)">//ρ SENSITIVITY</button>
   </div>
 
   <!-- OVERVIEW -->
@@ -373,6 +379,26 @@ select.si{cursor:pointer}
     </div>
     <div id="stressContent"><div class="empty"><div class="ei">//</div><div class="et">RUN STRESS TEST TO SEE BASE VS STRESSED COMPARISON</div></div></div>
   </div>
+
+  <!-- RHO SENSITIVITY TAB -->
+  <div id="tab-corrsens" style="display:none">
+    <div class="cw">
+      <div class="ct">// ρ SENSITIVITY — CVaR vs CORRELATION (0.0 → 0.9)</div>
+      <div style="font-family:var(--fm);font-size:.54rem;color:var(--black);margin-bottom:.8rem;line-height:1.7">Shows how Credit VaR rises as systematic correlation ρ increases. The steep rise at high ρ is the 2008 mechanism — correlated defaults amplify tail losses exponentially. <span style="color:var(--gd);font-weight:600">Use HY or DISTRESSED preset for best results.</span> <span style="color:var(--gd);font-weight:600">Tip: use DISTRESSED preset for the most dramatic curve.</span></div>
+      <div style="text-align:center;margin-bottom:.8rem">
+        <button id="corrBtn" onclick="runCorrSens()" style="background:var(--black);color:var(--bg);font-family:var(--fm);font-size:.6rem;letter-spacing:.08em;padding:.55rem 1.6rem;border:none;cursor:pointer;border-radius:2px">⚡ RUN ρ SENSITIVITY (10 SIMULATIONS)</button>
+      </div>
+      <div style="height:320px;position:relative"><canvas id="corrSensC"></canvas></div>
+    </div>
+    <div class="cw">
+      <div class="ct">// KEY INSIGHT</div>
+      <div style="font-family:var(--fm);font-size:.54rem;color:var(--black);line-height:1.85">
+        <div style="margin-bottom:.35rem"><span style="color:var(--gd);font-weight:600">Low ρ (0.0–0.2)</span> — Idiosyncratic risk dominates. Diversification works. CVaR grows slowly.</div>
+        <div style="margin-bottom:.35rem"><span style="color:#d68910;font-weight:600">Medium ρ (0.3–0.5)</span> — Systematic risk emerges. Diversification benefit shrinks rapidly.</div>
+        <div><span style="color:#c0392b;font-weight:600">High ρ (0.6–0.9)</span> — Defaults cluster simultaneously. Rating agencies used ρ≈0.30; realized 2008 ρ was 0.80+.</div>
+      </div>
+    </div>
+  </div>
 </main>
 </div>
 
@@ -407,7 +433,7 @@ select.si{cursor:pointer}
     <h3>Validation</h3>
     <p>Monte Carlo output is validated against the Basel II IRB analytical formula: K = LGD · N[N⁻¹(PD)/√(1-R) + √(R/(1-R))·N⁻¹(0.999)] - LGD·PD. At 50,000 simulations, Monte Carlo converges within 2–3% of the analytical formula at 99.9% confidence.</p>
   </div>
-</div>
+
 
 <script>
 const API='http://127.0.0.1:8000';
@@ -429,13 +455,10 @@ async function loadTickerList(){
       const name=(parts[1]||'').replace(/"/g,'').trim();
       const sector=(parts[2]||'').replace(/"/g,'').trim();
       const lastUpdated=(parts[7]||'').replace(/"/g,'').trim();
-      return {ticker, name, sector, lastUpdated};
-    }).filter(t=>t.ticker && t.ticker!=='TICKER');
-    // Show data date in sidebar
-    if(allTickers.length && allTickers[0].lastUpdated){
-      const el=document.getElementById('dataDate');
-      if(el) el.textContent=allTickers[0].lastUpdated;
-    }
+      const market_cap=parseFloat(parts[3]||'0')||0;
+      return {ticker,name,sector,lastUpdated,market_cap};
+    }).filter(t=>t.ticker&&t.ticker!=='TICKER');
+    if(allTickers.length&&allTickers[0].lastUpdated){const el=document.getElementById('dataDate');if(el)el.textContent=allTickers[0].lastUpdated;}
     log('> Market data: '+allTickers.length+' tickers loaded... <span class="ok">OK</span>','ok');
   }catch(e){
     // Fallback: build from known presets if CSV unavailable
@@ -455,29 +478,101 @@ async function loadTickerList(){
   }
 }
 
+// Track recently used + usage frequency
+const recentTickers=JSON.parse(sessionStorage.getItem('recentTk')||'[]');
+const usageCount=JSON.parse(sessionStorage.getItem('usageCount')||'{}');
+
+function recordUsage(ticker){
+  // Remove if exists, add to front
+  const idx=recentTickers.indexOf(ticker);
+  if(idx>-1) recentTickers.splice(idx,1);
+  recentTickers.unshift(ticker);
+  if(recentTickers.length>20) recentTickers.pop();
+  usageCount[ticker]=(usageCount[ticker]||0)+1;
+  sessionStorage.setItem('recentTk',JSON.stringify(recentTickers));
+  sessionStorage.setItem('usageCount',JSON.stringify(usageCount));
+}
+
+function fuzzyScore(ticker,name,q){
+  // Returns score 0-100, higher = better match
+  const t=ticker.toUpperCase(), n=(name||'').toUpperCase();
+  if(t===q) return 100;                          // exact ticker match
+  if(t.startsWith(q)) return 90-(t.length-q.length); // prefix match, shorter = better
+  if(n.startsWith(q)) return 70;                 // name prefix
+  if(n.includes(' '+q)) return 65;               // word boundary in name
+  if(t.includes(q)) return 55;                   // ticker contains query
+  if(n.includes(q)) return 45;                   // name contains query
+  // Fuzzy: check if all query chars appear in order in ticker
+  let qi=0;
+  for(let i=0;i<t.length&&qi<q.length;i++) if(t[i]===q[qi]) qi++;
+  if(qi===q.length) return 30-(t.length);        // all chars found in order
+  return 0;
+}
+
 function tickerSearch(val){
   const drop=document.getElementById('acDrop');
   acIdx=-1;
   const q=val.trim().toUpperCase();
-  if(!q){drop.style.display='none';return;}
+  if(!q){
+    // Show recently used when input is empty but focused
+    if(recentTickers.length){
+      const rec=recentTickers.slice(0,6).map(tk=>{
+        const t=allTickers.find(a=>a.ticker===tk)||{ticker:tk,name:'',sector:''};
+        return t;
+      });
+      drop.innerHTML='<div style="padding:.3rem .6rem;font-family:var(--fm);font-size:.46rem;color:var(--gray);letter-spacing:.08em;text-transform:uppercase;opacity:.7">Recently used</div>'
+        +rec.map((t,i)=>
+          `<div class="ac-item" data-ticker="${t.ticker}" onmousedown="pickTicker('${t.ticker}')" onmouseover="hoverAc(${i})">
+            <span class="ac-tk">${t.ticker}</span>
+            <span class="ac-nm">${t.name||'—'}</span>
+            ${t.sector?`<span class="ac-sec">${t.sector.split(' ')[0]}</span>`:''}
+            <span style="font-family:var(--fm);font-size:.44rem;color:var(--gray);opacity:.6;margin-left:.3rem">${usageCount[t.ticker]>1?usageCount[t.ticker]+'x':''}</span>
+          </div>`
+        ).join('');
+      drop.style.display='block';
+    } else {
+      drop.style.display='none';
+    }
+    return;
+  }
   if(!allTickers.length){
     drop.innerHTML='<div style="padding:.5rem .75rem;font-family:var(--fm);font-size:.58rem;color:var(--gray)">Loading ticker list...</div>';
-    drop.style.display='block';
-    return;
+    drop.style.display='block';return;
   }
-  // Match: ticker starts with q, OR name contains q, OR sector contains q
-  const starts=allTickers.filter(t=>t.ticker.startsWith(q));
-  const nameHits=allTickers.filter(t=>!t.ticker.startsWith(q)&&t.name.toUpperCase().includes(q));
-  const sectorHits=allTickers.filter(t=>!t.ticker.startsWith(q)&&!t.name.toUpperCase().includes(q)&&(t.sector||'').toUpperCase().includes(q));
-  const results=[...starts,...nameHits,...sectorHits].slice(0,12);
-  if(!results.length){
-    drop.innerHTML='<div style="padding:.5rem .75rem;font-family:var(--fm);font-size:.58rem;color:var(--gray)">No match — try ticker, name or sector (e.g. Technology)</div>';
-    drop.style.display='block';
-    return;
+  // Score every ticker
+  const scored=allTickers.map(t=>{
+    let score=fuzzyScore(t.ticker,t.name,q);
+    if(!score) score=fuzzyScore('',t.sector||'',q)?20:0; // sector fallback
+    // Boost by usage frequency
+    if(usageCount[t.ticker]) score+=Math.min(8,usageCount[t.ticker]*2);
+    // Boost by recency
+    const ri=recentTickers.indexOf(t.ticker);
+    if(ri>-1) score+=Math.max(0,6-ri);
+    // Boost large caps (market_cap in data)
+    if(t.market_cap>1e12) score+=3;
+    else if(t.market_cap>1e11) score+=2;
+    else if(t.market_cap>1e10) score+=1;
+    return {t,score};
+  }).filter(x=>x.score>0)
+    .sort((a,b)=>b.score-a.score)
+    .slice(0,12);
+
+  if(!scored.length){
+    drop.innerHTML='<div style="padding:.5rem .75rem;font-family:var(--fm);font-size:.58rem;color:var(--gray)">No match — try ticker, name or sector</div>';
+    drop.style.display='block';return;
   }
-  drop.innerHTML=results.map((t,i)=>
+  // Highlight matching chars in ticker
+  function highlight(str,q){
+    let out='',qi=0,s=str.toUpperCase();
+    for(let i=0;i<str.length;i++){
+      if(qi<q.length&&s[i]===q[qi]){out+='<b style="color:var(--gd)">'+str[i]+'</b>';qi++;}
+      else out+=str[i];
+    }
+    return out;
+  }
+  drop.innerHTML=scored.map(({t},i)=>
     `<div class="ac-item" data-ticker="${t.ticker}" onmousedown="pickTicker('${t.ticker}')" onmouseover="hoverAc(${i})">
-      <span class="ac-tk">${t.ticker}</span>
+      <span class="ac-tk">${highlight(t.ticker,q)}</span>
       <span class="ac-nm">${t.name||'—'}</span>
       ${t.sector?`<span class="ac-sec">${t.sector.split(' ')[0]}</span>`:''}
     </div>`
@@ -504,6 +599,7 @@ function pickTicker(ticker){
   document.getElementById('ct').value=ticker;
   document.getElementById('acDrop').style.display='none';
   acIdx=-1;
+  recordUsage(ticker);
   // auto-add immediately
   addTicker();
 }
@@ -518,10 +614,10 @@ const PRESETS={
   ig:[{ticker:'AAPL',notional:10000000},{ticker:'MSFT',notional:10000000},{ticker:'JPM',notional:10000000},{ticker:'JNJ',notional:10000000},{ticker:'PG',notional:10000000}],
   hy:[{ticker:'F',notional:10000000},{ticker:'M',notional:10000000},{ticker:'CCL',notional:10000000},{ticker:'AAL',notional:10000000},{ticker:'AMC',notional:5000000}],
   mixed:[{ticker:'AAPL',notional:15000000},{ticker:'MSFT',notional:15000000},{ticker:'JPM',notional:10000000},{ticker:'F',notional:7000000},{ticker:'CCL',notional:7000000},{ticker:'AAL',notional:6000000}],
-  crisis:[{ticker:'C',notional:10000000},{ticker:'BAC',notional:10000000},{ticker:'GS',notional:10000000},{ticker:'MS',notional:10000000},{ticker:'WFC',notional:10000000}]
+  crisis:[{ticker:'AMC',notional:8000000},{ticker:'PRGO',notional:8000000},{ticker:'WOLF',notional:8000000},{ticker:'KSS',notional:8000000},{ticker:'AAP',notional:8000000},{ticker:'SRPT',notional:8000000}]
 };
 const SM={1:10000,2:25000,3:50000,4:100000};
-let cos=[...PRESETS.ig],lastRes=null,lChart=null,sChart=null;
+let cos=[...PRESETS.hy],lastRes=null,lChart=null,sChart=null;
 
 // ── interp toggle ──
 function toggleInterp(id){
@@ -544,12 +640,7 @@ function us(){
 }
 
 // ── preset ──
-function clearAll(){
-  cos=[];
-  document.querySelectorAll('#presetChips .chip').forEach(c=>c.classList.remove('active'));
-  rca(); updateTotal();
-  log('> Portfolio cleared','ok');
-}
+function clearAll(){cos=[];document.querySelectorAll('#presetChips .chip').forEach(c=>c.classList.remove('active'));rca();log('> Portfolio cleared','ok');}
 
 function selectPreset(n,btn){
   cos=[...PRESETS[n]];
@@ -564,63 +655,31 @@ function addTicker(){
   if(!t) return;
   if(cos.find(c=>c.ticker===t)){log('> '+t+' already in portfolio','err');return;}
   if(cos.length>=20){log('> Max 20 companies','err');return;}
+  if(allTickers.length>0&&!allTickers.find(a=>a.ticker===t)){log('> '+t+' not found in '+allTickers.length+'-ticker universe','err');document.getElementById('ct').select();return;}
   cos.push({ticker:t,notional:10000000});
   document.getElementById('ct').value='';
   document.querySelectorAll('#presetChips .chip').forEach(c=>c.classList.remove('active'));
-  rca(); log('> Added '+t,'ok');
+  rca(); log('> Added '+t+' ($10M notional)','ok');
 }
 
 function rca(){
   const el=document.getElementById('ac');
-  if(!cos.length){
-    el.innerHTML='<span style="font-family:var(--fm);font-size:.52rem;color:var(--gray);opacity:.6">No tickers — select a preset</span>';
-    return;
-  }
+  if(!cos.length){el.innerHTML='<span style="font-family:var(--fm);font-size:.52rem;color:var(--gray);opacity:.6">No tickers — select a preset</span>';return;}
   el.innerHTML=cos.map((c,i)=>
-    '<div style="display:flex;align-items:center;gap:.3rem;padding:.22rem .4rem;'+
-    'background:var(--bg);border:1px solid var(--border);border-radius:2px;margin-bottom:.15rem">'+
-      '<span style="font-family:var(--fm);font-size:.6rem;font-weight:600;color:var(--black);min-width:42px;flex-shrink:0">'+c.ticker+'</span>'+
-      '<span style="font-family:var(--fm);font-size:.52rem;color:var(--gray);flex:1;cursor:pointer;text-align:right" '+
-        'onclick="editNotional('+i+',this)" title="Click to edit notional">'+
-        '$'+(c.notional/1e6).toFixed(1)+'M'+
-      '</span>'+
-      '<button onclick="removeTicker('+i+')" '+
-        'style="background:none;border:none;font-size:.6rem;color:var(--gray);cursor:pointer;'+
-        'padding:0 .1rem;line-height:1;flex-shrink:0;opacity:.5;transition:all .12s" '+
-        'onmouseover="this.style.opacity=1;this.style.color='#c0392b'" '+
-        'onmouseout="this.style.opacity=.5;this.style.color='var(--gray)'" '+
-        'title="Remove '+c.ticker+'">✕</button>'+
-    '</div>'
+    '<div style="display:flex;align-items:center;gap:.3rem;padding:.22rem .4rem;background:var(--bg);border:1px solid var(--border);border-radius:2px;margin-bottom:.15rem">'
+    +'<span style="font-family:var(--fm);font-size:.6rem;font-weight:600;color:var(--black);min-width:42px;flex-shrink:0">'+c.ticker+'</span>'
+    +'<span style="font-family:var(--fm);font-size:.52rem;color:var(--gray);flex:1;text-align:right">$'+(c.notional/1e6).toFixed(1)+'M</span>'
+    +'<button onclick="removeTicker('+i+')" style="background:none;border:none;font-size:.62rem;color:#aaa;cursor:pointer;padding:0 .2rem;line-height:1" title="Remove">&#x2715;</button>'
+    +'</div>'
   ).join('');
-}
-
-function updateTotal(){
-  const total=cos.reduce((s,c)=>s+c.notional,0);
-  const el=document.getElementById('portTotal');
-  if(el) el.textContent=cos.length+' names · $'+(total/1e6).toFixed(1)+'M total';
 }
 
 function removeTicker(i){
   const t=cos[i].ticker;
   cos.splice(i,1);
   document.querySelectorAll('#presetChips .chip').forEach(c=>c.classList.remove('active'));
-  rca(); updateTotal();
-  log('> Removed '+t+' from portfolio','ok');
-}
-
-function editNotional(i,el){
-  const current=(cos[i].notional/1e6).toFixed(1);
-  const val=prompt('Enter notional for '+cos[i].ticker+' ($M):', current);
-  if(val===null) return;
-  const n=parseFloat(val.replace(/[$MmBbKk,\s]/g,''));
-  if(isNaN(n)||n<=0){log('> Invalid notional — use a number like 10 or 15.5','err');return;}
-  // Handle M/B/K suffix if typed
-  let notional=n*1e6;
-  if(val.toUpperCase().includes('B')) notional=n*1e9;
-  else if(val.toUpperCase().includes('K')) notional=n*1e3;
-  cos[i].notional=Math.round(notional);
-  rca(); updateTotal();
-  log('> '+cos[i].ticker+' notional → $'+(cos[i].notional/1e6).toFixed(1)+'M','ok');
+  rca();
+  log('> Removed '+t,'ok');
 }
 
 // ── tabs ──
@@ -631,7 +690,7 @@ function sw(n,btn){
   document.getElementById('tab-'+n).style.display='block';
 }
 function swn(n){
-  const tabs=['overview','loss','tranche','stress'];
+  const tabs=['overview','loss','tranche','stress','corrsens'];
   document.querySelectorAll('.tb').forEach((b,i)=>b.classList.toggle('active',tabs[i]===n));
   document.querySelectorAll('[id^="tab-"]').forEach(t=>t.style.display='none');
   document.getElementById('tab-'+n).style.display='block';
@@ -644,11 +703,14 @@ function log(msg,t){
   if(t==='ok') d.innerHTML=msg;
   else if(t==='err') d.innerHTML='<span class="er">'+msg+'</span>';
   else d.textContent=msg;
-  el.appendChild(d);el.scrollTop=el.scrollHeight;
+  el.appendChild(d);
+  const lines=el.querySelectorAll('.ll');
+  if(lines.length>14) lines[0].remove();
+  el.scrollTop=el.scrollHeight;
 }
 
 // ── formatters ──
-const f$=n=>'$'+(n/1e6).toFixed(2)+'M';
+const f$=n=>'$'+(Math.max(0,n)/1e6).toFixed(2)+'M';
 const fp=n=>(n*100).toFixed(4)+'%';
 const fpb=n=>(n*100).toFixed(2)+'%';
 
@@ -689,13 +751,37 @@ function renderOverview(d){
       '<div class="sr2"><span class="sl">LGD</span><span class="sv">'+fpb(c.lgd)+'</span></div>'+
       '<div style="margin-top:.42rem"><span class="tag">'+c.sector+'</span><span class="tag">'+f$(c.notional)+'</span></div></div>';
   }).join('');
+  // Sector concentration
+  const sMap={};
+  d.companies.forEach(c=>{const s=c.sector||'Unknown';sMap[s]=(sMap[s]||0)+c.notional;});
+  const totN=d.companies.reduce((s,c)=>s+c.notional,0);
+  const sArr=Object.entries(sMap).sort((a,b)=>b[1]-a[1]);
+  const topS=sArr[0],topP=totN>0?topS[1]/totN*100:0;
+  const warn=topP>=60
+    ?'<div style="margin:.4rem 0;padding:.38rem .6rem;background:rgba(192,57,43,.07);border-left:2px solid #c0392b;font-family:var(--fm);font-size:.52rem;color:#c0392b">'
+      +'<b>⚠ CONCENTRATION RISK:</b> '+topP.toFixed(0)+'% '+topS[0]+'</div>'
+    :topP>=40
+    ?'<div style="margin:.4rem 0;padding:.38rem .6rem;background:rgba(214,137,16,.07);border-left:2px solid #d68910;font-family:var(--fm);font-size:.52rem;color:#d68910">'
+      +'<b>⚡ NOTE:</b> '+topP.toFixed(0)+'% '+topS[0]+' exposure</div>'
+    :'';
+  const sBars=sArr.map(([s,a])=>{
+    const p=totN>0?a/totN*100:0;
+    return '<div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.2rem">'
+      +'<span style="font-family:var(--fm);font-size:.48rem;color:var(--black);width:105px;flex-shrink:0;text-align:right">'+s+'</span>'
+      +'<div style="flex:1;background:var(--border);border-radius:2px;height:7px">'
+      +'<div style="width:'+p.toFixed(1)+'%;background:var(--gd);height:7px;border-radius:2px"></div></div>'
+      +'<span style="font-family:var(--fm);font-size:.48rem;color:var(--black);width:32px">'+p.toFixed(0)+'%</span>'
+      +'</div>';
+  }).join('');
+  const secBlock='<div class="cw" style="margin-bottom:.5rem"><div class="ct">// SECTOR CONCENTRATION</div>'+warn+sBars+'</div>';
+
   document.getElementById('overviewContent').innerHTML=
     '<div class="mg">'+
     '<div class="mc mc-g"><div class="ml">// EXPECTED LOSS</div><div class="mv g">'+f$(d.expected_loss)+'</div></div>'+
     '<div class="mc mc-a"><div class="ml">// UNEXPECTED LOSS</div><div class="mv a">'+f$(d.unexpected_loss)+'</div></div>'+
     '<div class="mc mc-r"><div class="ml">// CREDIT VaR ('+(d.confidence*100).toFixed(0)+'%)</div><div class="mv r">'+f$(d.credit_var)+'</div></div>'+
     '<div class="mc mc-r"><div class="ml">// EXPECTED SHORTFALL</div><div class="mv r">'+f$(d.expected_shortfall)+'</div></div>'+
-    '</div><div class="sd">// COMPANY_RISK_PROFILES</div><div class="cg">'+cards+'</div>';
+    '</div>'+secBlock+'<div class="sd">// COMPANY_RISK_PROFILES</div><div class="cg">'+cards+'</div>';
 }
 
 function renderLoss(d){
@@ -725,17 +811,50 @@ async function renderTranche(d,rho,nsim){
     const td=await r.json();
     const colors={'Equity':'#c0392b','Mezzanine':'#d68910','Senior':'#4A8A28'};
     const mx=Math.max(...td.tranches.map(t=>t.expected_loss_pct),0.0001);
-    const cards=td.tranches.map(t=>{const c=colors[t.label]||'#888';return '<div class="mc"><div class="ml" style="color:'+c+'">// '+t.label.toUpperCase()+'</div><div class="mv" style="color:'+c+'">'+(t.expected_loss_pct*100).toFixed(3)+'%</div><div style="font-family:var(--fm);font-size:.56rem;color:var(--gray);margin-top:.22rem">EL: '+f$(t.expected_loss_usd)+'</div><div style="font-family:var(--fm);font-size:.5rem;color:var(--gray)">'+(t.attachment*100).toFixed(0)+'%→'+(t.detachment*100).toFixed(0)+'%</div></div>';}).join('');
+    const cards=td.tranches.map(t=>{const c=colors[t.label]||'#888';return '<div class="mc"><div class="ml" style="color:'+c+'">// '+t.label.toUpperCase()+'</div><div class="mv" style="color:'+c+'">'+(t.expected_loss_pct*100).toFixed(3)+'%</div><div style="font-family:var(--fm);font-size:.56rem;color:var(--black);margin-top:.22rem">EL: '+f$(t.expected_loss_usd)+'</div><div style="font-family:var(--fm);font-size:.5rem;color:var(--gray)">'+(t.attachment*100).toFixed(0)+'%→'+(t.detachment*100).toFixed(0)+'%</div></div>';}).join('');
     const bars=td.tranches.map(t=>{const c=colors[t.label]||'#888';const bar=((t.expected_loss_pct/mx)*100).toFixed(1);return '<div class="tr"><div class="tl" style="color:'+c+'">'+t.label.toUpperCase()+'<br><span style="font-size:.48rem;color:var(--gray)">'+(t.attachment*100).toFixed(0)+'%→'+(t.detachment*100).toFixed(0)+'%</span></div><div class="tbw"><div class="tb2" style="width:'+bar+'%;background:'+c+'"></div></div><div class="tp" style="color:'+c+'">'+(t.expected_loss_pct*100).toFixed(3)+'%</div><div style="font-family:var(--fm);font-size:.58rem;color:var(--gray);width:58px;text-align:right">'+f$(t.expected_loss_usd)+'</div></div>';}).join('');
     const pie=td.tranches.map(t=>parseFloat((t.expected_loss_pct*100).toFixed(4)));
     const pieC=td.tranches.map(t=>colors[t.label]||'#888');
     document.getElementById('trancheContent').innerHTML=
       '<div class="mg" style="grid-template-columns:repeat(3,1fr)">'+cards+'</div>'+
       '<div class="two"><div class="cw"><div class="ct">// CDO TRANCHE EXPECTED LOSS BARS</div>'+bars+'</div>'+
-      '<div class="cw"><div class="ct">// TRANCHE EL COMPOSITION</div><div style="height:180px;position:relative"><canvas id="pieC"></canvas></div></div></div>'+
-      '<div class="cw"><div class="ct">// CDO WATERFALL — SUBORDINATION STRUCTURE</div>'+
-      '<div style="display:flex;height:40px;border:1px solid var(--border);border-radius:2px;overflow:hidden">'+
-      '<div style="display:flex;height:60px;border:1px solid var(--border);border-radius:3px;overflow:hidden;margin-bottom:.32rem"><div style="width:3%;background:#c0392b;display:flex;flex-direction:column;align-items:center;justify-content:center"><span style="font-family:var(--fm);font-size:.54rem;color:#fff;font-weight:600">3%</span><span style="font-family:var(--fm);font-size:.38rem;color:rgba(255,255,255,.7)">EQ</span></div><div style="width:4%;background:#d68910;display:flex;flex-direction:column;align-items:center;justify-content:center"><span style="font-family:var(--fm);font-size:.54rem;color:#fff;font-weight:600">4%</span><span style="font-family:var(--fm);font-size:.38rem;color:rgba(255,255,255,.7)">MZ</span></div><div style="flex:1;background:#4A8A28;display:flex;flex-direction:column;align-items:center;justify-content:center"><span style="font-family:var(--fm);font-size:.62rem;color:#fff;letter-spacing:.08em;font-weight:600">SENIOR — 93%</span><span style="font-family:var(--fm);font-size:.46rem;color:rgba(255,255,255,.7);margin-top:.12rem">7% to 100% of notional</span></div></div><div style="display:flex;justify-content:space-between;font-family:var(--fm);font-size:.5rem;margin-top:.28rem"><span style="color:#c0392b">0% FIRST LOSS</span><span style="color:var(--gray)">3% EQUITY</span><span style="color:var(--gray)">7% MEZZ</span><span style="color:var(--gd)">100% SENIOR</span></div></div>';
+      '<div class="cw"><div class="ct">// TRANCHE EL COMPOSITION</div><div style="height:180px;position:relative"><canvas id="pieC"></canvas></div></div></div>';
+    // dynamic waterfall - separate append
+    const wfEl=document.getElementById('trancheContent');
+    const wfDiv=document.createElement('div');
+    wfDiv.className='cw';
+    const wfTr=td&&td.tranches?td.tranches:[];
+    const wfEq=wfTr[0]?wfTr[0]:{expected_loss_pct:0};
+    const wfMz=wfTr[1]?wfTr[1]:{expected_loss_pct:0};
+    const wfSr=wfTr[2]?wfTr[2]:{expected_loss_pct:0};
+    const wfEqp=(wfEq.expected_loss_pct||0)*100;
+    const wfMzp=(wfMz.expected_loss_pct||0)*100;
+    const wfSrp=(wfSr.expected_loss_pct||0)*100;
+    wfDiv.innerHTML=
+      '<div class="ct">// CDO WATERFALL — SUBORDINATION STRUCTURE</div>'+
+      '<div style="font-family:var(--fm);font-size:.52rem;color:var(--black);margin-bottom:.7rem;line-height:1.65">Losses flow upward. Opacity reflects actual EL — faded means no loss in that tranche.</div>'+
+      '<div style="display:flex;align-items:center;gap:.7rem;margin-bottom:.35rem">'+
+        '<span style="font-family:var(--fm);font-size:.52rem;font-weight:600;color:var(--gd);width:52px;flex-shrink:0">SENIOR</span>'+
+        '<div style="flex:1;background:#4A8A28;border-radius:3px;height:32px;display:flex;align-items:center;padding:0 .7rem;opacity:'+(wfSrp>0.001?'1':'0.2')+'">'+
+          '<span style="font-family:var(--fm);font-size:.54rem;color:#fff;font-weight:600">93% · EL: '+wfSrp.toFixed(3)+'%</span></div>'+
+        '<span style="font-family:var(--fm);font-size:.48rem;color:var(--gray);width:80px;flex-shrink:0;text-align:right">7%→100% AAA</span>'+
+      '</div>'+
+      '<div style="display:flex;align-items:center;gap:.7rem;margin-bottom:.35rem">'+
+        '<span style="font-family:var(--fm);font-size:.52rem;font-weight:600;color:#d68910;width:52px;flex-shrink:0">MEZZ</span>'+
+        '<div style="width:20%;background:#d68910;border-radius:3px;height:26px;display:flex;align-items:center;justify-content:center;opacity:'+(wfMzp>0.001?'1':'0.25')+'">'+
+          '<span style="font-family:var(--fm);font-size:.5rem;color:#fff;font-weight:600">'+wfMzp.toFixed(3)+'%</span></div>'+
+        '<span style="font-family:var(--fm);font-size:.48rem;color:var(--gray);width:80px;flex-shrink:0;text-align:right">3%→7% BBB/BB</span>'+
+      '</div>'+
+      '<div style="display:flex;align-items:center;gap:.7rem;margin-bottom:.6rem">'+
+        '<span style="font-family:var(--fm);font-size:.52rem;font-weight:600;color:#c0392b;width:52px;flex-shrink:0">EQUITY</span>'+
+        '<div style="width:12%;background:#c0392b;border-radius:3px;height:22px;display:flex;align-items:center;justify-content:center;opacity:'+(wfEqp>0.001?'1':'0.3')+'">'+
+          '<span style="font-family:var(--fm);font-size:.5rem;color:#fff;font-weight:600">'+wfEqp.toFixed(3)+'%</span></div>'+
+        '<span style="font-family:var(--fm);font-size:.48rem;color:var(--gray);width:80px;flex-shrink:0;text-align:right">0%→3% First loss</span>'+
+      '</div>'+
+      '<div style="padding:.42rem .6rem;background:rgba(107,191,62,.05);border-left:2px solid rgba(107,191,62,.35);font-family:var(--fm);font-size:.52rem;color:var(--gray);line-height:1.65">'+
+        '<span style="color:var(--gd);font-weight:600">2008 lesson —</span> Agencies used ρ≈0.30 for AAA tranches. Realized ρ spiked to 0.80+. Use DISTRESSED preset at ρ=0.70+ to see senior EL rise.'+
+      '</div>';
+    wfEl.appendChild(wfDiv);
     new Chart(document.getElementById('pieC'),{type:'doughnut',
       data:{labels:td.tranches.map(t=>t.label),datasets:[{data:pie,backgroundColor:pieC,borderWidth:2,borderColor:'#fff'}]},
       options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{family:'IBM Plex Mono',size:9},color:'#888780',boxWidth:10}}}}});
@@ -774,7 +893,8 @@ async function runStress(){
 
 async function checkApi(){
   try{
-    await fetch(API+'/health');
+    const _hr=await fetch(API+'/portfolio/preset/ig');
+    if(!_hr.ok) throw new Error('not ok');
     document.getElementById('apiSt').textContent='ONLINE';
     document.getElementById('apiSt').style.color='var(--green)';
     log('> Backend API connected... <span class="ok">OK</span>','ok');
@@ -785,7 +905,102 @@ async function checkApi(){
   }
 }
 
-rca(); us(); updateTotal(); checkApi(); loadTickerList();
+
+// ── RHO SENSITIVITY ──────────────────────────────────────
+let corrChart=null;
+async function runCorrSens(){
+  if(!lastRes){log('> Run analysis first','err');return;}
+  const btn=document.getElementById('corrBtn');
+  btn.disabled=true;btn.textContent='⏳ Running... (0/10)';
+  log('> Starting ρ sensitivity analysis (10 runs)...','ok');
+  const rhoVals=[0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9];
+  const cvarVals=[],elVals=[];
+  const companies=lastRes.companies.map(c=>({ticker:c.ticker,notional:c.notional}));
+  const nsim=20000; // 20k per run — reliable 95th percentile estimation
+  const conf=0.95; // use 95% CI for corr sensitivity — more stable tail estimates
+  try{
+    // initialise chart with empty data immediately
+    // Ensure tab is visible so canvas context works
+    const corrTab=document.getElementById('tab-corrsens');
+    if(corrTab) corrTab.style.display='block';
+    // Switch tab nav to corrsens
+    document.querySelectorAll('.tb').forEach(b=>{
+      if(b.getAttribute('onclick')&&b.getAttribute('onclick').includes('corrsens')){
+        document.querySelectorAll('.tb').forEach(x=>x.classList.remove('active'));
+        b.classList.add('active');
+        document.querySelectorAll('[id^="tab-"]').forEach(t=>{if(t.id!=='tab-corrsens')t.style.display='none';});
+      }
+    });
+    await new Promise(r=>setTimeout(r,50)); // let browser paint
+    const ctxEl=document.getElementById('corrSensC');
+    if(!ctxEl){log('> Canvas not found','err');return;}
+    const ctx=ctxEl.getContext('2d');
+    if(corrChart)corrChart.destroy();
+    corrChart=new Chart(ctx,{
+      type:'line',
+      data:{labels:rhoVals.map(r=>r.toFixed(1)),
+        datasets:[
+          {label:'Credit VaR ($M)',data:[],borderColor:'#c0392b',backgroundColor:'rgba(192,57,43,.08)',borderWidth:2,pointRadius:4,pointBackgroundColor:'#c0392b',tension:0.35,fill:true},
+          {label:'Expected Loss ($M)',data:[],borderColor:'#6BBF3E',backgroundColor:'rgba(107,191,62,.06)',borderWidth:2,pointRadius:4,pointBackgroundColor:'#6BBF3E',tension:0.35,fill:true}
+        ]
+      },
+      options:{responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{labels:{font:{family:'IBM Plex Mono',size:9},color:'#888780',boxWidth:12}},
+          tooltip:{callbacks:{label:c=>'$'+c.parsed.y.toFixed(3)+'M'}}},
+        scales:{
+          x:{title:{display:true,text:'Correlation ρ',font:{family:'IBM Plex Mono',size:9},color:'#888780'},
+             ticks:{font:{family:'IBM Plex Mono',size:9},color:'#888780'},grid:{color:'rgba(0,0,0,.04)'}},
+          y:{title:{display:true,text:'Loss ($M)',font:{family:'IBM Plex Mono',size:9},color:'#888780'},
+             ticks:{font:{family:'IBM Plex Mono',size:9},color:'#888780'},grid:{color:'rgba(0,0,0,.04)'}}
+        }
+      }
+    });
+    // Check if portfolio has meaningful EL — warn if too low
+    const baseEL=(lastRes.expected_loss||0);
+    const pdMultiplier=baseEL<5000?10:1; // boost PDs 10x for near-zero portfolios
+    if(pdMultiplier>1){
+      log('> Low-PD portfolio detected — applying 10x PD stress for sensitivity curve','ok');
+    }
+    let runIdx=0;
+    for(const rho of rhoVals){
+      runIdx++;
+      btn.textContent='⏳ Running... ('+runIdx+'/10)';
+      // Use stress endpoint with pd_multiplier to get meaningful curve
+      const payload=pdMultiplier>1
+        ?{companies,base_rho:rho,stressed_rho:rho,pd_multiplier:pdMultiplier,confidence:conf,n_sim:nsim}
+        :{companies,rho,confidence:conf,n_sim:nsim};
+      const endpoint=pdMultiplier>1?'/stress/run':'/portfolio/analyze';
+      const r=await fetch(API+endpoint,{method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(payload)});
+      const d=await r.json();
+      // stress/run returns d.stressed, portfolio/analyze returns d directly
+      const src=pdMultiplier>1?d.stressed:d;
+      const cv=Math.max(0,(src.credit_var||0)/1e6);
+      const el=(src.expected_loss||0)/1e6;
+      cvarVals.push(cv);elVals.push(el);
+      corrChart.data.datasets[0].data=cvarVals.slice();
+      corrChart.data.datasets[1].data=elVals.slice();
+      corrChart.update();
+      log('> ρ='+rho.toFixed(1)+' CVaR=$'+cv.toFixed(3)+'M EL=$'+el.toFixed(3)+'M','ok');
+      await new Promise(r=>setTimeout(r,50));
+    }
+    // Check if curve is meaningful
+    const maxCvar=Math.max(...cvarVals);
+    const minCvar=Math.min(...cvarVals);
+    const spread=maxCvar-minCvar;
+    if(maxCvar<0.05){
+      log('> ⚠ CVaR near zero — portfolio PD too low for sensitivity curve. Use DISTRESSED preset.','err');
+    } else if(spread/maxCvar<0.15){
+      log('> ⚠ Curve is flat — try DISTRESSED preset for a more dramatic ρ effect.','err');
+    } else {
+      log('> ρ sensitivity complete — curve shows '+((maxCvar/minCvar).toFixed(1))+'x CVaR amplification at high ρ','ok');
+    }
+  }catch(e){log('> ρ sensitivity error: '+e.message,'err');}
+  finally{btn.disabled=false;btn.textContent='⚡ RUN ρ SENSITIVITY (10 SIMULATIONS)';}
+}
+
+rca(); us(); checkApi(); loadTickerList();
 </script>
 </body>
 </html>
