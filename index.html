@@ -21,62 +21,209 @@ html,body{background:var(--bg);color:var(--black);font-family:var(--fb);font-siz
 /* ── APP ── */
 .app{display:flex;min-height:100vh}
 
-/* ── SIDEBAR — fixed width, no overflow ── */
+/* ══════════════════════════════════════
+   SIDEBAR — REDESIGNED
+══════════════════════════════════════ */
 .sidebar{
-  width:245px;min-width:245px;max-width:245px;
-  background:var(--surface);border-right:1px solid var(--border);
-  padding:.75rem .7rem;position:sticky;top:0;
-  height:100vh;overflow:hidden; /* NO SCROLL, NO OVERFLOW */
-  display:flex;flex-direction:column;
+  width:260px;min-width:260px;max-width:260px;
+  background:#0e0e0c;border-right:1px solid rgba(107,191,62,.12);
+  position:sticky;top:0;height:100vh;
+  display:flex;flex-direction:column;overflow:hidden;
 }
 
-.s-logo{font-family:var(--fh);font-weight:800;font-size:.95rem;letter-spacing:.05em;
-  padding-bottom:.55rem;border-bottom:1px solid var(--border);margin-bottom:.5rem;flex-shrink:0}
-.s-logo span{color:var(--green)}
-.s-sub{font-family:var(--fm);font-size:.5rem;color:var(--gray);letter-spacing:.08em;display:block;margin-top:.1rem}
+/* ── Logo bar ── */
+.s-logo{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.8rem 1rem .7rem;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  flex-shrink:0;
+}
+.s-logo-name{font-family:var(--fh);font-weight:800;font-size:1.05rem;
+  letter-spacing:.06em;color:#fff;line-height:1}
+.s-logo-name span{color:var(--green)}
+.s-sub{font-family:var(--fm);font-size:.44rem;color:rgba(107,191,62,.6);
+  letter-spacing:.12em;display:block;margin-top:.18rem;text-transform:uppercase}
+.s-logo-ver{font-family:var(--fm);font-size:.42rem;color:rgba(255,255,255,.2);
+  letter-spacing:.06em;align-self:flex-start;margin-top:.1rem}
 
-.s-section{flex:1;display:flex;flex-direction:column;justify-content:space-between}
-.s-h{font-family:var(--fm);font-size:.5rem;letter-spacing:.1em;color:var(--gray);
-  text-transform:uppercase;margin:.85rem 0 .45rem;padding-top:.85rem;
-  border-top:1px solid var(--border)}
+/* ── Scrollable body ── */
+.s-body{flex:1;overflow-y:auto;overflow-x:hidden;padding:.5rem 0 .5rem;}
+.s-body::-webkit-scrollbar{width:2px}
+.s-body::-webkit-scrollbar-track{background:transparent}
+.s-body::-webkit-scrollbar-thumb{background:rgba(107,191,62,.25);border-radius:2px}
 
-/* chip row — no wrap, scrollable horizontally but hidden scrollbar */
-.chips{display:flex;gap:.35rem;overflow-x:auto;padding-bottom:.1rem;flex-shrink:0}
-.chips::-webkit-scrollbar{display:none}
-.chip{font-family:var(--fm);font-size:.52rem;padding:.28rem .52rem;border:1px solid var(--border);
-  background:transparent;cursor:pointer;color:var(--black);white-space:nowrap;flex-shrink:0;transition:all .12s}
-.chip:hover,.chip.active{background:var(--black);color:var(--green);border-color:var(--black)}
+/* ── Section header rule ── */
+.s-h{
+  display:flex;align-items:center;gap:.5rem;
+  font-family:var(--fm);font-size:.44rem;letter-spacing:.14em;
+  color:rgba(136,135,128,.7);text-transform:uppercase;
+  padding:.7rem 1rem .35rem;
+  position:relative;
+}
+.s-h::after{content:'';flex:1;height:1px;background:rgba(255,255,255,.06)}
+.s-h-icon{color:var(--green);font-size:.5rem;flex-shrink:0}
 
-/* inputs */
-.si{width:100%;border:1px solid var(--border);background:var(--bg);font-family:var(--fm);
-  font-size:.58rem;padding:.45rem .45rem;color:var(--black);outline:none;margin-bottom:.45rem}
-.si:focus{border-color:var(--green)}
-.si::placeholder{color:var(--gray)}
+/* ── Section body padding ── */
+.s-pad{padding:0 .85rem .6rem}
+
+/* ── Preset toggle groups ── */
+.preset-group-label{
+  font-family:var(--fm);font-size:.42rem;letter-spacing:.1em;
+  color:rgba(107,191,62,.5);text-transform:uppercase;
+  margin-bottom:.32rem;
+}
+.preset-row{display:flex;flex-wrap:wrap;gap:.28rem;margin-bottom:.55rem}
+.chip{
+  font-family:var(--fm);font-size:.5rem;padding:.3rem .6rem;
+  border:1px solid rgba(255,255,255,.1);
+  background:rgba(255,255,255,.03);
+  cursor:pointer;color:rgba(255,255,255,.55);
+  white-space:nowrap;flex-shrink:0;
+  transition:all .18s ease;letter-spacing:.06em;
+  position:relative;
+}
+.chip::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:0;
+  background:var(--green);transition:width .18s ease;
+}
+.chip:hover{color:#fff;border-color:rgba(107,191,62,.35);background:rgba(107,191,62,.06)}
+.chip.active{
+  color:var(--green);border-color:rgba(107,191,62,.45);
+  background:rgba(107,191,62,.08);
+}
+.chip.active::before{width:2px}
+
+/* ── Ticker input ── */
+.ticker-wrap{position:relative}
+.si{
+  width:100%;border:1px solid rgba(255,255,255,.09);
+  background:rgba(255,255,255,.04);
+  font-family:var(--fm);font-size:.58rem;
+  padding:.52rem .65rem;color:#fff;outline:none;
+  margin-bottom:.4rem;transition:border-color .15s;
+  letter-spacing:.04em;
+}
+.si:focus{border-color:rgba(107,191,62,.5);background:rgba(107,191,62,.04)}
+.si::placeholder{color:rgba(255,255,255,.22)}
 select.si{cursor:pointer}
+select.si option{background:#1a1a16;color:#fff}
 
-/* slider row — ultra compact */
-.sr{display:flex;align-items:center;gap:.3rem;margin-bottom:.55rem}
-.sr span.lbl{font-family:var(--fm);font-size:.48rem;color:var(--gray);
-  min-width:46px;max-width:46px;line-height:1.2;flex-shrink:0}
-.sr input[type=range]{flex:1;accent-color:var(--green);height:12px;min-width:0}
-.sr .val{font-family:var(--fm);font-size:.52rem;color:var(--green);min-width:26px;text-align:right;flex-shrink:0}
+/* autocomplete dropdown */
+#acDrop{
+  display:none;position:absolute;left:0;right:0;top:100%;
+  background:#1a1a16;border:1px solid rgba(107,191,62,.35);
+  border-top:none;z-index:999;max-height:160px;overflow-y:auto;
+  box-shadow:0 8px 24px rgba(0,0,0,.45);
+}
+.ac-item{padding:.42rem .65rem;cursor:pointer;display:flex;align-items:baseline;gap:.5rem;
+  border-bottom:1px solid rgba(255,255,255,.05);transition:background .1s}
+.ac-item:last-child{border-bottom:none}
+.ac-item:hover,.ac-item.focused{background:rgba(107,191,62,.08)}
+.ac-tk{color:var(--green);font-weight:500;min-width:48px;flex-shrink:0;font-family:var(--fm);font-size:.58rem}
+.ac-nm{color:rgba(255,255,255,.4);font-family:var(--fm);font-size:.5rem;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
-/* active tickers */
-#ac{display:flex;flex-wrap:wrap;gap:.18rem;margin-bottom:.2rem;min-height:16px}
+/* add button */
+.btn-add{
+  width:100%;background:rgba(255,255,255,.05);color:rgba(255,255,255,.6);
+  border:1px solid rgba(255,255,255,.1);font-family:var(--fm);font-size:.5rem;
+  letter-spacing:.1em;text-transform:uppercase;padding:.48rem .6rem;
+  cursor:pointer;transition:all .18s;display:flex;align-items:center;justify-content:center;gap:.4rem;
+}
+.btn-add:hover{background:rgba(107,191,62,.1);border-color:rgba(107,191,62,.4);color:var(--green)}
 
-/* buttons */
-.btn-b{width:100%;background:var(--black);color:var(--green);border:none;font-family:var(--fm);
-  font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;padding:.75rem .6rem;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;gap:.35rem;margin-top:.65rem;transition:all .12s}
-.btn-b:hover{background:var(--green);color:var(--black)}
-.btn-b:disabled{opacity:.35;cursor:not-allowed}
-.btn-o{width:100%;background:transparent;color:var(--black);border:1px solid var(--border);
-  font-family:var(--fm);font-size:.5rem;letter-spacing:.08em;text-transform:uppercase;
-  padding:.55rem .6rem;cursor:pointer;transition:all .12s;margin-top:.45rem}
-.btn-o:hover{border-color:var(--black)}
+/* ── Active tickers ── */
+#ac{display:flex;flex-wrap:wrap;gap:.28rem;min-height:18px}
 
-/* api dot */
-.s-api{font-family:var(--fm);font-size:.48rem;color:var(--gray);margin-top:auto;padding-top:.4rem}
+/* ── Slider rows ── */
+.sr{display:flex;align-items:center;gap:.5rem;margin-bottom:.6rem}
+.sr span.lbl{
+  font-family:var(--fm);font-size:.44rem;color:rgba(255,255,255,.4);
+  min-width:44px;max-width:44px;line-height:1.3;flex-shrink:0;
+  letter-spacing:.06em;text-transform:uppercase;
+}
+.sr input[type=range]{
+  flex:1;min-width:0;height:3px;
+  -webkit-appearance:none;appearance:none;
+  background:rgba(255,255,255,.1);
+  border-radius:2px;outline:none;cursor:pointer;
+}
+.sr input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none;appearance:none;
+  width:12px;height:12px;border-radius:50%;
+  background:var(--green);cursor:pointer;
+  box-shadow:0 0 0 2px rgba(107,191,62,.2);
+  transition:box-shadow .15s;
+}
+.sr input[type=range]::-webkit-slider-thumb:hover{box-shadow:0 0 0 4px rgba(107,191,62,.25)}
+.sr .val{
+  font-family:var(--fm);font-size:.52rem;color:var(--green);
+  min-width:30px;text-align:right;flex-shrink:0;letter-spacing:.04em;
+}
+
+/* ── Run button ── */
+.btn-b{
+  width:100%;background:var(--green);color:#0e0e0c;border:none;
+  font-family:var(--fm);font-size:.56rem;letter-spacing:.12em;
+  text-transform:uppercase;padding:.82rem .6rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:.4rem;
+  margin-top:.2rem;transition:all .2s;font-weight:600;
+  position:relative;overflow:hidden;
+}
+.btn-b::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);
+  transform:translateX(-100%);transition:transform .6s;
+}
+.btn-b:hover::after{transform:translateX(100%)}
+.btn-b:hover{background:#7fd44a;color:#0a0a08}
+.btn-b:disabled{opacity:.3;cursor:not-allowed}
+.btn-b:disabled::after{display:none}
+
+/* ── Secondary buttons ── */
+.btn-o{
+  width:100%;background:transparent;color:rgba(255,255,255,.5);
+  border:1px solid rgba(255,255,255,.1);font-family:var(--fm);
+  font-size:.48rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:.58rem .6rem;cursor:pointer;transition:all .18s;margin-top:.45rem;
+}
+.btn-o:hover{border-color:rgba(107,191,62,.45);color:var(--green);background:rgba(107,191,62,.06)}
+.btn-o.btn-green{color:rgba(107,191,62,.7);border-color:rgba(107,191,62,.25)}
+.btn-o.btn-green:hover{color:var(--green);border-color:rgba(107,191,62,.6)}
+
+/* ── Divider between param / stress ── */
+.s-divider{height:1px;background:rgba(255,255,255,.05);margin:.2rem .85rem .2rem}
+
+/* ── Status bar ── */
+.s-status{
+  flex-shrink:0;
+  border-top:1px solid rgba(255,255,255,.06);
+  padding:.6rem 1rem;
+  display:flex;align-items:center;justify-content:space-between;
+  background:#0a0a08;
+}
+.s-status-left{display:flex;align-items:center;gap:.5rem}
+.s-status-dot{width:6px;height:6px;border-radius:50%;background:var(--green);
+  animation:pulse 2.5s ease-in-out infinite;flex-shrink:0}
+.s-status-text{font-family:var(--fm);font-size:.44rem;color:rgba(255,255,255,.35);letter-spacing:.06em}
+.s-status-val{font-family:var(--fm);font-size:.44rem;letter-spacing:.06em}
+.s-status-right{font-family:var(--fm);font-size:.42rem;color:rgba(255,255,255,.2);letter-spacing:.04em}
+
+/* ── Ticker tags (active) ── */
+.t-tag{
+  display:inline-flex;align-items:center;gap:.3rem;
+  font-family:var(--fm);font-size:.48rem;
+  padding:.22rem .45rem;
+  background:rgba(107,191,62,.08);
+  border:1px solid rgba(107,191,62,.22);
+  color:rgba(255,255,255,.75);
+  cursor:default;
+}
+.t-tag .t-ticker{color:var(--green);font-weight:500}
+.t-tag .t-amt{color:rgba(255,255,255,.4)}
+.t-tag .t-x{cursor:pointer;color:rgba(255,255,255,.3);font-size:.55rem;
+  transition:color .12s;margin-left:.1rem}
+.t-tag .t-x:hover{color:#e24b4a}
 
 /* ── MAIN ── */
 .main{flex:1;padding:1.4rem 1.6rem;background:var(--bg);min-width:0;overflow-x:hidden}
@@ -210,12 +357,7 @@ select.si{cursor:pointer}
   border-top-color:var(--green);border-radius:50%;animation:sp .7s linear infinite;margin-right:.35rem;vertical-align:middle}
 @keyframes sp{to{transform:rotate(360deg)}}
 
-/* autocomplete dropdown */
-.ac-item{padding:.38rem .55rem;cursor:pointer;display:flex;align-items:baseline;gap:.5rem;border-bottom:1px solid var(--border);transition:background .1s}
-.ac-item:last-child{border-bottom:none}
-.ac-item:hover,.ac-item.focused{background:var(--gdim)}
-.ac-tk{color:var(--green);font-weight:500;min-width:48px;flex-shrink:0;font-family:var(--fm);font-size:.58rem}
-.ac-nm{color:var(--gray);font-family:var(--fm);font-size:.52rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* autocomplete — handled in sidebar block */
 /* body text → black */
 .ib-row div, .interp-body li, .interp-body div:not(.ct):not(.ml) {color:var(--black)}
 .cw > div:not(.ct):not([class]) {color:var(--black)}
@@ -227,59 +369,123 @@ select.si{cursor:pointer}
 <div class="app">
 
 <!-- ════════════════════════════════════════
-     SIDEBAR
+     SIDEBAR — REDESIGNED
 ════════════════════════════════════════ -->
 <aside class="sidebar">
-  <div class="s-logo">KARAM<span>.</span><span class="s-sub">CREDIT RISK ENGINE</span></div>
 
-  <div class="s-section">
-    <div class="s-h" style="border-top:none;padding-top:0;margin-top:.1rem">PRESETS</div>
-    <div class="chips" id="presetChips">
-      <button class="chip" onclick="selectPreset('ig',this)">IG</button>
-      <button class="chip active" onclick="selectPreset('hy',this)">HY</button>
-      <button class="chip" onclick="selectPreset('mixed',this)">MIXED</button>
-      <button class="chip" onclick="selectPreset('crisis',this)">DISTRESSED</button>
+  <!-- Logo -->
+  <div class="s-logo">
+    <div>
+      <div class="s-logo-name">KARAM<span>.</span></div>
+      <span class="s-sub">CREDIT RISK ENGINE</span>
     </div>
-
-    <div class="s-h">ADD TICKER</div>
-    <div style="position:relative" id="acWrap">
-      <input class="si" type="text" id="ct" placeholder="e.g. NVDA..." maxlength="8" autocomplete="off"
-        oninput="tickerSearch(this.value)"
-        onkeydown="tickerKey(event)"
-        style="margin-bottom:0"/>
-      <div id="acDrop" style="
-        display:none;position:absolute;left:0;right:0;top:100%;
-        background:var(--surface);border:1px solid var(--green);
-        border-top:none;z-index:999;max-height:160px;overflow-y:auto;
-        font-family:var(--fm);font-size:.58rem;box-shadow:0 4px 12px rgba(0,0,0,.12)
-      "></div>
-    </div>
-    <button class="btn-o" onclick="addTicker()" style="margin-top:.35rem">+ ADD</button>
-
-    <div class="s-h">ACTIVE</div>
-    <div id="ac"></div>
-
-    <div class="s-h">PARAMETERS</div>
-    <div class="sr"><span class="lbl">CORR ρ</span><input type="range" min="0" max="100" value="20" id="rho" oninput="us()"/><span class="val" id="rhoV">0.20</span></div>
-    <div class="sr"><span class="lbl">CONF.</span>
-      <select class="si" id="conf" style="margin-bottom:0;flex:1;padding:.22rem .3rem">
-        <option value="0.90">90%</option><option value="0.95">95%</option>
-        <option value="0.99" selected>99%</option><option value="0.999">99.9%</option>
-      </select>
-    </div>
-    <div class="sr"><span class="lbl">SIMS</span><input type="range" min="1" max="4" value="3" id="sim" oninput="us()"/><span class="val" id="simV">50K</span></div>
-    <button class="btn-b" id="runBtn" onclick="runAnalysis()"><span id="runTxt">⚡ RUN ANALYSIS</span></button>
-
-    <div class="s-h">STRESS TEST</div>
-    <div class="sr"><span class="lbl">STR ρ</span><input type="range" min="0" max="100" value="50" id="strRho" oninput="us()"/><span class="val" id="strRhoV">0.50</span></div>
-    <div class="sr"><span class="lbl">PD ×</span><input type="range" min="10" max="50" value="20" id="pdm" oninput="us()"/><span class="val" id="pdmV">2.0×</span></div>
-    <button class="btn-o" onclick="runStress()">RUN STRESS TEST</button>
-    <button class="btn-o" onclick="document.getElementById('aboutModal').classList.add('open')" style="margin-top:.35rem;color:var(--green);border-color:rgba(107,191,62,.35)">// ABOUT PROJECT</button>
+    <div class="s-logo-ver">v1.0</div>
   </div>
 
-  <div class="s-api">
-    API: <span id="apiSt" style="color:#e24b4a">CHECKING</span> · 127.0.0.1:8000<br>DATA: <span id="dataDate" style="color:var(--gray)">loading...</span>
+  <!-- Scrollable body -->
+  <div class="s-body">
+
+    <!-- PRESETS -->
+    <div class="s-h"><span class="s-h-icon">//</span>PRESETS</div>
+    <div class="s-pad">
+      <div class="preset-group-label">QUALITY</div>
+      <div class="preset-row" id="presetChips">
+        <button class="chip" onclick="selectPreset('ig',this)">IG</button>
+        <button class="chip active" onclick="selectPreset('hy',this)">HY</button>
+        <button class="chip" onclick="selectPreset('mixed',this)">MIXED</button>
+        <button class="chip" onclick="selectPreset('crisis',this)">DISTRESSED</button>
+      </div>
+      <div class="preset-group-label">SECTOR</div>
+      <div class="preset-row">
+        <button class="chip" onclick="selectPreset('tech',this)">TECH</button>
+        <button class="chip" onclick="selectPreset('banks',this)">BANKS</button>
+        <button class="chip" onclick="selectPreset('energy',this)">ENERGY</button>
+        <button class="chip" onclick="selectPreset('healthcare',this)">HEALTH</button>
+        <button class="chip" onclick="selectPreset('airlines',this)">AIRLINES</button>
+        <button class="chip" onclick="selectPreset('realestate',this)">REITs</button>
+      </div>
+    </div>
+
+    <!-- ADD TICKER -->
+    <div class="s-h"><span class="s-h-icon">//</span>ADD TICKER</div>
+    <div class="s-pad">
+      <div class="ticker-wrap" id="acWrap">
+        <input class="si" type="text" id="ct" placeholder="e.g. NVDA..." maxlength="8"
+          autocomplete="off" oninput="tickerSearch(this.value)" onkeydown="tickerKey(event)"
+          style="margin-bottom:.4rem"/>
+        <div id="acDrop"></div>
+      </div>
+      <button class="btn-add" onclick="addTicker()">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        ADD TICKER
+      </button>
+    </div>
+
+    <!-- ACTIVE TICKERS -->
+    <div class="s-h"><span class="s-h-icon">//</span>ACTIVE</div>
+    <div class="s-pad">
+      <div id="ac"></div>
+    </div>
+
+    <!-- PARAMETERS -->
+    <div class="s-h"><span class="s-h-icon">//</span>PARAMETERS</div>
+    <div class="s-pad">
+      <div class="sr">
+        <span class="lbl">CORR ρ</span>
+        <input type="range" min="0" max="100" value="20" id="rho" oninput="us()"/>
+        <span class="val" id="rhoV">0.20</span>
+      </div>
+      <div class="sr">
+        <span class="lbl">CONF.</span>
+        <select class="si" id="conf" style="margin-bottom:0;flex:1;padding:.3rem .4rem">
+          <option value="0.90">90%</option>
+          <option value="0.95">95%</option>
+          <option value="0.99" selected>99%</option>
+          <option value="0.999">99.9%</option>
+        </select>
+      </div>
+      <div class="sr">
+        <span class="lbl">SIMS</span>
+        <input type="range" min="1" max="4" value="2" id="sim" oninput="us()"/>
+        <span class="val" id="simV">25K</span>
+      </div>
+      <button class="btn-b" id="runBtn" onclick="runAnalysis()">
+        <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><polygon points="2,1 10,5.5 2,10" fill="currentColor"/></svg>
+        <span id="runTxt">RUN ANALYSIS</span>
+      </button>
+    </div>
+
+    <!-- STRESS TEST -->
+    <div class="s-divider"></div>
+    <div class="s-h"><span class="s-h-icon">//</span>STRESS TEST</div>
+    <div class="s-pad">
+      <div class="sr">
+        <span class="lbl">STR ρ</span>
+        <input type="range" min="0" max="100" value="50" id="strRho" oninput="us()"/>
+        <span class="val" id="strRhoV">0.50</span>
+      </div>
+      <div class="sr">
+        <span class="lbl">PD ×</span>
+        <input type="range" min="10" max="50" value="20" id="pdm" oninput="us()"/>
+        <span class="val" id="pdmV">2.0×</span>
+      </div>
+      <button class="btn-o" onclick="runStress()">⚡ RUN STRESS TEST</button>
+      <button class="btn-o btn-green" onclick="document.getElementById('aboutModal').classList.add('open')">// ABOUT PROJECT</button>
+    </div>
+
+  </div><!-- end s-body -->
+
+  <!-- Status bar -->
+  <div class="s-status">
+    <div class="s-status-left">
+      <div class="s-status-dot"></div>
+      <div class="s-status-text">
+        API <span class="s-status-val" id="apiSt" style="color:#e24b4a">CHECKING</span>
+      </div>
+    </div>
+    <div class="s-status-right" id="dataDate">loading...</div>
   </div>
+
 </aside>
 
 <!-- ════════════════════════════════════════
@@ -611,10 +817,18 @@ document.addEventListener('click',e=>{
 });
 
 const PRESETS={
+  // ── QUALITY PRESETS ──
   ig:[{ticker:'AAPL',notional:10000000},{ticker:'MSFT',notional:10000000},{ticker:'JPM',notional:10000000},{ticker:'JNJ',notional:10000000},{ticker:'PG',notional:10000000}],
   hy:[{ticker:'F',notional:10000000},{ticker:'M',notional:10000000},{ticker:'CCL',notional:10000000},{ticker:'AAL',notional:10000000},{ticker:'AMC',notional:5000000}],
   mixed:[{ticker:'AAPL',notional:15000000},{ticker:'MSFT',notional:15000000},{ticker:'JPM',notional:10000000},{ticker:'F',notional:7000000},{ticker:'CCL',notional:7000000},{ticker:'AAL',notional:6000000}],
-  crisis:[{ticker:'AMC',notional:8000000},{ticker:'PRGO',notional:8000000},{ticker:'WOLF',notional:8000000},{ticker:'KSS',notional:8000000},{ticker:'AAP',notional:8000000},{ticker:'SRPT',notional:8000000}]
+  crisis:[{ticker:'AMC',notional:8000000},{ticker:'PRGO',notional:8000000},{ticker:'WOLF',notional:8000000},{ticker:'KSS',notional:8000000},{ticker:'AAP',notional:8000000},{ticker:'SRPT',notional:8000000}],
+  // ── SECTOR PRESETS ──
+  tech:[{ticker:'AAPL',notional:12000000},{ticker:'MSFT',notional:12000000},{ticker:'NVDA',notional:10000000},{ticker:'GOOGL',notional:10000000},{ticker:'META',notional:8000000},{ticker:'AMZN',notional:8000000}],
+  banks:[{ticker:'JPM',notional:12000000},{ticker:'BAC',notional:10000000},{ticker:'GS',notional:10000000},{ticker:'MS',notional:10000000},{ticker:'WFC',notional:8000000},{ticker:'C',notional:8000000}],
+  energy:[{ticker:'XOM',notional:12000000},{ticker:'CVX',notional:10000000},{ticker:'COP',notional:8000000},{ticker:'OXY',notional:8000000},{ticker:'HAL',notional:6000000},{ticker:'DVN',notional:6000000}],
+  healthcare:[{ticker:'JNJ',notional:12000000},{ticker:'UNH',notional:12000000},{ticker:'LLY',notional:10000000},{ticker:'ABBV',notional:8000000},{ticker:'PFE',notional:8000000},{ticker:'MRK',notional:8000000}],
+  airlines:[{ticker:'DAL',notional:10000000},{ticker:'UAL',notional:10000000},{ticker:'AAL',notional:8000000},{ticker:'LUV',notional:8000000},{ticker:'ALK',notional:6000000}],
+  realestate:[{ticker:'PLD',notional:10000000},{ticker:'AMT',notional:10000000},{ticker:'EQIX',notional:8000000},{ticker:'SPG',notional:8000000},{ticker:'O',notional:8000000},{ticker:'WELL',notional:6000000}]
 };
 const SM={1:10000,2:25000,3:50000,4:100000};
 let cos=[...PRESETS.hy],lastRes=null,lChart=null,sChart=null;
@@ -642,11 +856,25 @@ function us(){
 // ── preset ──
 function clearAll(){cos=[];document.querySelectorAll('#presetChips .chip').forEach(c=>c.classList.remove('active'));rca();log('> Portfolio cleared','ok');}
 
+const PRESET_DESC={
+  ig:'Investment Grade — large cap, low PD, near-zero losses',
+  hy:'High Yield — distressed consumer, meaningful tail risk',
+  mixed:'Mixed Quality — IG + HY blend, moderate risk',
+  crisis:'Distressed — high PD names, use for ρ sensitivity',
+  tech:'Technology — mega-cap tech, very low PD',
+  banks:'Banks — systemically important, high leverage',
+  energy:'Energy — commodity exposure, moderate vol',
+  healthcare:'Healthcare — defensive, low correlation',
+  airlines:'Airlines — high debt, cyclical, corr-sensitive',
+  realestate:'REITs — rate-sensitive, moderate leverage'
+};
+
 function selectPreset(n,btn){
   cos=[...PRESETS[n]];
   document.querySelectorAll('#presetChips .chip').forEach(c=>c.classList.remove('active'));
   btn.classList.add('active'); rca();
-  log('> Preset: '+n.toUpperCase()+' ('+cos.length+' names)','ok');
+  const desc=PRESET_DESC[n]||'';
+  log('> Preset: '+n.toUpperCase()+' ('+cos.length+' names) — '+desc,'ok');
 }
 
 // ── add ticker ──
@@ -664,12 +892,12 @@ function addTicker(){
 
 function rca(){
   const el=document.getElementById('ac');
-  if(!cos.length){el.innerHTML='<span style="font-family:var(--fm);font-size:.52rem;color:var(--gray);opacity:.6">No tickers — select a preset</span>';return;}
+  if(!cos.length){el.innerHTML='<span style="font-family:var(--fm);font-size:.48rem;color:rgba(255,255,255,.25);letter-spacing:.06em">NO TICKERS &#8212; SELECT A PRESET</span>';return;}
   el.innerHTML=cos.map((c,i)=>
-    '<div style="display:flex;align-items:center;gap:.3rem;padding:.22rem .4rem;background:var(--bg);border:1px solid var(--border);border-radius:2px;margin-bottom:.15rem">'
-    +'<span style="font-family:var(--fm);font-size:.6rem;font-weight:600;color:var(--black);min-width:42px;flex-shrink:0">'+c.ticker+'</span>'
-    +'<span style="font-family:var(--fm);font-size:.52rem;color:var(--gray);flex:1;text-align:right">$'+(c.notional/1e6).toFixed(1)+'M</span>'
-    +'<button onclick="removeTicker('+i+')" style="background:none;border:none;font-size:.62rem;color:#aaa;cursor:pointer;padding:0 .2rem;line-height:1" title="Remove">&#x2715;</button>'
+    '<div class="t-tag">'
+    +'<span class="t-ticker">'+c.ticker+'</span>'
+    +'<span class="t-amt">$'+(c.notional/1e6).toFixed(0)+'M</span>'
+    +'<span class="t-x" onclick="removeTicker('+i+')" title="Remove">&#x2715;</span>'
     +'</div>'
   ).join('');
 }
@@ -871,7 +1099,7 @@ async function runStress(){
   const confidence=parseFloat(document.getElementById('conf').value);
   try{
     const r=await fetch(API+'/stress/run',{method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({companies,base_rho,stressed_rho,pd_multiplier,confidence,n_sim:50000})});
+      body:JSON.stringify({companies,base_rho,stressed_rho,pd_multiplier,confidence,n_sim:nsim})});
     const sd=await r.json();
     log('> Stress complete: CVaR Δ='+sd.var_delta_pct.toFixed(1)+'%',sd.var_delta_pct>0?'err':'ok');
     const delta=(b,s)=>{const d=s-b;const p=Math.abs(b)>1?((d/Math.abs(b))*100).toFixed(1):'—';return '<span class="'+(d>0?'dp':'dn')+'">'+(d>0?'+':'')+(d/1e6).toFixed(2)+'M ('+(d>0?'+':'')+p+'%)</span>';};
@@ -1001,6 +1229,8 @@ async function runCorrSens(){
 }
 
 rca(); us(); checkApi(); loadTickerList();
+// Keep-alive ping every 10 min to prevent Railway sleep
+setInterval(()=>fetch(API+'/portfolio/preset/ig').catch(()=>{}), 600000);
 </script>
 </body>
 </html>
