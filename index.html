@@ -1097,6 +1097,7 @@ async function runStress(){
   const stressed_rho=parseFloat(document.getElementById('strRho').value)/100;
   const pd_multiplier=parseFloat(document.getElementById('pdm').value)/10;
   const confidence=parseFloat(document.getElementById('conf').value);
+  const nsim=SM[parseInt(document.getElementById('sim').value)];
   try{
     const r=await fetch(API+'/stress/run',{method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({companies,base_rho,stressed_rho,pd_multiplier,confidence,n_sim:nsim})});
@@ -1142,16 +1143,15 @@ async function runCorrSens(){
   btn.disabled=true;btn.textContent='⏳ Running... (0/10)';
   log('> Starting ρ sensitivity analysis (10 runs)...','ok');
   const rhoVals=[0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9];
-  const cvarVals=[],elVals=[];
+  // Plot 3 series: Total VaR, Expected Shortfall, Expected Loss
+  const totalVarVals=[], esVals=[], elVals=[];
   const companies=lastRes.companies.map(c=>({ticker:c.ticker,notional:c.notional}));
-  const nsim=20000; // 20k per run — reliable 95th percentile estimation
-  const conf=0.95; // use 95% CI for corr sensitivity — more stable tail estimates
+  // 50k paths at 99% CI — enough tail mass for any portfolio quality
+  const nsim=50000;
+  const conf=0.99;
   try{
-    // initialise chart with empty data immediately
-    // Ensure tab is visible so canvas context works
     const corrTab=document.getElementById('tab-corrsens');
     if(corrTab) corrTab.style.display='block';
-    // Switch tab nav to corrsens
     document.querySelectorAll('.tb').forEach(b=>{
       if(b.getAttribute('onclick')&&b.getAttribute('onclick').includes('corrsens')){
         document.querySelectorAll('.tb').forEach(x=>x.classList.remove('active'));
@@ -1159,7 +1159,7 @@ async function runCorrSens(){
         document.querySelectorAll('[id^="tab-"]').forEach(t=>{if(t.id!=='tab-corrsens')t.style.display='none';});
       }
     });
-    await new Promise(r=>setTimeout(r,50)); // let browser paint
+    await new Promise(r=>setTimeout(r,50));
     const ctxEl=document.getElementById('corrSensC');
     if(!ctxEl){log('> Canvas not found','err');return;}
     const ctx=ctxEl.getContext('2d');
@@ -1168,8 +1168,9 @@ async function runCorrSens(){
       type:'line',
       data:{labels:rhoVals.map(r=>r.toFixed(1)),
         datasets:[
-          {label:'Credit VaR ($M)',data:[],borderColor:'#c0392b',backgroundColor:'rgba(192,57,43,.08)',borderWidth:2,pointRadius:4,pointBackgroundColor:'#c0392b',tension:0.35,fill:true},
-          {label:'Expected Loss ($M)',data:[],borderColor:'#6BBF3E',backgroundColor:'rgba(107,191,62,.06)',borderWidth:2,pointRadius:4,pointBackgroundColor:'#6BBF3E',tension:0.35,fill:true}
+          {label:'Total VaR 99% ($M)',data:[],borderColor:'#c0392b',backgroundColor:'rgba(192,57,43,.10)',borderWidth:2.5,pointRadius:5,pointBackgroundColor:'#c0392b',tension:0.3,fill:true},
+          {label:'Expected Shortfall ($M)',data:[],borderColor:'#e67e22',backgroundColor:'rgba(230,126,34,.07)',borderWidth:2,pointRadius:4,pointBackgroundColor:'#e67e22',tension:0.3,fill:false,borderDash:[4,3]},
+          {label:'Expected Loss ($M)',data:[],borderColor:'#6BBF3E',backgroundColor:'rgba(107,191,62,.06)',borderWidth:1.5,pointRadius:3,pointBackgroundColor:'#6BBF3E',tension:0.3,fill:false}
         ]
       },
       options:{responsive:true,maintainAspectRatio:false,
@@ -1179,51 +1180,37 @@ async function runCorrSens(){
           x:{title:{display:true,text:'Correlation ρ',font:{family:'IBM Plex Mono',size:9},color:'#888780'},
              ticks:{font:{family:'IBM Plex Mono',size:9},color:'#888780'},grid:{color:'rgba(0,0,0,.04)'}},
           y:{title:{display:true,text:'Loss ($M)',font:{family:'IBM Plex Mono',size:9},color:'#888780'},
-             ticks:{font:{family:'IBM Plex Mono',size:9},color:'#888780'},grid:{color:'rgba(0,0,0,.04)'}}
+             ticks:{font:{family:'IBM Plex Mono',size:9},color:'#888780'},grid:{color:'rgba(0,0,0,.04)'},
+             beginAtZero:true}
         }
       }
     });
-    // Check if portfolio has meaningful EL — warn if too low
-    const baseEL=(lastRes.expected_loss||0);
-    const pdMultiplier=baseEL<5000?10:1; // boost PDs 10x for near-zero portfolios
-    if(pdMultiplier>1){
-      log('> Low-PD portfolio detected — applying 10x PD stress for sensitivity curve','ok');
-    }
     let runIdx=0;
     for(const rho of rhoVals){
       runIdx++;
       btn.textContent='⏳ Running... ('+runIdx+'/10)';
-      // Use stress endpoint with pd_multiplier to get meaningful curve
-      const payload=pdMultiplier>1
-        ?{companies,base_rho:rho,stressed_rho:rho,pd_multiplier:pdMultiplier,confidence:conf,n_sim:nsim}
-        :{companies,rho,confidence:conf,n_sim:nsim};
-      const endpoint=pdMultiplier>1?'/stress/run':'/portfolio/analyze';
-      const r=await fetch(API+endpoint,{method:'POST',
+      const r=await fetch(API+'/portfolio/analyze',{method:'POST',
         headers:{'Content-Type':'application/json'},
-        body:JSON.stringify(payload)});
+        body:JSON.stringify({companies,rho,confidence:conf,n_sim:nsim})});
       const d=await r.json();
-      // stress/run returns d.stressed, portfolio/analyze returns d directly
-      const src=pdMultiplier>1?d.stressed:d;
-      const cv=Math.max(0,(src.credit_var||0)/1e6);
-      const el=(src.expected_loss||0)/1e6;
-      cvarVals.push(cv);elVals.push(el);
-      corrChart.data.datasets[0].data=cvarVals.slice();
-      corrChart.data.datasets[1].data=elVals.slice();
+      // Total VaR = EL + credit_var (the full percentile loss, not just excess)
+      const el  = (d.expected_loss||0)/1e6;
+      const totalVar = ((d.expected_loss||0)+(d.credit_var||0))/1e6;
+      const es  = ((d.expected_loss||0)+(d.expected_shortfall||0))/1e6;
+      totalVarVals.push(parseFloat(totalVar.toFixed(4)));
+      esVals.push(parseFloat(es.toFixed(4)));
+      elVals.push(parseFloat(el.toFixed(4)));
+      corrChart.data.datasets[0].data=totalVarVals.slice();
+      corrChart.data.datasets[1].data=esVals.slice();
+      corrChart.data.datasets[2].data=elVals.slice();
       corrChart.update();
-      log('> ρ='+rho.toFixed(1)+' CVaR=$'+cv.toFixed(3)+'M EL=$'+el.toFixed(3)+'M','ok');
-      await new Promise(r=>setTimeout(r,50));
+      log('> ρ='+rho.toFixed(1)+' VaR=$'+totalVar.toFixed(3)+'M ES=$'+es.toFixed(3)+'M EL=$'+el.toFixed(3)+'M','ok');
+      await new Promise(r=>setTimeout(r,80));
     }
-    // Check if curve is meaningful
-    const maxCvar=Math.max(...cvarVals);
-    const minCvar=Math.min(...cvarVals);
-    const spread=maxCvar-minCvar;
-    if(maxCvar<0.05){
-      log('> ⚠ CVaR near zero — portfolio PD too low for sensitivity curve. Use DISTRESSED preset.','err');
-    } else if(spread/maxCvar<0.15){
-      log('> ⚠ Curve is flat — try DISTRESSED preset for a more dramatic ρ effect.','err');
-    } else {
-      log('> ρ sensitivity complete — curve shows '+((maxCvar/minCvar).toFixed(1))+'x CVaR amplification at high ρ','ok');
-    }
+    const maxVar=Math.max(...totalVarVals);
+    const minVar=Math.min(...totalVarVals);
+    const amplification=(maxVar/Math.max(minVar,0.001)).toFixed(1);
+    log('> ρ sensitivity complete — Total VaR amplification: '+amplification+'x (ρ=0→0.9)','ok');
   }catch(e){log('> ρ sensitivity error: '+e.message,'err');}
   finally{btn.disabled=false;btn.textContent='⚡ RUN ρ SENSITIVITY (10 SIMULATIONS)';}
 }
